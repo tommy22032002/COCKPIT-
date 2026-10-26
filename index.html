@@ -12,9 +12,9 @@
 <style>
 :root{--bg:#0C0F15;--surface:#141922;--line:#252C38;--ink:#E8ECF3;--muted:#8B95A7;--accent:#7590FF;--loss:#F0717A}
 *{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
 main{min-height:100%;display:grid;place-items:center;padding:24px 16px}
-.box{width:100%;max-width:360px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 22px;text-align:center}
+.box{width:100%;max-width:360px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 22px;text-align:center}
 img{width:72px;height:72px;border-radius:18px}
 h1{font-size:22px;margin:14px 0 4px;letter-spacing:-.02em}
 p{color:var(--muted);font-size:14px;margin:0 0 18px}
@@ -22,9 +22,11 @@ input[type=password]{width:100%;font:inherit;padding:12px 14px;border-radius:12p
 input:focus{outline:2px solid var(--accent);outline-offset:1px}
 label.rm{display:flex;gap:8px;align-items:center;justify-content:center;font-size:14px;color:var(--muted);margin:12px 0 16px}
 button{width:100%;font:inherit;font-weight:600;padding:12px;border:0;border-radius:12px;background:var(--accent);color:#0C0F15;cursor:pointer}
+button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);display:flex;gap:10px;align-items:center;justify-content:center;margin-bottom:14px}
 button:disabled{opacity:.6}
 #msg{min-height:1.4em;font-size:14px;margin:12px 0 0;color:var(--muted)}
 #msg.err{color:var(--loss)}
+.or{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;margin:0 0 14px}.or:before,.or:after{content:"";flex:1;height:1px;background:var(--line)}
 </style>
 </head>
 <body>
@@ -32,10 +34,14 @@ button:disabled{opacity:.6}
   <form class="box" id="f" autocomplete="off">
     <img src="icon-192.png" alt="">
     <h1>Cockpit PEA</h1>
-    <p>Tes données sont chiffrées. Entre ton code pour les ouvrir.</p>
+    <p id="sub">Tes données sont chiffrées. Entre ton code pour les ouvrir.</p>
+    <div id="biobox" hidden>
+      <button type="button" class="ghost" id="bio"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 11v3a8 8 0 0 1-1 4"/><path d="M8.5 7.5A5 5 0 0 1 17 11v1.5"/><path d="M7 11a5 5 0 0 1 .3-1.7"/><path d="M7 14.5c.2 1.6-.1 3-.8 4.3"/><path d="M14.5 13.5c0 2.5-.5 4.6-1.6 6.5"/><path d="M17 15.5c-.1 1.7-.4 3.2-1 4.5"/><path d="M4.5 9A8 8 0 0 1 19.6 8"/><path d="M4 13.5c.1-1 .2-2 .5-2.9"/></svg>Déverrouiller avec l'empreinte</button>
+      <div class="or">ou avec ton code</div>
+    </div>
     <label for="pw" style="position:absolute;left:-9999px">Code</label>
-    <input type="password" id="pw" placeholder="Code" autocomplete="current-password" required>
-    <label class="rm"><input type="checkbox" id="rm" checked> Se souvenir sur ce téléphone</label>
+    <input type="password" id="pw" placeholder="Code" autocomplete="current-password">
+    <label class="rm" id="rmbox"><input type="checkbox" id="rm" checked> Se souvenir sur ce téléphone</label>
     <button id="go">Ouvrir</button>
     <div id="msg" role="status" aria-live="polite"></div>
   </form>
@@ -43,9 +49,9 @@ button:disabled{opacity:.6}
 <script>
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 const $=id=>document.getElementById(id);
-const KEY='cockpit.pw';
-function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
-function put(v){try{v==null?localStorage.removeItem(KEY):localStorage.setItem(KEY,v)}catch(e){}}
+const KEY='cockpit.pw',BIO='cockpit.bio';
+const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
+const b64=a=>btoa(String.fromCharCode(...new Uint8Array(a))),unb64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 async function unlock(pw){
   const res=await fetch('cockpit.enc',{cache:'no-cache'});
   if(!res.ok)throw new Error('net');
@@ -60,13 +66,24 @@ async function unlock(pw){
 function show(html){document.open();document.write(html);document.close()}
 async function attempt(pw,remember){
   $('go').disabled=true;$('msg').className='';$('msg').textContent='Ouverture…';
-  try{const html=await unlock(pw);if(remember)put(pw);show(html)}
+  try{const html=await unlock(pw);if(remember&&!ls.get(BIO))ls.set(KEY,pw);try{sessionStorage.setItem('cockpit.unlockedAt',Date.now())}catch(e){}show(html)}
   catch(e){$('go').disabled=false;
-    if(e.message==='pw'){put(null);$('msg').className='err';$('msg').textContent='Code incorrect.'}
+    if(e.message==='pw'){ls.set(KEY,null);$('msg').className='err';$('msg').textContent='Code incorrect.'}
     else{$('msg').className='err';$('msg').textContent='Impossible de charger le cockpit. Vérifie ta connexion (la première ouverture doit se faire en ligne).'}}
 }
-$('f').addEventListener('submit',e=>{e.preventDefault();attempt($('pw').value.trim(),$('rm').checked)});
-const saved=get();if(saved)attempt(saved,true);
+// Empreinte (WebAuthn) : avec l'extension PRF, la clé qui protège ton code ne sort jamais du capteur.
+async function bioUnlock(){const bio=JSON.parse(ls.get(BIO)||'null');if(!bio)return;
+  $('msg').className='';$('msg').textContent='Pose ton doigt sur le capteur…';
+  try{const a=await navigator.credentials.get({publicKey:{challenge:crypto.getRandomValues(new Uint8Array(32)),rpId:location.hostname,allowCredentials:[{type:'public-key',id:unb64(bio.id)}],userVerification:'required',timeout:60000,extensions:bio.mode==='prf'?{prf:{eval:{first:unb64(bio.salt)}}}:{}}});
+    let pw;if(bio.mode==='prf'){const r=a.getClientExtensionResults();const out=r&&r.prf&&r.prf.results&&r.prf.results.first;if(!out)throw new Error('prf');
+      const k=await crypto.subtle.importKey('raw',out,{name:'AES-GCM'},false,['decrypt']);pw=new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:unb64(bio.iv)},k,unb64(bio.ct)))}
+    else pw=ls.get(KEY);
+    if(!pw)throw new Error('nopw');await attempt(pw,false)}
+  catch(e){$('msg').className='err';$('msg').textContent=e&&e.name==='NotAllowedError'?'Empreinte annulée. Réessaie ou entre ton code.':'Empreinte non reconnue. Entre ton code.'}}
+$('f').addEventListener('submit',e=>{e.preventDefault();const v=$('pw').value.trim();if(v)attempt(v,$('rm').checked)});
+$('bio').addEventListener('click',bioUnlock);
+if(ls.get(BIO)){ $('biobox').hidden=false;$('rmbox').hidden=true;$('sub').textContent='Tes données sont chiffrées et protégées par ton empreinte.';bioUnlock() }
+else{const saved=ls.get(KEY);if(saved)attempt(saved,true)}
 </script>
 </body>
 </html>

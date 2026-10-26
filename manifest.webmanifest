@@ -1,4 +1,5 @@
 {
+  "id": "./",
   "name": "Cockpit PEA",
   "short_name": "Cockpit",
   "description": "Mon tableau de bord PEA, épargne et plan patrimonial",
@@ -9,9 +10,96 @@
   "orientation": "portrait",
   "background_color": "#0C0F15",
   "theme_color": "#0C0F15",
+  "categories": [
+    "finance"
+  ],
   "icons": [
-    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
-  ]
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Prochain achat",
+      "short_name": "Achat",
+      "url": "./#achat",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Budget & envies",
+      "short_name": "Budget",
+      "url": "./#budget",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mettre à jour",
+      "short_name": "Mise à jour",
+      "url": "./#maj",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Performance",
+      "short_name": "Perf",
+      "url": "./#performance",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "./share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "files": [
+        {
+          "name": "files",
+          "accept": [
+            "application/pdf",
+            ".pdf",
+            "image/*",
+            "text/csv",
+            ".csv",
+            "application/json",
+            ".json"
+          ]
+        }
+      ]
+    }
+  }
 }
