@@ -23,6 +23,11 @@ jobs:
           $p = Start-Process -FilePath $exe -ArgumentList "--selftest","windows/test/vector.json","selftest.txt" -Wait -PassThru
           Get-Content selftest.txt | ForEach-Object { Write-Output "::notice::$_" }
           if ($p.ExitCode -ne 0) { Write-Output "::error::autotest code $($p.ExitCode)"; exit 1 }
+      - name: Capture du widget
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath "windows/CockpitWidget/bin/Release/net48/CockpitWidget.exe" -ArgumentList "--render","windows/test/vector.json","windows/preview" -Wait -PassThru
+          Get-ChildItem windows/preview | ForEach-Object { Write-Output "::notice::capture $($_.Name) $($_.Length)" }
       - name: Publication
         shell: pwsh
         run: |
@@ -31,7 +36,7 @@ jobs:
           "{""version"": $n}" | Out-File -Encoding utf8 widget-version.json
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add CockpitWidget.exe widget-version.json
+          git add CockpitWidget.exe widget-version.json windows/preview
           git commit -m "Widget Windows v$n"
           git pull --rebase origin main
           git push origin HEAD:main

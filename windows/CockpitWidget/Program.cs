@@ -346,7 +346,7 @@ namespace CockpitWidget
         WF.NotifyIcon tray;
         bool busy;
 
-        public Widget(Config c)
+        public Widget(Config c, Model preview = null)
         {
             cfg = c;
             Title = "Cockpit PEA";
@@ -366,6 +366,7 @@ namespace CockpitWidget
             ContextMenu = BuildMenu();
             if (!double.IsNaN(cfg.Left) && !double.IsNaN(cfg.Top) && OnScreen(cfg.Left, cfg.Top)) { Left = cfg.Left; Top = cfg.Top; }
             else { WindowStartupLocation = WindowStartupLocation.Manual; Left = SystemParameters.WorkArea.Right - Width - 24; Top = SystemParameters.WorkArea.Top + 24; }
+            if (preview != null) { model = preview; Render(); return; }
             LoadCache();
             Render();
             timer.Tick += async (s, e) => await Refresh(false);
@@ -675,6 +676,7 @@ namespace CockpitWidget
         static int Main(string[] args)
         {
             if (args.Length >= 3 && args[0] == "--selftest") return SelfTest(args[1], args[2]);
+            if (args.Length >= 3 && args[0] == "--render") return RenderPreview(args[1], args[2]);
             bool created;
             using (var mutex = new Mutex(true, "CockpitPEA.Widget", out created))
             {
@@ -692,6 +694,35 @@ namespace CockpitWidget
                 app.Run();
             }
             return 0;
+        }
+
+        // Capture du widget (petit et grand) pour vérifier le rendu pendant la compilation.
+        static int RenderPreview(string input, string outDir)
+        {
+            try
+            {
+                var app = new Application { ShutdownMode = ShutdownMode.OnExplicitShutdown };
+                var v = J.Parse(File.ReadAllText(input));
+                var plain = Crypto.Decrypt(J.Str(v, "salt"), J.Str(v, "iv"), J.Str(v, "ct"), J.Str(v, "code"));
+                var snap = J.Parse(plain) as Dictionary<string, object>; snap["__dev"] = "Appli Android"; snap["__at"] = DateTime.UtcNow.ToString("o");
+                var model = Data.Build(snap, J.Get(v, "raw"), "Les marchés montent avant une semaine chargée en banques centrales");
+                Directory.CreateDirectory(outDir);
+                foreach (var large in new[] { true, false })
+                    foreach (var per in new[] { 1, 3 })
+                    {
+                        if (!large && per == 3) continue;
+                        var w = new Widget(new Config { Large = large, Period = per }, model) { Left = -5000, Top = -5000, ShowActivated = false };
+                        w.Show(); w.UpdateLayout();
+                        var el = (FrameworkElement)w.Content;
+                        var rtb = new System.Windows.Media.Imaging.RenderTargetBitmap((int)Math.Ceiling(el.ActualWidth * 2), (int)Math.Ceiling(el.ActualHeight * 2), 192, 192, PixelFormats.Pbgra32);
+                        rtb.Render(el);
+                        var enc = new System.Windows.Media.Imaging.PngBitmapEncoder(); enc.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(rtb));
+                        using (var fs = File.Create(System.IO.Path.Combine(outDir, (large ? "grand" : "petit") + "-" + per + ".png"))) enc.Save(fs);
+                        w.Close();
+                    }
+                return 0;
+            }
+            catch (Exception ex) { File.WriteAllText(System.IO.Path.Combine(outDir, "erreur.txt"), ex.ToString()); return 1; }
         }
 
         // Autotest utilisé par la compilation : déchiffre un paquet produit par le Cockpit et calcule le modèle.
