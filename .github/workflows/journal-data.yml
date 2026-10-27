@@ -1,0 +1,20 @@
+name: Journal (marchés et actus)
+on:
+  schedule:
+    - cron: '*/30 5-21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: journal-data
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: python3 tools/journal_data.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add journal/raw.json
+          git commit -qm "Journal : marchés et actus" || exit 0
+          git pull -q --rebase origin main && git push -q origin HEAD:main
