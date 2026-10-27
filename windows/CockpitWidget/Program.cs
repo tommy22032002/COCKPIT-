@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
@@ -33,6 +34,7 @@ namespace CockpitWidget
         public string Code = "";
         public double Left = double.NaN, Top = double.NaN;
         public bool Large = true, Topmost = false, Hidden = false;
+        public double Width = 340;
         public int Period = 1;
 
         static string Dir => System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "CockpitWidget");
@@ -59,6 +61,7 @@ namespace CockpitWidget
                 c.Left = J.Num(d, "left", double.NaN);
                 c.Top = J.Num(d, "top", double.NaN);
                 c.Large = J.Bool(d, "large", true);
+                c.Width = J.Num(d, "width", c.Large ? 340 : 230);
                 c.Topmost = J.Bool(d, "topmost", false);
                 c.Hidden = J.Bool(d, "hidden", false);
                 c.Period = (int)J.Num(d, "period", 1);
@@ -76,7 +79,7 @@ namespace CockpitWidget
                 {
                     ["token"] = Protect(Token), ["code"] = Protect(Code),
                     ["left"] = double.IsNaN(Left) ? (object)null : Left, ["top"] = double.IsNaN(Top) ? (object)null : Top,
-                    ["large"] = Large, ["topmost"] = Topmost, ["hidden"] = Hidden, ["period"] = Period
+                    ["large"] = Large, ["width"] = Width, ["topmost"] = Topmost, ["hidden"] = Hidden, ["period"] = Period
                 };
                 File.WriteAllText(FilePath, new JavaScriptSerializer().Serialize(d));
             }
@@ -220,6 +223,9 @@ namespace CockpitWidget
         public List<Tuple<DateTime, double, double>> Hist = new List<Tuple<DateTime, double, double>>();
         public double ApCur, ApTgt, MsCur, MsTgt;
         public string Next = "", Alert = "", Brief = "", From = "";
+        public List<Tuple<string, double, double, string>> Markets = new List<Tuple<string, double, double, string>>();
+        public List<Tuple<DateTime, string, string, int>> Agenda = new List<Tuple<DateTime, string, string, int>>();
+        public List<Tuple<string, string, string>> News = new List<Tuple<string, string, string>>();
         public DateTime SyncAt, PriceAt;
     }
 
@@ -275,17 +281,13 @@ namespace CockpitWidget
         {
             try { return J.Parse(await Http.GetStringAsync(Base + "journal/raw.json?t=" + DateTime.UtcNow.Ticks).ConfigureAwait(false)); } catch { return null; }
         }
-        public static async Task<string> LoadBriefTitle()
+        public static async Task<object> LoadBrief()
         {
-            try
-            {
-                var b = J.Parse(await Http.GetStringAsync(Base + "journal/brief.json?t=" + DateTime.UtcNow.Ticks).ConfigureAwait(false));
-                return J.Str(b, "title");
-            }
-            catch { return ""; }
+            try { return J.Parse(await Http.GetStringAsync(Base + "journal/brief.json?t=" + DateTime.UtcNow.Ticks).ConfigureAwait(false)); }
+            catch { return null; }
         }
 
-        public static Model Build(object snap, object raw, string brief)
+        public static Model Build(object snap, object raw, object brief)
         {
             var m = new Model();
             var mini = J.Get(snap, "_mini");
@@ -294,7 +296,7 @@ namespace CockpitWidget
             m.Verse = J.Num(mini, "verse"); m.Cash = J.Num(mini, "cash");
             m.ApCur = J.Num(mini, "apCur"); m.ApTgt = Math.Max(1, J.Num(mini, "apTgt", 50000));
             m.MsCur = J.Num(mini, "msCur"); m.MsTgt = Math.Max(1, J.Num(mini, "msTgt", 100000));
-            m.Next = J.Str(mini, "next"); m.Alert = J.Str(mini, "alert"); m.Brief = brief ?? "";
+            m.Next = J.Str(mini, "next"); m.Alert = J.Str(mini, "alert"); m.Brief = brief is string bs ? bs : J.Str(brief, "title");
             m.From = J.Str(snap, "__dev");
             DateTime.TryParse(J.Str(snap, "__at"), CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal, out m.SyncAt);
             var q = J.Get(raw, "q");
@@ -321,6 +323,22 @@ namespace CockpitWidget
                     m.Hist.Add(Tuple.Create(d, J.D(a[1]), J.D(a[2])));
             }
             var today = DateTime.Today;
+            // marchés mondiaux, agenda et actus (collecte GitHub toutes les 30 min + point du jour)
+            var mk = new[] { new[] { "^FCHI", "CAC 40", "" }, new[] { "^STOXX", "Stoxx 600", "" }, new[] { "^GSPC", "S&P 500", "" }, new[] { "^IXIC", "Nasdaq", "" },
+                new[] { "^N225", "Nikkei", "" }, new[] { "EURUSD=X", "Euro / dollar", "fx" }, new[] { "^VIX", "Peur (VIX)", "vix" }, new[] { "BTC-EUR", "Bitcoin", "€" } };
+            foreach (var x in mk)
+            {
+                var qq = J.Get(q, x[0]); if (qq == null || J.Num(qq, "p") <= 0) continue;
+                double pv = J.Num(qq, "p"), pr = J.Num(qq, "prev");
+                m.Markets.Add(Tuple.Create(x[1], pv, pr > 0 ? pv / pr - 1 : 0, x[2]));
+            }
+            foreach (var a in J.Arr(brief, "agenda"))
+            {
+                if (!DateTime.TryParseExact(J.Str(a, "d"), "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var ad) || ad < today) continue;
+                m.Agenda.Add(Tuple.Create(ad, J.Str(a, "h"), J.Str(a, "t"), (int)J.Num(a, "level")));
+            }
+            m.Agenda.Sort((x, y) => string.CompareOrdinal(x.Item1.ToString("yyyyMMdd") + x.Item2, y.Item1.ToString("yyyyMMdd") + y.Item2));
+            foreach (var n in J.Arr(J.Get(raw, "news"), "tout").Take(6)) m.News.Add(Tuple.Create(J.Str(n, "t"), J.Str(n, "s"), J.Str(n, "u")));
             m.Hist.RemoveAll(t => t.Item1 >= today);
             m.Hist.Add(Tuple.Create(today, m.Value, m.Verse));
             return m;
@@ -353,13 +371,29 @@ namespace CockpitWidget
             WindowStyle = WindowStyle.None; AllowsTransparency = true; Background = Brushes.Transparent;
             ResizeMode = ResizeMode.NoResize; ShowInTaskbar = false; SizeToContent = SizeToContent.Height;
             Topmost = cfg.Topmost;
-            Width = cfg.Large ? 340 : 230;
+            Width = Clamp(cfg.Width);
             card.CornerRadius = new CornerRadius(18);
             card.Background = new SolidColorBrush(Color.FromArgb(0xEE, 0x14, 0x19, 0x22));
             card.BorderBrush = new SolidColorBrush(Color.FromArgb(0x30, 0xFF, 0xFF, 0xFF)); card.BorderThickness = new Thickness(1);
             card.Padding = new Thickness(16, 14, 16, 14);
             card.Effect = new System.Windows.Media.Effects.DropShadowEffect { BlurRadius = 18, ShadowDepth = 3, Opacity = .35 };
-            card.Child = root; Content = new Border { Padding = new Thickness(10), Child = card };
+            var layer = new Grid(); layer.Children.Add(root);
+            var grip = new Border { Width = 18, Height = 18, Background = Brushes.Transparent, Cursor = Cursors.SizeNWSE, HorizontalAlignment = HorizontalAlignment.Right, VerticalAlignment = VerticalAlignment.Bottom, Margin = new Thickness(0, 0, -12, -10), ToolTip = "Glisse pour agrandir ou réduire" };
+            var tri = new Polygon { Fill = new SolidColorBrush(Color.FromArgb(0x70, 0x8B, 0x95, 0xA7)), Points = new PointCollection { new Point(16, 4), new Point(16, 16), new Point(4, 16) } };
+            grip.Child = tri; layer.Children.Add(grip);
+            double startX = 0, startW = 0; int lastTier = -1;
+            grip.MouseLeftButtonDown += (s, e) => { e.Handled = true; startX = PointToScreen(e.GetPosition(this)).X; startW = Width; lastTier = Tier; grip.CaptureMouse(); };
+            grip.MouseMove += (s, e) =>
+            {
+                if (!grip.IsMouseCaptured) return;
+                var x = PointToScreen(e.GetPosition(this)).X;
+                var src = PresentationSource.FromVisual(this); double scale = src?.CompositionTarget != null ? src.CompositionTarget.TransformToDevice.M11 : 1;
+                Width = Clamp(startW + (x - startX) / scale); cfg.Width = Width;
+                Render();
+            };
+            grip.MouseLeftButtonUp += (s, e) => { if (grip.IsMouseCaptured) { grip.ReleaseMouseCapture(); cfg.Save(); } };
+            PreviewMouseWheel += (s, e) => { if (Keyboard.Modifiers == ModifierKeys.Control) { e.Handled = true; Width = Clamp(Width + (e.Delta > 0 ? 30 : -30)); cfg.Width = Width; cfg.Save(); Render(); } };
+            card.Child = layer; Content = new Border { Padding = new Thickness(10), Child = card };
             MouseLeftButtonDown += (s, e) => { if (e.ButtonState == MouseButtonState.Pressed && !Clickable(e.OriginalSource as DependencyObject)) try { DragMove(); } catch { } };
             LocationChanged += (s, e) => { cfg.Left = Left; cfg.Top = Top; };
             Deactivated += (s, e) => cfg.Save();
@@ -384,7 +418,9 @@ namespace CockpitWidget
             }
             return false;
         }
-        double CW => cfg.Large ? 286 : 176;
+        double CW => Width - 54;
+        static double Clamp(double w) => Math.Max(220, Math.Min(820, double.IsNaN(w) ? 340 : w));
+        int Tier => Width < 280 ? 0 : Width < 470 ? 1 : 2;
 
         static bool OnScreen(double l, double t) => l > SystemParameters.VirtualScreenLeft - 50 && t > SystemParameters.VirtualScreenTop - 50 &&
             l < SystemParameters.VirtualScreenLeft + SystemParameters.VirtualScreenWidth - 80 && t < SystemParameters.VirtualScreenTop + SystemParameters.VirtualScreenHeight - 60;
@@ -399,7 +435,9 @@ namespace CockpitWidget
                 cm.Items.Add(Item("Actualiser", async () => await Refresh(true)));
                 cm.Items.Add(Item("Ouvrir le Cockpit", () => Open("executif")));
                 cm.Items.Add(new Separator());
-                cm.Items.Add(Item(cfg.Large ? "Format petit" : "Format grand", ToggleSize));
+                cm.Items.Add(Item((Tier == 0 ? "✓ " : "") + "Taille : petit", () => SetW(230)));
+                cm.Items.Add(Item((Tier == 1 ? "✓ " : "") + "Taille : moyen", () => SetW(340)));
+                cm.Items.Add(Item((Tier == 2 ? "✓ " : "") + "Taille : grand", () => SetW(640)));
                 cm.Items.Add(Item((cfg.Topmost ? "✓ " : "") + "Toujours au premier plan", ToggleTop));
                 cm.Items.Add(Item((Config.StartupEnabled ? "✓ " : "") + "Lancer au démarrage de Windows", () => Config.StartupEnabled = !Config.StartupEnabled));
                 cm.Items.Add(Item("Masquer (icône près de l'horloge)", HideWidget));
@@ -426,7 +464,7 @@ namespace CockpitWidget
         }
         void HideWidget() { cfg.Hidden = true; cfg.Save(); Hide(); try { tray.ShowBalloonTip(2500, "Cockpit PEA", "Le widget est caché. Clique sur l'icône près de l'horloge pour le réafficher.", WF.ToolTipIcon.None); } catch { } }
         void ShowWidget() { cfg.Hidden = false; cfg.Save(); Show(); Activate(); }
-        void ToggleSize() { cfg.Large = !cfg.Large; Width = cfg.Large ? 340 : 230; cfg.Save(); Render(); }
+        void SetW(double w) { Width = Clamp(w); cfg.Width = Width; cfg.Save(); Render(); }
         void ToggleTop() { cfg.Topmost = !cfg.Topmost; Topmost = cfg.Topmost; cfg.Save(); }
         void Quit() { cfg.Save(); try { tray.Visible = false; tray.Dispose(); } catch { } Application.Current.Shutdown(); }
         static void Open(string hash) { try { Process.Start(new ProcessStartInfo("https://tommy22032002.github.io/COCKPIT-/#" + hash) { UseShellExecute = true }); } catch { } }
@@ -444,11 +482,11 @@ namespace CockpitWidget
             {
                 if (!File.Exists(Config.CachePath)) return;
                 var d = J.Parse(File.ReadAllText(Config.CachePath));
-                model = Data.Build(J.Get(d, "snap"), J.Get(d, "raw"), J.Str(d, "brief"));
+                model = Data.Build(J.Get(d, "snap"), J.Get(d, "raw"), J.Get(d, "brief"));
             }
             catch { }
         }
-        void SaveCache(object snap, object raw, string brief)
+        void SaveCache(object snap, object raw, object brief)
         {
             try { File.WriteAllText(Config.CachePath, new JavaScriptSerializer { MaxJsonLength = int.MaxValue }.Serialize(new Dictionary<string, object> { ["snap"] = snap, ["raw"] = raw, ["brief"] = brief })); } catch { }
         }
@@ -459,7 +497,7 @@ namespace CockpitWidget
             if (manual) { error = "Actualisation…"; Render(); }
             try
             {
-                var snapT = Data.LoadSync(cfg); var rawT = Data.LoadRaw(); var briefT = Data.LoadBriefTitle();
+                var snapT = Data.LoadSync(cfg); var rawT = Data.LoadRaw(); var briefT = Data.LoadBrief();
                 var snap = await snapT; var raw = await rawT; var brief = await briefT;
                 model = Data.Build(snap, raw, brief); error = "";
                 SaveCache(snap, raw, brief);
@@ -495,18 +533,49 @@ namespace CockpitWidget
                 return;
             }
             var m = model; bool p = m.Privacy;
-            var val = T(p ? "•••• €" : Eur(m.Value), cfg.Large ? 30 : 24, Ink, FontWeights.SemiBold, new Thickness(0, 2, 0, 0));
+            var val = T(p ? "•••• €" : Eur(m.Value), Tier == 0 ? 24 : 30, Ink, FontWeights.SemiBold, new Thickness(0, 2, 0, 0));
             val.Cursor = Cursors.Hand; val.ToolTip = "Ouvrir le portefeuille"; val.MouseLeftButtonUp += (s, e) => Open("portefeuille");
             root.Children.Add(val);
-            root.Children.Add(T((p ? "••" : SEur(m.DayAbs)) + "   " + SPct(m.DayPct) + (cfg.Large ? "  aujourd'hui" : ""), 13, m.DayAbs >= 0 ? Gain : Loss));
+            root.Children.Add(T((p ? "••" : SEur(m.DayAbs)) + "   " + SPct(m.DayPct) + (Tier > 0 ? "  aujourd'hui" : ""), 13, m.DayAbs >= 0 ? Gain : Loss));
             var sub = new DockPanel { Margin = new Thickness(0, 2, 0, 0) };
             var at = T("màj " + m.PriceAt.ToString("HH:mm", FR), 10.5, Faint); DockPanel.SetDock(at, Dock.Right); sub.Children.Add(at);
             sub.Children.Add(T("Gain total " + (p ? "••" : SEur(m.Gain)), 11.5, Muted));
             root.Children.Add(sub);
             if (!string.IsNullOrEmpty(error)) root.Children.Add(T(error, 11, SoftLoss, null, new Thickness(0, 4, 0, 0)));
-            if (!cfg.Large) return;
+            if (Tier == 0) return;
+            if (Tier == 1)
+            {
+                AddChart(root, m, CW, 92);
+                AddAllocation(root, m, CW);
+                AddGoals(root, m, CW);
+                AddBrief(root, m, 0);
+            }
+            else
+            {
+                double gap = 22, colW = (CW - gap) / 2;
+                var cols = new Grid { Margin = new Thickness(0, 4, 0, 0) };
+                cols.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(colW) });
+                cols.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(gap) });
+                cols.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(colW) });
+                var L = new StackPanel(); var Rr = new StackPanel(); Grid.SetColumn(L, 0); Grid.SetColumn(Rr, 2);
+                cols.Children.Add(L); cols.Children.Add(Rr);
+                AddChart(L, m, colW, Math.Max(110, Math.Min(200, colW * .5)));
+                AddGoals(L, m, colW);
+                AddMarkets(L, m, colW);
+                AddAllocation(Rr, m, colW);
+                AddLines(Rr, m, colW);
+                AddBrief(Rr, m, 4);
+                root.Children.Add(cols);
+                AddNews(root, m, CW);
+            }
+            if (!string.IsNullOrEmpty(m.From)) root.Children.Add(T("Synchro : " + m.From + " · " + m.SyncAt.ToLocalTime().ToString("dd/MM HH:mm", FR) + "   ·   glisse le coin ◢ pour agrandir", 9.5, Faint, null, new Thickness(0, 8, 0, 0)));
+        }
 
-            // période + courbe
+        static TextBlock Section(string t) => T(t, 9.5, Faint, FontWeights.SemiBold, new Thickness(0, 14, 0, 4));
+
+        void AddChart(Panel host, Model m, double w, double h)
+        {
+            bool p = m.Privacy;
             var chips = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 12, 0, 4) };
             for (int i = 0; i < 4; i++)
             {
@@ -517,11 +586,13 @@ namespace CockpitWidget
                 b.MouseLeftButtonUp += (s, e) => { cfg.Period = idx; cfg.Save(); Render(); };
                 chips.Children.Add(b);
             }
-            root.Children.Add(chips);
-            root.Children.Add(Spark(m, CW, 92, out double delta, out double dpct));
-            root.Children.Add(T((p ? "••" : SEur(delta)) + "  " + SPct(dpct) + (cfg.Period == 3 ? " depuis le début" : " sur " + Periods[cfg.Period]) + "   ─ valeur  ┄ versé", 11, Muted, null, new Thickness(0, 2, 0, 0)));
+            host.Children.Add(chips);
+            host.Children.Add(Spark(m, w, h, out double delta, out double dpct));
+            host.Children.Add(T((p ? "••" : SEur(delta)) + "  " + SPct(dpct) + (cfg.Period == 3 ? " depuis le début" : " sur " + Periods[cfg.Period]) + "   ─ valeur  ┄ versé", 11, Muted, null, new Thickness(0, 2, 0, 0)));
+        }
 
-            // répartition
+        void AddAllocation(Panel host, Model m, double w)
+        {
             var row = new DockPanel { Margin = new Thickness(0, 12, 0, 0) };
             var donut = Donut(m, 86); DockPanel.SetDock(donut, Dock.Left); row.Children.Add(donut);
             var leg = new StackPanel { Margin = new Thickness(12, 2, 0, 0), VerticalAlignment = VerticalAlignment.Center };
@@ -531,21 +602,97 @@ namespace CockpitWidget
             if (m.Cash > 0.5) leg.Children.Add(LegRow("#5A6474", "Espèces", tot > 0 ? m.Cash / tot : 0));
             row.Children.Add(leg);
             row.Cursor = Cursors.Hand; row.MouseLeftButtonUp += (s, e) => Open("allocation");
-            root.Children.Add(row);
+            host.Children.Add(row);
+        }
 
-            // objectifs
-            root.Children.Add(BarRow("Apport immobilier", (p ? "••" : Eur(m.ApCur)) + " / " + Eur(m.ApTgt), m.ApCur / m.ApTgt, "plan"));
-            root.Children.Add(BarRow("Objectif " + Eur(m.MsTgt), (Math.Min(1, m.MsCur / m.MsTgt) * 100).ToString("0", FR) + " %", m.MsCur / m.MsTgt, "plan"));
-            if (!string.IsNullOrEmpty(m.Next)) { var n = T(m.Next, 12, Accent, FontWeights.SemiBold, new Thickness(0, 10, 0, 0)); n.Cursor = Cursors.Hand; n.MouseLeftButtonUp += (s, e) => Open("achat"); root.Children.Add(n); }
+        void AddGoals(Panel host, Model m, double w)
+        {
+            bool p = m.Privacy;
+            host.Children.Add(BarRow("Apport immobilier", (p ? "••" : Eur(m.ApCur)) + " / " + Eur(m.ApTgt), m.ApCur / m.ApTgt, "plan", w));
+            host.Children.Add(BarRow("Objectif " + Eur(m.MsTgt), (Math.Min(1, m.MsCur / m.MsTgt) * 100).ToString("0", FR) + "\u00a0%", m.MsCur / m.MsTgt, "plan", w));
+            if (!string.IsNullOrEmpty(m.Next)) { var n = T(m.Next, 12, Accent, FontWeights.SemiBold, new Thickness(0, 10, 0, 0)); n.Cursor = Cursors.Hand; n.MouseLeftButtonUp += (s, e) => Open("achat"); host.Children.Add(n); }
+        }
+
+        void AddBrief(Panel host, Model m, int agendaMax)
+        {
             if (!string.IsNullOrEmpty(m.Brief))
             {
-                var bp = new StackPanel { Margin = new Thickness(0, 10, 0, 0), Cursor = Cursors.Hand };
-                bp.Children.Add(T("LE POINT DU JOUR", 9.5, Faint, FontWeights.SemiBold));
-                bp.Children.Add(T(m.Brief, 12, Ink, null, new Thickness(0, 2, 0, 0)));
+                var bp = new StackPanel { Cursor = Cursors.Hand };
+                bp.Children.Add(Section("LE POINT DU JOUR"));
+                bp.Children.Add(T(m.Brief, 12, Ink));
                 bp.MouseLeftButtonUp += (s, e) => Open("journal");
-                root.Children.Add(bp);
+                host.Children.Add(bp);
             }
-            if (!string.IsNullOrEmpty(m.From)) root.Children.Add(T("Synchro : " + m.From + " · " + m.SyncAt.ToLocalTime().ToString("dd/MM HH:mm", FR), 9.5, Faint, null, new Thickness(0, 8, 0, 0)));
+            if (agendaMax > 0 && m.Agenda.Count > 0)
+            {
+                host.Children.Add(Section("AGENDA ÉCO"));
+                foreach (var a in m.Agenda.Take(agendaMax))
+                {
+                    var d = new DockPanel { Margin = new Thickness(0, 2, 0, 2), Cursor = Cursors.Hand };
+                    var when = T((a.Item1 == DateTime.Today ? "Auj." : a.Item1.ToString("dd/MM", FR)), 11, a.Item1 == DateTime.Today ? Accent : Muted, FontWeights.SemiBold);
+                    when.Width = 40; DockPanel.SetDock(when, Dock.Left); d.Children.Add(when);
+                    if (a.Item4 >= 3) { var f = T("●", 9, Loss); f.Margin = new Thickness(4, 2, 0, 0); f.ToolTip = "Impact fort"; DockPanel.SetDock(f, Dock.Right); d.Children.Add(f); }
+                    var t = T(a.Item3, 11.5, Ink); d.Children.Add(t);
+                    d.MouseLeftButtonUp += (s, e) => Open("journal");
+                    host.Children.Add(d);
+                }
+            }
+        }
+
+        void AddLines(Panel host, Model m, double w)
+        {
+            host.Children.Add(Section("TES LIGNES · COURS · JOUR · VALEUR"));
+            int ci = 0;
+            foreach (var l in m.Lines.Where(x => x.Q > 0))
+            {
+                var g = new Grid { Margin = new Thickness(0, 2, 0, 2), Cursor = Cursors.Hand };
+                g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+                g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(58) });
+                g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(58) });
+                g.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(64) });
+                var nm = new StackPanel { Orientation = Orientation.Horizontal };
+                nm.Children.Add(new Ellipse { Width = 7, Height = 7, Fill = B(Pal[ci++ % Pal.Length]), Margin = new Thickness(0, 0, 6, 0), VerticalAlignment = VerticalAlignment.Center });
+                var nt = T(l.N, 11.5, Muted); nt.TextWrapping = TextWrapping.NoWrap; nt.TextTrimming = TextTrimming.CharacterEllipsis; nm.Children.Add(nt);
+                g.Children.Add(nm);
+                double ch = l.Prev > 0 ? l.Px / l.Prev - 1 : 0;
+                var c1 = T(l.Px.ToString(l.Px < 20 ? "0.000" : "0.00", FR), 11.5, Ink); c1.TextAlignment = TextAlignment.Right; Grid.SetColumn(c1, 1); g.Children.Add(c1);
+                var c2 = T(l.Prev > 0 ? SPct(ch) : "—", 11.5, l.Prev <= 0 ? Muted : ch >= 0 ? Gain : Loss); c2.TextAlignment = TextAlignment.Right; Grid.SetColumn(c2, 2); g.Children.Add(c2);
+                var c3 = T(m.Privacy ? "••" : Eur(l.Q * l.Px), 11.5, Ink); c3.TextAlignment = TextAlignment.Right; Grid.SetColumn(c3, 3); g.Children.Add(c3);
+                g.MouseLeftButtonUp += (s, e) => Open("portefeuille");
+                host.Children.Add(g);
+            }
+        }
+
+        void AddMarkets(Panel host, Model m, double w)
+        {
+            if (m.Markets.Count == 0) return;
+            host.Children.Add(Section("MARCHÉS MONDIAUX"));
+            var g = new UniformGrid { Columns = 2 };
+            foreach (var x in m.Markets)
+            {
+                var d = new DockPanel { Margin = new Thickness(0, 2, 10, 2) };
+                bool inv = x.Item4 == "vix";
+                var c = T(SPct(x.Item3), 11, x.Item3 == 0 ? Muted : inv ? (x.Item3 > 0 ? SoftLoss : Muted) : x.Item3 > 0 ? Gain : Loss); DockPanel.SetDock(c, Dock.Right); d.Children.Add(c);
+                var nt = T(x.Item1, 11, Muted); nt.TextWrapping = TextWrapping.NoWrap; nt.TextTrimming = TextTrimming.CharacterEllipsis; d.Children.Add(nt);
+                g.Children.Add(d);
+            }
+            g.Cursor = Cursors.Hand; g.MouseLeftButtonUp += (s, e) => Open("journal");
+            host.Children.Add(g);
+        }
+
+        void AddNews(Panel host, Model m, double w)
+        {
+            if (m.News.Count == 0) return;
+            host.Children.Add(Section("ACTU DES MARCHÉS"));
+            foreach (var n in m.News.Take(Width > 620 ? 5 : 3))
+            {
+                var d = new DockPanel { Margin = new Thickness(0, 2, 0, 3), Cursor = Cursors.Hand, ToolTip = "Ouvrir l'article" };
+                var src = T(n.Item2, 10.5, Faint); src.Margin = new Thickness(10, 1, 0, 0); DockPanel.SetDock(src, Dock.Right); d.Children.Add(src);
+                var t = T(n.Item1, 11.5, Ink); t.TextWrapping = TextWrapping.NoWrap; t.TextTrimming = TextTrimming.CharacterEllipsis; d.Children.Add(t);
+                var url = n.Item3;
+                d.MouseLeftButtonUp += (s, e) => { try { if (url.StartsWith("https://")) Process.Start(new ProcessStartInfo(url) { UseShellExecute = true }); } catch { } };
+                host.Children.Add(d);
+            }
         }
 
         static FrameworkElement LegRow(string color, string name, double share)
@@ -558,7 +705,7 @@ namespace CockpitWidget
             return d;
         }
 
-        FrameworkElement BarRow(string label, string right, double ratio, string hash)
+        FrameworkElement BarRow(string label, string right, double ratio, string hash, double w)
         {
             var sp = new StackPanel { Margin = new Thickness(0, 9, 0, 0), Cursor = Cursors.Hand };
             var d = new DockPanel();
@@ -567,7 +714,7 @@ namespace CockpitWidget
             sp.Children.Add(d);
             var g = new Grid { Height = 6, Margin = new Thickness(0, 4, 0, 0) };
             g.Children.Add(new Border { Background = Track, CornerRadius = new CornerRadius(3) });
-            g.Children.Add(new Border { Background = Accent, CornerRadius = new CornerRadius(3), HorizontalAlignment = HorizontalAlignment.Left, Width = Math.Max(0, Math.Min(1, ratio)) * CW });
+            g.Children.Add(new Border { Background = Accent, CornerRadius = new CornerRadius(3), HorizontalAlignment = HorizontalAlignment.Left, Width = Math.Max(0, Math.Min(1, ratio)) * w });
             sp.Children.Add(g);
             sp.MouseLeftButtonUp += (s, e) => Open(hash);
             return sp;
@@ -705,19 +852,18 @@ namespace CockpitWidget
                 var v = J.Parse(File.ReadAllText(input));
                 var plain = Crypto.Decrypt(J.Str(v, "salt"), J.Str(v, "iv"), J.Str(v, "ct"), J.Str(v, "code"));
                 var snap = J.Parse(plain) as Dictionary<string, object>; snap["__dev"] = "Appli Android"; snap["__at"] = DateTime.UtcNow.ToString("o");
-                var model = Data.Build(snap, J.Get(v, "raw"), "Les marchés montent avant une semaine chargée en banques centrales");
+                var model = Data.Build(snap, J.Get(v, "raw"), J.Get(v, "brief") ?? (object)"Les marchés montent avant une semaine chargée en banques centrales");
                 Directory.CreateDirectory(outDir);
-                foreach (var large in new[] { true, false })
-                    foreach (var per in new[] { 1, 3 })
+                foreach (var size in new[] { 230, 340, 640, 820 })
+                    foreach (var per in new[] { 3 })
                     {
-                        if (!large && per == 3) continue;
-                        var w = new Widget(new Config { Large = large, Period = per }, model) { Left = -5000, Top = -5000, ShowActivated = false };
+                        var w = new Widget(new Config { Width = size, Period = per }, model) { Left = -5000, Top = -5000, ShowActivated = false };
                         w.Show(); w.UpdateLayout();
                         var el = (FrameworkElement)w.Content;
                         var rtb = new System.Windows.Media.Imaging.RenderTargetBitmap((int)Math.Ceiling(el.ActualWidth * 2), (int)Math.Ceiling(el.ActualHeight * 2), 192, 192, PixelFormats.Pbgra32);
                         rtb.Render(el);
                         var enc = new System.Windows.Media.Imaging.PngBitmapEncoder(); enc.Frames.Add(System.Windows.Media.Imaging.BitmapFrame.Create(rtb));
-                        using (var fs = File.Create(System.IO.Path.Combine(outDir, (large ? "grand" : "petit") + "-" + per + ".png"))) enc.Save(fs);
+                        using (var fs = File.Create(System.IO.Path.Combine(outDir, "w" + size + ".png"))) enc.Save(fs);
                         w.Close();
                     }
                 return 0;
