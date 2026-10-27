@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/w_root" android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="14dp" android:background="@drawable/widget_bg">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
-        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
-            android:text="PEA" android:textColor="@color/muted" android:textSize="12sp" android:textStyle="bold"/>
-        <TextView android:id="@+id/w_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="↻" android:textColor="@color/muted" android:textSize="16sp" android:paddingStart="10dp"/>
+    android:orientation="horizontal" android:padding="14dp" android:background="@drawable/widget_bg">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+        android:minWidth="130dp" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="PEA" android:textColor="@color/muted" android:textSize="12sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/w_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="↻" android:textColor="@color/muted" android:textSize="16sp" android:paddingStart="10dp" android:paddingEnd="4dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/w_value" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="—" android:textColor="@color/ink" android:textSize="24sp" android:textStyle="bold" android:maxLines="1"/>
+        <TextView android:id="@+id/w_day" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/gain" android:textSize="13sp" android:maxLines="1"/>
+        <TextView android:id="@+id/w_gain" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/muted" android:textSize="11sp" android:maxLines="1"/>
+        <TextView android:id="@+id/w_at" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="@color/muted" android:textSize="10sp" android:maxLines="1"/>
     </LinearLayout>
-    <TextView android:id="@+id/w_value" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="—" android:textColor="@color/ink" android:textSize="24sp" android:textStyle="bold" android:maxLines="1"/>
-    <TextView android:id="@+id/w_day" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textColor="@color/gain" android:textSize="13sp" android:maxLines="1"/>
-    <TextView android:id="@+id/w_gain" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textColor="@color/muted" android:textSize="11sp" android:maxLines="1"/>
-    <TextView android:id="@+id/w_at" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:textColor="@color/muted" android:textSize="10sp" android:maxLines="1"/>
+    <ImageView android:id="@+id/w_pie" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"
+        android:layout_marginStart="10dp" android:scaleType="fitCenter" android:visibility="gone"
+        android:contentDescription="Répartition du portefeuille"/>
 </LinearLayout>

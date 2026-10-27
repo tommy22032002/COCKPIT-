@@ -4,6 +4,6 @@
     <string name="share_label">Envoyer au Cockpit</string>
     <string name="w_pea_name">Cockpit · PEA</string>
     <string name="w_dash_name">Cockpit · Tableau de bord</string>
-    <string name="w_pea_desc">Valeur du PEA et variation du jour</string>
+    <string name="w_pea_desc">Valeur du PEA et variation du jour. Élargis-le pour voir ta répartition.</string>
     <string name="w_dash_desc">Courbe du PEA, apport, objectif et prochain achat. Agrandis-le jusqu’à tout l’écran.</string>
 </resources>

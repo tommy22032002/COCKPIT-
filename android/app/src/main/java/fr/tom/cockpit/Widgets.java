@@ -99,6 +99,17 @@ final class Widgets {
                 v.setTextColor(R.id.w_day, dayAbs >= 0 ? GAIN : LOSS);
                 v.setTextViewText(R.id.w_gain, "Gain total " + (priv ? "••" : signedEur(gain)));
                 v.setTextViewText(R.id.w_at, ago(d.optString("at", "")));
+                if (!dash) {
+                    int[] area = Pie.area(ctx, m, id);
+                    android.graphics.Bitmap pie = area == null ? null : Pie.draw(ctx, area, d, priv);
+                    if (pie != null) {
+                        v.setImageViewBitmap(R.id.w_pie, pie);
+                        v.setViewVisibility(R.id.w_pie, View.VISIBLE);
+                        v.setOnClickPendingIntent(R.id.w_pie, open(ctx, "allocation", 5));
+                    } else {
+                        v.setViewVisibility(R.id.w_pie, View.GONE);
+                    }
+                }
                 if (dash) {
                     double ap = d.optDouble("apCur", 0), apT = Math.max(1, d.optDouble("apTgt", 50000));
                     v.setTextViewText(R.id.w_ap, (priv ? "••" : eur(ap, false)) + " / " + eur(apT, false));
