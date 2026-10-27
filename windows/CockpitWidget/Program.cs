@@ -498,7 +498,7 @@ namespace CockpitWidget
             var val = T(p ? "•••• €" : Eur(m.Value), cfg.Large ? 30 : 24, Ink, FontWeights.SemiBold, new Thickness(0, 2, 0, 0));
             val.Cursor = Cursors.Hand; val.ToolTip = "Ouvrir le portefeuille"; val.MouseLeftButtonUp += (s, e) => Open("portefeuille");
             root.Children.Add(val);
-            root.Children.Add(T((p ? "••" : SEur(m.DayAbs)) + "   " + SPct(m.DayPct) + "  aujourd'hui", 13, m.DayAbs >= 0 ? Gain : Loss));
+            root.Children.Add(T((p ? "••" : SEur(m.DayAbs)) + "   " + SPct(m.DayPct) + (cfg.Large ? "  aujourd'hui" : ""), 13, m.DayAbs >= 0 ? Gain : Loss));
             var sub = new DockPanel { Margin = new Thickness(0, 2, 0, 0) };
             var at = T("màj " + m.PriceAt.ToString("HH:mm", FR), 10.5, Faint); DockPanel.SetDock(at, Dock.Right); sub.Children.Add(at);
             sub.Children.Add(T("Gain total " + (p ? "••" : SEur(m.Gain)), 11.5, Muted));
@@ -545,7 +545,7 @@ namespace CockpitWidget
                 bp.MouseLeftButtonUp += (s, e) => Open("journal");
                 root.Children.Add(bp);
             }
-            if (!string.IsNullOrEmpty(m.From)) root.Children.Add(T("Données de " + m.From + " · " + m.SyncAt.ToLocalTime().ToString("dd/MM HH:mm", FR), 9.5, Faint, null, new Thickness(0, 8, 0, 0)));
+            if (!string.IsNullOrEmpty(m.From)) root.Children.Add(T("Synchro : " + m.From + " · " + m.SyncAt.ToLocalTime().ToString("dd/MM HH:mm", FR), 9.5, Faint, null, new Thickness(0, 8, 0, 0)));
         }
 
         static FrameworkElement LegRow(string color, string name, double share)
