@@ -26,7 +26,7 @@ import java.util.Locale;
 final class Chart {
     private Chart() {}
 
-    static final String[] PERIODS = {"1 mois", "3 mois", "1 an", "depuis le début"};
+    static final String[] PERIODS = {"sur 1 mois", "sur 3 mois", "sur 1 an", "depuis le début"};
     static final int[] DAYS = {31, 92, 366, 100000};
 
     static final class Result {
@@ -86,7 +86,7 @@ final class Chart {
             double lo = Double.MAX_VALUE, hi = -Double.MAX_VALUE;
             for (double[] p : pts) { lo = Math.min(lo, Math.min(p[0], p[1])); hi = Math.max(hi, Math.max(p[0], p[1])); }
             double pad = Math.max((hi - lo) * 0.08, hi * 0.002 + 1);
-            lo -= pad; hi += pad;
+            lo = Math.max(0, lo - pad); hi += pad;
 
             float labelW = priv ? 0 : 44 * scale;
             float top = 4 * scale, bottom = H - 16 * scale, left = 2 * scale, right = W - labelW;
@@ -167,7 +167,7 @@ final class Chart {
             r.delta = delta;
             double base = first + Math.max(0, flows);
             String pct = base > 0 ? "  " + Widgets.pct(delta / base) : "";
-            r.label = (priv ? "••" : Widgets.signedEur(delta)) + pct + " sur " + PERIODS[per] + "   ─ valeur  ┄ versé";
+            r.label = (priv ? "••" : Widgets.signedEur(delta)) + pct + " " + PERIODS[per] + "   ─ valeur  ┄ versé";
             return r;
         } catch (Exception e) {
             return null;
