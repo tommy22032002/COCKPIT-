@@ -1,0 +1,17 @@
+name: Test sources
+on: workflow_dispatch
+jobs:
+  t:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          for s in '^FCHI' '^GSPC' '^IXIC' '^STOXX' '^N225' 'EEM' 'EURUSD=X' 'GC=F' 'BZ=F' 'BTC-EUR' '^VIX' '^TNX'; do
+            e=$(python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$s")
+            r=$(curl -s -A "Mozilla/5.0" "https://query1.finance.yahoo.com/v8/finance/chart/$e?range=5d&interval=1d" | jq -c '.chart.result[0].meta|{p:.regularMarketPrice,c:.currency,n:.shortName}' 2>&1 | head -c 150)
+            echo "$s $r" >> out.txt
+          done
+          for u in "https://news.google.com/rss/search?q=bourse%20march%C3%A9s%20when:1d&hl=fr&gl=FR&ceid=FR:fr" "https://syndication.lesechos.fr/rss/rss_finance-marches.xml" "https://www.boursorama.com/rss/actualites/marches.xml" "https://bfmbusiness.bfmtv.com/rss/bourse/"; do
+            c=$(curl -s -A "Mozilla/5.0" -o f.xml -w "%{http_code}" "$u"); n=$(grep -o "<item" f.xml | wc -l); t=$(grep -o "<title>[^<]*" f.xml | sed -n 3p | head -c 90)
+            echo "RSS $c items=$n $t | $u" >> out.txt
+          done
+          i=0; while read l; do i=$((i+1)); echo "::notice title=L$i::$l"; done < out.txt
