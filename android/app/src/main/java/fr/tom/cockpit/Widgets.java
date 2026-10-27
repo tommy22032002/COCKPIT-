@@ -201,6 +201,15 @@ final class Widgets {
                         prev = quote.optDouble("prev", 0);
                     }
                 }
+                double hi = l.optDouble("hi", 0);
+                if (hi > 0 && px > 0 && px / hi - 1 <= -0.10) {
+                    String okey = "opp-" + l.optString("k") + "-" + day.substring(0, 7);
+                    if (!Prefs.sp(ctx).getBoolean(okey, false)) {
+                        Prefs.sp(ctx).edit().putBoolean(okey, true).apply();
+                        Reminders.show(ctx, okey, "Opportunité : " + l.optString("n") + " " + pct(px / hi - 1) + " sous son plus haut",
+                                "Ton DCA l'achète en ce moment bien moins cher. Ne change rien à ton plan et ne vends pas : c'est là que le DCA fait la différence.", "achat");
+                    }
+                }
                 posValue += q * px;
                 if (prev > 0) { dayAbs += q * (px - prev); base += q * prev; }
             }
