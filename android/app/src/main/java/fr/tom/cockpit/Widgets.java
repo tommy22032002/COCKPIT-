@@ -110,16 +110,6 @@ final class Widgets {
                         v.setViewVisibility(R.id.w_pie, View.GONE);
                     }
                 }
-                if (!dash) {
-                    android.graphics.Bitmap pie = Chart.pie(ctx, m, id, d.optJSONArray("lines"), d.optDouble("cash", 0));
-                    if (pie != null) {
-                        v.setImageViewBitmap(R.id.w_pie, pie);
-                        v.setViewVisibility(R.id.w_pie, View.VISIBLE);
-                        v.setOnClickPendingIntent(R.id.w_pie, open(ctx, "allocation", 6));
-                    } else {
-                        v.setViewVisibility(R.id.w_pie, View.GONE);
-                    }
-                }
                 if (dash) {
                     double ap = d.optDouble("apCur", 0), apT = Math.max(1, d.optDouble("apTgt", 50000));
                     v.setTextViewText(R.id.w_ap, (priv ? "••" : eur(ap, false)) + " / " + eur(apT, false));
