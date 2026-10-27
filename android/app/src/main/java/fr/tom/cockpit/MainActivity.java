@@ -316,6 +316,11 @@ public class MainActivity extends Activity {
     private class Bridge {
         @JavascriptInterface public boolean isNative() { return true; }
 
+        /** Cours en direct (Yahoo Finance) : appelé par le cockpit, hors du fil principal. */
+        @JavascriptInterface public String quotes(String symsJson) {
+            try { return Quotes.fetchAll(new org.json.JSONArray(symsJson)).toString(); } catch (Exception e) { return "{}"; }
+        }
+
         @JavascriptInterface public String version() { return BuildConfig.VERSION_NAME; }
 
         @JavascriptInterface public void updateWidget(String json) {

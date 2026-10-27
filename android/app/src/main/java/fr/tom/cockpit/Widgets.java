@@ -172,15 +172,17 @@ final class Widgets {
             JSONObject d = new JSONObject(s);
             String key = d.optString("key", "");
             JSONArray lines = d.optJSONArray("lines");
-            if (key.isEmpty() || lines == null || lines.length() == 0) return;
+            if (lines == null || lines.length() == 0) return;
 
+            // Yahoo Finance : sans quota, donc toutes les 20 min pendant la Bourse (9 h – 17 h 45), sinon toutes les 3 h
             long now = System.currentTimeMillis();
-            if (!force && now - Prefs.lastFetch(ctx) < 3L * 3600_000L) return;
             Calendar paris = Calendar.getInstance(TimeZone.getTimeZone("Europe/Paris"));
             int dow = paris.get(Calendar.DAY_OF_WEEK);
-            if (!force && (dow == Calendar.SATURDAY || dow == Calendar.SUNDAY) && now - Prefs.lastFetch(ctx) < 24L * 3600_000L) return;
+            int hm = paris.get(Calendar.HOUR_OF_DAY) * 60 + paris.get(Calendar.MINUTE);
+            boolean open = dow != Calendar.SATURDAY && dow != Calendar.SUNDAY && hm >= 9 * 60 && hm <= 17 * 60 + 45;
+            long gap = open ? 20L * 60_000L : 3L * 3600_000L;
+            if (!force && now - Prefs.lastFetch(ctx) < gap) return;
             String day = new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date());
-            if (Prefs.quota(ctx, day) + lines.length() > 24) return;
 
             double posValue = 0, dayAbs = 0, base = 0;
             int calls = 0;
@@ -190,8 +192,8 @@ final class Widgets {
                 double q = l.optDouble("q", 0), px = l.optDouble("px", 0), prev = 0;
                 String sym = l.optString("s", "");
                 if (!sym.isEmpty()) {
-                    calls++;
-                    JSONObject quote = fetchQuote(sym, key);
+                    JSONObject quote = Quotes.fetch(Quotes.yahoo(sym));
+                    if (quote == null && !key.isEmpty() && Prefs.quota(ctx, day) + calls < 24) { calls++; quote = fetchQuote(sym, key); }
                     if (quote != null) {
                         double p = quote.optDouble("p", 0);
                         if (p > 0) { px = p; anyOk = true; l.put("px", p); }

@@ -3,5 +3,5 @@
     android:minWidth="110dp" android:maxResizeWidth="600dp" android:minHeight="80dp"
     android:targetCellWidth="2" android:targetCellHeight="1"
     android:resizeMode="horizontal|vertical" android:widgetCategory="home_screen"
-    android:updatePeriodMillis="3600000" android:initialLayout="@layout/widget_pea"
+    android:updatePeriodMillis="1800000" android:initialLayout="@layout/widget_pea"
     android:description="@string/w_pea_desc"/>
