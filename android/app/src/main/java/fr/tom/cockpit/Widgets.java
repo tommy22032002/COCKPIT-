@@ -66,6 +66,14 @@ final class Widgets {
         return PendingIntent.getBroadcast(ctx, 900, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     }
 
+    static PendingIntent period(Context ctx, int widgetId, int per) {
+        Intent i = new Intent(ctx, DashWidget.class);
+        i.setAction(DashWidget.ACTION_PERIOD);
+        i.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, widgetId);
+        i.putExtra("per", per);
+        return PendingIntent.getBroadcast(ctx, 1000 + widgetId * 4 + per, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+    }
+
     static void render(Context ctx, AppWidgetManager m, int[] ids, boolean dash) {
         JSONObject d = null;
         try {
@@ -92,23 +100,35 @@ final class Widgets {
                 v.setTextViewText(R.id.w_gain, "Gain total " + (priv ? "••" : signedEur(gain)));
                 v.setTextViewText(R.id.w_at, ago(d.optString("at", "")));
                 if (dash) {
-                    boolean envOn = d.optBoolean("envOn", false);
-                    double env = d.optDouble("envSpent", 0), cap = Math.max(1, d.optDouble("envCap", 150));
-                    v.setTextViewText(R.id.w_env, envOn ? (priv ? "••" : eur(env, false)) + " / " + eur(cap, false) : "à importer");
-                    v.setTextColor(R.id.w_env, env > cap ? LOSS : INK);
-                    v.setProgressBar(R.id.w_env_bar, 100, envOn ? (int) Math.min(100, env / cap * 100) : 0, false);
                     double ap = d.optDouble("apCur", 0), apT = Math.max(1, d.optDouble("apTgt", 50000));
                     v.setTextViewText(R.id.w_ap, (priv ? "••" : eur(ap, false)) + " / " + eur(apT, false));
                     v.setProgressBar(R.id.w_ap_bar, 100, (int) Math.min(100, ap / apT * 100), false);
                     double ms = d.optDouble("msCur", 0), msT = Math.max(1, d.optDouble("msTgt", 100000));
-                    v.setTextViewText(R.id.w_ms, String.format(Locale.FRANCE, "%.0f %%", Math.min(100, ms / msT * 100)));
+                    v.setTextViewText(R.id.w_ms, String.format(Locale.FRANCE, "%.0f\u00a0%%", Math.min(100, ms / msT * 100)));
                     v.setProgressBar(R.id.w_ms_bar, 100, (int) Math.min(100, ms / msT * 100), false);
                     v.setTextViewText(R.id.w_next, d.optString("next", ""));
                     String alert = d.optString("alert", "");
                     v.setTextViewText(R.id.w_alert, alert);
                     v.setViewVisibility(R.id.w_alert, alert.isEmpty() ? View.GONE : View.VISIBLE);
-                    v.setOnClickPendingIntent(R.id.w_env_row, open(ctx, "budget", 2));
                     v.setOnClickPendingIntent(R.id.w_next, open(ctx, "achat", 3));
+                    v.setOnClickPendingIntent(R.id.w_chart, open(ctx, "performance", 4));
+
+                    int per = Prefs.period(ctx, id);
+                    int[] chips = {R.id.w_p0, R.id.w_p1, R.id.w_p2, R.id.w_p3};
+                    for (int i = 0; i < 4; i++) {
+                        v.setInt(chips[i], "setBackgroundResource", i == per ? R.drawable.chip_on : R.drawable.chip_off);
+                        v.setTextColor(chips[i], i == per ? INK : MUTED);
+                        v.setOnClickPendingIntent(chips[i], period(ctx, id, i));
+                    }
+                    Chart.Result c = Chart.draw(ctx, m, id, d.optJSONArray("hist"), per, priv);
+                    if (c != null) {
+                        v.setImageViewBitmap(R.id.w_chart, c.bmp);
+                        v.setTextViewText(R.id.w_per, c.label);
+                        v.setTextColor(R.id.w_per, c.delta >= 0 ? GAIN : LOSS);
+                    } else {
+                        v.setTextViewText(R.id.w_per, "Pas encore assez d'historique");
+                        v.setTextColor(R.id.w_per, MUTED);
+                    }
                 }
             }
             m.updateAppWidget(id, v);
@@ -175,6 +195,12 @@ final class Widgets {
             d.put("gain", value - d.optDouble("verse", value));
             d.put("dayAbs", dayAbs);
             d.put("dayPct", dayPct);
+            JSONArray hist = d.optJSONArray("hist");
+            if (hist != null) {
+                JSONArray pt = new JSONArray().put(day).put(Math.round(value * 100) / 100.0).put(d.optDouble("verse", 0));
+                JSONArray last = hist.length() > 0 ? hist.optJSONArray(hist.length() - 1) : null;
+                if (last != null && day.equals(last.optString(0))) hist.put(hist.length() - 1, pt); else hist.put(pt);
+            }
             SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
             f.setTimeZone(TimeZone.getTimeZone("UTC"));
             d.put("at", f.format(new Date()));

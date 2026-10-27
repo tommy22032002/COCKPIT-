@@ -34,4 +34,6 @@ final class Prefs {
 
     static String lastDropAlert(Context c) { return sp(c).getString("dropDay", ""); }
     static void setLastDropAlert(Context c, String day) { sp(c).edit().putString("dropDay", day).apply(); }
+    static int period(Context c, int widgetId) { return sp(c).getInt("per" + widgetId, 1); }
+    static void setPeriod(Context c, int widgetId, int per) { sp(c).edit().putInt("per" + widgetId, per).apply(); }
 }
