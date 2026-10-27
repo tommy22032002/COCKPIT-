@@ -1,0 +1,15 @@
+name: Test cours
+on: workflow_dispatch
+jobs:
+  t:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: |
+          for q in FR001400U5Q4 FR0011871110 FR0011550672 FR0013411980 FR0013412020; do
+            r=$(curl -s -A "Mozilla/5.0" "https://query2.finance.yahoo.com/v1/finance/search?q=$q&quotesCount=5&newsCount=0" | jq -c '[.quotes[]|{s:.symbol,x:.exchange}]')
+            echo "::notice::$q $r"
+          done
+          for s in DCAM.PA PUST.PA ETSA.PA ETZ.PA PTPXE.PA PAEEM.PA; do
+            r=$(curl -s -A "Mozilla/5.0" "https://query1.finance.yahoo.com/v8/finance/chart/$s?range=5d&interval=1d" | jq -c '.chart.result[0].meta|{p:.regularMarketPrice,prev:.chartPreviousClose,t:.regularMarketTime,c:.currency}' 2>&1 | head -c 200)
+            echo "::notice::$s $r"
+          done
