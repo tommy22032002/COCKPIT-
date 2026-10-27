@@ -321,6 +321,8 @@ public class MainActivity extends Activity {
             try { return Quotes.fetchAll(new org.json.JSONArray(symsJson)).toString(); } catch (Exception e) { return "{}"; }
         }
 
+        @JavascriptInterface public String fetchText(String url) { return Quotes.fetchText(url); }
+
         @JavascriptInterface public String version() { return BuildConfig.VERSION_NAME; }
 
         @JavascriptInterface public void updateWidget(String json) {

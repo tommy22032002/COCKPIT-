@@ -1,0 +1,259 @@
+{
+ "v": 1,
+ "date": "2026-10-27",
+ "at": "2026-10-27T21:00:00+01:00",
+ "title": "Les marchés montent avant une semaine chargée en banques centrales",
+ "mood": "optimiste mais prudent",
+ "summary": [
+  "Belle séance presque partout : le CAC 40 a fini à 7 887 points (+0,5 %), tout près de son record. Wall Street est aussi dans le vert, surtout les valeurs technologiques (Nasdaq +1,3 %), portées par l'intelligence artificielle et la future entrée en Bourse d'Anthropic.",
+  "La grosse nouvelle du jour, c'est le pétrole : le Brent recule de près de 6 % (autour de 109 $). Moins de pression sur les prix de l'énergie, c'est moins de risque d'inflation, et les marchés aiment ça.",
+  "Tout le monde attend maintenant trois rendez-vous : la Fed américaine mercredi soir, la BCE jeudi et la Banque du Japon vendredi. Les trois devraient laisser leurs taux inchangés, mais leurs messages sur la suite peuvent faire bouger les marchés. S'ajoutent les résultats d'Alphabet, Microsoft et Apple cette semaine."
+ ],
+ "forYou": "Journée favorable à un portefeuille d'ETF diversifié : toutes les grandes zones montent ensemble. Le dollar s'est renforcé face à l'euro (-0,7 % pour l'euro), ce qui gonfle un peu en euros la valeur des ETF exposés aux États-Unis. Rien à faire : ton plan continue, prochain achat comme prévu.",
+ "zones": {
+  "monde": "Le MSCI World est porté à 70 % par les États-Unis : il profite du rebond de la tech américaine et de la hausse du dollar.",
+  "us": "Le Nasdaq mène la danse (+1,3 %) grâce aux valeurs de l'IA. Attention à la volatilité cette semaine avec la Fed mercredi et les résultats des géants de la tech.",
+  "europe": "Les Bourses européennes finissent dans le vert, soulagées par la baisse du pétrole. La BCE devrait garder ses taux jeudi et repousser une éventuelle hausse à décembre.",
+  "japon": "Le Nikkei bondit de 1,7 %, tiré par les valeurs liées à l'IA. La Banque du Japon, vendredi, pourrait préparer le terrain à une hausse de taux, ce qui ferait monter le yen.",
+  "emergents": "Les marchés émergents progressent avec le reste du monde (+1,2 % pour l'indice de référence en dollars), aidés par l'appétit pour l'Asie et la tech."
+ },
+ "markets": [
+  {
+   "k": "^FCHI",
+   "n": "CAC 40",
+   "v": 7887.14,
+   "ch": 0.00507
+  },
+  {
+   "k": "^STOXX",
+   "n": "Stoxx 600",
+   "v": 643.68,
+   "ch": 0.00471
+  },
+  {
+   "k": "^GSPC",
+   "n": "S&P 500",
+   "v": 7728.27,
+   "ch": 0.00671
+  },
+  {
+   "k": "^IXIC",
+   "n": "Nasdaq",
+   "v": 26508.014,
+   "ch": 0.01294
+  },
+  {
+   "k": "^N225",
+   "n": "Nikkei 225",
+   "v": 63268.37,
+   "ch": 0.01735
+  },
+  {
+   "k": "EEM",
+   "n": "Émergents (EEM)",
+   "v": 62.575,
+   "ch": 0.01221
+  },
+  {
+   "k": "EURUSD=X",
+   "n": "Euro / dollar",
+   "v": 1.114,
+   "ch": -0.00691
+  },
+  {
+   "k": "^TNX",
+   "n": "Taux US à 10 ans",
+   "v": 4.993,
+   "ch": 0.0014
+  },
+  {
+   "k": "^VIX",
+   "n": "Indice de la peur (VIX)",
+   "v": 17.67,
+   "ch": -0.03915
+  },
+  {
+   "k": "GC=F",
+   "n": "Or",
+   "v": 4074.1,
+   "ch": 0.00884
+  },
+  {
+   "k": "BZ=F",
+   "n": "Pétrole (Brent)",
+   "v": 109.17,
+   "ch": -0.05734
+  },
+  {
+   "k": "BTC-EUR",
+   "n": "Bitcoin",
+   "v": 72321.01,
+   "ch": 0.01003
+  }
+ ],
+ "agenda": [
+  {
+   "d": "2026-10-28",
+   "h": "19:00",
+   "t": "Décision de la Fed (taux américains)",
+   "z": "us",
+   "level": 3,
+   "impact": "Taux attendus inchangés. Le ton de Kevin Warsh sur l'inflation et le pétrole compte plus que la décision : il peut faire bouger le Nasdaq et le dollar."
+  },
+  {
+   "d": "2026-10-28",
+   "h": "après 22:00",
+   "t": "Résultats des géants de la tech (Alphabet, Microsoft, Apple…)",
+   "z": "us",
+   "level": 2,
+   "impact": "Ces entreprises pèsent lourd dans le Nasdaq-100 et le MSCI World. Des résultats décevants peuvent faire baisser ces ETF le lendemain. Publications réparties sur la semaine."
+  },
+  {
+   "d": "2026-10-29",
+   "h": "14:15",
+   "t": "Décision de la BCE (taux de la zone euro)",
+   "z": "europe",
+   "level": 3,
+   "impact": "Statu quo attendu, hausse possible repoussée à décembre. Joue sur l'euro, les banques européennes et donc le Stoxx 600."
+  },
+  {
+   "d": "2026-10-30",
+   "h": "matin",
+   "t": "Décision de la Banque du Japon",
+   "z": "japon",
+   "level": 2,
+   "impact": "Taux attendus à 1,25 % avec un signal de hausse. Un yen plus fort peut freiner les exportateurs japonais (ETF TOPIX)."
+  },
+  {
+   "d": "2026-11-06",
+   "h": "13:30",
+   "t": "Emploi américain (chiffres d'octobre)",
+   "z": "us",
+   "level": 2,
+   "impact": "Un marché de l'emploi trop fort fait craindre des taux élevés plus longtemps ; trop faible, une récession. Date habituelle (1er vendredi du mois), à confirmer."
+  }
+ ],
+ "headlines": [
+  {
+   "t": "Wall Street progresse, portée par le regain d’intérêt pour l’intelligence artificielle, tandis que la saison des résultats s’accélère",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTjl1d1plLVRKWEtaYXdSa0xKUzBYM0VwZmlkZU1kdkVxMDR0c0w2MGZVUzFLWGVLaEtaVVVLZ29IQXpXcS1ONWdVc01UN0dNRm1NRkRPQVNrYy1XelB6NERrbjFYS1ZTNnpOUG81MHZXY3JzNTdUNmM5MmgwOFAtbUJvRDJsYjRibWk5X3FTdGsyNk53MlZDTGtwVl9LVHc5QXZ3TFlJaXZWdzhyQzhsVWQyamVZSk9yV0ROamdHNXFaY0NfWlFqd2Y1YVhVTFpoMWYwcUV5Y1NkaFg5TDY2TDd0aHBZM2syaUJHTQ?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "Wall Street progresse grâce au regain d'élan du secteur de l'IA, alors que la saison des résultats s'accélère",
+   "s": "TradingView",
+   "u": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WYlc5RW54LVBUaVJCNy1qZVNILVdLRm1veW9PRVlYSVhDMHh0LWw5bWN0TFBxODhEd1FROXJxeXl0WDdqUlJ5RWV5QXcyVU1maW1TNEZFU1BkbWJGNkdjQ2hIY0ZHNDhBRmEzQ0VGc1M1Ty1NdHM0?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "Le faux pas de Kylian Mbappé sur Mao fait reculer l'action de son équipementier On à Wall Street",
+   "s": "Epoch Times",
+   "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOcHNGc1JrV1ZxRXFOdS1uNm9OMjFuYVBzZVpiS3V1bVZtSEpiUVRCeTlmTXJ1RWtYYVAta3F1UEIySXJ2SnB6YWpvdjNWcEhsZkNzRzFYU2R2ck1wMVF2ZGxCY3JuNzBOaVFodW9oMEVELUZHcExPUWxEMGR1clRqUENsUlpVVzFqNHJ4WHBWeG9LOGNOTFdPaXRqaFZwZDluUDVvMXNjdDBwNGYtaWdYMFY5SUVNMGdzS1YxWHFkNHNxTjhkcS02WEZLakVDQlU?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "Boeing plonge en Bourse après des perspectives de production décevantes",
+   "s": "TradingView",
+   "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1pRE1OcUNCd0dMMTNCd0hHYjQ4ODZmakZFT3JsQ29aTGtjNVlUUTJQWnhiczJ2LXFQel9tNVR1T2Q3YzdNWUtQZV9yNWhJeDNNanNKMWQxSlh1el9YM3RxQzBR?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "Le taux terminal de la Réserve fédérale pourrait dépasser son pic de 2023-2024 si l’essor des dépenses liées à l’intelligence artificielle (IA) se poursuit, selon TS Lombard",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQaUo0Y0IwSVBrNW9UUmxseFNldGlNenhTdTdBM0hNbk9qYXZpUmE4RW96OGxpTGJsdU96MG1aWEhJaHEyemNLbTFfbTJVRTI3RDN5dDFOT1o5QmFwbldkUEs1REd6VGVLUFU5WWkzSWF3OU5Yb1Fob3pyRWxsem5PMjAwYVRwVHR3eXBNSjk4WldwemVJaTRTaEZIc0RoUUxvWm53enF4N0xIa3VGa09MR1R1M3ViNUJLYjUzaWcxWXNJWF80Z1k3UW9icnhmU2dUblRXb0w5TWVYYkdBbVNwbTFlYUJ6bktXNUh5eWE1aVY?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "La Réserve fédérale américaine (Fed) confrontée à un problème d’inflation d’un autre type, selon Kaplan",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQcjdEcVJfc0pCMGNjWHBJVlpXOV9PX19UNWVNTno1Q1BiT2dUWC16YVQ0OVlTeTFMQ3lnLUoyWGtaMXgyY2tRTXBhRnVjOEJrSjZsTjlFNE1TRjZKYVFpdThuTE1oSERReFlfZVViWVFkVXk0Rk5lYTJrNXN6ZE5xTUphcWhyRVpWWkxra2lwYnNTUjQwMWJLbW1xVHI3dW13WFBNNmw1NEs2X3I2STM4ZV9QSjhKZVRqSXVveGJIdDc2N2lsM0E0czIzbmxLMmJrenRCU3FjR1dmbVN0WXkyRU1RMEtaajhFb05B?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Les bourses en direct | Les bourses européennes terminent majoritairement en hausse, Umicore en tête du Bel 20, le Nasdaq prend plus de 1%",
+   "s": "L'Echo",
+   "u": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQNW91aXdLQ0hLVTMxR0FMNzJJUklTOXllVDZhRFUxS3lJQTM2U3FsZXpOVVRrUWFFTHFqNFpmYm5QTmRvNy1vM0wyaElaNVJnbURYbm9OMGhOeFV2bUNBeTZLSE5HS2JVeUx4anRxckhYYmduWFVuYzlCZ1dGWlg3b3pGQ0Y0WmY0eGZZUWlGYjJSTkpCZERKdUhyZjk5YlNlUW9QWDEwdlhSRG9POFUzWFFHSmFQTktjZGt6ZGRuNzVxNW1MZkFPNnEwa1VjRm5rQXVkNVVxajBfSVV0LXc4TjZnSV9PZEluWFJ0b3pUS1E0MmpWbkxrX0czeEpYTEtLVVdSMEdGa0Nqbm5IRmV1WTk2c1dUSUVoanc?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Anthropic se met à nu pour séduire Wall Street",
+   "s": "l'Opinion",
+   "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNZEVrVzMyZk1mdnpFUFVpSHh6N2plVU1XekFBOHl3WlFNeW4ycEl0ZTFfSzhuVmI3S2pHT2NuZUJobHMzZG5PTGh6Y2xfQmJEV1dTUnI5REFveFlHRjJROE1GdGU2bWhpV2pyTGtJSWFGbnRyNEFSMmhOZUJ4WnVpSG03WFBsdw?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Dette, inflation, intelligence artificielle… La Fed et la BCE sous la pression des marchés",
+   "s": "Le Figaro",
+   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOX0VYV0QxUU9odGV3bkxnSGlVenpCQXpVOG9zOEhSN3ozbTZmRXRvYnNrazR1Q1RWNTFsVDRjc0tiMG1RcnFIUHBkRHIyVVNKT2xEdzE1NUNsd3BBaHpvcnNGeFlUdmlqeUJ4UmR6RjY1MDhmNGdqaDA5a3VNb3N6RmdlemQ1T0hFOXJPQlduUkN1ZnphcVBLRFZwNmxub25pTHc4dGFlYUJsWWt1OExGNUxBRF9KalIyWS0tYXJ0NlRNUVBTdGs0WS0xM1A?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "L’Europe finit dans le vert, le recul du pétrole rassure avant la Fed et la BCE",
+   "s": "Journal Chrétien",
+   "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSy1za3NoeFR4SjFSdV9ld19OVkNvRnF6M0pxcV9XVldrQUdRZmZGQklQZWVaaHNYQ2l1N0VsWVhyVldoS2NsZDVaanUzeDg4UWxLc2hJcmwwc1B3OWJ2MlIzVkVVUGVrakxCMjl4RmE4YmNuLUlCUVMyMkJQTjRPaWJR?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "UniCredit dépasse les exigences de fonds propres fixées par la BCE",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQc0s2SU5CZVBsLWJLekFyaktiZlVMX3FuR0ZGZmdrdVpkb2ZmTjVoT2h5ZlY1WGpVd1lXUVpTNklIRERuOGRzaEdYU0tEMXM0NlJIMFdCcjhLdkRiR2gyYnBNM2NydVFqUko1VmRET3dBZGtSNnJ5a3laVDJzamc2SlZzQ09tczZJMWJqSngzRXgtbVFHa2tfTGdoTjE2OUliWGdaWGw1YWFEUUhVd0pmRkpZd3dnV2JlQTlqNEVOSldLUXJ1Unc?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Société Générale : la BCE fixe son exigence de Pilier 2 à 2,37 % pour 2027",
+   "s": "Idéal Investisseur",
+   "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQWGNFMllPakktb1dhRllHVDZSYllwVkxlY0haSEExMVlIWW9OV3JCakgyTlJCNmVUWmVCXzBxT1pWN3dnU0U2LUVzZVU2dG9GYkhYRjdTZU5ySXVJVUhRTXFlSTBfNi1UTDlSeGJaRmh6U1Rra1Q5SWtONm1aZjkxQkc0WE9ONlNzQlRqUi1lbkdKZzBYNlF5NGsxeDNQdXAyRVBUd2ItcS0teXN5TWFXSzdMc0xSLW9GOU9UcG1hOTdaZw?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Nikkei : la Bourse de Tokyo bondit de 1,73 % le 27 octobre 2026",
+   "s": "Le Revenu",
+   "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcnRXTGNZMEwyU1d4aU1KSVhkMHp5Vm55SGFjVzhDa0M1Vkg0RjlWdkFnVjhMQXhzMVh3RE9VMk5xM3lteko2NzZzdEN5N2d1QU44b0Y2REwzdWxyeVRvSEJINENXdE82aHphb1JVNDQxNGFyWXBXTUF1Rlp3U1pIWWdUTGt2TVhzUExieUpVWEdXQ1F3dC1IdFZjemUwUHNsdHhMdTBELW1HeGtT?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "Graphique du jour : l'USDJPY pris au piège. Une intervention de Tokyo et une Banque du Japon (BoJ) belliciste se profilent à l'horizon",
+   "s": "XTB.com",
+   "u": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPVzhEM0h3alhOVWZtYzhyYTJxYUdsWUc0TDA3QnhKV2Z4UVk1bGlNaVdGeGk0WFZ2eG9WU3JxZzdhdDZxV3NKUk5udHQ3WDR5bWJnVVY3ckdmREtiSW5QeTFkcTF3R1picG5JbjJ1cGN2c0hYU0xFUEZBRDJ4UFVXaXV5OGRZb0lWUlV6U2pObkVIRk0wNHdueURoS2tjM2tTVXN4RHFDenpoZGExVFdWck9HNkRXenpiaEJwODE2WTZEbzZGSUpkVlBJTy0xdzE0dnFpM3ZlOThpOTdzd1o1SjExLUMtdnZWR1JxME4wZ2Q2Sm1HWElnaEpzMEtNdw?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "Le Nikkei japonais progresse, les valeurs liées à l’intelligence artificielle portées par le projet d’introduction en bourse d’Anthropic",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNYnpFV3A4YnlsUWo4eGtyc2tTbno3cVZZOC1yQXVaU0hORU05U2xPcHB1ek1ITTdXM1lNcEJURHpERHF0RjF0c0thN0VMYl9mUThFU0MwS0c5Ylpla040ZUpCSlY0aUpuZzBTMGlOdVVlUktZeEgtcHBCbnB2ZXVsVUNSMGZCdV9JRFBYN21vV2tHeFhIRG42eEQtaFVQcTNCNnhuSWx4bmFwaDU0TkN2bWItZUtobGhHbDN4bzZZcG1JdS1taGtkLTA0cTkwSUoxQjN5S0VfU0ttYWdiSWhkNGNHVkZ1andaSktFUzhnTQ?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "Tableau de bord de la finance durable: actions marchés émergents",
+   "s": "agefi.com",
+   "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVnEzSDFsbUluOEQ5bWdwdS1PYS1sRkZCaEhVYm5NYlB2WjRmcjlKZGhJVjJac3ctNkVla2VHdGNfUGJxRGxhTTFEcGhHZl9ieDh0RUpkN1FaQmNOLTNTUUtlYmVtNHE4cXBDLWhnTjFlYTQ0Y3FEeUNYMUkwU2lwdXp0MHp5TE9mbzh3NXZjaVY5YXpQVVlLUzhVa2tQTzZIdE43LWxR?oc=5",
+   "z": "emergents"
+  },
+  {
+   "t": "Sur les marchés émergents",
+   "s": "Profession CGP",
+   "u": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQT3RpRy1nemtWOFhRczFyNFRCTGp5R3ZWTUFvRURLRl9QNnNiOHEzeV9fTzZ1NGhjYjI3RHBIT28xOTBVbXRUdjZGQnE2WUFHRnVPd281cUhWU3dIcGRJWkJPZG1PNUI3UkdXYjNfYVFLTG10VllqSjFHT09yem9uaUhLOTdYZXpwY19rNGRUTDlMTzBQT0lBajI5MjRQbkZxUWc?oc=5",
+   "z": "emergents"
+  },
+  {
+   "t": "Thionville. Inflation des produits du quotidien : le marché comme solution ?",
+   "s": "Le Republicain Lorrain",
+   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQd1lDNVJ3UC1XekJWaUxxMkVBbW9xZ1RlMDZMTFk4XzA3UURycnFoRDhwTElhYmJnY0hqRkRuNVZMRHZiSjVldmlWS1MwQnJmVldUM09TYUItS1BrQmh0eGVWLTJiVjlfWF90TXBSSE1zY2twMVozMmdpb19ieXktalc2TlRLYTE4MEZrdWgzNmJkT2phVHJnRkZWR0tSWUpmNVAtT01uOWVPVDhtSGQwaDdCdEU1OUp4U0E3RTI4dw?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "États-Unis : La Fed sous pression pour freiner l'inflation, le marché attend sa décision sur les taux d'intérêt.",
+   "s": "Vietnam.vn",
+   "u": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUGVpWnEzblkzcWxFc055Q0RzbVItOVhYbHJib1d4UlhkY0t5TV9yWDhGZW9LZXZWVVp5aHQwdVl2WlljR2pMSHVPc1l2SUVwVXp1VHhJb0dMN2x6MmhzRVlzQ1NSTWwtQXJPY25yX1UtREhqR09PcklZMGYtRnFwbDkxd2tvcXd5eEdOenJGSnR5Ql8wTWw1c0dscnEtZw?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "Le Club : \"Marchés actions solides malgré l’énergie, les taux, l’inflation…\" - 27/10",
+   "s": "Orange Actualités",
+   "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNTmMxTU5UUDNJdVhoSjJQaVRETW9leUhsMFVBeTRlc1pqNXNhQVVKTy1lbzBzTVJFSFpRbHpWR0JDYl96dzNJc2prdmh1aFRneDBpUVk4c0JFWjBZT29pQ3pXajhWamJUOWxWWWo4cGs4VTdHWDIzMGh1eUFONTZRYVZBMDRfQTZhMWFONm9VcVhHYzhTZ2Z4bUtoeEJKblZIQUpTS2lOLVA0bGNaRkliU1JOOFB3TEd5SDFtM2V2U0t4a3B6dWMwenBUNGg5YlE?oc=5",
+   "z": "taux"
+  }
+ ],
+ "lesson": "Pourquoi le pétrole fait monter les actions quand il baisse ? Le pétrole entre dans le prix de presque tout (transport, chauffage, industrie). Quand il baisse, l'inflation ralentit, les banques centrales ont moins besoin de garder des taux élevés, et les entreprises gagnent plus : double bonne nouvelle pour les actions."
+}

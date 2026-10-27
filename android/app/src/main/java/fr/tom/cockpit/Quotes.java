@@ -83,4 +83,44 @@ final class Quotes {
         }
         return out;
     }
+
+    /** Télécharge un texte (flux d'actu, point du jour) : seulement depuis des sites autorisés. */
+    static String fetchText(String url) {
+        try {
+            URL u = new URL(url);
+            String h = u.getHost();
+            if (!"https".equals(u.getProtocol()) || !(h.equals("news.google.com") || h.equals("tommy22032002.github.io"))) return "";
+            HttpURLConnection c = (HttpURLConnection) u.openConnection();
+            c.setConnectTimeout(10000);
+            c.setReadTimeout(15000);
+            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Cockpit");
+            if (c.getResponseCode() != 200) return "";
+            InputStream in = c.getInputStream();
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            byte[] buf = new byte[8192];
+            int n;
+            while ((n = in.read(buf)) > 0 && out.size() < 2_000_000) out.write(buf, 0, n);
+            in.close();
+            return out.toString("UTF-8");
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    /** Nouveau point du jour publié ? Notification une fois par jour, à partir de 7 h. */
+    static void checkBrief(android.content.Context ctx) {
+        try {
+            java.util.Calendar paris = java.util.Calendar.getInstance(TimeZone.getTimeZone("Europe/Paris"));
+            if (paris.get(java.util.Calendar.HOUR_OF_DAY) < 7) return;
+            String s = fetchText("https://tommy22032002.github.io/COCKPIT-/journal/brief.json?t=" + System.currentTimeMillis());
+            if (s.isEmpty()) return;
+            JSONObject b = new JSONObject(s);
+            String date = b.optString("date", "");
+            SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+            f.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
+            if (!date.equals(f.format(new Date())) || date.equals(Prefs.lastBrief(ctx))) return;
+            Prefs.setLastBrief(ctx, date);
+            Reminders.show(ctx, "brief-" + date, "Le point du jour", b.optString("title", "Ton résumé des marchés est prêt."), "journal");
+        } catch (Exception ignored) { }
+    }
 }

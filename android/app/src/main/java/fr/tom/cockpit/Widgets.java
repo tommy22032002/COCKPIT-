@@ -181,6 +181,7 @@ final class Widgets {
             int hm = paris.get(Calendar.HOUR_OF_DAY) * 60 + paris.get(Calendar.MINUTE);
             boolean open = dow != Calendar.SATURDAY && dow != Calendar.SUNDAY && hm >= 9 * 60 && hm <= 17 * 60 + 45;
             long gap = open ? 20L * 60_000L : 3L * 3600_000L;
+            Quotes.checkBrief(ctx);
             if (!force && now - Prefs.lastFetch(ctx) < gap) return;
             String day = new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date());
 
