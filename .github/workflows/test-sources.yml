@@ -14,4 +14,4 @@ jobs:
             c=$(curl -s -A "Mozilla/5.0" -o f.xml -w "%{http_code}" "$u"); n=$(grep -o "<item" f.xml | wc -l); t=$(grep -o "<title>[^<]*" f.xml | sed -n 3p | head -c 90)
             echo "RSS $c items=$n $t | $u" >> out.txt
           done
-          i=0; while read l; do i=$((i+1)); echo "::notice title=L$i::$l"; done < out.txt
+          tail -n +11 out.txt | while read l; do echo "::notice::$l"; done
