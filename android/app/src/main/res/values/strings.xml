@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cockpit</string>
+    <string name="share_label">Envoyer au Cockpit</string>
+    <string name="w_pea_name">Cockpit · PEA</string>
+    <string name="w_dash_name">Cockpit · Tableau de bord</string>
+    <string name="w_pea_desc">Valeur du PEA et variation du jour</string>
+    <string name="w_dash_desc">PEA, envies du mois, apport, objectif et prochain achat</string>
+</resources>
