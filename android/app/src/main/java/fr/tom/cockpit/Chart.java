@@ -31,7 +31,7 @@ final class Chart {
 
     static final class Result {
         Bitmap bmp;
-        String label;
+        CharSequence label;
         double delta;
     }
 
@@ -100,7 +100,7 @@ final class Chart {
             double first = pts.get(0)[0], last = pts.get(pts.size() - 1)[0];
             double flows = pts.get(pts.size() - 1)[1] - pts.get(0)[1];
             double delta = last - first - flows; // gain de la période, hors versements
-            int col = delta >= 0 ? Widgets.GAIN : Widgets.LOSS;
+            int col = Widgets.ACCENT; // toujours la même couleur : la courbe ne vire pas au rouge
 
             // grille
             Paint grid = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -125,7 +125,7 @@ final class Chart {
             area.lineTo(xs[xs.length - 1], bottom);
             area.close();
             Paint fill = new Paint(Paint.ANTI_ALIAS_FLAG);
-            fill.setShader(new LinearGradient(0, top, 0, bottom, Color.argb(90, Color.red(col), Color.green(col), Color.blue(col)),
+            fill.setShader(new LinearGradient(0, top, 0, bottom, Color.argb(70, Color.red(col), Color.green(col), Color.blue(col)),
                     Color.argb(0, Color.red(col), Color.green(col), Color.blue(col)), Shader.TileMode.CLAMP));
             c.drawPath(area, fill);
 
@@ -167,7 +167,12 @@ final class Chart {
             r.delta = delta;
             double base = first + Math.max(0, flows);
             String pct = base > 0 ? "  " + Widgets.pct(delta / base) : "";
-            r.label = (priv ? "••" : Widgets.signedEur(delta)) + pct + " " + PERIODS[per] + "   ─ valeur  ┄ versé";
+            // seul le montant est teinté, en couleur douce ; le reste du texte reste discret
+            String amt = (priv ? "••" : Widgets.signedEur(delta)) + pct;
+            android.text.SpannableStringBuilder sb = new android.text.SpannableStringBuilder(amt);
+            sb.setSpan(new android.text.style.ForegroundColorSpan(delta >= 0 ? Widgets.SOFT_GAIN : Widgets.SOFT_LOSS), 0, amt.length(), 0);
+            sb.append(" ").append(PERIODS[per]).append("   ─ valeur  ┄ versé");
+            r.label = sb;
             return r;
         } catch (Exception e) {
             return null;

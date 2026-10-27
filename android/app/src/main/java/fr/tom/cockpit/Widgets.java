@@ -31,6 +31,9 @@ final class Widgets {
     static final int LOSS = Color.parseColor("#F0717A");
     static final int INK = Color.parseColor("#E8ECF3");
     static final int MUTED = Color.parseColor("#8B95A7");
+    static final int ACCENT = Color.parseColor("#6EA8FE");
+    static final int SOFT_GAIN = Color.parseColor("#8CCFB4");
+    static final int SOFT_LOSS = Color.parseColor("#C9A3A8");
 
     static void updateAll(Context ctx) {
         AppWidgetManager m = AppWidgetManager.getInstance(ctx);
@@ -137,7 +140,7 @@ final class Widgets {
                     if (c != null) {
                         v.setImageViewBitmap(R.id.w_chart, c.bmp);
                         v.setTextViewText(R.id.w_per, c.label);
-                        v.setTextColor(R.id.w_per, c.delta >= 0 ? GAIN : LOSS);
+                        v.setTextColor(R.id.w_per, MUTED);
                     } else {
                         v.setTextViewText(R.id.w_per, "Pas encore assez d'historique");
                         v.setTextColor(R.id.w_per, MUTED);
