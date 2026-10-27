@@ -191,7 +191,7 @@ public class MainActivity extends Activity {
         if (intent == null) return;
         String hash = intent.getStringExtra("hash");
         if (hash != null && hash.matches("[a-z]+")) {
-            if (pageReady) web.evaluateJavascript("window.go&&window.R&&R['" + hash + "']&&go('" + hash + "')", null);
+            if (pageReady) web.evaluateJavascript("(function(h){if(window.__nav)__nav(h);else location.hash=h})('" + hash + "')", null);
             else pendingHash = hash;
         }
         String action = intent.getAction();

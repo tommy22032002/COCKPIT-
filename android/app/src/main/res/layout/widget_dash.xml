@@ -28,14 +28,14 @@
         android:textColor="@color/muted" android:textSize="11sp" android:maxLines="1"/>
     <ImageView android:id="@+id/w_chart" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
         android:minHeight="70dp" android:layout_marginTop="4dp" android:scaleType="fitXY" android:contentDescription="Évolution du PEA"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/w_ap_row" android:orientation="vertical" android:paddingTop="8dp">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
             <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Apport immobilier" android:textColor="@color/muted" android:textSize="11sp"/>
             <TextView android:id="@+id/w_ap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/ink" android:textSize="11sp" android:maxLines="1"/>
         </LinearLayout>
         <ProgressBar android:id="@+id/w_ap_bar" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="3dp" android:max="100" android:progressDrawable="@drawable/bar"/>
     </LinearLayout>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/w_ms_row" android:orientation="vertical" android:paddingTop="8dp">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
             <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Objectif 100 000 €" android:textColor="@color/muted" android:textSize="11sp"/>
             <TextView android:id="@+id/w_ms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/ink" android:textSize="11sp" android:maxLines="1"/>

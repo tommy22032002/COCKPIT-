@@ -83,7 +83,7 @@ final class Widgets {
 
         for (int id : ids) {
             RemoteViews v = new RemoteViews(ctx.getPackageName(), dash ? R.layout.widget_dash : R.layout.widget_pea);
-            v.setOnClickPendingIntent(R.id.w_root, open(ctx, "executif", 1));
+            v.setOnClickPendingIntent(R.id.w_root, open(ctx, dash ? "performance" : "portefeuille", dash ? 5 : 1));
             v.setOnClickPendingIntent(R.id.w_refresh, refresh(ctx));
             if (d == null) {
                 v.setTextViewText(R.id.w_value, "—");
@@ -110,6 +110,16 @@ final class Widgets {
                         v.setViewVisibility(R.id.w_pie, View.GONE);
                     }
                 }
+                if (!dash) {
+                    android.graphics.Bitmap pie = Chart.pie(ctx, m, id, d.optJSONArray("lines"), d.optDouble("cash", 0));
+                    if (pie != null) {
+                        v.setImageViewBitmap(R.id.w_pie, pie);
+                        v.setViewVisibility(R.id.w_pie, View.VISIBLE);
+                        v.setOnClickPendingIntent(R.id.w_pie, open(ctx, "allocation", 6));
+                    } else {
+                        v.setViewVisibility(R.id.w_pie, View.GONE);
+                    }
+                }
                 if (dash) {
                     double ap = d.optDouble("apCur", 0), apT = Math.max(1, d.optDouble("apTgt", 50000));
                     v.setTextViewText(R.id.w_ap, (priv ? "••" : eur(ap, false)) + " / " + eur(apT, false));
@@ -122,6 +132,8 @@ final class Widgets {
                     v.setTextViewText(R.id.w_alert, alert);
                     v.setViewVisibility(R.id.w_alert, alert.isEmpty() ? View.GONE : View.VISIBLE);
                     v.setOnClickPendingIntent(R.id.w_next, open(ctx, "achat", 3));
+                    v.setOnClickPendingIntent(R.id.w_ap_row, open(ctx, "plan", 7));
+                    v.setOnClickPendingIntent(R.id.w_ms_row, open(ctx, "plan", 8));
                     v.setOnClickPendingIntent(R.id.w_chart, open(ctx, "performance", 4));
 
                     int per = Prefs.period(ctx, id);
