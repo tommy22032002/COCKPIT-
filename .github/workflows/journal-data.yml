@@ -1,20 +1,44 @@
 name: Journal (marchés et actus)
+# Les tâches planifiées de GitHub sont souvent sautées : pendant la séance, une seule exécution
+# tourne en boucle et rafraîchit les cours toutes les 15 minutes, puis se relance elle-même si besoin.
 on:
   schedule:
-    - cron: '*/30 5-21 * * *'
+    - cron: '5 6,7,8,9,11,13,15 * * 1-5'
+    - cron: '*/30 17-21 * * *'
+    - cron: '0 7,12,18 * * 0,6'
   workflow_dispatch:
 permissions:
   contents: write
-concurrency: journal-data
+  actions: write
+concurrency:
+  group: journal-quotes
+  cancel-in-progress: false
 jobs:
   collect:
     runs-on: ubuntu-24.04
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v5
-      - run: python3 tools/journal_data.py
-      - run: |
+      - name: Cours toutes les 15 minutes pendant la séance
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add journal/raw.json
-          git commit -qm "Journal : marchés et actus" || exit 0
-          git pull -q --rebase origin main && git push -q origin HEAD:main
+          start=$(date +%s)
+          while true; do
+            git pull -q --rebase origin main || { git rebase --abort; git fetch -q origin; git reset -q --hard origin/main; }
+            python3 tools/journal_data.py || true
+            git add journal/raw.json
+            if git commit -qm "Journal : marchés et actus"; then
+              git push -q origin HEAD:main || { git fetch -q origin; git reset -q --hard origin/main; }
+            fi
+            dow=$(date -u +%u); hm=$((10#$(date -u +%H%M)))
+            # séance Euronext 9h-17h35 Paris ≈ 7h-16h35 UTC (hiver : 8h-16h35)
+            if [ "$dow" -gt 5 ] || [ "$hm" -lt 655 ] || [ "$hm" -gt 1640 ]; then break; fi
+            if [ $(( $(date +%s) - start )) -gt 19800 ]; then
+              gh api -X POST "repos/${GITHUB_REPOSITORY}/actions/workflows/journal-data.yml/dispatches" -f ref=main || true
+              break
+            fi
+            sleep 900
+          done

@@ -9,7 +9,7 @@ on:
         default: 'non'
 permissions:
   contents: write
-concurrency: journal-data
+concurrency: brief-auto
 jobs:
   brief:
     runs-on: ubuntu-24.04
@@ -26,4 +26,4 @@ jobs:
           git config user.email "github-actions@users.noreply.github.com"
           git add journal/raw.json journal/brief.json journal/brief-test.json 2>/dev/null || git add journal/raw.json journal/brief.json
           git commit -qm "Point du jour automatique" || exit 0
-          git pull -q --rebase origin main && git push -q origin HEAD:main
+          git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main
