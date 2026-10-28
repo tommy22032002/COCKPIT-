@@ -378,6 +378,18 @@ public class MainActivity extends Activity {
             }
         }
 
+        /** Impression / enregistrement en PDF de la page affichée (rapport mensuel). */
+        @JavascriptInterface public void print(final String title) {
+            runOnUiThread(() -> {
+                try {
+                    android.print.PrintManager pm = (android.print.PrintManager) getSystemService(android.content.Context.PRINT_SERVICE);
+                    String t = (title == null || title.isEmpty()) ? "Cockpit" : title;
+                    pm.print(t, web.createPrintDocumentAdapter(t), new android.print.PrintAttributes.Builder()
+                        .setMediaSize(android.print.PrintAttributes.MediaSize.ISO_A4).build());
+                } catch (Exception e) { }
+            });
+        }
+
         @JavascriptInterface public void openExternal(String url) {
             runOnUiThread(() -> {
                 try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); } catch (Exception ignored) { }
