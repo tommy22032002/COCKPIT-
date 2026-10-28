@@ -90,6 +90,43 @@ public class MainActivity extends Activity {
         } catch (Exception e) { wh.postDelayed(() -> wakeLoop(), 2000); }
     }
 
+    private String voiceName = "";
+    private float vPitch = 0.88f, vRate = 1.0f;
+
+    private void initTts(final String first) {
+        tts = new android.speech.tts.TextToSpeech(MainActivity.this, st -> {
+            ttsReady = st == android.speech.tts.TextToSpeech.SUCCESS;
+            if (!ttsReady) return;
+            tts.setLanguage(java.util.Locale.FRANCE);
+            tts.setOnUtteranceProgressListener(new android.speech.tts.UtteranceProgressListener() {
+                @Override public void onStart(String id) { wh.post(() -> { speaking = true; wakePause(); }); }
+                @Override public void onDone(String id) { wh.postDelayed(() -> { speaking = false; wakeLoop(); }, 350); }
+                @Override public void onError(String id) { wh.post(() -> { speaking = false; wakeLoop(); }); }
+            });
+            applyVoice();
+            if (first != null && !first.isEmpty()) { speaking = true; wakePause(); tts.speak(first, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
+        });
+    }
+
+    /** Applique la voix choisie ; sinon une voix d'homme française si le téléphone en a une. */
+    private void applyVoice() {
+        if (tts == null || !ttsReady) return;
+        try {
+            android.speech.tts.Voice pick = null, male = null;
+            for (android.speech.tts.Voice v : tts.getVoices()) {
+                if (v.getLocale() == null || !"fr".equals(v.getLocale().getLanguage())) continue;
+                String n = v.getName().toLowerCase(java.util.Locale.ROOT);
+                if (!voiceName.isEmpty() && v.getName().equals(voiceName)) pick = v;
+                boolean m = n.contains("frb") || n.contains("frd") || n.contains("male") && !n.contains("female") || n.contains("smtm") || n.contains("#male");
+                if (m && (male == null || (!v.isNetworkConnectionRequired() && male.isNetworkConnectionRequired()))) male = v;
+            }
+            if (pick == null && voiceName.isEmpty()) pick = male;
+            if (pick != null) tts.setVoice(pick);
+            tts.setPitch(vPitch);
+            tts.setSpeechRate(vRate);
+        } catch (Exception ignored) { }
+    }
+
     private void wakePause() { try { if (sr != null) sr.cancel(); } catch (Exception ignored) { } }
 
     private void js(String code) { if (web != null) web.evaluateJavascript(code, null); }
@@ -511,25 +548,33 @@ public class MainActivity extends Activity {
             });
         }
 
+        /** Voix choisie (nom de voix Android), hauteur et vitesse. */
+        @JavascriptInterface public void setVoice(final String name, final float pitch, final float rate) {
+            runOnUiThread(() -> { voiceName = name == null ? "" : name; vPitch = pitch > 0 ? pitch : 1f; vRate = rate > 0 ? rate : 1f; applyVoice(); });
+        }
+
+        /** Liste des voix françaises installées (JSON). Lance la synthèse si besoin : rappeler un peu plus tard. */
+        @JavascriptInterface public String listVoices() {
+            JSONArray out = new JSONArray();
+            try {
+                if (tts == null) { runOnUiThread(() -> initTts(null)); return out.toString(); }
+                if (!ttsReady) return out.toString();
+                for (android.speech.tts.Voice v : tts.getVoices()) {
+                    if (v.getLocale() == null || !"fr".equals(v.getLocale().getLanguage())) continue;
+                    JSONObject o = new JSONObject();
+                    o.put("name", v.getName()); o.put("locale", v.getLocale().toString()); o.put("network", v.isNetworkConnectionRequired()); o.put("quality", v.getQuality());
+                    out.put(o);
+                }
+            } catch (Exception ignored) { }
+            return out.toString();
+        }
+
         /** Lecture à voix haute (synthèse vocale du téléphone). */
         @JavascriptInterface public void speak(final String text) {
             runOnUiThread(() -> {
                 try {
-                    if (tts == null) {
-                        tts = new android.speech.tts.TextToSpeech(MainActivity.this, st -> {
-                            ttsReady = st == android.speech.tts.TextToSpeech.SUCCESS;
-                            if (ttsReady) {
-                                tts.setLanguage(java.util.Locale.FRANCE);
-                                tts.setOnUtteranceProgressListener(new android.speech.tts.UtteranceProgressListener() {
-                                    @Override public void onStart(String id) { wh.post(() -> { speaking = true; wakePause(); }); }
-                                    @Override public void onDone(String id) { wh.postDelayed(() -> { speaking = false; wakeLoop(); }, 350); }
-                                    @Override public void onError(String id) { wh.post(() -> { speaking = false; wakeLoop(); }); }
-                                });
-                                speaking = true; wakePause();
-                                tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit");
-                            }
-                        });
-                    } else if (ttsReady) { speaking = true; wakePause(); tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
+                    if (tts == null) initTts(text);
+                    else if (ttsReady) { applyVoice(); speaking = true; wakePause(); tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
                 } catch (Exception ignored) { }
             });
         }
