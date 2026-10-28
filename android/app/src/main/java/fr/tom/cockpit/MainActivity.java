@@ -49,6 +49,66 @@ public class MainActivity extends Activity {
     private static final int REQ_VOICE = 12;
     private android.speech.tts.TextToSpeech tts;
     private boolean ttsReady = false;
+    // ---------- mains libres : écoute du mot de réveil quand l'appli est ouverte ----------
+    private static final int REQ_MIC = 13;
+    private android.speech.SpeechRecognizer sr;
+    private boolean wakeOn = false, speaking = false, resumed = false;
+    private final android.os.Handler wh = new android.os.Handler(android.os.Looper.getMainLooper());
+
+    private void wakeLoop() {
+        if (!wakeOn || speaking || !resumed) return;
+        if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) return;
+        try {
+            if (sr == null) {
+                if (!android.speech.SpeechRecognizer.isRecognitionAvailable(this)) { js("window.__wakeErr&&window.__wakeErr('indisponible')"); wakeOn = false; return; }
+                sr = android.speech.SpeechRecognizer.createSpeechRecognizer(this);
+                sr.setRecognitionListener(new android.speech.RecognitionListener() {
+                    @Override public void onResults(Bundle b) {
+                        ArrayList<String> l = b.getStringArrayList(android.speech.SpeechRecognizer.RESULTS_RECOGNITION);
+                        if (l != null && !l.isEmpty()) js("window.__heard&&window.__heard(" + JSONObject.quote(l.get(0)) + ")");
+                        wh.postDelayed(() -> wakeLoop(), 200);
+                    }
+                    @Override public void onError(int e) {
+                        int d = (e == android.speech.SpeechRecognizer.ERROR_RECOGNIZER_BUSY || e == android.speech.SpeechRecognizer.ERROR_CLIENT) ? 1500 : (e == android.speech.SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS ? -1 : 300);
+                        if (d > 0) wh.postDelayed(() -> wakeLoop(), d);
+                    }
+                    @Override public void onReadyForSpeech(Bundle p) { }
+                    @Override public void onBeginningOfSpeech() { }
+                    @Override public void onRmsChanged(float v) { }
+                    @Override public void onBufferReceived(byte[] b) { }
+                    @Override public void onEndOfSpeech() { }
+                    @Override public void onPartialResults(Bundle b) { }
+                    @Override public void onEvent(int t, Bundle b) { }
+                });
+            }
+            Intent i = new Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+            i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+            i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, "fr-FR");
+            i.putExtra(android.speech.RecognizerIntent.EXTRA_MAX_RESULTS, 1);
+            i.putExtra(android.speech.RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, 1400L);
+            sr.startListening(i);
+        } catch (Exception e) { wh.postDelayed(() -> wakeLoop(), 2000); }
+    }
+
+    private void wakePause() { try { if (sr != null) sr.cancel(); } catch (Exception ignored) { } }
+
+    private void js(String code) { if (web != null) web.evaluateJavascript(code, null); }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQ_MIC) {
+            boolean ok = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
+            if (ok) wakeLoop(); else { wakeOn = false; js("window.__wakeErr&&window.__wakeErr('refus')"); }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        resumed = true;
+        if (wakeOn) wh.postDelayed(() -> wakeLoop(), 400);
+    }
     private static final int REQ_NOTIF = 12;
 
     private WebView web;
@@ -287,6 +347,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        resumed = false;
+        wakePause();
         Widgets.updateAll(this);
     }
 
@@ -456,14 +518,34 @@ public class MainActivity extends Activity {
                     if (tts == null) {
                         tts = new android.speech.tts.TextToSpeech(MainActivity.this, st -> {
                             ttsReady = st == android.speech.tts.TextToSpeech.SUCCESS;
-                            if (ttsReady) { tts.setLanguage(java.util.Locale.FRANCE); tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
+                            if (ttsReady) {
+                                tts.setLanguage(java.util.Locale.FRANCE);
+                                tts.setOnUtteranceProgressListener(new android.speech.tts.UtteranceProgressListener() {
+                                    @Override public void onStart(String id) { wh.post(() -> { speaking = true; wakePause(); }); }
+                                    @Override public void onDone(String id) { wh.postDelayed(() -> { speaking = false; wakeLoop(); }, 350); }
+                                    @Override public void onError(String id) { wh.post(() -> { speaking = false; wakeLoop(); }); }
+                                });
+                                speaking = true; wakePause();
+                                tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit");
+                            }
                         });
-                    } else if (ttsReady) tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit");
+                    } else if (ttsReady) { speaking = true; wakePause(); tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
                 } catch (Exception ignored) { }
             });
         }
 
-        @JavascriptInterface public void stopSpeak() { runOnUiThread(() -> { try { if (tts != null) tts.stop(); } catch (Exception ignored) { } }); }
+        /** Mains libres : écoute en continu tant que l'appli est ouverte (le texte reconnu arrive dans window.__heard). */
+        @JavascriptInterface public void wakeStart() {
+            runOnUiThread(() -> {
+                wakeOn = true;
+                if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, REQ_MIC);
+                else wakeLoop();
+            });
+        }
+
+        @JavascriptInterface public void wakeStop() { runOnUiThread(() -> { wakeOn = false; wakePause(); }); }
+
+        @JavascriptInterface public void stopSpeak() { runOnUiThread(() -> { try { if (tts != null) tts.stop(); } catch (Exception ignored) { } if (speaking) { speaking = false; wh.postDelayed(() -> wakeLoop(), 300); } }); }
 
         @JavascriptInterface public void openExternal(String url) {
             runOnUiThread(() -> {
@@ -475,6 +557,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         try { if (tts != null) tts.shutdown(); } catch (Exception ignored) { }
+        try { if (sr != null) sr.destroy(); } catch (Exception ignored) { }
         if (web != null) {
             web.setVisibility(View.GONE);
             web.destroy();
