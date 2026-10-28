@@ -1,0 +1,29 @@
+name: Point du jour automatique
+on:
+  schedule:
+    - cron: '20 7 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      test:
+        description: 'Écrire dans journal/brief-test.json'
+        default: 'non'
+permissions:
+  contents: write
+concurrency: journal-data
+jobs:
+  brief:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Cours et actus du matin
+        run: python3 tools/journal_data.py
+      - name: Rédaction (si aucun point du jour aujourd'hui)
+        run: python3 tools/brief_auto.py
+        env:
+          BRIEF_OUT: ${{ github.event.inputs.test == 'oui' && 'journal/brief-test.json' || '' }}
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add journal/raw.json journal/brief.json journal/brief-test.json 2>/dev/null || git add journal/raw.json journal/brief.json
+          git commit -qm "Point du jour automatique" || exit 0
+          git pull -q --rebase origin main && git push -q origin HEAD:main
