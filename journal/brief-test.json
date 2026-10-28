@@ -1,0 +1,294 @@
+{
+ "v": 1,
+ "auto": true,
+ "date": "2026-10-28",
+ "at": "2026-10-28T12:02+01:00",
+ "title": "Les marchés montent, le Nasdaq en tête",
+ "mood": "optimiste",
+ "summary": [
+  "À la dernière séance, la Bourse de Paris a fini quasi stable (−0,1 %, 7 879 points) et l'ensemble de l'Europe (Stoxx 600) en baisse (−0,2 %).",
+  "À Wall Street, le S&P 500 termine en hausse (+0,6 %) et le Nasdaq en nette hausse (+1,2 %). Ce matin, la Bourse de Tokyo (Nikkei) est en nette hausse (+1,1 %).",
+  "Côté matières premières et devises : l'euro baisse face au dollar (−0,4 %, 1 € = 1,113 $), le pétrole Brent recule de 2,5 % (≈ 111 $), l'indice de la peur (VIX) est à 17,5."
+ ],
+ "forYou": "Séance favorable pour un portefeuille d'ETF diversifié comme le tien. Rien à faire : ton plan continue, prochain achat comme prévu. L'euro plus faible gonfle un peu la valeur en euros de tes ETF exposés aux États-Unis.",
+ "zones": {
+  "monde": "Le MSCI World suit surtout Wall Street (environ 70 % d'actions américaines) : S&P 500 +0,6 %, euro/dollar −0,4 %.",
+  "us": "S&P 500 +0,6 %, Nasdaq +1,2 % : ton Nasdaq-100 suit surtout les géants de la tech.",
+  "europe": "Stoxx 600 −0,2 %, CAC 40 −0,1 %.",
+  "japon": "Nikkei +1,1 % à la Bourse de Tokyo.",
+  "emergents": "Indice des pays émergents (EEM, en dollars) +1,1 %."
+ },
+ "markets": [
+  {
+   "k": "^FCHI",
+   "n": "CAC 40",
+   "v": 7879.18,
+   "ch": -0.00101
+  },
+  {
+   "k": "^STOXX",
+   "n": "Stoxx 600",
+   "v": 642.33,
+   "ch": -0.0021
+  },
+  {
+   "k": "^GSPC",
+   "n": "S&P 500",
+   "v": 7722.6,
+   "ch": 0.00597
+  },
+  {
+   "k": "^IXIC",
+   "n": "Nasdaq",
+   "v": 26477.81,
+   "ch": 0.01179
+  },
+  {
+   "k": "^N225",
+   "n": "Nikkei 225",
+   "v": 63954.19,
+   "ch": 0.01084
+  },
+  {
+   "k": "EEM",
+   "n": "Émergents (EEM)",
+   "v": 62.52,
+   "ch": 0.01132
+  },
+  {
+   "k": "EURUSD=X",
+   "n": "Euro / dollar",
+   "v": 1.1125,
+   "ch": -0.00437
+  },
+  {
+   "k": "^TNX",
+   "n": "Taux US à 10 ans",
+   "v": 4.993,
+   "ch": 0.0014
+  },
+  {
+   "k": "^VIX",
+   "n": "Indice de la peur (VIX)",
+   "v": 17.46,
+   "ch": -0.00342
+  },
+  {
+   "k": "GC=F",
+   "n": "Or",
+   "v": 4059.8,
+   "ch": -0.00363
+  },
+  {
+   "k": "BZ=F",
+   "n": "Pétrole (Brent)",
+   "v": 111.04,
+   "ch": -0.02494
+  },
+  {
+   "k": "BTC-EUR",
+   "n": "Bitcoin",
+   "v": 73130.18,
+   "ch": 0.00698
+  }
+ ],
+ "agenda": [
+  {
+   "d": "2026-10-28",
+   "h": "19:00",
+   "t": "Décision de taux de la Fed (conférence de presse à 19 h 30)",
+   "z": "us",
+   "level": 3,
+   "impact": "Maintien attendu entre 3,75 % et 4,00 %. Le ton de Jerome Powell sur une éventuelle hausse en décembre peut faire bouger le S&P 500 et le Nasdaq."
+  },
+  {
+   "d": "2026-10-28",
+   "h": "soir (après la clôture US)",
+   "t": "Résultats de Microsoft et Alphabet (Google)",
+   "z": "us",
+   "level": 3,
+   "impact": "Deux poids lourds de l'ETF Monde et du Nasdaq-100 : leurs chiffres sur l'IA et le cloud donneront le ton à la tech."
+  },
+  {
+   "d": "2026-10-29",
+   "h": "13:30",
+   "t": "PIB américain du 3e trimestre (1re estimation) et inflation PCE de septembre",
+   "z": "us",
+   "level": 2,
+   "impact": "Une croissance solide rassure sur l'économie, mais une inflation qui accélère pourrait pousser la Fed à remonter ses taux."
+  },
+  {
+   "d": "2026-10-29",
+   "h": "14:15",
+   "t": "Décision de taux de la BCE",
+   "z": "europe",
+   "level": 3,
+   "impact": "Statu quo attendu (taux de dépôt à 2,50 %). Le discours sur l'inflation et le pétrole compte pour le Stoxx 600 et l'euro."
+  },
+  {
+   "d": "2026-10-29",
+   "h": "soir (après la clôture US)",
+   "t": "Résultats d'Amazon",
+   "z": "us",
+   "level": 2,
+   "impact": "Autre géant du Nasdaq-100 et de l'ETF Monde : son activité cloud (AWS) est très suivie dans la course à l'IA."
+  },
+  {
+   "d": "2026-10-30",
+   "h": "matin",
+   "t": "Décision de la Banque du Japon",
+   "z": "japon",
+   "level": 2,
+   "impact": "Maintien à 1,25 % attendu. Un signal de hausse future renforcerait le yen, ce qui peut freiner la Bourse de Tokyo."
+  },
+  {
+   "d": "2026-11-03",
+   "h": "journée",
+   "t": "Élections de mi-mandat aux États-Unis",
+   "z": "us",
+   "level": 2,
+   "impact": "Le résultat peut créer un peu de volatilité à Wall Street, en général de courte durée."
+  },
+  {
+   "d": "2026-11-06",
+   "h": "14:30",
+   "t": "Rapport sur l'emploi américain d'octobre",
+   "z": "us",
+   "level": 3,
+   "impact": "Indicateur clé pour la Fed : un marché du travail trop fort ou trop faible peut faire bouger les taux et les actions."
+  }
+ ],
+ "reads": [
+  {
+   "t": "Seagate dépasse largement les attentes",
+   "s": "Boursier.com",
+   "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNllFUzJyaDRISEpNWUZ2cGJuOGl5bXhCNFp3R043VnhnZ3hvV3gzSVVBZ2ZjbHVPaXdfZUxWNlpwY0FyQzY2cHFoNHhuM2d1Z3htWmpfQ0laNG4wUmZ1UllaZ2UxWlBrRVFJeTZwLWx6aVJqbDVFLXdYUXkxcHhNQlI1dXpKbEx1RTItbUxJTVNSWFNrU3hiamxLdFQ2NllJ?oc=5"
+  },
+  {
+   "t": "L'Europe attendue en recul sous une salve de résultats d'entreprises, la Fed en ligne de mire",
+   "s": "ABC Bourse",
+   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWlNGTW1CSEE0Y1hwR3BjRm1sUGprLWdxa0VXTXh3VXJ5OThZb3pDSG9zaVdTeHE3VnU2NGRFV3VOWHo0N2hZWWthWi1iVDhNTHJRbm5PNEE5UU44aUg5ZTVReC1fc2JTTE9EYnV6Y0N6ckpiNE14N1M0LWQ3NjZSUWpxTjlnS201c0pRX05CNHF5VFZuVm1FNndXc3BMV3gzZDUtMXJZYWR1ajZQSnBXdXJobU9YeG8yZTU0?oc=5"
+  },
+  {
+   "t": "Point marchés-L'Europe vue en baisse, prudence face aux résultats et au pétrole",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUEJ3ZFl1alprUVhYWUJCRmdIS0IzUlpYLXdZeTZVZUVtVDlrb1Ezd25qNDJoMy1RZlJJVERLaVRUckZ5NmxuaGctakpMcHAwY0RvV0NubzFSTDByMXF5U1h6WTUzaEQ2MWJzSGJUMGNpN0ZYLWJtMFNtTGhBNDh4SGpsV3FxMmhDVkkwTzJkcmYxX2pJVGVwYk5TTXlJODcwajMwQVlwTW1oNzRVQzl4VEo4NEVQS3Zyaks4OTBkV2NGSFk3SVJTdExyWGozUjliMzltcw?oc=5"
+  },
+  {
+   "t": "Agenda : à suivre aujourd'hui sur les marchés financiers...",
+   "s": "Fortuneo",
+   "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUERHY1FmM3dEdWxHNzNhVk5mczJObVFrZDhGZi1BNEczM09aNWV6RkFHUWVVMUZhbzNNQlZONzhCWW14NzBianUxc0pWWUlGV0NHcl9QenAwT3A4RldPMW85WkhTcUdhQ1p1dTFjQkdXY1BVdFVaS2dpMWoxajFqbXVaMnVZNUZXbDVoUlZTNkRiUWxzaHNzcWN2TkQzRzRXYWYyNzl30gGmAUFVX3lxTFBQREdjUWYzd0R1bEc3M2FWTmZzMk5tUWtkOEZmLUE0RzMzT1o1ZXpGQUdRZVUxRmFvM01CVk43OEJZbXg3MGJqdTFzSlZZSUZXQ0dyX1B6cDBPcDhGV08xbzlaSFNxR2FDWnV1MWNCR1djUFV0VVpLZ2kxajFqMWptdVoydVk1RldsNWhSVlM2RGJRbHNoc3NxY3ZORDNHNFdhZjI3OXc?oc=5"
+  },
+  {
+   "t": "Ce qu’il faut savoir sur l’entrée en bourse de SpaceX",
+   "s": "Radio-Canada",
+   "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb29nQmhKWTUyelBXTFlKMS1EeG5FOWN1WUlUbXAyczkyMkFnbmRpMS1RQ1JKRVNWODVPbVlPYk9ibTB2cE02cE5sU0UzSVFUU1VGWU14ZHF3c1VpTk1nUmNtR2FmMy1iNkpMOFJkcWx1cjYzelFBREN2SkxhOVJtaTNybw?oc=5"
+  }
+ ],
+ "headlines": [
+  {
+   "t": "Seagate dépasse largement les attentes",
+   "s": "Boursier.com",
+   "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNllFUzJyaDRISEpNWUZ2cGJuOGl5bXhCNFp3R043VnhnZ3hvV3gzSVVBZ2ZjbHVPaXdfZUxWNlpwY0FyQzY2cHFoNHhuM2d1Z3htWmpfQ0laNG4wUmZ1UllaZ2UxWlBrRVFJeTZwLWx6aVJqbDVFLXdYUXkxcHhNQlI1dXpKbEx1RTItbUxJTVNSWFNrU3hiamxLdFQ2NllJ?oc=5"
+  },
+  {
+   "t": "L'Europe attendue en recul sous une salve de résultats d'entreprises, la Fed en ligne de mire",
+   "s": "ABC Bourse",
+   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOWlNGTW1CSEE0Y1hwR3BjRm1sUGprLWdxa0VXTXh3VXJ5OThZb3pDSG9zaVdTeHE3VnU2NGRFV3VOWHo0N2hZWWthWi1iVDhNTHJRbm5PNEE5UU44aUg5ZTVReC1fc2JTTE9EYnV6Y0N6ckpiNE14N1M0LWQ3NjZSUWpxTjlnS201c0pRX05CNHF5VFZuVm1FNndXc3BMV3gzZDUtMXJZYWR1ajZQSnBXdXJobU9YeG8yZTU0?oc=5"
+  },
+  {
+   "t": "Point marchés-L'Europe vue en baisse, prudence face aux résultats et au pétrole",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUEJ3ZFl1alprUVhYWUJCRmdIS0IzUlpYLXdZeTZVZUVtVDlrb1Ezd25qNDJoMy1RZlJJVERLaVRUckZ5NmxuaGctakpMcHAwY0RvV0NubzFSTDByMXF5U1h6WTUzaEQ2MWJzSGJUMGNpN0ZYLWJtMFNtTGhBNDh4SGpsV3FxMmhDVkkwTzJkcmYxX2pJVGVwYk5TTXlJODcwajMwQVlwTW1oNzRVQzl4VEo4NEVQS3Zyaks4OTBkV2NGSFk3SVJTdExyWGozUjliMzltcw?oc=5"
+  },
+  {
+   "t": "Agenda : à suivre aujourd'hui sur les marchés financiers...",
+   "s": "Fortuneo",
+   "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUERHY1FmM3dEdWxHNzNhVk5mczJObVFrZDhGZi1BNEczM09aNWV6RkFHUWVVMUZhbzNNQlZONzhCWW14NzBianUxc0pWWUlGV0NHcl9QenAwT3A4RldPMW85WkhTcUdhQ1p1dTFjQkdXY1BVdFVaS2dpMWoxajFqbXVaMnVZNUZXbDVoUlZTNkRiUWxzaHNzcWN2TkQzRzRXYWYyNzl30gGmAUFVX3lxTFBQREdjUWYzd0R1bEc3M2FWTmZzMk5tUWtkOEZmLUE0RzMzT1o1ZXpGQUdRZVUxRmFvM01CVk43OEJZbXg3MGJqdTFzSlZZSUZXQ0dyX1B6cDBPcDhGV08xbzlaSFNxR2FDWnV1MWNCR1djUFV0VVpLZ2kxajFqMWptdVoydVk1RldsNWhSVlM2RGJRbHNoc3NxY3ZORDNHNFdhZjI3OXc?oc=5"
+  },
+  {
+   "t": "Ce qu’il faut savoir sur l’entrée en bourse de SpaceX",
+   "s": "Radio-Canada",
+   "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNb29nQmhKWTUyelBXTFlKMS1EeG5FOWN1WUlUbXAyczkyMkFnbmRpMS1RQ1JKRVNWODVPbVlPYk9ibTB2cE02cE5sU0UzSVFUU1VGWU14ZHF3c1VpTk1nUmNtR2FmMy1iNkpMOFJkcWx1cjYzelFBREN2SkxhOVJtaTNybw?oc=5"
+  },
+  {
+   "t": "Un succès de l’IPO d’Anthropic planterait le dernier clou dans le cercueil de l’ESG",
+   "s": "l'Opinion",
+   "u": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNWlyMzFRbnN6Yk1PTlRuTGdxRlM1dUUtYTdIYmVGbFNydHd1bWNZNmRzeF9ISmlvX2VsSzNhQUpsVEdweEI4OGxWaXJ3MzMySU41N2pHT3VLU2ItVVA3MzN4ZC01WHFmaUZjRzZfTGVvV0hJMDQwSnpDVkZDN283N0wwTmVjSV8zM2NFR0xEYmp6MFFqbUFoNVpoZk9ycWVhTFJmdGFvMVh5VVUtOUVkM0tvbw?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "USA-Les valeurs à suivre à Wall Street",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONlJQdHp3TVpkZFk2Ykl4YTVBWElWa29JRzFoeHFfSXFmXzdWV2JUN20weFFUSHdpS2dZZlUwMjdUZGxzY1dYWHdMSjc3THZEd2w3dWhGOFRrekVDUTc4TmN4cXp4RjdJSkxyZkRyaHE1NWxZX29hS0NtMUFKbEl2N1NhNFhwRnN2dk9icnFnQzNvbjl1SlVndUZ4REdObTA?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "SK Hynix bat tous les records et fait bondir Wall Street🔥 Les stocks de mémoire sont épuisés jusqu'en 2029",
+   "s": "XTB.com",
+   "u": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPTVNQeFN2YWJvWjAyOUtEejlfMWNrWV9kWDF6TUc3RUpCamFkSmxGTWdvcjFhLXpYcVpSOFlsMzU5RWtZUGpRT2NXZ19BYzV2YUZNSjRSek5VYVd4aFNibkZDSWhPbnZlSnNNMHRERXJvVWZxMVQ5S0tseE9CcHRZSG1BODJzMWpIdDcwTlBPZ2w1aUpvOElLdFo4ODQzM21QZ1k5dUZQVFcxdzY4d3k4VUZzTXR0OXNia19QYjEtc2JXQlFLQkE1NmlmVC15M0RpbGk4aU5kekZ5MTlvQVE?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "Anthropic dépose son dossier d’introduction en Bourse au Nasdaq",
+   "s": "lnt.ma",
+   "u": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZlgzelNPVDBxbkxjWnJ2U2FEZUpQdTZaUFRCUkY4TTZYVmRZMGI0V1IybWZZakdseFQ5dnh3Vk1lUzVyWDk3UlJUaTNxRzlvb2dkcWhpUHJhZVhBMEFvX2tDSXZYN2lZRmJBdXQxTXVIQW9qM2t2OVNqWllrVG1iVGRDQTQ?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Le constructeur auto GM bascule à son tour du NYSE vers le Nasdaq",
+   "s": "Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONlFwV29GZWFRQThmUzFuS1hFcV9FZy10RGYzdWppSnlBLXUzazVoMVNSSW02OWt3ckJpT3FRV0hvd1o4R0FmczBMMDF5dkJudFdRb2ttdnByRHBfNTZZSkNrTG9iak8zZTktV3lZUUtCZlpwbDE0X041cUNNbTRnUEpqWWozWVU4X29rTjFxRERKb0lHT19PYVdOcU5KX0xCeldUSnNKWGo1NmlaNGVTeGFHWU9VLU1tV1VNYXB5U3ptN0JpWEpleGtZVDk?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Visiteurs du soir étonnants et agendas secrets : ce qui se passe vraiment dans le huis clos du bureau du président de la Réserve fédérale",
+   "s": "Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPOGpIX0Uza05Xb2o3NWxUMlFWMlBGdTh6cFRDSXdZeXM1eFJENExZRHM2bWxMT1dlMUFWUXJ0RGtVT2VPbU12dkIydW5iZFNtT0doNjhfa3lWZ1pibnNaN2Q1WjRJY0ROUHpvb1IwTGpCcUVSWlVzOC1wekQzYzdkZnJOclcyZGdEUFFLamtSMlJ6d3h3UDV1WnNCRHA1TjVHZEY4YW5GZy1vd1ZZMF9LWVVNa1VHdVJGYmZiUnNGeGFKRldjRDd6R0dfVHoyMnlNZXpIb18wYTR5S2tQRGxLVzh4cFVfY3lnZm9XTmF2QUxPWnpNbldSVE1KeWlnTk9zV1JaZHp4Q2wxbHhGNjc0YXhWa0dRWXdIZmR4Y1ZVMm1WeTFiYXNXcEJ3?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Le CAC 40 cale sous les 7 880 points, Stellantis flambe de plus de 5 %",
+   "s": "Idéal Investisseur",
+   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPWURLeEY3ZEY4ODBxUVVKeHh5cDF3cnlvUWhCVDZnYll5UGJ2Yk9HTHRseTh2X1VlUzJwQTlneGprVHlRWTFYUHkzWWdRRWhmaEdzaFQ1MUktdi0zYW1jUE8zaTlaSkFKNC1SRVBCc0dZNUtQa0plcDhoNWtySVRXRkVLLU1OU0h6eWYtTFVocktNVjRxREs4eTRqX1hqd2MwbEJmenZnam5QMWEzY00xYWNRdnFfQXZneWhFeUtIaGtkOWg0RHc?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Inde: les actions reculent de 0,5% -Cac 40",
+   "s": "ABC Bourse",
+   "u": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5DdW0xSTdobWZPV2RLU1F0clg0OVRuWU0tSnBhdG5Qb2JUSjJaQ29zUmJYWjctSDR4UnJqOEVvRUc5Qk5yVm0ya2hYZlJwTVd5cXY4NXhlSjVqekdTZF80cE9pY1FfUF9GWUJsVm9kaDZIT05TMFIxMlVGNE4zUQ?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "CAC 40: Une certaine prudence pour le CAC 40 avant la Fed",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMXJOSGg5YzAtbFJlTFZsS0JBY1dhRXpJQWxzRkNLZzBhOFZmeGZXLW1UMGhEU1B6STN1aUxoOVpWazFQRVBMZDgzNElGNVJod0MxcXRBUkVHMGp1RHpSRmQ5QzhtcGg1OHVyaWprZXhuTmVuVUhxbDE2ZHRTdGhFcHRNeXRsTUFzdEEwY1g1am1rNjJvUHRIdk1LMWhESmVUUmp0QXBjWHJxNVZDNmo4?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Danone dans le haut du CAC 40",
+   "s": "Bourse Direct",
+   "u": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNYnc2YW1ETVJuSlQ2UEJxalYxc0JLWkVfbXVEdkw4OXVOcy1QSlZBSk9mdFVEX0R4elppR3NzUm1MWUhVUEtZU0NNRFh1TDdTSWVnNEJCWFdLZUZySHpJSnNIUFB5ekRqbXVDdzNhdHNuekRJSDNBekdhc2xHeGdoYk9PTmVlemNpa2RremRCbmF0aTJkSl9teU1pRVpXZW1xR0NwaVY3cjFzVW50S2kta1NhajlMTnhuNzl6Ti1KaHdrWUxJNlFoWDFmd0xEM2FBcEE3YkxtNVVQRFZjUzlqUnRjb3VYbW9nWnM0N0YxQVFhU2dSTGtFMmlCWllkeTFTdTU3cXB6OG85ci1wcXJnV2VfT1ZrOHMyeTZZbnk1TQ?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Senshu Electric Co., Ltd. (Bourse de Tokyo (TSE) : 9824) annonce un programme de rachat d’actions portant sur 75 000 titres, soit 0,44 %, pour 600 millions de yens.",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPcXZzc2lGYVBNSHNDWURwSmF0alJ5R2NWN3hxVHZlaDRHVGhaN2ZGUnhpN2NYaHVoMTlYdWNOOW02NUtZUDZSdGd1REJIajExal83OU5ZMV9SemRxamhCU1J3azI0elFYb3hyMkhaUENVS0xKSEZNSXRTcE1OMFpDTm96d3NZVFJobXl6ODhYWGlWMWpHanRDZlB5NjFfZGVUcDg1N1MzSEJRWXdZbHBzYXZaVDZBd3RoNl82eWJkNXozOEpoR2hWM1JxVU9wMk1STHBsNTVkcV9iNGp2V2FoOGV0N2E?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "la Bourse de Tokyo gagne 1,08 % le 28 octobre 2026",
+   "s": "Le Revenu",
+   "u": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOGtqMHJoTTJ6V3pNT0xvbjBpWV9PZXJoaE51MDVEblpUZm50ZTJQNHQwTnJUUXhEU2JFNmJQZXZEMnFKSUJGNnBTbzJaVl9DczlidE1qRzFNX3d4b3E5REplUUp1a25VVEJzMFdWVlFxVHRxSFNUNW1yRjZOeFBocGVGd1Bpdi1jNkNnMU91ZjZ0eTZreGlkZTIzQWFkek1DQkFMMjFFYXgxWmls?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "Le Nikkei japonais progresse, les résultats technologiques ravivant l’optimisme autour de l’IA ; le Topix recule",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPMktQTUJmaXlDNHd6d29paFFfUzR2NHpGUTlGQ0RsZGZUZGhkM1lwM1Bnc2dON2dhWFlKOFZQbzNFcTl1ZWsyRl9Fa2RSenpzd2JWbklFdVVqb3lVR1VCdzNZMHFfczh4NXE3ZlVPWmIzMER2c0pjSUVpOGlEVG9fMU1FcWhzMFBkM1MwMmdqQlQzcjdpbmRqRTh1MndNVkdVc2Mwb3ZQMXZqUE10Y2xtdU5sS2k2M2ZkMExLYl81dFdYQVBiRjJ2TmtlZlkzYzVGSFZtc3BDcWJ5cXpNU3RWVWZZdTFPYl9nNzA5WA?oc=5",
+   "z": "japon"
+  }
+ ],
+ "lesson": "Un ETF capitalisant réinvestit tout seul les dividendes dans son cours : rien n'arrive sur ton compte, mais ta part vaut plus. C'est le plus efficace dans un PEA."
+}
