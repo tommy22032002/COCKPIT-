@@ -46,6 +46,9 @@ public class MainActivity extends Activity {
     static final String HOST = "tommy22032002.github.io";
     static final String BASE = "https://" + HOST + "/COCKPIT-/";
     private static final int REQ_FILE = 11;
+    private static final int REQ_VOICE = 12;
+    private android.speech.tts.TextToSpeech tts;
+    private boolean ttsReady = false;
     private static final int REQ_NOTIF = 12;
 
     private WebView web;
@@ -250,6 +253,15 @@ public class MainActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQ_VOICE) {
+            String txt = "";
+            if (resultCode == RESULT_OK && data != null) {
+                ArrayList<String> r = data.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS);
+                if (r != null && !r.isEmpty()) txt = r.get(0);
+            }
+            if (web != null) web.evaluateJavascript("window.__voice&&window.__voice(" + JSONObject.quote(txt) + ")", null);
+            return;
+        }
         if (requestCode != REQ_FILE || fileCallback == null) return;
         Uri[] result = null;
         if (resultCode == RESULT_OK && data != null) {
@@ -390,6 +402,69 @@ public class MainActivity extends Activity {
             });
         }
 
+        /** Assistant IA : requête POST vers Groq ou Gemini uniquement (pas de blocage CORS dans l'appli). */
+        /** Version asynchrone : la réponse revient dans window.__httpCb(id, json), sans bloquer la page. */
+        @JavascriptInterface public void httpPostAsync(final String id, final String url, final String headersJson, final String body) {
+            new Thread(() -> {
+                final String r = httpPost(url, headersJson, body);
+                runOnUiThread(() -> { if (web != null) web.evaluateJavascript("window.__httpCb&&window.__httpCb(" + JSONObject.quote(id) + "," + JSONObject.quote(r) + ")", null); });
+            }).start();
+        }
+
+        @JavascriptInterface public String httpPost(String url, String headersJson, String body) {
+            JSONObject res = new JSONObject();
+            try {
+                URL u = new URL(url);
+                String h = u.getHost();
+                if (!"https".equals(u.getProtocol()) || !(h.equals("api.groq.com") || h.equals("generativelanguage.googleapis.com"))) { res.put("status", 0); res.put("body", "hôte refusé"); return res.toString(); }
+                HttpURLConnection c = (HttpURLConnection) u.openConnection();
+                c.setConnectTimeout(15000); c.setReadTimeout(90000);
+                boolean get = body == null || body.isEmpty();
+                c.setRequestMethod(get ? "GET" : "POST");
+                JSONObject hd = new JSONObject(headersJson == null || headersJson.isEmpty() ? "{}" : headersJson);
+                java.util.Iterator<String> it = hd.keys();
+                while (it.hasNext()) { String k = it.next(); c.setRequestProperty(k, hd.getString(k)); }
+                if (!get) { c.setDoOutput(true); OutputStream o = c.getOutputStream(); o.write(body.getBytes("UTF-8")); o.close(); }
+                int code = c.getResponseCode();
+                InputStream in = code >= 400 ? c.getErrorStream() : c.getInputStream();
+                ByteArrayOutputStream out = new ByteArrayOutputStream();
+                if (in != null) { byte[] buf = new byte[8192]; int n; while ((n = in.read(buf)) > 0 && out.size() < 4_000_000) out.write(buf, 0, n); in.close(); }
+                res.put("status", code); res.put("body", out.toString("UTF-8"));
+            } catch (Exception e) { try { res.put("status", 0); res.put("body", String.valueOf(e.getMessage())); } catch (Exception ignored) { } }
+            return res.toString();
+        }
+
+        /** Dictée vocale : reconnaissance d'Android, en français. Le texte revient dans window.__voice. */
+        @JavascriptInterface public void listen() {
+            runOnUiThread(() -> {
+                try {
+                    Intent i = new Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                    i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                    i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, "fr-FR");
+                    i.putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, "Parle à ton Cockpit");
+                    startActivityForResult(i, REQ_VOICE);
+                } catch (Exception e) {
+                    if (web != null) web.evaluateJavascript("window.__voiceErr&&window.__voiceErr('indisponible')", null);
+                }
+            });
+        }
+
+        /** Lecture à voix haute (synthèse vocale du téléphone). */
+        @JavascriptInterface public void speak(final String text) {
+            runOnUiThread(() -> {
+                try {
+                    if (tts == null) {
+                        tts = new android.speech.tts.TextToSpeech(MainActivity.this, st -> {
+                            ttsReady = st == android.speech.tts.TextToSpeech.SUCCESS;
+                            if (ttsReady) { tts.setLanguage(java.util.Locale.FRANCE); tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit"); }
+                        });
+                    } else if (ttsReady) tts.speak(text, android.speech.tts.TextToSpeech.QUEUE_FLUSH, null, "cockpit");
+                } catch (Exception ignored) { }
+            });
+        }
+
+        @JavascriptInterface public void stopSpeak() { runOnUiThread(() -> { try { if (tts != null) tts.stop(); } catch (Exception ignored) { } }); }
+
         @JavascriptInterface public void openExternal(String url) {
             runOnUiThread(() -> {
                 try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); } catch (Exception ignored) { }
@@ -399,6 +474,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        try { if (tts != null) tts.shutdown(); } catch (Exception ignored) { }
         if (web != null) {
             web.setVisibility(View.GONE);
             web.destroy();
