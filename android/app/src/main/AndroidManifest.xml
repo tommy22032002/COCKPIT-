@@ -146,6 +146,10 @@
             android:exported="false" />
 
         <receiver
+            android:name=".MarketNotif"
+            android:exported="false" />
+
+        <receiver
             android:name=".ReminderReceiver"
             android:exported="false" />
 

@@ -144,6 +144,7 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         resumed = true;
+        try { MarketNotif.schedule(this); } catch (Exception ignored) { }
         if (wakeOn) wh.postDelayed(() -> wakeLoop(), 400);
     }
     private static final int REQ_NOTIF = 12;
@@ -597,6 +598,11 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface public void wakeStop() { runOnUiThread(() -> { wakeOn = false; wakePause(); }); }
+
+        /** Points bourse : {on, slots:[minutes depuis minuit]} ; test = notification tout de suite. */
+        @JavascriptInterface public void setMarketNotif(String json) { MarketNotif.setCfg(MainActivity.this, json); }
+        @JavascriptInterface public String getMarketNotif() { return MarketNotif.cfg(MainActivity.this).toString(); }
+        @JavascriptInterface public void testMarketNotif() { sendBroadcast(new Intent(MainActivity.this, MarketNotif.class).putExtra("test", true)); }
 
         /** Résumé du cockpit + clé et voix, pour que Jarvis réponde hors de l'appli (bulle, tuile, widget). */
         @JavascriptInterface public void setJarvis(String json) { Jarvis.setCfg(MainActivity.this, json); }

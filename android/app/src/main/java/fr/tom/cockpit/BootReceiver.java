@@ -10,6 +10,7 @@ public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context ctx, Intent intent) {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             Reminders.schedule(ctx);
+            MarketNotif.schedule(ctx);
             Widgets.updateAll(ctx);
         }
     }
