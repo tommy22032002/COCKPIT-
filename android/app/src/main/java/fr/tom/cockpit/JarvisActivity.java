@@ -106,6 +106,7 @@ public class JarvisActivity extends Activity {
         if (res == RESULT_OK && data != null) { ArrayList<String> r = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS); if (r != null && !r.isEmpty()) q = r.get(0).trim(); }
         if (q.isEmpty()) { if (hist.isEmpty()) finishQuiet(); else status.setText("Appuie sur « Encore » pour une autre question."); return; }
         String qq = q.replaceFirst("(?i)^(et |hey |ok )?jarvis[ ,]*", "").trim();
+        if (playCommand(qq)) return;
         if (openCommand(qq)) return;
         if (END.matcher(qq).matches()) { say("À ton service, Tom."); closing = true; status.setText("À plus tard."); return; }
         if (qq.isEmpty()) { say("Oui ?"); h.postDelayed(this::listen, 900); return; }
@@ -139,6 +140,43 @@ public class JarvisActivity extends Activity {
         {"coach", "coach"}, {"saison", "saison"}, {"mettre a jour|mise a jour", "maj"}, {"apparence|theme|couleur", "apparence"}};
 
     private static String norm(String s) { return java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD).replaceAll("\\p{M}", "").toLowerCase(Locale.ROOT).replaceAll("['’]", " ").trim(); }
+
+    // ---------- « mets Daft Punk sur Apple Music » : lecture d'une musique dans l'appli choisie ----------
+    private static final Pattern PLAY = Pattern.compile("^(?:peux-tu |tu peux )?(joue|jouer|mets|mettre|mets-moi|lance|lancer|fais(?:-moi)? (?:écouter|ecouter)|écoute|ecoute|passe|je veux écouter|je veux ecouter)\\s+(?:de la |du |de l'|la musique |la chanson |le titre |l'album |la playlist )?(.+?)(?:\\s+(?:sur|dans|avec)\\s+(apple music|apple musique|spotify|deezer|youtube music|youtube musique|amazon music|soundcloud))?[ .!?]*$", Pattern.CASE_INSENSITIVE);
+    private static final String[][] MUSIC = {{"apple", "com.apple.android.music", "Apple Music"}, {"spotify", "com.spotify.music", "Spotify"}, {"deezer", "deezer.android.app", "Deezer"},
+        {"youtube", "com.google.android.apps.youtube.music", "YouTube Music"}, {"amazon", "com.amazon.mp3", "Amazon Music"}, {"soundcloud", "com.soundcloud.android", "SoundCloud"}};
+
+    private boolean playCommand(String q) {
+        java.util.regex.Matcher m = PLAY.matcher(q.trim());
+        if (!m.matches()) return false;
+        String verb = m.group(1).toLowerCase(Locale.ROOT), what = m.group(2).trim(), app = m.group(3) == null ? "" : norm(m.group(3));
+        if (app.isEmpty() && verb.startsWith("lance")) return false; // « lance YouTube » = ouvrir une appli
+        if (app.isEmpty() && what.matches("(?i).*(application|appli|cockpit|onglet|page).*")) return false; // « lance l'appli » = ouvrir
+        String[] target = null;
+        if (!app.isEmpty()) for (String[] x : MUSIC) if (app.contains(x[0])) { target = x; break; }
+        if (target == null) { String pref = Jarvis.cfg(this).optString("music", ""); for (String[] x : MUSIC) if (x[1].equals(pref)) { target = x; break; } }
+        if (target == null) target = MUSIC[0];
+        Intent i = new Intent(android.provider.MediaStore.INTENT_ACTION_MEDIA_PLAY_FROM_SEARCH);
+        i.putExtra(android.app.SearchManager.QUERY, what);
+        i.putExtra(android.provider.MediaStore.EXTRA_MEDIA_FOCUS, "vnd.android.cursor.item/*");
+        i.setPackage(target[1]);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        you.setText("« " + q + " »");
+        try {
+            startActivity(i);
+            say("Je lance " + what + " sur " + target[2] + ".");
+            ans.setText("▶ " + what + " · " + target[2]);
+            h.postDelayed(this::finishQuiet, 1800);
+        } catch (Exception e) {
+            Intent open = getPackageManager().getLaunchIntentForPackage(target[1]);
+            if (open != null) {
+                startActivity(open.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                say(target[2] + " ne me laisse pas choisir la musique : je l'ouvre, cherche " + what + ".");
+                h.postDelayed(this::finishQuiet, 2500);
+            } else { ans.setText(target[2] + " n'est pas installée sur ce téléphone."); say(target[2] + " n'est pas installée."); }
+        }
+        return true;
+    }
 
     private boolean openCommand(String q) {
         java.util.regex.Matcher m = OPEN.matcher(q.trim());
