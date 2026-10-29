@@ -515,7 +515,7 @@ public class MainActivity extends Activity {
             try {
                 URL u = new URL(url);
                 String h = u.getHost();
-                if (!"https".equals(u.getProtocol()) || !(h.equals("api.groq.com") || h.equals("generativelanguage.googleapis.com"))) { res.put("status", 0); res.put("body", "hôte refusé"); return res.toString(); }
+                if (!"https".equals(u.getProtocol()) || !(h.equals("api.groq.com") || h.equals("generativelanguage.googleapis.com") || h.equals("api.anthropic.com") || h.equals("api.github.com"))) { res.put("status", 0); res.put("body", "hôte refusé"); return res.toString(); }
                 HttpURLConnection c = (HttpURLConnection) u.openConnection();
                 c.setConnectTimeout(15000); c.setReadTimeout(90000);
                 boolean get = body == null || body.isEmpty();
