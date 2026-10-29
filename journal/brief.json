@@ -1,144 +1,144 @@
 {
  "v": 1,
- "date": "2026-10-28",
- "at": "2026-10-28T07:55:00+01:00",
- "title": "L'IA porte Wall Street et Tokyo, la Fed tranche ce soir",
- "mood": "optimiste mais prudent",
+ "date": "2026-10-29",
+ "at": "2026-10-29T07:55:00+01:00",
+ "title": "Alphabet refroidit la tech, la BCE et le PIB américain au menu",
+ "mood": "attentiste",
  "summary": [
-  "Wall Street a fini mardi dans le vert, tirée par les valeurs technologiques et les semi-conducteurs : le Nasdaq gagne +1,2 % et le S&P 500 +0,6 %. L'enthousiasme autour de l'intelligence artificielle, relancé par le projet d'entrée en Bourse d'Anthropic, a compensé la déception sur Boeing. En Europe, le CAC 40 (+0,5 %) et le Stoxx 600 (+0,5 %) ont progressé, rassurés par un léger recul du pétrole et des taux.",
-  "Ce matin en Asie, la Bourse de Tokyo poursuit sur sa lancée : le Nikkei prend environ +1,2 % et dépasse les 64 000 points, toujours porté par la tech. Le pétrole reste très cher (Brent autour de 111 $, mais −2,3 %) et le taux américain à 10 ans frôle les 5 %, deux points qui pèsent sur l'inflation et donc sur les banques centrales. L'indice de la peur (VIX) baisse à 17,5, signe d'un marché plutôt serein.",
-  "La journée sera dominée par la Réserve fédérale américaine, qui annonce sa décision ce soir à 19 h (heure de Paris) : un maintien des taux entre 3,75 % et 4,00 % est largement attendu, mais les marchés guetteront tout signal d'une hausse en décembre. Microsoft et Alphabet publient leurs résultats après la clôture de Wall Street, puis viennent la BCE jeudi et la Banque du Japon vendredi."
+  "Comme prévu, la Fed a laissé hier soir ses taux inchangés (entre 3,75 % et 4 %), mais deux de ses membres voulaient déjà les remonter et son président Kevin Warsh juge l'inflation « trop élevée ». Wall Street a quand même fini dans le vert pour la troisième séance d'affilée : S&P 500 +0,3 %, Nasdaq +0,3 %. Le taux américain à 10 ans grimpe en revanche à 5,04 %, son plus haut niveau récent, signe que les investisseurs anticipent des taux durablement élevés.",
+  "Après la clôture, les résultats des géants de la tech ont divisé : Microsoft a rassuré (cloud Azure en forte hausse, action +2,6 % hors séance), alors qu'Alphabet (Google) a déçu sur la publicité et chute d'environ 10 % après la séance. Cela pèse sur les contrats à terme du Nasdaq ce matin. En Asie, Tokyo progresse (Nikkei autour de +1 %), mais Séoul recule nettement (Kospi −2,8 %) à cause de Samsung, et Shanghai cède 0,8 %.",
+  "Bonne nouvelle côté énergie : le pétrole Brent recule d'environ 4 % vers 110 $ après des signes de reprise du dialogue entre Washington et l'Iran. Aujourd'hui, l'Europe attend la décision de la BCE (statu quo attendu) et les États-Unis publient leur croissance du 3e trimestre et l'inflation PCE, avant les résultats d'Amazon ce soir."
  ],
- "forYou": "Les trois dernières séances ont été favorables à tous tes ETF, surtout le Nasdaq-100 et le Japon, portés par la tech. Cette semaine très chargée (trois banques centrales et les résultats des géants de la tech) peut provoquer des à-coups de quelques pourcents, dans un sens comme dans l'autre : c'est normal. En investissant chaque mois, tu lisses ces variations sans avoir à deviner le bon moment.",
+ "forYou": "Les mouvements du jour restent modestes à l'échelle de tes ETF : la chute d'Alphabet ne représente qu'une petite part du Nasdaq-100 et encore moins de l'ETF Monde. La vraie toile de fond, ce sont des taux longs élevés qui peuvent rendre la Bourse plus nerveuse dans les semaines à venir ; en investissant chaque mois, tu lisses justement ces à-coups, sans avoir à deviner le bon moment.",
  "zones": {
-  "monde": "Les actions mondiales progressent grâce à l'élan de l'IA, avec en toile de fond un pétrole cher et des taux longs élevés. Toute l'attention est sur la Fed ce soir.",
-  "us": "Le Nasdaq (+1,2 %) et le S&P 500 (+0,6 %) enchaînent une deuxième hausse, portés par les semi-conducteurs. Microsoft et Alphabet publient ce soir, Amazon demain.",
-  "europe": "Le CAC 40 (+0,5 %) a frôlé les 7 900 points et le Stoxx 600 a gagné +0,5 %, aidés par la détente du pétrole malgré des résultats décevants de HSBC. La BCE se réunit jeudi, statu quo attendu (taux de dépôt à 2,50 %).",
-  "japon": "Le Nikkei gagne environ +1,2 % ce matin, au-dessus de 64 000 points, porté par la tech. Le yen reste faible face au dollar avant la décision de la Banque du Japon vendredi (maintien à 1,25 % attendu).",
-  "emergents": "Les actions émergentes ont progressé (+1,1 % pour l'ETF EEM), tirées par l'Asie et la tech. Les devises restent stables en attendant les banques centrales."
+  "monde": "Les marchés digèrent une Fed patiente mais inquiète de l'inflation et une saison de résultats tech en demi-teinte ; le recul du pétrole apporte un peu d'air.",
+  "us": "Wall Street a fini en légère hausse après la Fed, mais la déception d'Alphabet (environ −10 % hors séance) refroidit la tech ce matin ; Microsoft, lui, a rassuré.",
+  "europe": "Le CAC 40 a terminé stable (7 887 points) et le Stoxx 600 à +0,1 % ; la BCE devrait garder ses taux inchangés cet après-midi, avec la situation budgétaire française en toile de fond.",
+  "japon": "Le Nikkei progresse encore ce matin (autour de +1 %), porté par les perspectives du fabricant de puces Advantest, à la veille de la décision de la Banque du Japon.",
+  "emergents": "Les émergents ont bien fini hier (+1,6 % pour l'ETF EEM), mais l'Asie recule ce matin, Séoul en tête (Kospi −2,8 %) avec la baisse de Samsung."
  },
  "markets": [
   {
    "k": "^FCHI",
    "n": "CAC 40",
-   "v": 7887.14,
-   "ch": 0.00507
+   "v": 7886.96,
+   "ch": -2e-05
   },
   {
    "k": "^STOXX",
    "n": "Stoxx 600",
-   "v": 643.68,
-   "ch": 0.00471
+   "v": 644.14,
+   "ch": 0.00071
   },
   {
    "k": "^GSPC",
    "n": "S&P 500",
-   "v": 7722.6,
-   "ch": 0.00597
+   "v": 7743.98,
+   "ch": 0.00277
   },
   {
    "k": "^IXIC",
    "n": "Nasdaq",
-   "v": 26477.81,
-   "ch": 0.01179
+   "v": 26549.85,
+   "ch": 0.00272
   },
   {
    "k": "^N225",
    "n": "Nikkei 225",
-   "v": 64042.06,
-   "ch": 0.01223
+   "v": 64580.64,
+   "ch": 0.0098
   },
   {
    "k": "EEM",
    "n": "Émergents (EEM)",
-   "v": 62.52,
-   "ch": 0.01132
+   "v": 63.52,
+   "ch": 0.01599
   },
   {
    "k": "EURUSD=X",
    "n": "Euro / dollar",
-   "v": 1.1121,
-   "ch": -0.00473
+   "v": 1.1142,
+   "ch": 0.00111
   },
   {
    "k": "^TNX",
    "n": "Taux US à 10 ans",
-   "v": 4.993,
-   "ch": 0.0014
+   "v": 5.045,
+   "ch": 0.01041
   },
   {
    "k": "^VIX",
    "n": "Indice de la peur (VIX)",
-   "v": 17.52,
-   "ch": -0.04731
+   "v": 16.91,
+   "ch": -0.03482
   },
   {
    "k": "GC=F",
    "n": "Or",
-   "v": 4045.1,
-   "ch": -0.00724
+   "v": 4036.4,
+   "ch": -0.00375
   },
   {
    "k": "BZ=F",
    "n": "Pétrole (Brent)",
-   "v": 111.26,
-   "ch": -0.02301
+   "v": 110.21,
+   "ch": -0.04431
   },
   {
    "k": "BTC-EUR",
    "n": "Bitcoin",
-   "v": 72640.41,
-   "ch": 0.01449
+   "v": 71826.44,
+   "ch": -0.01098
   }
  ],
  "agenda": [
   {
-   "d": "2026-10-28",
-   "h": "19:00",
-   "t": "Décision de taux de la Fed (conférence de presse à 19 h 30)",
-   "z": "us",
-   "level": 3,
-   "impact": "Maintien attendu entre 3,75 % et 4,00 %. Le ton de Jerome Powell sur une éventuelle hausse en décembre peut faire bouger le S&P 500 et le Nasdaq."
-  },
-  {
-   "d": "2026-10-28",
-   "h": "soir (après la clôture US)",
-   "t": "Résultats de Microsoft et Alphabet (Google)",
-   "z": "us",
-   "level": 3,
-   "impact": "Deux poids lourds de l'ETF Monde et du Nasdaq-100 : leurs chiffres sur l'IA et le cloud donneront le ton à la tech."
-  },
-  {
    "d": "2026-10-29",
    "h": "13:30",
-   "t": "PIB américain du 3e trimestre (1re estimation) et inflation PCE de septembre",
+   "t": "PIB américain du 3e trimestre et inflation PCE de septembre",
    "z": "us",
-   "level": 2,
-   "impact": "Une croissance solide rassure sur l'économie, mais une inflation qui accélère pourrait pousser la Fed à remonter ses taux."
+   "level": 3,
+   "impact": "Une croissance solide avec une inflation tenace conforterait l'idée d'une hausse des taux de la Fed en décembre, ce qui peut peser sur les actions américaines."
   },
   {
    "d": "2026-10-29",
    "h": "14:15",
-   "t": "Décision de taux de la BCE",
+   "t": "Décision de taux de la BCE, puis conférence de Christine Lagarde (14:45)",
    "z": "europe",
    "level": 3,
-   "impact": "Statu quo attendu (taux de dépôt à 2,50 %). Le discours sur l'inflation et le pétrole compte pour le Stoxx 600 et l'euro."
+   "impact": "Un statu quo est attendu ; le ton de Lagarde sur l'inflation et la dette française peut faire bouger l'euro et le Stoxx 600."
   },
   {
    "d": "2026-10-29",
-   "h": "soir (après la clôture US)",
-   "t": "Résultats d'Amazon",
+   "h": "après la clôture US (vers 21:00)",
+   "t": "Résultats trimestriels d'Amazon",
    "z": "us",
    "level": 2,
-   "impact": "Autre géant du Nasdaq-100 et de l'ETF Monde : son activité cloud (AWS) est très suivie dans la course à l'IA."
+   "impact": "Amazon pèse lourd dans le Nasdaq-100 : après Alphabet, ses chiffres du cloud diront si l'enthousiasme pour l'IA tient."
   },
   {
    "d": "2026-10-30",
    "h": "matin",
    "t": "Décision de la Banque du Japon",
    "z": "japon",
+   "level": 3,
+   "impact": "Un maintien des taux est attendu ; un signal de hausse prochaine ferait monter le yen, ce qui peut freiner le TOPIX à court terme."
+  },
+  {
+   "d": "2026-10-30",
+   "h": "matin",
+   "t": "Croissance et inflation provisoires d'octobre en France, Allemagne, Italie et Espagne",
+   "z": "europe",
    "level": 2,
-   "impact": "Maintien à 1,25 % attendu. Un signal de hausse future renforcerait le yen, ce qui peut freiner la Bourse de Tokyo."
+   "impact": "Indique si l'économie européenne ralentit, un facteur clé pour la BCE et pour ton ETF Stoxx 600."
+  },
+  {
+   "d": "2026-11-02",
+   "h": "après la clôture US (vers 22:00)",
+   "t": "Résultats trimestriels d'Apple",
+   "z": "us",
+   "level": 2,
+   "impact": "Apple est l'un des premiers poids de l'ETF Monde et du Nasdaq-100 ; ses ventes d'iPhone donnent le ton pour la tech."
   },
   {
    "d": "2026-11-03",
@@ -146,7 +146,7 @@
    "t": "Élections de mi-mandat aux États-Unis",
    "z": "us",
    "level": 2,
-   "impact": "Le résultat peut créer un peu de volatilité à Wall Street, en général de courte durée."
+   "impact": "Le résultat peut changer les perspectives budgétaires et géopolitiques américaines ; ce genre d'événement crée souvent de la volatilité passagère."
   },
   {
    "d": "2026-11-06",
@@ -154,112 +154,106 @@
    "t": "Rapport sur l'emploi américain d'octobre",
    "z": "us",
    "level": 3,
-   "impact": "Indicateur clé pour la Fed : un marché du travail trop fort ou trop faible peut faire bouger les taux et les actions."
+   "impact": "Un marché du travail encore très solide renforcerait la probabilité d'une hausse de taux de la Fed en décembre."
   }
  ],
  "headlines": [
   {
-   "t": "Le Nasdaq et le S&P 500 enchaînent deux hausses après de nouveaux résultats",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTTVkYzVhMUdCWFREclFpTFQ2Sm93T0hucHl3dWZVRkt4SFBfbnV1OHg4RkQ4NnB4ZE1rWHFta3hCSEV6OEZIN1NqLUVYMy1VTkhPUWFzc0pvaXVZX1l4amR5SGNydkRncGNka1Yzdm5aanhyS0E4SUtHb1Rvc0o4ZUdFM0luQUVjQzRqVkZqUF9qbE9qNnNFY19VSGJFUGI5dlFxMldQNWhpQ29BQi1IRlpRWVF1YThfMXd6UGtZTEV3eXcwV3JUam1keExyLTVy?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "USA: Wall Street finit dans le vert grâce aux technologiques, Boeing déçoit",
-   "s": "ABC Bourse",
-   "u": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPRWxCNVpONV92a0M0MG91NTlKOFVzWUdKVkJ1UlIweEp2ZXh3Ry1sQWk3SDZ1MmQzbmI2Yks5MHVDckN0c0xQbjJRY1UyUWZOd1ZTbTJfRDQ2ZXMxeFZMYW1CYk9QMGRxSC00dWRQT2tjMXhHb0VJakI3Q21fRXU2ZUMwMWtURE1FLU1fR3VJUEo3cEZJQkdJa2lDbHM3Rm15cF9JYjVZaGVfUG9Ja09PVEcyeVk?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Wall Street poursuit son rebond, les semi-conducteurs retrouvent de l'élan avant la Fed",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxORDdacEZOVzhJd05TLXpSU0Z1QndYV1I0aUdpcHNYemR0R0FpM1N5N3RfdFJvTldqTU1oQnktVXNvcFRxNDVCcmRWaWRtd1RDMWgzZ1lRckxXdE1Tc3Z2Q0xoZ09TX19RN0dCa25hUUhnSkxUdG9Vc3h5R0JxZHozT1U3N0poLTlQR1NONGc2WE1OQWNmTFhnbjJtWkl0Q1RXQzhSRXNsVGVQYUsxUjNhYThVZGY4eklCS0RmaURjN2NTdFNGanlkakFnaG9xc3ZXUE9QMzAweWlOb2QtRjhiVXJjaEdBWW9ualozZ0pkXzl1b2ZBTGJXWmZJaGLSAfwBQVVfeXFMTkQ3WnBGTlc4SXdOUy16UlNGdUJ3WFdSNGlHaXBzWHpkdEdBaTNTeTd0X3RSb05Xak1NaEJ5LVVzb3BUcTQ1QnJkVmlkbXdUQzFoM2dZUXJMV3RNU3N2dkNMaGdPU19fUTdHQmtuYVFIZ0pMVHRvVXN4eUdCcWR6M09VNzdKaC05UEdTTjRnNlhNTkFjZkxYZ24ybVpJdENUV0M4UkVzbFRlUGFLMVIzYWE4VWRmOHpJQktEZmlEYzdjU3RTRmp5ZGpBZ2hvcXN2V1BPUDMwMHlpTm9kLUY4YlVyY2hHQVlvbmpaM2dKZF85dW9mQUxiV1pmSWhi?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Que va faire la Réserve fédérale américaine? À quelques jours d'élections aux États-Unis, la Fed devrait maintenir inchangés ses taux directeurs",
-   "s": "BFM",
-   "u": "https://news.google.com/rss/articles/CBMisgJBVV95cUxONk54Q3hGX0l6WFNqTGRWQTltWkxIUENpakJCQS1YYUpGNHhyTTNYZk05T2lJamNLNEtuUTZQb0Vlcm1XQ28zdUtKNVl4aWZXcFM5ZmdkSDNqcjFXcWo3X2NWQ0l0TWw3VUFKNUFCcjZFWTRiRi1qQkc1UTFabVlHT2JwSDJTMWM3a1Bwa3lrLU0wSW1RekJMaEFhSkx5azhjaUF2dmt4X1V2MURzb1hzaXpSM1M4MTU4LVdPeHIyYi0yUGptb09HU2ljRl9hbC1TZHB3MVFjNnhiVW1fQ1hzV1EwU242VGtiN2REMWU2OV9qbUdPYVA5TzlMSloxNzE1eUFUX0dDb01lV2g2dVRmWDFZcURoUEtlSkNHRDFJb0MzbHRmMjI2SkY2cWlVdEhiOEE?oc=5",
-   "z": "taux"
-  },
-  {
-   "t": "La Réserve fédérale devrait marquer une pause avant les législatives",
-   "s": "Le Singulier",
-   "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRGMxWkw4OVpLTWJLdWRqblZ4alhFYmpYSFloS2xEVGJDUjZQOE8teEd6RjVkZFJSdHpjSmN6cGE0ZUVTbUF1eXUzOG1pRFI5M21qb3VyNTFsMVcya3I0Qm9MRzBER180VnpPWXBDYmVxQnFDbklDWm5nZHM4dG1aaDluVW5ZaDBHVTNvOTJzTEE0MGMxZkV1QXAzRjI?oc=5",
-   "z": "taux"
-  },
-  {
-   "t": "Anthropic, un colosse aux pieds d'argile ? Trois menaces qui pèsent sur son entrée en Bourse",
-   "s": "TradingView",
-   "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE93dXRCbUw2ZGw4MUhSaE81NkI5RjItOEhuMHpGRURuQkttWHpfMTU0dEZvLTN0Q1l5WXNzUkdIRFJibE9FNkFXYjdKYlJOUklCdm9PTFRwWkc1bXYyc3pPXzZR?oc=5",
+   "t": "Les actions asiatiques reculent, la déception sur les résultats d’Alphabet pesant sur les contrats à terme de Wall Street",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPZ29DWDYxQUthcUhxcHFXeldyQ2NGRFRDcWtaUG5xaFJhQXdmLVJrMjA5aG9JRE1HckJOLUdfUHRiWklWd1Q1UDlHRk5uLXFnR2NlOV95YkNOOS1vb1FKSUFJSk5YTzZpM29MYTd5NFVueVBETlYtLXJXZkFCdVpWSTJFaWtPZ1BCVU56N0g0SmJqQVBQT0dKVVR3OElGYm45UjFQVEl6cTZYMEtzZHhQbml3WmZVN20zcU9GNERBOUZoQ3FWNVJQTmZ2QVNxVHVhUHZ2SXhLT1NiaFpSRVFwV0tPRHZBQ19ubGE5bGh3WHM?oc=5",
    "z": "monde"
   },
   {
-   "t": "L'Europe finit dans le vert, le recul du pétrole rassure avant la Fed et la BCE",
+   "t": "Vance a écrit au haut responsable iranien de la sécurité, rapporte le Wall Street Journal",
+   "s": "L'Orient-Le Jour",
+   "u": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa1dSQTA3N1k5cUZxdmd1T3N1OEJOQUVoRDJ5Z2xnTlM5aF9hcWNqRVhLUmtuQmZEVDY5TC13ekYybWxJZHo1czhEdXdkRTFMWUM0TDRpRW5FVHZSYTdjeXJrRll2QVdoUUVMY2RjWS1Vd2FLbGc2dVNVTnI5V1hCSFNJYjJKRnVRZVp2ZnRLVnliWXM2eU5hZThPRTlwS2lQaFJMalQ2cjB0VzNyV0c3RVA0bHZnaXNfc0xyMnFDR29PX0JBWHI4Mk5rQ1NUVVp4V1NxclRR?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "ROI-La faiblesse généralisée de Wall Street alimente la tendance autour de l'IA : McGeever",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQTEFISGxYZVF3WlpzaXhZSkE3SVFtZjU4TkNJUFJnLXE3eFh0OGRNclFBeEVPejBHZGpIdTBXanlFc3dCWnV1U0ZqUEQ0dnJBU3JpNzlnU3JKNWVmcGJnSkczUjZ4OEo0bDd2bjZ0TVJHWm45SzUwNElqNXJSaGlQSGY5TDFORHRiT19nOHVPQ1FmdFlWUVYyeGV6OHRGclFOSk9qcHNQUnprMUIxanlSUERzTHd4Rnk5bkNsdVRjVGZ5b050bFVZRTUzZUNjcUM1b1FUX3NOZHk3Xy1DaXdJdTNvVDRzUDVLUk4zMtIB8gFBVV95cUxNZlVrUHQ5SjVWQ1d0OXVJZXV0b1Jxb09hYnp3TkowVkVkZDk3UXNIX0loM3RpU3FreHJteEc1ZjIwQ0JVbDlGYmMwenVBM2hmc05iY21MNVh0R3RYUDdYTlFRRlFKNElrM0NQd3NkVjhiVkNnaDhqbGtnbE4yU3ptblpSS0hOSnhGOVdZWFlpQ1NtYWRMaFQxODhsRURyT2h3NUhITlJhb3BhRnRyN2tkRWcxZHAxWkFoNXJFX3pJTGVHaENzVm9ZaEZkVE1jWlFCQkUybVVTTlk4dGFmMnFGeEpmUFI5dXNOWHJ2SXpvb0JPdw?oc=5",
-   "z": "europe"
+   "u": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNOUtTVkE1QnJDNVpsUTVTbDNKSEk5YWtCYUc3bUlfbkRpMWJlMTlkTjJSWUdMNzUwWWJlNGdkdjdYbHdSeHJUSURINmtod2J2WUFYZGJWcGJSTnVZbHI3SlFXSjZ3WGY0ZUozdWZCVE5rTnVmOENST2hsLTZJNXBKYVJCcGx2OEdIRnFaQTJsZ2Z1RGktLTliVllrMkxjSUpDS1VZeEhLZFNONWdvQlN0eXFQQjlEekI0bjN4dlhKeFhKNFBoWVZ6X0JReml1QUJYYUFzd1RJVzNJVUJPcHVFZjM3RVpWZWpmLVR6bURvbXBrSGN5am1hLVlIM0lhcGfSAf8BQVVfeXFMTTlLU1ZBNUJyQzVabFE1U2wzSkhJOWFrQmFHN21JX25EaTFiZTE5ZE4yUllHTDc1MFliZTRnZHY3WGx3UnhyVElESDZraHdidllBWGRiVnBiUk51WWxyN0pRV0o2d1hmNGVKM3VmQlROa051ZjhDUk9obC02STVwSmFSQnBsdjhHSEZxWkEybGdmdURpLS05YlZZazJMY0lKQ0tVWXhIS2RTTjVnb0JTdHlxUEI5RHpCNG4zeHZYSnhYSjRQaFlWel9CUXppdUFCWGFBc3dUSVczSVVCT3B1RWYzN0VaVmVqZi1Uem1Eb21wa0hjeWptYS1ZSDNJYXBn?oc=5",
+   "z": "us"
   },
   {
-   "t": "CAC 40 : La Bourse de Paris termine en hausse, profitant d'une accalmie sur le pétrole et les taux",
+   "t": "Le S&P 500 et le Nasdaq progressent pour la troisième séance consécutive après la pause de la Fed",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNcXU1NXdpTEdyZms2dlp4U09KdFRlMWpEQXdoOEt1d1FULWRCQkFzOXEwTGN0eXlGamlIYVo1MXR4Uld3a1M1WlZDellJYnhPZ1R2bGl0N3g0U1J0SWVHdjRjTnM5Ujd0M3BGTmZzXzVEOWh3WHRMcjNJSGx5ZG4yX0FVYkJQQ2xBY1A3aG5WWkNURERuTW9XTDJqd0hUVkxFZndjdkthdHNzeVRoMC1iSzM0YmZFeVE3dFlBMmNZeTRxeUVMek5UYkFJNHJxNzVQV1QzOUZEdm5DdzYxLXAwbzJSTzdUQVNWRGVzWGE4QQ?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Alphabet déçoit au 3T à cause de la publicité, l'action dévisse",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPWXNWWjdiclQwWHBhcUNwZDdQUFA0Nzk4NjVPcFNqdlo4NVRRYkVtMXltNEhacUtXUU1lY19DLU1xUHhTamRBQU9GTEhfQzF6UzdObHN1ZzctQWR4WDBPeEt5OU43WE5meGtxa1l4Wkw1ckhWNVNUZ2l1Uk9KOTFfMmFCSHczNkREdTFiQjFHUUc1emhOR2RELU9FWVJLNFRvTlF6YWFTVWZ4aXFKRlVCSENPT0tjZXFlOVFic05qS0FPekdUaERUcW5BYURvQVdXeTFEV2hRVks4M3g2R290c3d6akNZODNKQ1lJX0ZiZ9IB7wFBVV95cUxPWXNWWjdiclQwWHBhcUNwZDdQUFA0Nzk4NjVPcFNqdlo4NVRRYkVtMXltNEhacUtXUU1lY19DLU1xUHhTamRBQU9GTEhfQzF6UzdObHN1ZzctQWR4WDBPeEt5OU43WE5meGtxa1l4Wkw1ckhWNVNUZ2l1Uk9KOTFfMmFCSHczNkREdTFiQjFHUUc1emhOR2RELU9FWVJLNFRvTlF6YWFTVWZ4aXFKRlVCSENPT0tjZXFlOVFic05qS0FPekdUaERUcW5BYURvQVdXeTFEV2hRVks4M3g2R290c3d6akNZODNKQ1lJX0ZiZw?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Fortinet : Wall Street sanctionne l'essoufflement de la croissance malgré des résultats solides",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPVWFXY01mcTNRUlpVcnh4OU9HeW1aQTI5aXhMdHpQR05mU3pnaEdDUkt6QXNhTllQOVZrTUdsZGhEM0piV3gzRENlZ3JWck9WcHNLS3p0c082eXpKeWpvWDEzSW5MVjlEMDlDM0ljTlRCLVluazJqeHBEUko3TVpUell5TjFvLXpVRnEwNnNqMEMydWpjaDBmbWNjS01kUV96cVlLVE85UFNxaUFraW5BMFY4N1RNall4LTJldi1sWkhzME5GZUtnRFB3aEZEZ18zRGR0R0xydlhPYUVyWC1iWnVTd3R4VjhSdlpkcFhla01OaUtLWlI1eFl4RUk4SllZc1BzY2tn0gGGAkFVX3lxTE9VYVdjTWZxM1FSWlVyeHg5T0d5bVpBMjlpeEx0elBHTmZTemdoR0NSS3pBc2FOWVA5VmtNR2xkaEQzSmJXeDNEQ2VnclZyT1Zwc0tLenRzTzZ5ekp5am9YMTNJbkxWOUQwOUMzSWNOVEItWW5rMmp4cERSSjdNWlR6WXlOMW8telVGcTA2c2owQzJ1amNoMGZtY2NLTWRRX3pxWUtUTzlQU3FpQWtpbkEwVjg3VE1qWXgtMmV2LWxaSHMwTkZlS2dEUHdoRkRnXzNEZHRHTHJ2WE9hRXJYLWJadVN3dHhWOFJ2WmRwWGVrTU5pS0taUjV4WXhFSThKWVlzUHNja2c?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "La Fed maintient ses taux inchangés malgré une inflation élevée et une croissance forte",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNc2UyWkdmSnNIay1VbC00ZExKNnpUUVJJWXNDTTVucmFyb1EtWVl1a0xtVm5McjZpcWxnR21ramx2Mjc3dG15a21xSXExS3BYRVB2ZGotVTloNl9ObkJ5bVdQSWZVZkVXeC11eklYX0QzV3E0Mlhsbncxc0QzMXlGdFYzdEpQcGR0MEtLbVdSOU1pV05hUXo3NF8tbHEyX0VIOGctYWJRNjFkYzY0ZF9CVWMySVBVel9GZGJCUmV4amFfcDBBZ2M5QmVuU1ZiY3FlN0l2UTR5RGxfc3g1dUJXZUVGVHB6Z1kyVUc4?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Dette, inflation, intelligence artificielle… La Fed et la BCE sous la pression des marchés",
-   "s": "Le Figaro",
-   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOX0VYV0QxUU9odGV3bkxnSGlVenpCQXpVOG9zOEhSN3ozbTZmRXRvYnNrazR1Q1RWNTFsVDRjc0tiMG1RcnFIUHBkRHIyVVNKT2xEdzE1NUNsd3BBaHpvcnNGeFlUdmlqeUJ4UmR6RjY1MDhmNGdqaDA5a3VNb3N6RmdlemQ1T0hFOXJPQlduUkN1ZnphcVBLRFZwNmxub25pTHc4dGFlYUJsWWt1OExGNUxBRF9KalIyWS0tYXJ0NlRNUVBTdGs0WS0xM1A?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPQnNFb19HS2kxblQ5SzkzQnRQUFJtTEZVbXNlRlNxaHMzX3N3UXRLdGRTV3pRWk9RcTlUbDBpZWRjM0tPZ2dhQ3d5eWZDVmdKejdLa0tHZUQ5TlZoRVgxLXV2MmxoWEVqa2c1dEEtN3cyaDAyQU02SEFXelJReUhwamh1dFczaFRKbGJDVFpTcjRyTE92S0g0VWxnOVdDNkNaRDlrVlZ6LTczNnJBdkZ0RzQ4RnJDNU5mRjNiRXhaNjRTYUM5YjR0a2Z0dkhrdGpmSzdqOFFTcmVfLUJ5N2pXZQ?oc=5",
    "z": "taux"
   },
   {
-   "t": "DAX-FLASH : Un peu de prudence avant la décision de la Réserve fédérale (Fed) et les résultats trimestriels",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSXlSS3lCUGVfX0RpUkZYT3JtQmtBVDVoTXo5eWVOb0hLbTNDZWc2VkZ4LWtqOWh5QVMzQmJNd2h5M2Y5bkU1LXByY1JwdVl6NkdQdG9iRzZITlB1YnhobGRkUk1MdkE4UVlvVGhiRFhNQjNpUzJ2RVlteVF3N3NuUEY5Y2plV1ZhVkJXS3NCTHpJVHUzUGI1am1uN2txMG9FQUFwYm5oaDZjVkVfWFd2SWZPUmRRSlQ3RE0xb21Fc0VsNEx5OGtfb2d3Sk9iWXZXYlZaMm1UWU1ycTZwWkpWMkU2RFV6aUUzVDA2cU5R?oc=5",
+   "t": "Économie américaine : \"L'inflation est trop élevée\" juge Kevin Warsh, patron de la Fed",
+   "s": "BFM",
+   "u": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSlpRUXcyUDVKMDJEMV9LSjUwMld1NE1jZmkyNWpuajl3TXhxU00zVmwyYW51MHl5aFBxWXFJeUFSOWk3bTJrUHpUZlg4SGxGTEN0TG16OWpXY05sbm1tYWlnTXNZVWlhMGMtU0ttbWtlbGpYdWIzUjFUNFpJZmZ2ZDJ1UFFkNERVNU0wVVkxVE44SEVwdzhJUWJCVVBsdE5JMmNfZExGdXZCMTVDLUwwbW9Fczhvem1kSExWaXNxSk9rek1mV3Njb1BWbHRIXzhDOEE0ZGp0Z1EzYWZE?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "La Fed laisse ses taux inchangés mais annonce une évolution majeure à partir de 2027",
+   "s": "Challenges",
+   "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOSllwbWNNeUpCdmtOUGZQdm9XZ1VQdnExRHh3TTZ2ZmZYYkktdmZ0VXlac1BSMHU4NlUyNi0ydkZWbzZmQ1RXVXljMEdDbWVTdllWa2kzTmFIMkl1aFRxekhEczBNMmZ6eTJHZ29SM25qZ0ZDZ1J0WjZBLVAtdzZuR0JKOGkxeTVreFVzNW1xVjAyRjlmN1M2ZXJ3NkVjV1FJWTlxTV93bXMwSzdyclU3LVdwdXBtVGZSOTlwTGRXZjQ?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "La BCE vers un statu quo sur ses taux, Lagarde et la France sous le feu des projecteurs",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPeEdIS3RWcjZGYVJMdFBwclRqT2VSVFdBc25mZzYyblE0M1hOdEpRbGhxcENKeGdoRDlheXNDU1pXcm1XaGVNRUxjaWN3ejAwTk9VVmFDTG1zeFZDd0NEbUhHeXJGNUhFdkJVY294U2FxWDFnTHVBcWNTUjYyZlFHRFBZdzk5T0lYSHc0M0xWLVRxWUxmYk1lZTlaMFdhcG5GaUtwUkdKTy1pUjBVOFVjUTVwU3Y4alJJRU1GcHY4YU8yeExTdU9aSzlzR0o5LXg0cjZ3OHdqSVVyUHBSN1ZLOG5GeGgyaHBVQWZrcWpPVzVaNDN1VU9HenJuZnZWcHYtb21rcFNhU3pPQdIBjwJBVV95cUxNV0ctQ082elc5dm8yU01uTjNMWUNFWU4tZWJxOG1IaUpGWTUwT0h0ZkVmNXR3NHQ5bVZyTUJzVFhNYkNUUzB4a3hIV29mYWFUWExObG1PMllWWmtOVHRZRXpLc1BjUFdxamtfU1Z2V3VkUDlabC1COU83X19vb1FmY05zeGxGNXEtcGlyTVNHQmJycGJ3WU80MzdPN1VqSURlZzdSeHpRZ1BlZUlhemZOOGszZEU1V0VBdGJTcEctbjBWX3lfakxvQS1yUnFEaVRxcGJtaldDa1RtcDJ0UzJTMGZYX0VzbTYxZDZkdVhtcURJVGZsWTdTeVhXSmRMb1I3eml6T3U5OUNaUlRSdFFv?oc=5",
    "z": "europe"
   },
   {
-   "t": "Le Nikkei finit en hausse de 1,08%",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTGhvalVmNzVJak1iTzkwUGlqQ0I0eWRaRVZ3RVpYdkp2WVRBUTR5RV80ZERDQ1pucEdXOFlidHVKeFVGMFlWeWhSTFMyVC1SdVBodTQxaFVqYnpkRk5PbmVkQUpBNHdrRkM4UU5TZTdHTzJDemsyWGhSeXlpdm1KcUgyMUUyTHdpTEFyM1ZsOTd6ZlVEWXJ1YzRfdTBidHV3bkczN3VUelpISEh3TEJPX9IBtgFBVV95cUxNV0psUFBFOFRQcnZ1eVRMVmp1d0NGZ0xESGpVSWIwd2w4SS1fQUVkaVRqY3pYRVNlazI2YUk1ZUFCQUIySFotc3gzQXFocng4dm44ZU9mbmlKOFhkTnhfRWVaYVNWN1ItemU0Zm03MzZ0NUZRZ2hDekIxUFVXaWVEVG1EMG1teW1ZelVaMnZ6QW0yVTA5UDZpdnVDdTM5QktXSVdZM3dhNTMwQmRVSFNRTXA4bUk4dw?oc=5",
-   "z": "japon"
+   "t": "La BCE devrait rester attentiste en gardant un ton ferme",
+   "s": "L'Echo",
+   "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMHh2VDloWDd2aXlta1ZldFpTZjNkcVVKdHRrU2VHU0dHMnNBaVNRMWtUbTVnMzg3S21SQnBGMVN3WGpLWEVReEFLZ2hiSUZURFdjRk9ySWRZTmMzNERadjNNeWVpRy1QY3lxQW9pVzdPRF9hUHhmSElYZ3h3WmhCTTMwVllvdW1wZDhKV2tUbFd5ZGdXU3F0TWNOU2lZZVVmWXVIMHR4cTBWR1RTMlNTTGVwVHdBdGM?oc=5",
+   "z": "europe"
   },
   {
-   "t": "Le Nikkei japonais bondit, les résultats technologiques ravivant l’optimisme envers l’intelligence artificielle",
+   "t": "Le Nikkei japonais progresse grâce aux perspectives bénéficiaires d’Advantest, mais Samsung pèse",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOQ0JIM0JwZTlpNjJkd2RRWVZ5c1RlREhRUkdQdWlkajBOTURtb1JoWjZ2VjlnRmwzdWEzbXFpai1fT3ZZNGh0OUVJQ0l0REwxMkxtVEtqTFY5U2RaX0pKTDdPOGliTjRWUTZHN3BfemhmREV4d24yLUM5SVVOaWJUbElLc1JZd0RFSGNfUVhQeWlhSUN6ZExjSHNPYlJzRmV3ck9GdUJwd250c2xJMkhtWTNLeTE2eW4xcGdtOTZSWDBnbF9rSTY2MTBVRmJOWGg1ZV9rc3FtX2dXdDl1cGdkdF9GUnZXdkVPWjc0MGpB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOTDNZbGF0RkdqMG9XX3dsTnl0QWJhYlhMWjcxbjREaWRPUlhIMHcyaWt5blJuLVFvbUE1MTRMWGN3R2NHUTQ5R3g3MDhkc1owQkg2eldPM1hDcE9jM0VLY3VYaU5wd2V5VWZQcVBadS11azNOTEN6UDNiWHRHSHJWMzdRVGxKTEVXWGFzdm1ONXlILW1VcjZYUUdJY1A2TUxiMHFheG8tb3pyeG5yeHM3STlmRmRiZmlCcUlPWHZjTzlyeU43SXlYR2RmUFFDVGFRQzBHVHZoRWVKdzBhZjRzdVVaNGlIZWVPRkZuaw?oc=5",
    "z": "japon"
   },
   {
-   "t": "COMMENTAIRE - L'USD/JPY devrait passer de la zone des 157,00 à environ 158,00 à l'approche de la réunion du FO",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNZTU5QWI5NFI5aTZ0WEZpU1dMd2RNcXJLbFJfTGVzbHR2TDY1b2JMWXJGMk03RXRXMUxSZ2RMQjVBcDdSdmhuRUFYMURVeDVqTXF5Yjl1VEVMbWJyYjhyVG9zTHJpamdwRDg0X3dFY2xZVUtQUElrRHlIYVlnNjd6QmNxZFlQM1NDT0hCU2gxSlZBNy11ZHJIWWtSZjlPR3QyZWNXcjhFVE9xZVg1b2pSZHp0QjQwQXVsSWx0UEpHbkVfU1BtWVJQdW1zZFRfUGtWZDF0aDFYU2RFQVVWVGpNajRwVHhJdGJZSlRReGtrQ0tDSEJFaGVPYjVYeGZIMTRyVFRMc1Z6eFhKakp0ZkFscHVOblBIaThqT2dwbtIBnAJBVV95cUxNZTU5QWI5NFI5aTZ0WEZpU1dMd2RNcXJLbFJfTGVzbHR2TDY1b2JMWXJGMk03RXRXMUxSZ2RMQjVBcDdSdmhuRUFYMURVeDVqTXF5Yjl1VEVMbWJyYjhyVG9zTHJpamdwRDg0X3dFY2xZVUtQUElrRHlIYVlnNjd6QmNxZFlQM1NDT0hCU2gxSlZBNy11ZHJIWWtSZjlPR3QyZWNXcjhFVE9xZVg1b2pSZHp0QjQwQXVsSWx0UEpHbkVfU1BtWVJQdW1zZFRfUGtWZDF0aDFYU2RFQVVWVGpNajRwVHhJdGJZSlRReGtrQ0tDSEJFaGVPYjVYeGZIMTRyVFRMc1Z6eFhKakp0ZkFscHVOblBIaThqT2dwbg?oc=5",
+   "t": "Graphique du jour : l'USDJPY pris au piège. Une intervention de Tokyo et une Banque du Japon (BoJ) belliciste se profilent à l'horizon",
+   "s": "XTB.com",
+   "u": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPVzhEM0h3alhOVWZtYzhyYTJxYUdsWUc0TDA3QnhKV2Z4UVk1bGlNaVdGeGk0WFZ2eG9WU3JxZzdhdDZxV3NKUk5udHQ3WDR5bWJnVVY3ckdmREtiSW5QeTFkcTF3R1picG5JbjJ1cGN2c0hYU0xFUEZBRDJ4UFVXaXV5OGRZb0lWUlV6U2pObkVIRk0wNHdueURoS2tjM2tTVXN4RHFDenpoZGExVFdWck9HNkRXenpiaEJwODE2WTZEbzZGSUpkVlBJTy0xdzE0dnFpM3ZlOThpOTdzd1o1SjExLUMtdnZWR1JxME4wZ2Q2Sm1HWElnaEpzMEtNdw?oc=5",
    "z": "japon"
   },
   {
-   "t": "La Banque du Japon devrait maintenir ses taux inchangés vendredi, après que le yen a effacé la moitié de ses gains",
-   "s": "www.tmgm.com",
-   "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPUmhnVU9IbTBNUVpFOVJBakFtWTN6cXZ1RkgzZ08weXhKT3BrQTVvZ2ZlWVZOZENoNjNIcmUydXMxV0wtWGp5LVhYZFJXY09ZYUlFQ1lmdEhiOUVsanZNVERma0dDdUVMZzdxWmJObHNObkpKTlNXRFhkMzZlSW1mTmpXUHF3Wk1aT1pqX1dOYVVxc1lDSVpYTWpNTXh4OURETG9fQlRWR05NUnNwdjJPYjNSWUtWRnVxSTFzWFV2d1Vhd1ZJQnhwb204STkwaTg?oc=5",
-   "z": "japon"
-  },
-  {
-   "t": "MARCHÉS ÉMERGENTS-Les actions des marchés émergents progressent, les marchés des changes restent stables dans",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMihgNBVV95cUxNa3kzRkZSd0NwczAyLTBoSFFuX1YyaGxXVEVodm1ORUgtMnJSX3BNM3ppaWctUGZyZnMxLUs4NUtES2pqeDQta0J3ODFISlZlVTE5MjRkeXZiTk14SDZVMTN2elBjQ2lEU1ZUbHh4OEcwQ3ZWcFhOQTNsa0dEekljX2tFVFNKX3lrbDYtdzRHVGlGMng0REx2TU9WaFBycFo4dXR6MnN2cVRwNkgxUjdfTUVneThVTnVrLURpUlZrSEZ3WFBSRnlscUo2X29fS2kxWGY5LThEQ3hINTlPX2M4Z2sxNjNNa29IZWVpdnpucTZqcjZKbGswVEtGaEdZUUdhVjdOakhnbjNDZVUwNHNrbF9sRUtKZlE2M2lWS1Q0VmM4TDlqTDJIdkVKUVlicDNCbE13b2d5UkwxaHZXZ1lEQjdIMFFCaFhvczBPcUQwdFB0S1RwVXRUaElFNXlsRlFaLThFSDBua0IwTEhRZWh4RnF6YzBRZXN4Y3V1ZXVDMFNyTzZYd1HSAYYDQVVfeXFMTWt5M0ZGUndDcHMwMi0waEhRbl9WMmhsV1RFaHZtTkVILTJyUl9wTTN6aWlnLVBmcmZzMS1LODVLREtqang0LWtCdzgxSEpWZVUxOTI0ZHl2Yk5NeEg2VTEzdnpQY0NpRFNWVGx4eDhHMEN2VnBYTkEzbGtHRHpJY19rRVRTSl95a2w2LXc0R1RpRjJ4NERMdk1PVmhQcnBaOHV0ejJzdnFUcDZIMVI3X01FZ3k4VU51ay1EaVJWa0hGd1hQUkZ5bHFKNl9vX0tpMVhmOS04REN4SDU5T19jOGdrMTYzTWtvSGVlaXZ6bnE2anI2SmxrMFRLRmhHWVFHYVY3TmpIZ24zQ2VVMDRza2xfbEVLSmZRNjNpVktUNFZjOEw5akwySHZFSlFZYnAzQmxNd29neVJMMWh2V2dZREI3SDBRQmhYb3MwT3FEMHRQdEtUcFV0VGhJRTV5bEZRWi04RUgwbmtCMExIUWVoeEZxemMwUWVzeGN1dWV1QzBTck82WHdR?oc=5",
+   "t": "Les actions des marchés émergents progressent, portées par la tech ; les devises reculent avant la décision de la Fed",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNamZES1psQU9ycF96UUh1ZXJnUWU3MzE4bmJKRWszM1BNa1ZZVmlvRWNQN0lMXzQyek9jWjE2MVJ5WFdZYmtzMElWbFpPU25mWnlJVDd1WnVHTWI3NWdBendMNHdIVTJQX2xSckZ2bGhCTDktTm1hYnJ5Z3c0aDRiQTE3UXN3elU2QV9sUHZGdmxVcEVKVUxBRlRjTXRQMHRwX19RVm1kLXpDemQ4SGZEMVdPbVFlSU83NkdVWXZpWUw1bWRNWHBBY0JiVU1kQW56ajJLOWgxM3p6b0x5cGU2Tkd5QnRWaEVfZVVtTWp3?oc=5",
    "z": "emergents"
   },
   {
-   "t": "La Chine crame des milliers de milliards de dollars dans la course à l'IA, et ça commence à inquiéter",
-   "s": "Slate.fr",
-   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPZ2tGeTQtWEFWSDZKNHNLWDcxWXkycFM4d1o1SEZ6ZjcxVVdMcXAwaXBNZnFzNXQzYnFQS0h1c083dGVvZVJwMTF0Y25xLVlQMkw4aXdJM2lnbEVqOHhGeUhLbmpxXzg1SEttTVZLeHJ2djdTUWdWMjZnZk5IVXdrbDFtOERNeGF3OV91Z01NU1FoSGI4dHAtdDdOUmNydU9vWFVSS0pwNXJPVXlBaVlXZElLWlZFbkJLOTJCZHpIY9IBxAFBVV95cUxPbDFlV0VneDUzZUs4UE1lUmtMSlJHcE9rdXI2WDlsTUUtRWdZc2hrYVozOVJzOW1qQmROeU13Z01kYnAzZmJRLVRySWFnc2RQODRMc3c5bk90eFdSdlkwd3VTcXluZ19OSWRNUjRGa2dRWFNpb0dsQ3J1cno5VGlUb1hwZFZYQTliMC10ZnVZbjNob1NMeDNSVURyblNDNGVMLXVBSmRkbERtVW10akFrTnUxYTVkaDhjRlpOT0FQNHdTMmFJ?oc=5",
+   "t": "Inde: Jio s'envole pour ses débuts en Bourse après une introduction record",
+   "s": "France 24",
+   "u": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZHZlZFdpUWR1VzBtYUEyTFg4Rmpfb3RZVzB0czJvc0JSTHNLWEpla2haMnFlRDVvbDN4a3M4Tll6OEgwVFB2Mm12LVMwdFdfN1RRa2xTcWpyVWZ3WDdQeVNKRHZCYW00NmJGLUd3cVlaWE5zeFR1V21ITEktR2NxbVBIc1BKc2E3WGFaRFJPUDFXZThPandacG1sSjVwSndEX29sSVhQeHltcFN1YWlnZnFsWmlUbEhONnd5ci1xbmNBMGdzWW5vTXZGRUJqcTRQTnc?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Les marchés émergents offrent de nouvelles opportunités au-delà des géants technologiques asiatiques",
-   "s": "Economie Matin",
-   "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUlBPY3N4bldvTGFvLUJrQ0hQaFI2S1p4c3NqYU1YN21UZWNpQlhHTHBRUklEaG5vVEtUQjJNMGFRTjhUdE5KWnNmWEFpRHJueWdYQTB0ODJNcVNlNjl1dy1DR09xY2lxQjVJTHJGajR1U0R1Y29LYjRvN0c3bExCTHc0M2MtNE1KODFXRW5Zb19EeFQtZGVxdmdndzE?oc=5",
+   "t": "L’IA s’effondre en Bourse en Chine avec 480 milliards de dollars de valorisation perdus",
+   "s": "Siècle Digital",
+   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVXplNE9CZnQ1Z2o5clZBOG01OGlFUExsdzJIUmtWazlBNEJaWFVEMWNQbUpySjkwRjBDUFE5SmtINThMc0dZcUNqbjJ6V29LdHV6SDFLckFVcGo5R3JZWEdPVVVYeUFla25lV3lOZlgwc2gyZUtuOXZGc2MzQjhsODVNQWxKaWN3N1hCWjNoM3ROck9sei1wSHo3LVVGb3NHbXNKVFRSV0IxUHpJSlZDa2tfanpOU01MVHVJYkNTTQ?oc=5",
    "z": "emergents"
   }
  ],
- "lesson": "Le taux directeur. C'est le taux auquel une banque centrale (la Fed aux États-Unis, la BCE en Europe) prête de l'argent aux banques. Quand il monte, le crédit coûte plus cher, l'économie ralentit et l'inflation recule, mais les actions ont tendance à souffrir. Quand il baisse, c'est l'inverse. C'est pour ça que les marchés retiennent leur souffle avant chaque décision, comme ce soir avec la Fed."
+ "lesson": "Le mot du jour : le « rendement à 10 ans ». C'est le taux d'intérêt que l'État américain paie pour emprunter sur dix ans ; il sert de référence au monde entier pour le coût de l'argent. Quand il monte, comme hier à plus de 5 %, les placements sans risque deviennent plus attractifs et les actions, surtout celles de croissance comme la tech, paraissent relativement plus chères. C'est pourquoi un taux à 10 ans qui grimpe peut freiner la Bourse, même quand les entreprises vont bien."
 }
