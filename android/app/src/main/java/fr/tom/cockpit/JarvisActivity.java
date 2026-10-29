@@ -106,6 +106,7 @@ public class JarvisActivity extends Activity {
         if (res == RESULT_OK && data != null) { ArrayList<String> r = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS); if (r != null && !r.isEmpty()) q = r.get(0).trim(); }
         if (q.isEmpty()) { if (hist.isEmpty()) finishQuiet(); else status.setText("Appuie sur « Encore » pour une autre question."); return; }
         String qq = q.replaceFirst("(?i)^(et |hey |ok )?jarvis[ ,]*", "").trim();
+        if (openCommand(qq)) return;
         if (END.matcher(qq).matches()) { say("À ton service, Tom."); closing = true; status.setText("À plus tard."); return; }
         if (qq.isEmpty()) { say("Oui ?"); h.postDelayed(this::listen, 900); return; }
         lastQ = qq;
@@ -125,6 +126,48 @@ public class JarvisActivity extends Activity {
                 show(qq, shown, !err);
             });
         }).start();
+    }
+
+    // ---------- « ouvre … » : le Cockpit, un de ses onglets, ou une autre appli du téléphone ----------
+    private static final Pattern OPEN = Pattern.compile("^(?:peux-tu |tu peux |est-ce que tu peux )?(?:ouvre|ouvrir|lance|lancer|affiche|afficher|montre(?:-moi)?|va (?:dans|sur)|mets?(?:-moi)? (?:sur|le|la))\\s+(.+?)[ .!?]*$", Pattern.CASE_INSENSITIVE);
+    private static final String[][] PAGES = {
+        {"accueil|vue d.ensemble|tableau de bord|executi", "executif"}, {"portefeuille|mes etf|lignes", "portefeuille"}, {"plan|objectif", "plan"},
+        {"budget|depense|abonnement", "budget"}, {"journal|actu|point du jour|marche", "journal"}, {"assurance.vie|\\bav\\b|fonds euro", "av"},
+        {"rapport", "rapport"}, {"assistant|jarvis|reglage", "assistant"}, {"envie|liste d.attente", "envies"}, {"impot", "impots"},
+        {"projet|voyage|japon", "projets"}, {"patrimoine|livret", "patrimoine"}, {"dividende", "dividendes"}, {"historique|operation", "historique"},
+        {"prochain achat|achat", "achat"}, {"allocation|repartition", "allocation"}, {"performance", "performance"}, {"projection", "projection"},
+        {"coach", "coach"}, {"saison", "saison"}, {"mettre a jour|mise a jour", "maj"}, {"apparence|theme|couleur", "apparence"}};
+
+    private static String norm(String s) { return java.text.Normalizer.normalize(s, java.text.Normalizer.Form.NFD).replaceAll("\\p{M}", "").toLowerCase(Locale.ROOT).replaceAll("['’]", " ").trim(); }
+
+    private boolean openCommand(String q) {
+        java.util.regex.Matcher m = OPEN.matcher(q.trim());
+        if (!m.matches()) return false;
+        String t = norm(m.group(1)).replaceAll("^(l |le |la |les |l'|mon |ma |mes |moi |l application |l appli |application |appli |la page |l onglet |onglet )+", "").trim();
+        boolean cockpit = t.isEmpty() || t.matches(".*(cockpit|application|appli|pea).*");
+        String page = null;
+        for (String[] p : PAGES) if (java.util.regex.Pattern.compile(p[0]).matcher(t).find()) { page = p[1]; break; }
+        if (cockpit && page == null) page = "executif";
+        if (page != null) {
+            Intent i = new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP).putExtra("hash", page);
+            say("J'ouvre."); startActivity(i); h.postDelayed(this::finishQuiet, 600); return true;
+        }
+        // autre appli installée, d'après son nom
+        try {
+            android.content.pm.PackageManager pm = getPackageManager();
+            Intent main = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER);
+            android.content.pm.ResolveInfo best = null; int bestScore = 0;
+            for (android.content.pm.ResolveInfo r : pm.queryIntentActivities(main, 0)) {
+                String lab = norm(String.valueOf(r.loadLabel(pm)));
+                int sc = lab.equals(t) ? 3 : (lab.startsWith(t) || t.startsWith(lab)) && lab.length() > 2 ? 2 : lab.contains(t) && t.length() > 3 ? 1 : 0;
+                if (sc > bestScore) { bestScore = sc; best = r; }
+            }
+            if (best != null) {
+                Intent li = new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER).setClassName(best.activityInfo.packageName, best.activityInfo.name).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                say("J'ouvre " + best.loadLabel(pm) + "."); startActivity(li); h.postDelayed(this::finishQuiet, 600); return true;
+            }
+        } catch (Exception ignored) { }
+        you.setText("« " + q + " »"); ans.setText("Je ne trouve pas d'appli qui s'appelle « " + m.group(1) + " »."); say("Je ne trouve pas cette appli."); return true;
     }
 
     private void show(String q, String a, boolean speak) {
