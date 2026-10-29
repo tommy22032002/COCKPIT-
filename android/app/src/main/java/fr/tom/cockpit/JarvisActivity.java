@@ -194,11 +194,10 @@ public class JarvisActivity extends Activity {
         i.setPackage(target[1]);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         you.setText("« " + q + " »");
+        // Apple Music : la lecture directe passe par la même demande que celle de l'Assistant Google
         if (target[1].equals("com.apple.android.music")) {
-            // Apple Music ne laisse pas une autre appli choisir le morceau : on ouvre directement sa recherche sur le titre demandé
-            Intent am = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://music.apple.com/fr/search?term=" + android.net.Uri.encode(what))).setPackage(target[1]).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            try { startActivity(am); say("Voilà " + what + " sur Apple Music. Touche le morceau pour l'écouter."); ans.setText("🔎 " + what + " · Apple Music"); h.postDelayed(this::finishQuiet, 2200); return true; }
-            catch (Exception ignored) { }
+            i.putExtra(android.provider.MediaStore.EXTRA_MEDIA_TITLE, what);
+            i.putExtra("android.intent.extra.focus", "vnd.android.cursor.item/audio");
         }
         try {
             startActivity(i);
