@@ -194,6 +194,8 @@ public class JarvisActivity extends Activity {
         i.setPackage(target[1]);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         you.setText("« " + q + " »");
+        you.setText("« " + q + " »");
+        if (sessionPlay(target, what)) return true;
         // Apple Music : la lecture directe passe par la même demande que celle de l'Assistant Google
         if (target[1].equals("com.apple.android.music")) {
             i.putExtra(android.provider.MediaStore.EXTRA_MEDIA_TITLE, what);
@@ -212,6 +214,53 @@ public class JarvisActivity extends Activity {
                 h.postDelayed(this::finishQuiet, 2500);
             } else { ans.setText(target[2] + " n'est pas installée sur ce téléphone."); say(target[2] + " n'est pas installée."); }
         }
+        return true;
+    }
+
+    // ---------- lecture via la session média de l'appli (comme Android Auto / l'Assistant) ----------
+    private boolean musicAccess() {
+        String l = android.provider.Settings.Secure.getString(getContentResolver(), "enabled_notification_listeners");
+        return l != null && l.contains(getPackageName());
+    }
+
+    private android.media.session.MediaController sessionOf(String pkg) {
+        try {
+            android.media.session.MediaSessionManager msm = (android.media.session.MediaSessionManager) getSystemService(MEDIA_SESSION_SERVICE);
+            for (android.media.session.MediaController c : msm.getActiveSessions(new android.content.ComponentName(this, JarvisNotif.class)))
+                if (pkg.equals(c.getPackageName())) return c;
+        } catch (Exception ignored) { }
+        return null;
+    }
+
+    private boolean sessionPlay(String[] target, String what) {
+        if (!musicAccess()) {
+            if (!target[1].equals("com.apple.android.music")) return false;
+            ans.setText("Pour qu'Apple Music joue directement le titre, autorise une fois Jarvis à piloter la musique : Paramètres → « Accès aux notifications » → Cockpit. (Jarvis ne lit aucune notification.)");
+            open.setText("Autoriser");
+            open.setOnClickListener(v -> { try { startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)); } catch (Exception ignored) { } });
+            say("Il me faut une autorisation, une seule fois, pour choisir la musique dans Apple Music.");
+            return true;
+        }
+        android.media.session.MediaController c = sessionOf(target[1]);
+        if (c == null) {
+            Intent open0 = getPackageManager().getLaunchIntentForPackage(target[1]);
+            if (open0 == null) { ans.setText(target[2] + " n'est pas installée sur ce téléphone."); say(target[2] + " n'est pas installée."); return true; }
+            startActivity(open0.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            ans.setText("J'ouvre " + target[2] + "…");
+            final int[] tries = {0};
+            Runnable r = new Runnable() { public void run() {
+                android.media.session.MediaController c2 = sessionOf(target[1]);
+                if (c2 != null) { c2.getTransportControls().playFromSearch(what, new Bundle()); finishQuiet(); }
+                else if (++tries[0] < 8) h.postDelayed(this, 700);
+                else finishQuiet();
+            }};
+            h.postDelayed(r, 1200);
+            return true;
+        }
+        c.getTransportControls().playFromSearch(what, new Bundle());
+        ans.setText("▶ " + what + " · " + target[2]);
+        say("Je lance " + what + ".");
+        h.postDelayed(this::finishQuiet, 1500);
         return true;
     }
 

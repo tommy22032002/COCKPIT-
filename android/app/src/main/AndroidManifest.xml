@@ -85,6 +85,16 @@
         </activity-alias>
 
         <service
+            android:name=".JarvisNotif"
+            android:exported="true"
+            android:label="Jarvis · contrôle de la musique"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <service
             android:name=".JarvisTile"
             android:exported="true"
             android:icon="@drawable/ic_stat"
