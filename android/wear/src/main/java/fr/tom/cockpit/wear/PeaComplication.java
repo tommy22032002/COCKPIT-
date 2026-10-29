@@ -9,6 +9,7 @@ import androidx.wear.watchface.complications.data.ComplicationData;
 import androidx.wear.watchface.complications.data.ComplicationType;
 import androidx.wear.watchface.complications.data.LongTextComplicationData;
 import androidx.wear.watchface.complications.data.PlainComplicationText;
+import androidx.wear.watchface.complications.data.RangedValueComplicationData;
 import androidx.wear.watchface.complications.data.ShortTextComplicationData;
 import androidx.wear.watchface.complications.datasource.ComplicationDataSourceService;
 import androidx.wear.watchface.complications.datasource.ComplicationRequest;
@@ -34,6 +35,14 @@ public class PeaComplication extends ComplicationDataSourceService {
             return new ShortTextComplicationData.Builder(t(shortTxt), t("PEA aujourd'hui " + shortTxt)).setTitle(t("PEA")).setTapAction(tap()).build();
         if (type == ComplicationType.LONG_TEXT)
             return new LongTextComplicationData.Builder(t(value + "  " + shortTxt), t(value + ", aujourd'hui " + shortTxt)).setTitle(t("Mon PEA")).setTapAction(tap()).build();
+        if (type == ComplicationType.RANGED_VALUE) {
+            JSONObject g = Pea.mainGoal(d);
+            if (g == null) return null;
+            float tgt = (float) Math.max(1, g.optDouble("tgt", 1)), cur = (float) Math.min(tgt, Math.max(0, g.optDouble("cur", 0)));
+            String p = Math.round(cur / tgt * 100) + "%";
+            return new RangedValueComplicationData.Builder(cur, 0f, tgt, t(g.optString("n") + " " + p + (g.optString("date").isEmpty() ? "" : ", prévu " + Pea.month(g.optString("date")))))
+                    .setText(t(p)).setTitle(t(g.optString("n"))).setTapAction(tap()).build();
+        }
         return null;
     }
 
@@ -46,7 +55,8 @@ public class PeaComplication extends ComplicationDataSourceService {
     @Nullable @Override
     public ComplicationData getPreviewData(@NonNull ComplicationType type) {
         try {
-            return build(type, new JSONObject().put("value", 12345).put("dayPct", 0.0084));
+            return build(type, new JSONObject().put("value", 12345).put("dayPct", 0.0084)
+                    .put("goals", new org.json.JSONArray().put(new JSONObject().put("n", "Patrimoine").put("cur", 40).put("tgt", 100))));
         } catch (Exception e) { return null; }
     }
 }

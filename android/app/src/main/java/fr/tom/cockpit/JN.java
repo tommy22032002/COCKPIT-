@@ -100,6 +100,14 @@ final class JN {
             b.addAction(new Notification.Action.Builder(Icon.createWithResource(c, R.drawable.ic_stat), "Écouter", pi).build());
         }
         nm.notify(nid, b.build());
+        // journal des dernières notifications, affiché sur la montre
+        try {
+            JSONArray log = new JSONArray(Prefs.sp(c).getString("jnLog", "[]")), keep = new JSONArray();
+            keep.put(new JSONObject().put("t", title).put("b", body.length() > 400 ? body.substring(0, 400) + "…" : body).put("at", System.currentTimeMillis()));
+            for (int i = 0; i < log.length() && keep.length() < 6; i++) if (!title.equals(log.getJSONObject(i).optString("t"))) keep.put(log.get(i));
+            Prefs.sp(c).edit().putString("jnLog", keep.toString()).apply();
+            Wear.push(c);
+        } catch (Exception ignored) { }
     }
 
     /** Pose une question à Jarvis (résumé du cockpit déjà enregistré) ; renvoie null en cas d'échec. */

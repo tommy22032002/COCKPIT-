@@ -20,14 +20,14 @@ import org.json.JSONObject;
 /** Tuile « PEA du jour » : valeur, variation du jour, gain total. */
 public class PeaTile extends TileService {
 
-    private static LayoutElementBuilders.LayoutElement txt(String s, float sp, int color, boolean bold) {
+    static LayoutElementBuilders.LayoutElement txt(String s, float sp, int color, boolean bold) {
         LayoutElementBuilders.FontStyle.Builder f = new LayoutElementBuilders.FontStyle.Builder()
                 .setSize(DimensionBuilders.sp(sp)).setColor(ColorBuilders.argb(color));
         if (bold) f.setWeight(LayoutElementBuilders.FONT_WEIGHT_BOLD);
         return new LayoutElementBuilders.Text.Builder().setText(s).setFontStyle(f.build()).setMaxLines(1).build();
     }
 
-    private static LayoutElementBuilders.LayoutElement gap(float dp) {
+    static LayoutElementBuilders.LayoutElement gap(float dp) {
         return new LayoutElementBuilders.Spacer.Builder().setHeight(DimensionBuilders.dp(dp)).build();
     }
 
@@ -54,6 +54,7 @@ public class PeaTile extends TileService {
                .addContent(txt(priv ? "••" : Pea.eur2(day) + " aujourd'hui", 13, c, false))
                .addContent(gap(6))
                .addContent(txt("Gain total " + (priv ? "••" : Pea.eur2(g)), 12, Pea.MUTED, false))
+               .addContent(txt(Pea.saison(d), 11, Pea.ACCENT, false))
                .addContent(txt((Pea.marketOpen() ? "● Bourse ouverte · " : "Bourse fermée · ") + Pea.at(d), 11, Pea.MUTED, false));
         }
         ModifiersBuilders.Clickable click = new ModifiersBuilders.Clickable.Builder().setId("open")

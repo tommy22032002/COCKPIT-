@@ -28,6 +28,14 @@ final class Wear {
                         .put("q", l.optDouble("q", 0)).put("px", l.optDouble("px", 0)));
             }
             o.put("lines", out);
+            for (String k : new String[]{"envSpent", "envCap", "daysLeft"}) o.put(k, d.optDouble(k, 0));
+            o.put("envOn", d.optBoolean("envOn", false));
+            o.put("month", d.optString("month", ""));
+            if (d.has("saison")) o.put("saison", d.optJSONObject("saison"));
+            if (d.has("goals")) o.put("goals", d.optJSONArray("goals"));
+            o.put("week", Prefs.sp(ctx).getString("weekBilan", ""));
+            o.put("weekAt", Prefs.sp(ctx).getString("weekBilanAt", ""));
+            try { o.put("log", new JSONArray(Prefs.sp(ctx).getString("jnLog", "[]"))); } catch (Exception ignored) { }
             String js = o.toString();
             if (js.equals(last)) return;
             last = js;

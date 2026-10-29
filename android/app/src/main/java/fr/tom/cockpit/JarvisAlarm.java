@@ -35,8 +35,10 @@ public class JarvisAlarm extends BroadcastReceiver {
         am.cancel(w);
         if (JN.on(c, "week")) {
             Calendar k = Calendar.getInstance(TimeZone.getTimeZone("Europe/Paris"));
-            k.set(Calendar.HOUR_OF_DAY, 18); k.set(Calendar.MINUTE, 30); k.set(Calendar.SECOND, 0);
-            while (k.get(Calendar.DAY_OF_WEEK) != Calendar.FRIDAY || k.getTimeInMillis() <= now) k.add(Calendar.DAY_OF_YEAR, 1);
+            boolean sun = JN.cfg(c).optInt("weekDay", 6) == 1;
+            k.set(Calendar.HOUR_OF_DAY, sun ? 19 : 18); k.set(Calendar.MINUTE, sun ? 0 : 30); k.set(Calendar.SECOND, 0);
+            int wd = sun ? Calendar.SUNDAY : Calendar.FRIDAY;
+            while (k.get(Calendar.DAY_OF_WEEK) != wd || k.getTimeInMillis() <= now) k.add(Calendar.DAY_OF_YEAR, 1);
             am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, k.getTimeInMillis(), w);
         }
         JSONObject d = JN.data(c);
@@ -83,6 +85,7 @@ public class JarvisAlarm extends BroadcastReceiver {
         if ("week".equals(kind)) {
             String a = JN.jarvis(c, "Fais le bilan de ma semaine en 3 phrases courtes : mon PEA (valeur et évolution), mon épargne et mes dépenses du mois, puis un conseil concret pour la semaine prochaine. Termine sur une note positive.");
             if (a == null) a = "Ouvre le Cockpit pour voir ta semaine : PEA, épargne et budget.";
+            else Prefs.sp(c).edit().putString("weekBilan", a).putString("weekBilanAt", new java.text.SimpleDateFormat("EEEE d MMMM", java.util.Locale.FRANCE).format(new java.util.Date())).apply();
             JN.post(c, 6100, null, "Ton bilan de la semaine", a, "executif", null, true, a, true);
         } else if ("dca".equals(kind)) {
             JSONObject dca = d.optJSONObject("dca");

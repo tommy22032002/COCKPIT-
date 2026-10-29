@@ -51,6 +51,7 @@ final class Pea {
     static void changed(Context c) {
         Context a = c.getApplicationContext();
         try { TileService.getUpdater(a).requestUpdate(PeaTile.class); } catch (Throwable ignored) { }
+        try { TileService.getUpdater(a).requestUpdate(BudgetTile.class); } catch (Throwable ignored) { }
         try { ComplicationDataSourceUpdateRequester.create(a, new ComponentName(a, PeaComplication.class)).requestUpdateAll(); } catch (Throwable ignored) { }
         Runnable r = onChange;
         if (r != null) r.run();
@@ -147,6 +148,37 @@ final class Pea {
     static String eur(double v) { return String.format(Locale.FRANCE, "%,.0f", v).replace(' ', ' ').replace(' ', ' ') + " €"; }
     static String eur2(double v) { return (v > 0 ? "+" : v < 0 ? "−" : "") + String.format(Locale.FRANCE, "%,.2f", Math.abs(v)).replace(' ', ' ').replace(' ', ' ') + " €"; }
     static String pct(double v) { return (v > 0 ? "+" : v < 0 ? "−" : "") + String.format(Locale.FRANCE, "%.2f", Math.abs(v * 100)) + " %"; }
+
+    /** Ligne « mode saison » : salaire du mois et épargne prévue, ou mois de pause. */
+    static String saison(JSONObject d) {
+        JSONObject s = d == null ? null : d.optJSONObject("saison");
+        if (s == null) return "";
+        boolean priv = d.optBoolean("privacy", false);
+        if (s.optBoolean("pause") || s.optBoolean("skip")) return "Mois sans versement : plan en pause";
+        double in = s.optDouble("in", 0), ep = s.optDouble("ep", 0);
+        if (in >= 800) return "Saison : salaire " + (priv ? "••" : eur(in)) + " · épargne " + (priv ? "••" : eur(ep));
+        return ep > 0 ? "Épargne prévue ce mois : " + (priv ? "••" : eur(ep)) : "";
+    }
+
+    /** Objectif prioritaire (patrimoine financier), sinon le premier non atteint. */
+    static JSONObject mainGoal(JSONObject d) {
+        JSONArray g = d == null ? null : d.optJSONArray("goals");
+        if (g == null) return null;
+        JSONObject first = null;
+        for (int i = 0; i < g.length(); i++) {
+            JSONObject o = g.optJSONObject(i);
+            if (o == null || o.optDouble("cur", 0) >= o.optDouble("tgt", 1)) continue;
+            if ("Patrimoine".equals(o.optString("n"))) return o;
+            if (first == null) first = o;
+        }
+        return first;
+    }
+
+    static String month(String ym) {
+        if (ym == null || ym.length() < 7) return "";
+        String[] M = {"janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."};
+        try { return M[Integer.parseInt(ym.substring(5, 7)) - 1] + " " + ym.substring(0, 4); } catch (Exception e) { return ym; }
+    }
 
     static String at(JSONObject d) {
         try {

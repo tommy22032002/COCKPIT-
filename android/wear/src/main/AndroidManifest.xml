@@ -46,6 +46,17 @@
         </service>
 
         <service
+            android:name="fr.tom.cockpit.wear.BudgetTile"
+            android:exported="true"
+            android:label="@string/tile_budget"
+            android:permission="com.google.android.wearable.permission.BIND_TILE_PROVIDER">
+            <intent-filter>
+                <action android:name="androidx.wear.tiles.action.BIND_TILE_PROVIDER" />
+            </intent-filter>
+            <meta-data android:name="androidx.wear.tiles.PREVIEW" android:resource="@mipmap/ic_launcher" />
+        </service>
+
+        <service
             android:name="fr.tom.cockpit.wear.PeaComplication"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"
@@ -54,7 +65,7 @@
             <intent-filter>
                 <action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST" />
             </intent-filter>
-            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT,LONG_TEXT" />
+            <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="SHORT_TEXT,LONG_TEXT,RANGED_VALUE" />
             <meta-data android:name="android.support.wearable.complications.UPDATE_PERIOD_SECONDS" android:value="900" />
         </service>
 

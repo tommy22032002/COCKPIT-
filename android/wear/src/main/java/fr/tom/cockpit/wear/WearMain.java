@@ -47,6 +47,12 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
         return t;
     }
 
+    private void section(String s) {
+        tv(" ", 6, Pea.MUTED, false);
+        TextView t = tv(s.toUpperCase(Locale.FRANCE), 10.5f, Pea.ACCENT, true);
+        t.setLetterSpacing(0.06f);
+    }
+
     private Button btn(String s, int color, View.OnClickListener l) {
         Button b = new Button(this);
         b.setText(s);
@@ -107,10 +113,61 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
             }
             tv((Pea.marketOpen() ? "● Bourse ouverte · màj " : "Bourse fermée · màj ") + Pea.at(d), 11, Pea.MUTED, false);
         }
+        tv(" ", 6, Pea.MUTED, false);
         btn("Actualiser", Pea.INK, v -> { toastLine("Actualisation…"); Pea.refreshAsync(this, true); });
         btn("🎙  Parler à Jarvis", Pea.ACCENT, v -> listen());
+        tv("Ex. : « 12 € de courses », « combien il me reste ? »", 10.5f, Pea.MUTED, false);
         jarvis = tv("", 13.5f, Pea.INK, false);
         jarvis.setGravity(Gravity.START);
+        if (d != null) more(d, d.optBoolean("privacy", false));
+    }
+
+    private void more(JSONObject d, boolean priv) {
+            String sa = Pea.saison(d);
+            if (!sa.isEmpty()) tv(sa, 12, Pea.ACCENT, false);
+
+            double cap = d.optDouble("envCap", 0), spent = d.optDouble("envSpent", 0);
+            if (cap > 0) {
+                section("Budget plaisir · " + d.optString("month", ""));
+                double left = cap - spent;
+                int days = Math.max(1, (int) d.optDouble("daysLeft", 1));
+                tv((left >= 0 ? "Il te reste " : "Dépassé de ") + (priv ? "••" : Pea.eur(Math.abs(left))), 15, left < 0 ? Pea.LOSS : Pea.GAIN, true);
+                tv((priv ? "••" : Pea.eur(spent)) + " sur " + Pea.eur(cap) + (left > 0 ? " · ≈ " + (priv ? "••" : Pea.eur(left / days)) + "/jour" : ""), 12, Pea.MUTED, false);
+            }
+
+            JSONArray G = d.optJSONArray("goals");
+            if (G != null && G.length() > 0) {
+                section("Objectifs");
+                for (int i = 0; i < G.length(); i++) {
+                    JSONObject g = G.optJSONObject(i);
+                    if (g == null) continue;
+                    double cur = g.optDouble("cur", 0), tgt = Math.max(1, g.optDouble("tgt", 1));
+                    boolean ok = cur >= tgt;
+                    int dr = g.optInt("drift", 0);
+                    tv(g.optString("n") + "  " + Math.min(100, Math.round(cur / tgt * 100)) + " %", 13, ok ? Pea.GAIN : Pea.INK, true);
+                    tv(ok ? "Atteint ✓" : "Prévu " + Pea.month(g.optString("date")) + (dr == 0 ? "" : "  (" + Math.abs(dr) + " mois plus " + (dr < 0 ? "tôt)" : "tard)")), 11.5f, dr < 0 ? Pea.GAIN : dr > 0 ? Pea.LOSS : Pea.MUTED, false);
+                }
+            }
+
+            String wk = d.optString("week", "");
+            if (!wk.isEmpty()) {
+                section("Bilan de la semaine" + (d.optString("weekAt").isEmpty() ? "" : " · " + d.optString("weekAt")));
+                TextView w = tv(wk, 12.5f, Pea.INK, false);
+                w.setGravity(Gravity.START);
+                btn("▶  Écouter le bilan", Pea.MUTED, v -> { if (ttsOk) tts.speak(wk.replace("€", " euros"), TextToSpeech.QUEUE_FLUSH, null, "w"); });
+            }
+
+            JSONArray log = d.optJSONArray("log");
+            if (log != null && log.length() > 0) {
+                section("Dernières infos de Jarvis");
+                for (int i = 0; i < log.length() && i < 4; i++) {
+                    JSONObject l = log.optJSONObject(i);
+                    if (l == null) continue;
+                    tv(l.optString("t"), 12.5f, Pea.INK, true).setGravity(Gravity.START);
+                    String b = l.optString("b");
+                    tv(b.length() > 160 ? b.substring(0, 160) + "…" : b, 11.5f, Pea.MUTED, false).setGravity(Gravity.START);
+                }
+            }
     }
 
     private void toastLine(String s) { if (jarvis != null) { jarvis.setTextColor(Pea.MUTED); jarvis.setText(s); } }
