@@ -95,21 +95,16 @@ public class MarketNotif extends BroadcastReceiver {
         boolean us = hm >= 15 * 60 + 30;
         String body = sb.length() > 0 ? sb.toString() : "Cours indisponibles pour le moment.";
         if (!us && sb.length() > 0) body += "\n(Wall Street : séance d'hier, elle ouvre à 15 h 30.)";
+        boolean close = hm >= 17 * 60 + 30;
+        if (close && JN.on(ctx, "close")) {
+            String a = JN.jarvis(ctx, "Clôture de la Bourse aujourd'hui. " + title + ". Indices : " + sb + ". En 2 phrases courtes, explique simplement ce qui a fait bouger mon PEA aujourd'hui (cherche l'actualité du jour) et dis si je dois faire quelque chose (en général : rien, le plan continue).");
+            if (a != null) body += "\n\nJarvis : " + a;
+        }
         NotificationManager nm = ctx.getSystemService(NotificationManager.class);
         if (nm == null) return;
         NotificationChannel ch = new NotificationChannel(CHANNEL, "Points bourse", NotificationManager.IMPORTANCE_LOW);
         ch.setDescription("Ton PEA et les grands indices, quelques fois par jour en semaine.");
         nm.createNotificationChannel(ch);
-        Notification n = new Notification.Builder(ctx, CHANNEL)
-                .setSmallIcon(R.drawable.ic_stat)
-                .setContentTitle(title)
-                .setContentText(body)
-                .setStyle(new Notification.BigTextStyle().bigText(body))
-                .setAutoCancel(true)
-                .setContentIntent(Widgets.open(ctx, "journal", 4343))
-                .setVisibility(Notification.VISIBILITY_PRIVATE)
-                .setPublicVersion(new Notification.Builder(ctx, CHANNEL).setSmallIcon(R.drawable.ic_stat).setContentTitle("Point bourse · " + when).setContentText("Déverrouille pour voir ton PEA.").build())
-                .build();
-        nm.notify(4343, n);
+        JN.post(ctx, 4343, CHANNEL, title, body, "journal", null, true, body.replace("\n", " ").replace("€", " euros"), true);
     }
 }

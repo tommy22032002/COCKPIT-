@@ -149,6 +149,10 @@
             android:name=".MarketNotif"
             android:exported="false" />
 
+        <receiver android:name=".JNReply" android:exported="false" />
+        <receiver android:name=".JNAction" android:exported="false" />
+        <receiver android:name=".JarvisAlarm" android:exported="false" />
+
         <receiver
             android:name=".ReminderReceiver"
             android:exported="false" />

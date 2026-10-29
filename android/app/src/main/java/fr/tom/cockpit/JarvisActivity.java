@@ -76,6 +76,14 @@ public class JarvisActivity extends Activity {
         sc.getLayoutParams().height = ViewGroup.LayoutParams.WRAP_CONTENT;
         ans.setMaxHeight(dp(320));
         initTts();
+        String sp = getIntent().getStringExtra("speak");
+        if (sp != null && !sp.isEmpty()) {
+            String t0 = getIntent().getStringExtra("title");
+            you.setText(t0 == null ? "" : t0); ans.setText(sp); status.setText("Jarvis te lit la notification");
+            closing = false; hasAction = true; // pas de réécoute automatique après la lecture
+            h.postDelayed(() -> say(sp.replace("€", " euros")), 300);
+            return;
+        }
         if (Jarvis.cfg(this).optString("key", "").isEmpty()) show("", "Ouvre d'abord le Cockpit, onglet Assistant, et enregistre ta clé Claude : Jarvis pourra ensuite te répondre d'ici.", false);
         else h.postDelayed(this::listen, 250);
     }

@@ -9,6 +9,6 @@ public class ReminderReceiver extends BroadcastReceiver {
     public void onReceive(Context ctx, Intent intent) {
         String id = intent.getStringExtra("id");
         Reminders.show(ctx, id == null ? "rappel" : id, intent.getStringExtra("title"),
-                intent.getStringExtra("body"), intent.getStringExtra("hash"));
+                intent.getStringExtra("body"), intent.getStringExtra("hash"), intent.getStringExtra("acts"));
     }
 }

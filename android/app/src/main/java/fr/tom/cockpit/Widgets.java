@@ -235,6 +235,26 @@ final class Widgets {
             Prefs.setWidgetJson(ctx, d.toString());
             updateAll(ctx);
 
+            // paliers du PEA (une seule fois par palier)
+            try {
+                org.json.JSONArray pal = JN.data(ctx).optJSONArray("paliers");
+                if (pal != null && JN.on(ctx, "paliers")) for (int i = 0; i < pal.length(); i++) {
+                    double p = pal.optDouble(i);
+                    String pk = "pal-" + (long) p;
+                    if (value >= p && !Prefs.sp(ctx).getBoolean(pk, false)) {
+                        Prefs.sp(ctx).edit().putBoolean(pk, true).apply();
+                        JN.post(ctx, pk.hashCode(), null, "🎉 Ton PEA dépasse " + eur(p, false), "Nouveau palier franchi : ton PEA vaut " + eur(value, false) + ". Continue ton DCA, c'est lui qui fait le travail.", "executif", null, true, null, true);
+                    }
+                }
+            } catch (Exception ignored) { }
+            // grosse journée de marché : Jarvis explique (une fois par jour, pas la nuit)
+            if (JN.on(ctx, "alerts") && Math.abs(dayPct) >= 0.02 && !("big-" + day).equals(Prefs.sp(ctx).getString("bigDay", "")) && !JN.quiet(ctx)) {
+                Prefs.sp(ctx).edit().putString("bigDay", "big-" + day).apply();
+                Prefs.setLastDropAlert(ctx, day);
+                String a = JN.jarvis(ctx, "Mon PEA " + (dayPct < 0 ? "baisse" : "monte") + " de " + pct(dayPct) + " aujourd'hui (" + signedEur(dayAbs) + "). En 2 phrases : pourquoi (cherche l'actualité du jour) et que dois-je faire (rappelle mon plan DCA).");
+                JN.post(ctx, ("big-" + day).hashCode(), null, (dayPct < 0 ? "Grosse baisse : " : "Belle hausse : ") + "ton PEA " + pct(dayPct) + " (" + signedEur(dayAbs) + ")",
+                        a != null ? a : (dayPct < 0 ? "Pas de panique : ton DCA achètera moins cher." : "Bonne journée pour ton PEA. Ne change rien à ton plan."), "journal", null, true, a, true);
+            }
             if (dayPct <= -0.03 && !day.equals(Prefs.lastDropAlert(ctx))) {
                 Prefs.setLastDropAlert(ctx, day);
                 Reminders.show(ctx, "drop-" + day, "Marché en baisse : " + pct(dayPct),

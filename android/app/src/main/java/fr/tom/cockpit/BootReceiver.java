@@ -11,6 +11,7 @@ public class BootReceiver extends BroadcastReceiver {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             Reminders.schedule(ctx);
             MarketNotif.schedule(ctx);
+            JarvisAlarm.scheduleAll(ctx);
             Widgets.updateAll(ctx);
         }
     }

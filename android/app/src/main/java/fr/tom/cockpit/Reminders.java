@@ -44,6 +44,7 @@ final class Reminders {
                 in.putExtra("title", r.optString("title"));
                 in.putExtra("body", r.optString("body"));
                 in.putExtra("hash", r.optString("hash"));
+                if (r.has("acts")) in.putExtra("acts", r.optJSONArray("acts").toString());
                 PendingIntent pi = PendingIntent.getBroadcast(ctx, r.optString("id").hashCode(), in,
                         PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
                 am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, t, pi);
@@ -51,7 +52,21 @@ final class Reminders {
         } catch (Exception ignored) { }
     }
 
-    static void show(Context ctx, String id, String title, String body, String hash) {
+    static void show(Context ctx, String id, String title, String body, String hash, String acts) {
+        JSONArray a = null;
+        try { if (acts != null && acts.startsWith("[")) a = new JSONArray(acts); } catch (Exception ignored) { }
+        JN.post(ctx, id.hashCode(), CHANNEL_ID(ctx), title, body, hash, a, true, null, false);
+    }
+
+    static String CHANNEL_ID(Context ctx) {
+        NotificationManager nm = ctx.getSystemService(NotificationManager.class);
+        if (nm != null) nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Rappels du cockpit", NotificationManager.IMPORTANCE_DEFAULT));
+        return CHANNEL;
+    }
+
+    static void show(Context ctx, String id, String title, String body, String hash) { show(ctx, id, title, body, hash, null); }
+
+    static void showOld(Context ctx, String id, String title, String body, String hash) {
         if (Build.VERSION.SDK_INT >= 33
                 && ctx.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) return;
         NotificationManager nm = ctx.getSystemService(NotificationManager.class);

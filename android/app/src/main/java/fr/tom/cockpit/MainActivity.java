@@ -297,6 +297,12 @@ public class MainActivity extends Activity {
             if (pageReady) web.evaluateJavascript("(function(h){if(window.__nav)__nav(h);else location.hash=h})('" + hash + "')", null);
             else pendingHash = hash;
         }
+        String ja = intent.getStringExtra("jarvis_acts");
+        if (ja != null && !ja.isEmpty()) {
+            intent.removeExtra("jarvis_acts");
+            final String code = "(function(a){var t=0;(function f(){if(typeof jarvisNotifAct==='function'){jarvisNotifAct(a)}else if(t++<60)setTimeout(f,500)})()})(" + JSONObject.quote(ja) + ")";
+            if (pageReady) web.evaluateJavascript(code, null); else pendingJs = code;
+        }
         String jq = intent.getStringExtra("jarvis_q");
         if (jq != null && !jq.isEmpty()) {
             intent.removeExtra("jarvis_q");
@@ -598,6 +604,16 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface public void wakeStop() { runOnUiThread(() -> { wakeOn = false; wakePause(); }); }
+
+        /** Jarvis proactif : réglages {close, alerts, dca, week, events, paliers, budget, quiet} et données {dca, events, paliers}. */
+        @JavascriptInterface public void setJarvisNotif(String json) { JN.setCfg(MainActivity.this, json); }
+        @JavascriptInterface public String getJarvisNotif() { return JN.cfg(MainActivity.this).toString(); }
+        @JavascriptInterface public void setJarvisData(String json) { Prefs.sp(MainActivity.this).edit().putString("jdata", json).apply(); JarvisAlarm.scheduleAll(MainActivity.this); }
+        @JavascriptInterface public String takeActions() { return JN.take(MainActivity.this); }
+        @JavascriptInterface public void notifyNow(String json) {
+            try { JSONObject o = new JSONObject(json); JN.post(MainActivity.this, o.optString("id", "n").hashCode(), null, o.optString("title"), o.optString("body"), o.optString("hash", "executif"), o.optJSONArray("acts"), true, o.optString("speak", null), o.optBoolean("private", true)); } catch (Exception ignored) { }
+        }
+        @JavascriptInterface public void testJarvisNotif(final String kind) { sendBroadcast(new Intent(MainActivity.this, JarvisAlarm.class).putExtra("kind", kind)); }
 
         /** Points bourse : {on, slots:[minutes depuis minuit]} ; test = notification tout de suite. */
         @JavascriptInterface public void setMarketNotif(String json) { MarketNotif.setCfg(MainActivity.this, json); }

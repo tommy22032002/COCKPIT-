@@ -120,7 +120,12 @@ final class Quotes {
             f.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
             if (!date.equals(f.format(new Date())) || date.equals(Prefs.lastBrief(ctx))) return;
             Prefs.setLastBrief(ctx, date);
-            Reminders.show(ctx, "brief-" + date, "Le point du jour", b.optString("title", "Ton résumé des marchés est prêt."), "journal");
+            StringBuilder say = new StringBuilder(b.optString("title", ""));
+            org.json.JSONArray sm = b.optJSONArray("summary");
+            if (sm != null) for (int i = 0; i < sm.length() && i < 3; i++) say.append(". ").append(sm.optString(i));
+            Object fy = b.opt("forYou");
+            if (fy instanceof String) say.append(". Pour toi : ").append(fy);
+            JN.post(ctx, ("brief-" + date).hashCode(), null, "Le point du jour", b.optString("title", "Ton résumé des marchés est prêt."), "journal", null, true, say.toString(), false);
         } catch (Exception ignored) { }
     }
 }
