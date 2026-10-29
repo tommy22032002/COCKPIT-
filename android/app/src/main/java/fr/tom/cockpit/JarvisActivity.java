@@ -106,7 +106,10 @@ public class JarvisActivity extends Activity {
         if (res == RESULT_OK && data != null) { ArrayList<String> r = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS); if (r != null && !r.isEmpty()) q = r.get(0).trim(); }
         if (q.isEmpty()) { if (hist.isEmpty()) finishQuiet(); else status.setText("Appuie sur « Encore » pour une autre question."); return; }
         String qq = q.replaceFirst("(?i)^(et |hey |ok )?jarvis[ ,]*", "").trim();
-        if (playCommand(qq)) return;
+        java.util.regex.Matcher cm = Pattern.compile("^(?:ouvre|lance|va sur)\\s+(.+?)\\s+(?:et|puis)\\s+(?:mets|mets-moi|joue|lance|cherche|recherche|passe|fais(?:-moi)? (?:écouter|ecouter|voir))\\s+(.+?)[ .!?]*$", Pattern.CASE_INSENSITIVE).matcher(qq);
+        final String cmd = cm.matches() ? "mets " + cm.group(2) + " sur " + cm.group(1) : qq;
+        if (videoCommand(cmd)) return;
+        if (playCommand(cmd)) return;
         if (openCommand(qq)) return;
         if (END.matcher(qq).matches()) { say("À ton service, Tom."); closing = true; status.setText("À plus tard."); return; }
         if (qq.isEmpty()) { say("Oui ?"); h.postDelayed(this::listen, 900); return; }
@@ -146,6 +149,35 @@ public class JarvisActivity extends Activity {
     private static final String[][] MUSIC = {{"apple", "com.apple.android.music", "Apple Music"}, {"spotify", "com.spotify.music", "Spotify"}, {"deezer", "deezer.android.app", "Deezer"},
         {"youtube", "com.google.android.apps.youtube.music", "YouTube Music"}, {"amazon", "com.amazon.mp3", "Amazon Music"}, {"soundcloud", "com.soundcloud.android", "SoundCloud"}};
 
+    private static final Pattern VIDEO = Pattern.compile("^(?:mets|mets-moi|joue|lance|cherche|recherche|montre(?:-moi)?|passe|fais(?:-moi)? voir|je veux voir|regarde)\\s+(?:la |une |les |le |un )?(?:vid[ée]os? |clip |film |bande.annonce )?(?:de |du |d'|des )?(.+?)\\s+(?:sur|dans|avec)\\s+(youtube|you tube|netflix|twitch|tiktok)[ .!?]*$", Pattern.CASE_INSENSITIVE);
+
+    private boolean videoCommand(String q) {
+        java.util.regex.Matcher m = VIDEO.matcher(q.trim());
+        if (!m.matches()) return false;
+        String what = m.group(1).trim(), app = norm(m.group(2)).replace(" ", "");
+        you.setText("« " + q + " »");
+        Intent i;
+        if (app.startsWith("youtube")) {
+            i = new Intent(Intent.ACTION_SEARCH).setPackage("com.google.android.youtube").putExtra("query", what);
+        } else if (app.equals("netflix")) {
+            i = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.netflix.com/search?q=" + android.net.Uri.encode(what))).setPackage("com.netflix.mediaclient");
+        } else if (app.equals("twitch")) {
+            i = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.twitch.tv/search?term=" + android.net.Uri.encode(what)));
+        } else {
+            i = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.tiktok.com/search?q=" + android.net.Uri.encode(what)));
+        }
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try { startActivity(i); }
+        catch (Exception e) {
+            try { startActivity(new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://www.youtube.com/results?search_query=" + android.net.Uri.encode(what))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); }
+            catch (Exception e2) { ans.setText("Je n'arrive pas à ouvrir " + m.group(2) + "."); return true; }
+        }
+        ans.setText("🔎 " + what + " · " + m.group(2));
+        say("Voilà les résultats pour " + what + ". Choisis la vidéo.");
+        h.postDelayed(this::finishQuiet, 2200);
+        return true;
+    }
+
     private boolean playCommand(String q) {
         java.util.regex.Matcher m = PLAY.matcher(q.trim());
         if (!m.matches()) return false;
@@ -162,6 +194,12 @@ public class JarvisActivity extends Activity {
         i.setPackage(target[1]);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         you.setText("« " + q + " »");
+        if (target[1].equals("com.apple.android.music")) {
+            // Apple Music ne laisse pas une autre appli choisir le morceau : on ouvre directement sa recherche sur le titre demandé
+            Intent am = new Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://music.apple.com/fr/search?term=" + android.net.Uri.encode(what))).setPackage(target[1]).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            try { startActivity(am); say("Voilà " + what + " sur Apple Music. Touche le morceau pour l'écouter."); ans.setText("🔎 " + what + " · Apple Music"); h.postDelayed(this::finishQuiet, 2200); return true; }
+            catch (Exception ignored) { }
+        }
         try {
             startActivity(i);
             say("Je lance " + what + " sur " + target[2] + ".");
