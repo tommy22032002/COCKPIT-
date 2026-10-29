@@ -605,6 +605,12 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface public void wakeStop() { runOnUiThread(() -> { wakeOn = false; wakePause(); }); }
 
+        /** Agenda Google du téléphone. */
+        @JavascriptInterface public String calendarEvents(int days) { return Agenda.events(MainActivity.this, days).toString(); }
+        @JavascriptInterface public String calendarAdd(String json) { return Agenda.add(MainActivity.this, json); }
+        @JavascriptInterface public boolean calendarOk() { return Agenda.canRead(MainActivity.this) && Agenda.canWrite(MainActivity.this); }
+        @JavascriptInterface public void calendarAsk() { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.READ_CALENDAR, Manifest.permission.WRITE_CALENDAR}, 14)); }
+
         /** Jarvis proactif : réglages {close, alerts, dca, week, events, paliers, budget, quiet} et données {dca, events, paliers}. */
         @JavascriptInterface public void setJarvisNotif(String json) { JN.setCfg(MainActivity.this, json); }
         @JavascriptInterface public String getJarvisNotif() { return JN.cfg(MainActivity.this).toString(); }

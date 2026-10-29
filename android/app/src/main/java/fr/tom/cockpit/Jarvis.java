@@ -53,7 +53,10 @@ final class Jarvis {
             for (String[] m : history) {
                 JSONObject o = new JSONObject(); o.put("role", m[0]); o.put("content", m[0].equals("user") ? "[voix] " + m[1] : m[1]); msgs.put(o);
             }
-            String sys = cfg.optString("sys", "") + "\nTu réponds en dehors de l'appli, par une petite bulle et à voix haute : 1 à 3 phrases courtes, sans liste. Les chiffres du cockpit datent du " + cfg.optString("at", "dernier passage dans l'appli") + ". Pour une modification, propose quand même le bloc <action> : Tom la validera dans le Cockpit.";
+            String agenda = "";
+            if (java.util.regex.Pattern.compile("(agenda|calendrier|rendez|rdv|semaine|demain|aujourd|ce soir|pr[ée]vu|planning|occup|libre|dispo|week-end)", java.util.regex.Pattern.CASE_INSENSITIVE).matcher(last).find())
+                agenda = "\nAgenda de Tom (14 prochains jours) : " + Agenda.events(c, 14).toString();
+            String sys = cfg.optString("sys", "") + agenda + "\nTu réponds en dehors de l'appli, par une petite bulle et à voix haute : 1 à 3 phrases courtes, sans liste. Les chiffres du cockpit datent du " + cfg.optString("at", "dernier passage dans l'appli") + ". Pour une modification, propose quand même le bloc <action> : Tom la validera dans le Cockpit.";
             JSONObject body = new JSONObject();
             body.put("model", cfg.optString("model", "claude-sonnet-5-5"));
             body.put("max_tokens", 700);
