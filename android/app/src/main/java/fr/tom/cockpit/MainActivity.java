@@ -153,6 +153,7 @@ public class MainActivity extends Activity {
     private boolean loaded = false;
     private boolean pageReady = false;
     private String pendingHash = null;
+    private String pendingJs = null;
     private String pendingShare = "[]";
 
     @Override
@@ -185,6 +186,7 @@ public class MainActivity extends Activity {
             public void onPageFinished(WebView view, String url) {
                 pageReady = true;
                 deliverShare();
+                if (pendingJs != null) { final String c0 = pendingJs; pendingJs = null; view.evaluateJavascript(c0, null); }
             }
         });
         web.setWebChromeClient(new WebChromeClient() {
@@ -293,6 +295,12 @@ public class MainActivity extends Activity {
         if (hash != null && hash.matches("[a-z]+")) {
             if (pageReady) web.evaluateJavascript("(function(h){if(window.__nav)__nav(h);else location.hash=h})('" + hash + "')", null);
             else pendingHash = hash;
+        }
+        String jq = intent.getStringExtra("jarvis_q");
+        if (jq != null && !jq.isEmpty()) {
+            intent.removeExtra("jarvis_q");
+            final String code = "(function(q){var t=0;(function f(){if(typeof aiSend==='function'&&typeof go==='function'){try{go('assistant')}catch(e){}aiSend(q,{voice:false})}else if(t++<60)setTimeout(f,500)})()})(" + JSONObject.quote(jq) + ")";
+            if (pageReady) web.evaluateJavascript(code, null); else pendingJs = code;
         }
         String action = intent.getAction();
         List<Uri> uris = new ArrayList<>();
@@ -589,6 +597,9 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface public void wakeStop() { runOnUiThread(() -> { wakeOn = false; wakePause(); }); }
+
+        /** Résumé du cockpit + clé et voix, pour que Jarvis réponde hors de l'appli (bulle, tuile, widget). */
+        @JavascriptInterface public void setJarvis(String json) { Jarvis.setCfg(MainActivity.this, json); }
 
         @JavascriptInterface public void stopSpeak() { runOnUiThread(() -> { try { if (tts != null) tts.stop(); } catch (Exception ignored) { } if (speaking) { speaking = false; wh.postDelayed(() -> wakeLoop(), 300); } }); }
 
