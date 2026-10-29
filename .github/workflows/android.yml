@@ -28,13 +28,16 @@ jobs:
       - name: Publication sur GitHub Pages
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk cockpit.apk
+          cp android/wear/build/outputs/apk/release/wear-release.apk cockpit-wear.apk
           echo "{\"versionCode\": ${GITHUB_RUN_NUMBER}, \"versionName\": \"1.0.${GITHUB_RUN_NUMBER}\"}" > apk-version.json
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add cockpit.apk apk-version.json
+          git add cockpit.apk cockpit-wear.apk apk-version.json
           git commit -m "APK v1.${GITHUB_RUN_NUMBER}" || echo "rien à publier"
           git pull --rebase origin main && git push origin HEAD:main
       - uses: actions/upload-artifact@v4
         with:
           name: cockpit-apk
-          path: cockpit.apk
+          path: |
+            cockpit.apk
+            cockpit-wear.apk

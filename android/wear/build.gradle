@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+def runNumber = Integer.parseInt(System.getenv('GITHUB_RUN_NUMBER') ?: '1')
+
+android {
+    namespace 'fr.tom.cockpit.wear'
+    compileSdk 34
+
+    defaultConfig {
+        // même identifiant et même signature que l'appli du téléphone : indispensable pour qu'ils se parlent
+        applicationId 'fr.tom.cockpit'
+        minSdk 30
+        targetSdk 34
+        versionCode runNumber
+        versionName "1.0.${runNumber}"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../app/cockpit.keystore')
+            storePassword 'cockpitpea'
+            keyAlias 'cockpit'
+            keyPassword 'cockpitpea'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-wearable:18.2.0'
+    implementation 'androidx.wear.tiles:tiles:1.4.0'
+    implementation 'androidx.wear.protolayout:protolayout:1.2.0'
+    implementation 'androidx.wear.watchface:watchface-complications-data-source:1.2.1'
+    implementation 'com.google.guava:guava:33.2.1-android'
+}

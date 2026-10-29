@@ -41,6 +41,7 @@ final class Widgets {
         int[] dash = m.getAppWidgetIds(new ComponentName(ctx, DashWidget.class));
         if (pea != null && pea.length > 0) render(ctx, m, pea, false);
         if (dash != null && dash.length > 0) render(ctx, m, dash, true);
+        Wear.push(ctx);
     }
 
     static String eur(double v, boolean cents) {
