@@ -52,6 +52,7 @@ final class Pea {
         Context a = c.getApplicationContext();
         try { TileService.getUpdater(a).requestUpdate(PeaTile.class); } catch (Throwable ignored) { }
         try { TileService.getUpdater(a).requestUpdate(BudgetTile.class); } catch (Throwable ignored) { }
+        try { TileService.getUpdater(a).requestUpdate(SaisonTile.class); } catch (Throwable ignored) { }
         try { ComplicationDataSourceUpdateRequester.create(a, new ComponentName(a, PeaComplication.class)).requestUpdateAll(); } catch (Throwable ignored) { }
         Runnable r = onChange;
         if (r != null) r.run();
@@ -178,6 +179,11 @@ final class Pea {
         if (ym == null || ym.length() < 7) return "";
         String[] M = {"janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."};
         try { return M[Integer.parseInt(ym.substring(5, 7)) - 1] + " " + ym.substring(0, 4); } catch (Exception e) { return ym; }
+    }
+
+    static String fh(double h) {
+        long m = Math.round(Math.abs(h) * 60);
+        return (h < 0 ? "−" : "") + (m / 60) + " h" + (m % 60 != 0 ? String.format(Locale.FRANCE, " %02d", m % 60) : "");
     }
 
     static String at(JSONObject d) {

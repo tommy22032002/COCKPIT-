@@ -2,5 +2,6 @@
     <string name="app_name">Cockpit</string>
     <string name="tile_name">PEA du jour</string>
     <string name="tile_budget">Budget du mois</string>
+    <string name="tile_saison">Ma saison</string>
     <string name="comp_name">PEA</string>
 </resources>

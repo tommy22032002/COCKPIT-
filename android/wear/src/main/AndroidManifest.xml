@@ -57,6 +57,17 @@
         </service>
 
         <service
+            android:name="fr.tom.cockpit.wear.SaisonTile"
+            android:exported="true"
+            android:label="@string/tile_saison"
+            android:permission="com.google.android.wearable.permission.BIND_TILE_PROVIDER">
+            <intent-filter>
+                <action android:name="androidx.wear.tiles.action.BIND_TILE_PROVIDER" />
+            </intent-filter>
+            <meta-data android:name="androidx.wear.tiles.PREVIEW" android:resource="@mipmap/ic_launcher" />
+        </service>
+
+        <service
             android:name="fr.tom.cockpit.wear.PeaComplication"
             android:exported="true"
             android:icon="@mipmap/ic_launcher"

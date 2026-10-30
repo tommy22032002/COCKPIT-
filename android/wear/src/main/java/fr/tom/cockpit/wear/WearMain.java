@@ -149,6 +149,16 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
                 }
             }
 
+            JSONObject pa = d.optJSONObject("paie");
+            if (pa != null && pa.optBoolean("hasH", false)) {
+                section("Ma saison · " + pa.optString("nom"));
+                if (!pa.optBoolean("ended", false)) tv(pa.optString("mois") + " : " + Pea.fh(pa.optDouble("hMois", 0)) + " (" + pa.optInt("jours") + " j)", 13, Pea.INK, true);
+                tv("Saison : " + Pea.fh(pa.optDouble("worked", 0)) + " / " + Pea.fh(pa.optDouble("paid", 0)) + " payées", 12, Pea.MUTED, false);
+                double ex = pa.optDouble("ext", 0);
+                tv(ex > 0 ? Pea.fh(ex) + " d'heures sup à réclamer" : Pea.fh(pa.optDouble("manque", 0)) + " payées en plus", 12, ex > 0 ? Pea.LOSS : Pea.GAIN, false);
+                tv("Dicte tes heures : « 6 h 30 aujourd'hui »", 10.5f, Pea.MUTED, false);
+            }
+
             String wk = d.optString("week", "");
             if (!wk.isEmpty()) {
                 section("Bilan de la semaine" + (d.optString("weekAt").isEmpty() ? "" : " · " + d.optString("weekAt")));

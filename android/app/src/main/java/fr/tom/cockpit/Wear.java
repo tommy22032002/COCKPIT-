@@ -33,6 +33,7 @@ final class Wear {
             o.put("month", d.optString("month", ""));
             if (d.has("saison")) o.put("saison", d.optJSONObject("saison"));
             if (d.has("goals")) o.put("goals", d.optJSONArray("goals"));
+            if (d.has("paie")) o.put("paie", d.optJSONObject("paie"));
             o.put("week", Prefs.sp(ctx).getString("weekBilan", ""));
             o.put("weekAt", Prefs.sp(ctx).getString("weekBilanAt", ""));
             try { o.put("log", new JSONArray(Prefs.sp(ctx).getString("jnLog", "[]"))); } catch (Exception ignored) { }
