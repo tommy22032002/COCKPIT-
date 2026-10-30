@@ -1,5 +1,5 @@
 // Cockpit PEA : fonctionne hors connexion, se met à jour tout seul, et envoie tes rappels.
-const CACHE='cockpit-j1793374661';
+const CACHE='cockpit-j1793375099';
 const CORE=['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png','cockpit.enc'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
