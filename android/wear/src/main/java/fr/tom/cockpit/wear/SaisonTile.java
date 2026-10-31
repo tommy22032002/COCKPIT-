@@ -16,7 +16,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 
 import org.json.JSONObject;
 
-/** Tuile « Ma saison » : heures du mois, total de la saison face aux heures payées. */
+/** Tuile « Ma saison » : heures du mois et total de la saison ; entre deux saisons, budget par jour et compte à rebours. */
 public class SaisonTile extends TileService {
 
     @NonNull @Override
@@ -28,7 +28,24 @@ public class SaisonTile extends TileService {
                 .setHorizontalAlignment(LayoutElementBuilders.HORIZONTAL_ALIGN_CENTER)
                 .addContent(PeaTile.txt("Ma saison", 13, Pea.MUTED, false))
                 .addContent(PeaTile.gap(4));
-        if (pa == null || !pa.optBoolean("hasH", false)) {
+        JSONObject it = pa == null ? null : pa.optJSONObject("inter");
+        if (it != null) {
+            // intersaison : budget par jour jusqu'au prochain salaire et compte à rebours de la prochaine saison
+            boolean priv = d.optBoolean("privacy", false);
+            double day = it.optDouble("day", -1);
+            int jDeb = it.optInt("jDeb", -1);
+            if (day >= 0) {
+                col.addContent(PeaTile.txt(priv ? "••" : Pea.eur(Math.max(0, day)), 28, day < 5 ? Pea.LOSS : day < 10 ? 0xFFF2B35B : Pea.GAIN, true))
+                   .addContent(PeaTile.txt("par jour · " + it.optInt("j") + " j", 12, Pea.MUTED, false))
+                   .addContent(PeaTile.txt("salaire vers le " + it.optString("pay"), 11, Pea.MUTED, false));
+            } else {
+                col.addContent(PeaTile.txt("Intersaison", 22, Pea.INK, true));
+            }
+            col.addContent(PeaTile.gap(6));
+            if (jDeb > 0) col.addContent(PeaTile.txt(it.optString("lieu", "Saison") + " dans " + jDeb + " j", 14, Pea.ACCENT, true));
+            else if (jDeb == 0) col.addContent(PeaTile.txt(it.optString("lieu", "Saison") + " : c'est parti !", 14, Pea.ACCENT, true));
+            if (it.has("todo")) col.addContent(PeaTile.txt(it.optString("todo"), 11, Pea.MUTED, false));
+        } else if (pa == null || !pa.optBoolean("hasH", false)) {
             col.addContent(PeaTile.txt("—", 28, Pea.INK, true)).addContent(PeaTile.gap(6))
                .addContent(PeaTile.txt("Ouvre le Cockpit", 13, Pea.MUTED, false))
                .addContent(PeaTile.txt("sur ton téléphone", 13, Pea.MUTED, false));

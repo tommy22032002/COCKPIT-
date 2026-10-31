@@ -150,6 +150,15 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
             }
 
             JSONObject pa = d.optJSONObject("paie");
+            JSONObject it = pa == null ? null : pa.optJSONObject("inter");
+            if (it != null) {
+                section("Intersaison");
+                double day = it.optDouble("day", -1);
+                if (day >= 0) tv((priv ? "••" : Pea.eur(Math.max(0, day))) + " par jour jusqu'au " + it.optString("pay"), 13, Pea.INK, true);
+                int jDeb = it.optInt("jDeb", -1);
+                if (jDeb >= 0) tv(it.optString("lieu", "Prochaine saison") + (jDeb > 0 ? " dans " + jDeb + " jours" : " : aujourd'hui !"), 12, Pea.ACCENT, false);
+                if (it.has("todo")) tv(it.optString("todo"), 11, Pea.MUTED, false);
+            }
             if (pa != null && pa.optBoolean("hasH", false)) {
                 section("Ma saison · " + pa.optString("nom"));
                 if (!pa.optBoolean("ended", false)) tv(pa.optString("mois") + " : " + Pea.fh(pa.optDouble("hMois", 0)) + " (" + pa.optInt("jours") + " j)", 13, Pea.INK, true);
