@@ -55,6 +55,12 @@ public class BudgetTile extends TileService {
                .addContent(PeaTile.txt((priv ? "••" : Pea.eur(spent)) + " sur " + Pea.eur(cap), 12, Pea.MUTED, false))
                .addContent(PeaTile.txt(left > 0 ? "≈ " + (priv ? "••" : Pea.eur(left / days)) + " par jour · " + days + " j" : "Pause plaisir jusqu'au 1er", 12, Pea.INK, false));
         }
+        JSONObject sa = d == null ? null : d.optJSONObject("saison");
+        JSONObject df = sa == null ? null : sa.optJSONObject("defi");
+        if (df != null && df.optInt("j", 0) > 0) {
+            int j = df.optInt("j", 0);
+            col.addContent(PeaTile.gap(4)).addContent(PeaTile.txt("🔥 " + j + " j sans achat plaisir", 12, j >= 7 ? Pea.GAIN : Pea.INK, true));
+        }
         ModifiersBuilders.Clickable click = new ModifiersBuilders.Clickable.Builder().setId("open")
                 .setOnClick(new ActionBuilders.LaunchAction.Builder().setAndroidActivity(
                         new ActionBuilders.AndroidActivity.Builder().setPackageName(getPackageName()).setClassName(WearMain.class.getName()).build()).build())

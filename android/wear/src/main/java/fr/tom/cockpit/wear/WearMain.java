@@ -134,6 +134,9 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
                 tv((left >= 0 ? "Il te reste " : "Dépassé de ") + (priv ? "••" : Pea.eur(Math.abs(left))), 15, left < 0 ? Pea.LOSS : Pea.GAIN, true);
                 tv((priv ? "••" : Pea.eur(spent)) + " sur " + Pea.eur(cap) + (left > 0 ? " · ≈ " + (priv ? "••" : Pea.eur(left / days)) + "/jour" : ""), 12, Pea.MUTED, false);
             }
+            JSONObject so = d.optJSONObject("saison");
+            JSONObject df = so == null ? null : so.optJSONObject("defi");
+            if (df != null && df.optInt("j", 0) > 0) tv("🔥 " + df.optInt("j", 0) + " jours sans achat plaisir · record " + df.optInt("best", 0), 12, Pea.GAIN, true);
 
             JSONArray G = d.optJSONArray("goals");
             if (G != null && G.length() > 0) {
