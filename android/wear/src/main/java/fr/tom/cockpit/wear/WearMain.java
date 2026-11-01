@@ -137,6 +137,14 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
             JSONObject so = d.optJSONObject("saison");
             JSONObject df = so == null ? null : so.optJSONObject("defi");
             if (df != null && df.optInt("j", 0) > 0) tv("🔥 " + df.optInt("j", 0) + " jours sans achat plaisir · record " + df.optInt("best", 0), 12, Pea.GAIN, true);
+            section("Une envie ? Résiste !");
+            for (int amt : new int[]{10, 20, 50}) {
+                final int a2 = amt;
+                btn("💪 Je résiste : " + amt + " €", Pea.GAIN, v -> {
+                    android.widget.Toast.makeText(this, "💪 " + a2 + " € sauvés !", android.widget.Toast.LENGTH_SHORT).show();
+                    new Thread(() -> { boolean ok = Pea.askPhone(this, "/pea/resist", String.valueOf(a2)); if (!ok) runOnUiThread(() -> android.widget.Toast.makeText(this, "Téléphone injoignable : vérifie le Bluetooth.", android.widget.Toast.LENGTH_LONG).show()); }).start();
+                });
+            }
 
             JSONArray G = d.optJSONArray("goals");
             if (G != null && G.length() > 0) {

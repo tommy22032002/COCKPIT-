@@ -15,6 +15,16 @@ public class WatchListener extends WearableListenerService {
         if ("/pea/sync".equals(path)) {
             Widgets.refreshPrices(this, false);
             Wear.push(this);
+        } else if ("/pea/resist".equals(path)) {
+            // « Je résiste » depuis la montre : l'envie évitée est notée, le Cockpit la compte comme argent sauvé
+            String amt = new String(ev.getData(), StandardCharsets.UTF_8).trim();
+            double v = 0; try { v = Double.parseDouble(amt.replace(',', '.')); } catch (Exception ignored) { }
+            String txt;
+            if (v > 0) {
+                try { JN.queue(this, new org.json.JSONObject().put("t", "resist").put("amt", v).put("at", new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", java.util.Locale.US).format(new java.util.Date()))); } catch (Exception ignored) { }
+                txt = "💪 Bravo ! " + Math.round(v) + " € pas dépensés. Ils sont notés dans ta liste d'attente comme argent sauvé : vire-les sur ton PEA quand tu veux.";
+            } else txt = "Je n'ai pas compris le montant.";
+            Wearable.getMessageClient(this).sendMessage(ev.getSourceNodeId(), "/jarvis/reply", txt.getBytes(StandardCharsets.UTF_8));
         } else if ("/jarvis/ask".equals(path)) {
             String q = new String(ev.getData(), StandardCharsets.UTF_8).trim();
             String txt;
