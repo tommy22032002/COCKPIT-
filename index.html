@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0C0F15">
 <meta name="robots" content="noindex,nofollow">
-<title>Cockpit PEA</title>
+<title>Capital</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
@@ -33,7 +33,7 @@ button:disabled{opacity:.6}
 <main>
   <form class="box" id="f" autocomplete="off">
     <img src="icon-192.png" alt="">
-    <h1>Cockpit PEA</h1>
+    <h1>Capital</h1>
     <p id="sub">Tes données sont chiffrées. Entre ton code pour les ouvrir.</p>
     <div id="biobox" hidden>
       <button type="button" class="ghost" id="bio"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 11v3a8 8 0 0 1-1 4"/><path d="M8.5 7.5A5 5 0 0 1 17 11v1.5"/><path d="M7 11a5 5 0 0 1 .3-1.7"/><path d="M7 14.5c.2 1.6-.1 3-.8 4.3"/><path d="M14.5 13.5c0 2.5-.5 4.6-1.6 6.5"/><path d="M17 15.5c-.1 1.7-.4 3.2-1 4.5"/><path d="M4.5 9A8 8 0 0 1 19.6 8"/><path d="M4 13.5c.1-1 .2-2 .5-2.9"/></svg>Déverrouiller avec l'empreinte</button>
@@ -69,7 +69,7 @@ async function attempt(pw,remember){
   try{const html=await unlock(pw);if(remember&&!ls.get(BIO))ls.set(KEY,pw);try{sessionStorage.setItem('cockpit.unlockedAt',Date.now())}catch(e){}show(html)}
   catch(e){$('go').disabled=false;
     if(e.message==='pw'){ls.set(KEY,null);$('msg').className='err';$('msg').textContent='Code incorrect.'}
-    else{$('msg').className='err';$('msg').textContent='Impossible de charger le cockpit. Vérifie ta connexion (la première ouverture doit se faire en ligne).'}}
+    else{$('msg').className='err';$('msg').textContent='Impossible de charger Capital. Vérifie ta connexion (la première ouverture doit se faire en ligne).'}}
 }
 // Empreinte (WebAuthn) : avec l'extension PRF, la clé qui protège ton code ne sort jamais du capteur.
 async function bioUnlock(){const bio=JSON.parse(ls.get(BIO)||'null');if(!bio)return;

@@ -1,5 +1,5 @@
-// Cockpit PEA : fonctionne hors connexion, se met à jour tout seul, et envoie tes rappels.
-const CACHE='cockpit-j1793571450';
+// Capital : fonctionne hors connexion, se met à jour tout seul, et envoie tes rappels.
+const CACHE='cockpit-j1793573499';
 const CORE=['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png','cockpit.enc'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
@@ -19,7 +19,7 @@ self.addEventListener('fetch',e=>{
   }
 });
 
-// ---------- rappels : la liste est préparée par le cockpit (dates et textes seulement) ----------
+// ---------- rappels : la liste est préparée par Capital (dates et textes seulement) ----------
 const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open('cockpit-notif',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)});
 async function kv(k,v){const db=await idb();return new Promise((res,rej)=>{const tx=db.transaction('kv',v===undefined?'readonly':'readwrite');const s=tx.objectStore('kv');const r=v===undefined?s.get(k):s.put(v,k);r.onsuccess=()=>res(v===undefined?r.result:v);r.onerror=()=>rej(r.error)})}
 const today=()=>{const n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0')};
@@ -43,6 +43,6 @@ async function runChecks(force){
 self.addEventListener('periodicsync',e=>{if(e.tag==='cockpit-rappels')e.waitUntil(runChecks(false))});
 self.addEventListener('message',e=>{const d=e.data||{};
   if(d.type==='check')e.waitUntil(runChecks(!!d.force));
-  if(d.type==='test')e.waitUntil(self.registration.showNotification('Cockpit PEA',{body:'Les notifications fonctionnent. Tes rappels arriveront ici.',tag:'test',icon:'icon-192.png',data:{hash:''}}))});
+  if(d.type==='test')e.waitUntil(self.registration.showNotification('Capital',{body:'Les notifications fonctionnent. Tes rappels arriveront ici.',tag:'test',icon:'icon-192.png',data:{hash:''}}))});
 self.addEventListener('notificationclick',e=>{e.notification.close();const h=(e.notification.data||{}).hash;const url=new URL('./'+(h?'#'+h:''),self.registration.scope).href;
   e.waitUntil(self.clients.matchAll({type:'window',includeUncontrolled:true}).then(cs=>{for(const c of cs){if('focus' in c){c.postMessage({type:'go',hash:h});return c.focus()}}return self.clients.openWindow(url)}))});
