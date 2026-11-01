@@ -84,8 +84,8 @@ final class Agenda {
             long end = all ? start + 86_400_000L : start + Math.max(15, o.optInt("duree", 60)) * 60_000L;
             ContentValues v = new ContentValues();
             v.put(CalendarContract.Events.CALENDAR_ID, cal);
-            v.put(CalendarContract.Events.TITLE, o.optString("titre", "Cockpit"));
-            v.put(CalendarContract.Events.DESCRIPTION, o.optString("note", "Ajouté par Jarvis (Cockpit)"));
+            v.put(CalendarContract.Events.TITLE, o.optString("titre", "Capital"));
+            v.put(CalendarContract.Events.DESCRIPTION, o.optString("note", "Ajouté par Jarvis (Capital)"));
             v.put(CalendarContract.Events.DTSTART, start);
             v.put(CalendarContract.Events.DTEND, end);
             v.put(CalendarContract.Events.ALL_DAY, all ? 1 : 0);

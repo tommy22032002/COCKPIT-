@@ -84,7 +84,7 @@ public class JarvisAlarm extends BroadcastReceiver {
         JSONObject d = JN.data(c);
         if ("week".equals(kind)) {
             String a = JN.jarvis(c, "Fais le bilan de ma semaine en 4 phrases courtes : mon PEA (valeur et évolution), mon épargne et mes dépenses du mois, ma série de jours sans achat plaisir (defiPlaisir : série, record, trophées, récompense en attente) en m'encourageant, puis un conseil concret pour la semaine prochaine. Termine sur une note positive.");
-            if (a == null) a = "Ouvre le Cockpit pour voir ta semaine : PEA, épargne et budget.";
+            if (a == null) a = "Ouvre Capital pour voir ta semaine : PEA, épargne et budget.";
             else Prefs.sp(c).edit().putString("weekBilan", a).putString("weekBilanAt", new java.text.SimpleDateFormat("EEEE d MMMM", java.util.Locale.FRANCE).format(new java.util.Date())).apply();
             JN.post(c, 6100, null, "Ton bilan de la semaine", a, "executif", null, true, a, true);
         } else if ("dca".equals(kind)) {

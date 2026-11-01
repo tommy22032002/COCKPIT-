@@ -110,7 +110,7 @@ final class Pea {
             HttpURLConnection c = (HttpURLConnection) new URL("https://query1.finance.yahoo.com/v8/finance/chart/" + URLEncoder.encode(s, "UTF-8") + "?range=5d&interval=1d").openConnection();
             c.setConnectTimeout(10000);
             c.setReadTimeout(10000);
-            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Cockpit");
+            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Capital");
             if (c.getResponseCode() != 200) return null;
             InputStream in = c.getInputStream();
             ByteArrayOutputStream out = new ByteArrayOutputStream();

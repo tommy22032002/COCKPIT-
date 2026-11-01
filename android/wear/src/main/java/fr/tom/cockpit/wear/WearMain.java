@@ -91,7 +91,7 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
         tv("PEA", 13, Pea.MUTED, false);
         if (d == null) {
             tv("—", 30, Pea.INK, true);
-            tv("Ouvre le Cockpit sur ton téléphone : la montre recevra ton PEA automatiquement.", 13, Pea.MUTED, false);
+            tv("Ouvre Capital sur ton téléphone : la montre recevra ton PEA automatiquement.", 13, Pea.MUTED, false);
         } else {
             boolean priv = d.optBoolean("privacy", false);
             double day = d.optDouble("dayAbs", 0);

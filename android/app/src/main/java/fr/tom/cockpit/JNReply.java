@@ -50,7 +50,7 @@ public class JNReply extends BroadcastReceiver {
                     Prefs.sp(app).edit().putString("jn_conv", new JSONObject().put("at", System.currentTimeMillis()).put("h", arr).toString()).apply();
                 }
                 JSONArray acts = null;
-                if (act) acts = new JSONArray().put(new JSONObject().put("label", "Valider dans le Cockpit").put("open", true).put("data", new JSONObject().put("t", "ask").put("q", q).toString()));
+                if (act) acts = new JSONArray().put(new JSONObject().put("label", "Valider dans Capital").put("open", true).put("data", new JSONObject().put("t", "ask").put("q", q).toString()));
                 JN.post(app, nid, null, "Jarvis", "« " + q + " »\n\n" + shown, "assistant", acts, true, shown, false);
             } catch (Exception ignored) { } finally { pr.finish(); }
         }).start();

@@ -60,7 +60,7 @@ final class Reminders {
 
     static String CHANNEL_ID(Context ctx) {
         NotificationManager nm = ctx.getSystemService(NotificationManager.class);
-        if (nm != null) nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Rappels du cockpit", NotificationManager.IMPORTANCE_DEFAULT));
+        if (nm != null) nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Rappels de Capital", NotificationManager.IMPORTANCE_DEFAULT));
         return CHANNEL;
     }
 
@@ -71,7 +71,7 @@ final class Reminders {
                 && ctx.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) return;
         NotificationManager nm = ctx.getSystemService(NotificationManager.class);
         if (nm == null) return;
-        nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Rappels du cockpit", NotificationManager.IMPORTANCE_DEFAULT));
+        nm.createNotificationChannel(new NotificationChannel(CHANNEL, "Rappels de Capital", NotificationManager.IMPORTANCE_DEFAULT));
         Notification n = new Notification.Builder(ctx, CHANNEL)
                 .setSmallIcon(R.drawable.ic_stat)
                 .setContentTitle(title)

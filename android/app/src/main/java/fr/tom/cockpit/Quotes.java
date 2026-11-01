@@ -34,7 +34,7 @@ final class Quotes {
             HttpURLConnection c = (HttpURLConnection) u.openConnection();
             c.setConnectTimeout(10000);
             c.setReadTimeout(10000);
-            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Cockpit");
+            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Capital");
             if (c.getResponseCode() != 200) return null;
             InputStream in = c.getInputStream();
             ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -93,7 +93,7 @@ final class Quotes {
             HttpURLConnection c = (HttpURLConnection) u.openConnection();
             c.setConnectTimeout(10000);
             c.setReadTimeout(15000);
-            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Cockpit");
+            c.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 14) Capital");
             if (c.getResponseCode() != 200) return "";
             InputStream in = c.getInputStream();
             ByteArrayOutputStream out = new ByteArrayOutputStream();

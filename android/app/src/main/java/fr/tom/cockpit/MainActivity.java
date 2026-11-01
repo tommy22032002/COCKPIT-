@@ -236,7 +236,7 @@ public class MainActivity extends Activity {
     @SuppressWarnings("deprecation")
     private void authenticate() {
         BiometricPrompt.Builder b = new BiometricPrompt.Builder(this)
-                .setTitle("Cockpit PEA")
+                .setTitle("Capital")
                 .setSubtitle("Déverrouille avec ton empreinte");
         if (Build.VERSION.SDK_INT >= 30) {
             b.setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_STRONG
@@ -260,7 +260,7 @@ public class MainActivity extends Activity {
 
     private void showLocked() {
         TextView t = new TextView(this);
-        t.setText("Cockpit verrouillé\n\nTouche l'écran pour réessayer");
+        t.setText("Capital verrouillé\n\nTouche l'écran pour réessayer");
         t.setTextColor(Color.parseColor("#E8ECF3"));
         t.setTextSize(18);
         t.setGravity(android.view.Gravity.CENTER);
@@ -427,7 +427,7 @@ public class MainActivity extends Activity {
                 if (remote > BuildConfig.VERSION_CODE) {
                     runOnUiThread(() -> new AlertDialog.Builder(this)
                             .setTitle("Mise à jour disponible")
-                            .setMessage("Une nouvelle version de l'appli Cockpit (" + o.optString("versionName", "") + ") est prête. Tes données restent en place.")
+                            .setMessage("Une nouvelle version de l'appli Capital (" + o.optString("versionName", "") + ") est prête. Tes données restent en place.")
                             .setPositiveButton("Télécharger", (d, w) -> {
                                 try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(BASE + "cockpit.apk"))); } catch (Exception ignored) { }
                             })
@@ -481,7 +481,7 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface public void testNotification() {
-            Reminders.show(MainActivity.this, "test", "Cockpit PEA", "Les rappels fonctionnent. Ils arriveront ici à 9 h le jour prévu.", "");
+            Reminders.show(MainActivity.this, "test", "Capital", "Les rappels fonctionnent. Ils arriveront ici à 9 h le jour prévu.", "");
         }
 
         @JavascriptInterface public boolean saveFile(String name, String b64, String mime) {
@@ -509,7 +509,7 @@ public class MainActivity extends Activity {
             runOnUiThread(() -> {
                 try {
                     android.print.PrintManager pm = (android.print.PrintManager) getSystemService(android.content.Context.PRINT_SERVICE);
-                    String t = (title == null || title.isEmpty()) ? "Cockpit" : title;
+                    String t = (title == null || title.isEmpty()) ? "Capital" : title;
                     pm.print(t, web.createPrintDocumentAdapter(t), new android.print.PrintAttributes.Builder()
                         .setMediaSize(android.print.PrintAttributes.MediaSize.ISO_A4).build());
                 } catch (Exception e) { }
@@ -555,7 +555,7 @@ public class MainActivity extends Activity {
                     Intent i = new Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
                     i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
                     i.putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE, "fr-FR");
-                    i.putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, "Parle à ton Cockpit");
+                    i.putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, "Parle à ton Capital");
                     startActivityForResult(i, REQ_VOICE);
                 } catch (Exception e) {
                     if (web != null) web.evaluateJavascript("window.__voiceErr&&window.__voiceErr('indisponible')", null);

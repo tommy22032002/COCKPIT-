@@ -30,7 +30,7 @@ public class BudgetTile extends TileService {
                 .addContent(PeaTile.gap(4));
         if (d == null || d.optDouble("envCap", 0) <= 0) {
             col.addContent(PeaTile.txt("—", 28, Pea.INK, true)).addContent(PeaTile.gap(6))
-               .addContent(PeaTile.txt("Ouvre le Cockpit", 13, Pea.MUTED, false))
+               .addContent(PeaTile.txt("Ouvre Capital", 13, Pea.MUTED, false))
                .addContent(PeaTile.txt("sur ton téléphone", 13, Pea.MUTED, false));
         } else {
             boolean priv = d.optBoolean("privacy", false);

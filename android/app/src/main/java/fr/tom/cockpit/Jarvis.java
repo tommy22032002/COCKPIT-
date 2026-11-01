@@ -46,7 +46,7 @@ final class Jarvis {
     static String ask(Context c, List<String[]> history) {
         JSONObject cfg = cfg(c);
         String key = cfg.optString("key", "");
-        if (key.isEmpty()) return "!Ouvre d'abord le Cockpit, onglet Assistant, et enregistre ta clé Claude : Jarvis pourra ensuite te répondre d'ici.";
+        if (key.isEmpty()) return "!Ouvre d'abord Capital, onglet Assistant, et enregistre ta clé Claude : Jarvis pourra ensuite te répondre d'ici.";
         try {
             String last = history.get(history.size() - 1)[1];
             JSONArray msgs = new JSONArray();
@@ -56,7 +56,7 @@ final class Jarvis {
             String agenda = "";
             if (java.util.regex.Pattern.compile("(agenda|calendrier|rendez|rdv|semaine|demain|aujourd|ce soir|pr[ée]vu|planning|occup|libre|dispo|week-end)", java.util.regex.Pattern.CASE_INSENSITIVE).matcher(last).find())
                 agenda = "\nAgenda de Tom (14 prochains jours) : " + Agenda.events(c, 14).toString();
-            String sys = cfg.optString("sys", "") + agenda + "\nTu réponds en dehors de l'appli, par une petite bulle et à voix haute : 1 à 3 phrases courtes, sans liste. Les chiffres du cockpit datent du " + cfg.optString("at", "dernier passage dans l'appli") + ". Pour une modification, propose quand même le bloc <action> : Tom la validera dans le Cockpit.";
+            String sys = cfg.optString("sys", "") + agenda + "\nTu réponds en dehors de l'appli, par une petite bulle et à voix haute : 1 à 3 phrases courtes, sans liste. Les chiffres de Capital datent du " + cfg.optString("at", "dernier passage dans l'appli") + ". Pour une modification, propose quand même le bloc <action> : Tom la validera dans Capital.";
             JSONObject body = new JSONObject();
             body.put("model", cfg.optString("model", "claude-sonnet-5-5"));
             body.put("max_tokens", 700);

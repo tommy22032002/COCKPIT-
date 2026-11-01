@@ -47,7 +47,7 @@ public class SaisonTile extends TileService {
             if (it.has("todo")) col.addContent(PeaTile.txt(it.optString("todo"), 11, Pea.MUTED, false));
         } else if (pa == null || !pa.optBoolean("hasH", false)) {
             col.addContent(PeaTile.txt("—", 28, Pea.INK, true)).addContent(PeaTile.gap(6))
-               .addContent(PeaTile.txt("Ouvre le Cockpit", 13, Pea.MUTED, false))
+               .addContent(PeaTile.txt("Ouvre Capital", 13, Pea.MUTED, false))
                .addContent(PeaTile.txt("sur ton téléphone", 13, Pea.MUTED, false));
         } else {
             boolean ended = pa.optBoolean("ended", false);

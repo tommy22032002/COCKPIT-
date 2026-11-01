@@ -42,7 +42,7 @@ public class PeaTile extends TileService {
                 .addContent(gap(4));
         if (d == null) {
             col.addContent(txt("—", 30, Pea.INK, true)).addContent(gap(6))
-               .addContent(txt("Ouvre le Cockpit", 13, Pea.MUTED, false))
+               .addContent(txt("Ouvre Capital", 13, Pea.MUTED, false))
                .addContent(txt("sur ton téléphone", 13, Pea.MUTED, false));
         } else {
             boolean priv = d.optBoolean("privacy", false);

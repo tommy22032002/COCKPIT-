@@ -63,7 +63,7 @@ public class JarvisActivity extends Activity {
         ScrollView sc = new ScrollView(this); sc.addView(ans);
         LinearLayout row = new LinearLayout(this); row.setOrientation(LinearLayout.HORIZONTAL); row.setPadding(0, dp(10), 0, 0); row.setGravity(Gravity.END);
         again = btn("🎤 Encore", v -> listen());
-        open = btn("Ouvrir le Cockpit", v -> openCockpit());
+        open = btn("Ouvrir Capital", v -> openCockpit());
         Button close = btn("Fermer", v -> finishQuiet());
         row.addView(again); row.addView(open); row.addView(close);
         card.addView(title); card.addView(status); card.addView(you);
@@ -84,7 +84,7 @@ public class JarvisActivity extends Activity {
             h.postDelayed(() -> say(sp.replace("€", " euros")), 300);
             return;
         }
-        if (Jarvis.cfg(this).optString("key", "").isEmpty()) show("", "Ouvre d'abord le Cockpit, onglet Assistant, et enregistre ta clé Claude : Jarvis pourra ensuite te répondre d'ici.", false);
+        if (Jarvis.cfg(this).optString("key", "").isEmpty()) show("", "Ouvre d'abord Capital, onglet Assistant, et enregistre ta clé Claude : Jarvis pourra ensuite te répondre d'ici.", false);
         else h.postDelayed(this::listen, 250);
     }
 
@@ -134,7 +134,7 @@ public class JarvisActivity extends Activity {
                 hasAction = txt.contains("<action>");
                 String shown = txt.replaceAll("(?s)<action>.*?</action>", "").replaceAll("\\*\\*", "").trim();
                 if (!err) hist.add(new String[]{"assistant", shown});
-                if (hasAction) shown += "\n\nPour l'enregistrer, appuie sur « Ouvrir le Cockpit » : la proposition t'y attend.";
+                if (hasAction) shown += "\n\nPour l'enregistrer, appuie sur « Ouvrir Capital » : la proposition t'y attend.";
                 show(qq, shown, !err);
             });
         }).start();
@@ -191,7 +191,7 @@ public class JarvisActivity extends Activity {
         if (!m.matches()) return false;
         String verb = m.group(1).toLowerCase(Locale.ROOT), what = m.group(2).trim(), app = m.group(3) == null ? "" : norm(m.group(3));
         if (app.isEmpty() && verb.startsWith("lance")) return false; // « lance YouTube » = ouvrir une appli
-        if (app.isEmpty() && what.matches("(?i).*(application|appli|cockpit|onglet|page).*")) return false; // « lance l'appli » = ouvrir
+        if (app.isEmpty() && what.matches("(?i).*(application|appli|cockpit|capital|onglet|page).*")) return false; // « lance l'appli » = ouvrir
         String[] target = null;
         if (!app.isEmpty()) for (String[] x : MUSIC) if (app.contains(x[0])) { target = x; break; }
         if (target == null) { String pref = Jarvis.cfg(this).optString("music", ""); for (String[] x : MUSIC) if (x[1].equals(pref)) { target = x; break; } }
@@ -243,7 +243,7 @@ public class JarvisActivity extends Activity {
     private boolean sessionPlay(String[] target, String what) {
         if (!musicAccess()) {
             if (!target[1].equals("com.apple.android.music")) return false;
-            ans.setText("Pour qu'Apple Music joue directement le titre, autorise une fois Jarvis à piloter la musique : Paramètres → « Accès aux notifications » → Cockpit. (Jarvis ne lit aucune notification.)");
+            ans.setText("Pour qu'Apple Music joue directement le titre, autorise une fois Jarvis à piloter la musique : Paramètres → « Accès aux notifications » → Capital. (Jarvis ne lit aucune notification.)");
             open.setText("Autoriser");
             open.setOnClickListener(v -> { try { startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)); } catch (Exception ignored) { } });
             say("Il me faut une autorisation, une seule fois, pour choisir la musique dans Apple Music.");
@@ -276,7 +276,7 @@ public class JarvisActivity extends Activity {
         java.util.regex.Matcher m = OPEN.matcher(q.trim());
         if (!m.matches()) return false;
         String t = norm(m.group(1)).replaceAll("^(l |le |la |les |l'|mon |ma |mes |moi |l application |l appli |application |appli |la page |l onglet |onglet )+", "").trim();
-        boolean cockpit = t.isEmpty() || t.matches(".*(cockpit|application|appli|pea).*");
+        boolean cockpit = t.isEmpty() || t.matches(".*(cockpit|capital|application|appli|pea).*");
         String page = null;
         for (String[] p : PAGES) if (java.util.regex.Pattern.compile(p[0]).matcher(t).find()) { page = p[1]; break; }
         if (cockpit && page == null) page = "executif";
@@ -304,8 +304,8 @@ public class JarvisActivity extends Activity {
 
     private void show(String q, String a, boolean speak) {
         ans.setText(a);
-        status.setText(hasAction ? "Proposition à valider dans le Cockpit" : "");
-        open.setText(hasAction ? "Valider dans le Cockpit" : "Ouvrir le Cockpit");
+        status.setText(hasAction ? "Proposition à valider dans Capital" : "");
+        open.setText(hasAction ? "Valider dans Capital" : "Ouvrir Capital");
         if (speak) say(a.replace("€", " euros").replaceAll("Pour l'enregistrer.*", ""));
     }
 
