@@ -4,4 +4,22 @@
         android:shortcutShortLabel="@string/jarvis_short" android:shortcutLongLabel="@string/jarvis_long">
         <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.JarvisActivity"/>
     </shortcut>
+    <shortcut android:shortcutId="service" android:enabled="true" android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sc_service" android:shortcutLongLabel="@string/sc_service_long">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.MainActivity">
+            <extra android:name="hash" android:value="service" />
+        </intent>
+    </shortcut>
+    <shortcut android:shortcutId="coffre" android:enabled="true" android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sc_coffre" android:shortcutLongLabel="@string/sc_coffre_long">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.MainActivity">
+            <extra android:name="hash" android:value="coffre" />
+        </intent>
+    </shortcut>
+    <shortcut android:shortcutId="auto" android:enabled="true" android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sc_auto" android:shortcutLongLabel="@string/sc_auto_long">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.MainActivity">
+            <extra android:name="hash" android:value="auto" />
+        </intent>
+    </shortcut>
 </shortcuts>

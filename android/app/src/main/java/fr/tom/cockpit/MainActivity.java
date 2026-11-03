@@ -616,6 +616,27 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String getJarvisNotif() { return JN.cfg(MainActivity.this).toString(); }
         @JavascriptInterface public void setJarvisData(String json) { Prefs.sp(MainActivity.this).edit().putString("jdata", json).apply(); JarvisAlarm.scheduleAll(MainActivity.this); }
         @JavascriptInterface public String takeActions() { return JN.take(MainActivity.this); }
+        /* Auto : voiture reconnue par son Bluetooth, trajets en attente */
+        @JavascriptInterface public String btStatus() { return CarBt.status(MainActivity.this); }
+        @JavascriptInterface public String btDevices() { return CarBt.devices(MainActivity.this); }
+        @JavascriptInterface public void setCarBt(String addr, String name) { CarBt.setCar(MainActivity.this, addr, name); }
+        @JavascriptInterface public String takeTrips() { return CarBt.take(MainActivity.this); }
+        @JavascriptInterface public void btAsk() {
+            runOnUiThread(() -> {
+                java.util.List<String> p = new java.util.ArrayList<>();
+                if (Build.VERSION.SDK_INT >= 31) p.add(Manifest.permission.BLUETOOTH_CONNECT);
+                p.add(Manifest.permission.ACCESS_FINE_LOCATION); p.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+                requestPermissions(p.toArray(new String[0]), 21);
+            });
+        }
+        @JavascriptInterface public void locBgAsk() {
+            runOnUiThread(() -> {
+                if (Build.VERSION.SDK_INT >= 30) {
+                    try { startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()))); } catch (Exception ignored) { }
+                    android.widget.Toast.makeText(MainActivity.this, "Autorisations → Position → Toujours autoriser", android.widget.Toast.LENGTH_LONG).show();
+                } else requestPermissions(new String[]{Manifest.permission.ACCESS_BACKGROUND_LOCATION}, 22);
+            });
+        }
         @JavascriptInterface public void notifyNow(String json) {
             try { JSONObject o = new JSONObject(json); JN.post(MainActivity.this, o.optString("id", "n").hashCode(), null, o.optString("title"), o.optString("body"), o.optString("hash", "executif"), o.optJSONArray("acts"), true, o.optString("speak", null), o.optBoolean("private", true)); } catch (Exception ignored) { }
         }

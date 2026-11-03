@@ -9,6 +9,12 @@
     <string name="jarvis_name">Jarvis</string>
     <string name="jarvis_short">Parler à Jarvis</string>
     <string name="jarvis_long">Parler à Jarvis</string>
+    <string name="sc_service">Service</string>
+    <string name="sc_service_long">Pointer mon service</string>
+    <string name="sc_coffre">Coffre</string>
+    <string name="sc_coffre_long">Mes papiers</string>
+    <string name="sc_auto">Auto</string>
+    <string name="sc_auto_long">Ma voiture</string>
     <string name="w_jarvis_name">Jarvis</string>
     <string name="w_jarvis_desc">Un bouton pour parler à Jarvis sans ouvrir Capital.</string>
 </resources>
