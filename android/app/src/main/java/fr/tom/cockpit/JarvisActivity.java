@@ -119,8 +119,8 @@ public class JarvisActivity extends Activity {
         if (videoCommand(cmd)) return;
         if (playCommand(cmd)) return;
         if (openCommand(qq)) return;
-        if (END.matcher(qq).matches()) { say("À ton service, Tom."); closing = true; status.setText("À plus tard."); return; }
-        if (qq.isEmpty()) { say("Oui ?"); h.postDelayed(this::listen, 900); return; }
+        if (END.matcher(qq).matches()) { say("À votre service, monsieur."); closing = true; status.setText("À plus tard."); return; }
+        if (qq.isEmpty()) { say("Oui, monsieur ?"); h.postDelayed(this::listen, 900); return; }
         lastQ = qq;
         hist.add(new String[]{"user", qq});
         you.setText("« " + qq + " »");
