@@ -348,14 +348,67 @@ public class JarvisActivity extends Activity {
     }
 
     private void say(String t) {
-        if (tts == null || !ttsReady) { h.postDelayed(() -> say(t), 300); return; }
+        // voix de majordome ElevenLabs si elle est réglée dans Capital, sinon la voix du téléphone
+        JSONObject cfg = Jarvis.cfg(this);
+        String ek = cfg.optString("elKey", "");
+        if (!ek.isEmpty() && cfg.optBoolean("elOn", true) && !elFailed) { elSay(t, ek, cfg.optString("elVoice", "JBFqnCBsd6RMkjVDRZzb")); return; }
+        ttsSay(t);
+    }
+
+    private void ttsSay(String t) {
+        if (tts == null || !ttsReady) { h.postDelayed(() -> ttsSay(t), 300); return; }
         tts.speak(t, TextToSpeech.QUEUE_FLUSH, null, t.length() < 25 ? "short" : "conv");
     }
 
-    private void stopTts() { try { if (tts != null) tts.stop(); } catch (Exception ignored) { } }
+    private android.media.MediaPlayer mp;
+    private boolean elFailed = false;
+    private int elSeq = 0;
+
+    private void elSay(String t, String key, String voice) {
+        final int seq = ++elSeq;
+        stopTts();
+        new Thread(() -> {
+            java.io.File out = null;
+            try {
+                String txt = t.replace("€", " euros");
+                if (txt.length() > 1800) txt = txt.substring(0, 1800);
+                java.net.HttpURLConnection c = (java.net.HttpURLConnection) new java.net.URL("https://api.elevenlabs.io/v1/text-to-speech/" + voice + "?output_format=mp3_44100_64").openConnection();
+                c.setRequestMethod("POST"); c.setDoOutput(true); c.setConnectTimeout(10000); c.setReadTimeout(30000);
+                c.setRequestProperty("xi-api-key", key); c.setRequestProperty("Content-Type", "application/json"); c.setRequestProperty("Accept", "audio/mpeg");
+                JSONObject body = new JSONObject().put("text", txt).put("model_id", "eleven_multilingual_v2")
+                        .put("voice_settings", new JSONObject().put("stability", .55).put("similarity_boost", .8).put("style", .3).put("use_speaker_boost", true));
+                c.getOutputStream().write(body.toString().getBytes(java.nio.charset.StandardCharsets.UTF_8));
+                if (c.getResponseCode() != 200) throw new Exception("http " + c.getResponseCode());
+                out = new java.io.File(getCacheDir(), "jarvis-" + seq + ".mp3");
+                try (java.io.InputStream in = c.getInputStream(); java.io.FileOutputStream fo = new java.io.FileOutputStream(out)) {
+                    byte[] buf = new byte[8192]; int n; while ((n = in.read(buf)) > 0) fo.write(buf, 0, n);
+                }
+                final java.io.File f = out;
+                h.post(() -> {
+                    if (seq != elSeq) return;
+                    try {
+                        if (mp != null) { try { mp.release(); } catch (Exception ignored) { } }
+                        mp = new android.media.MediaPlayer();
+                        mp.setDataSource(f.getAbsolutePath());
+                        mp.setOnCompletionListener(m -> { f.delete(); h.postDelayed(() -> { if (closing) finishQuiet(); else if (!hasAction && t.length() >= 25) listen(); }, 400); });
+                        mp.prepare(); mp.start();
+                    } catch (Exception e) { ttsSay(t); }
+                });
+            } catch (Exception e) {
+                elFailed = true;
+                if (out != null) out.delete();
+                h.post(() -> { if (seq == elSeq) ttsSay(t); });
+            }
+        }).start();
+    }
+
+    private void stopTts() {
+        try { if (tts != null) tts.stop(); } catch (Exception ignored) { }
+        try { if (mp != null && mp.isPlaying()) mp.stop(); } catch (Exception ignored) { }
+    }
 
     private void finishQuiet() { stopTts(); finish(); overridePendingTransition(0, 0); }
 
     @Override
-    protected void onDestroy() { try { if (tts != null) tts.shutdown(); } catch (Exception ignored) { } super.onDestroy(); }
+    protected void onDestroy() { try { if (tts != null) tts.shutdown(); } catch (Exception ignored) { } try { if (mp != null) mp.release(); } catch (Exception ignored) { } super.onDestroy(); }
 }
