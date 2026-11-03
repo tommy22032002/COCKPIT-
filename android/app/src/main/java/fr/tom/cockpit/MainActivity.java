@@ -169,7 +169,7 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);
         s.setDatabaseEnabled(true);
         s.setAllowFileAccess(false);
-        s.setMediaPlaybackRequiresUserGesture(true);
+        s.setMediaPlaybackRequiresUserGesture(false); // la voix ElevenLabs de Jarvis doit pouvoir lire ses réponses
         s.setSupportZoom(false);
         s.setTextZoom(100);
 
