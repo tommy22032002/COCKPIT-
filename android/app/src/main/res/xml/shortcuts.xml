@@ -16,6 +16,12 @@
             <extra android:name="hash" android:value="coffre" />
         </intent>
     </shortcut>
+    <shortcut android:shortcutId="forme" android:enabled="true" android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/sc_forme" android:shortcutLongLabel="@string/sc_forme_long">
+        <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.MainActivity">
+            <extra android:name="hash" android:value="forme" />
+        </intent>
+    </shortcut>
     <shortcut android:shortcutId="auto" android:enabled="true" android:icon="@mipmap/ic_launcher"
         android:shortcutShortLabel="@string/sc_auto" android:shortcutLongLabel="@string/sc_auto_long">
         <intent android:action="android.intent.action.VIEW" android:targetPackage="fr.tom.cockpit" android:targetClass="fr.tom.cockpit.MainActivity">

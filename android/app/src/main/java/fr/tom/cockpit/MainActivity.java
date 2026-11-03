@@ -134,6 +134,7 @@ public class MainActivity extends Activity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 23) { try { Steps.startLive(this); Steps.schedule(this); } catch (Exception ignored) { } }
         if (requestCode == REQ_MIC) {
             boolean ok = grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED;
             if (ok) wakeLoop(); else { wakeOn = false; js("window.__wakeErr&&window.__wakeErr('refus')"); }
@@ -142,6 +143,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onResume() {
+        try { Steps.startLive(this); Steps.schedule(this); } catch (Exception ignored) { }
         super.onResume();
         resumed = true;
         try { MarketNotif.schedule(this); } catch (Exception ignored) { }
@@ -398,6 +400,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onPause() {
+        try { Steps.stopLive(this); } catch (Exception ignored) { }
         super.onPause();
         resumed = false;
         wakePause();
@@ -617,6 +620,11 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void setJarvisData(String json) { Prefs.sp(MainActivity.this).edit().putString("jdata", json).apply(); JarvisAlarm.scheduleAll(MainActivity.this); }
         @JavascriptInterface public String takeActions() { return JN.take(MainActivity.this); }
         /* Auto : voiture reconnue par son Bluetooth, trajets en attente */
+        /* Forme : podomètre du téléphone */
+        @JavascriptInterface public long stepsToday() { return Steps.todayCount(MainActivity.this); }
+        @JavascriptInterface public String stepsDays() { return Steps.daysJson(MainActivity.this); }
+        @JavascriptInterface public boolean stepsOk() { return Steps.ok(MainActivity.this); }
+        @JavascriptInterface public void stepsAsk() { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 23)); }
         @JavascriptInterface public String btStatus() { return CarBt.status(MainActivity.this); }
         @JavascriptInterface public String btDevices() { return CarBt.devices(MainActivity.this); }
         @JavascriptInterface public void setCarBt(String addr, String name) { CarBt.setCar(MainActivity.this, addr, name); }

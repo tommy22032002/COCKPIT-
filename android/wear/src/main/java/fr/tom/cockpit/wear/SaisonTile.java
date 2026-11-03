@@ -60,6 +60,10 @@ public class SaisonTile extends TileService {
                .addContent(PeaTile.txt(ext > 0 ? Pea.fh(ext) + " d'heures sup" : Pea.fh(pa.optDouble("manque", 0)) + " payées en plus", 12, ext > 0 ? Pea.LOSS : Pea.GAIN, false))
                .addContent(PeaTile.txt(pa.optString("nom"), 11, Pea.MUTED, false));
         }
+        JSONObject fo = d == null ? null : d.optJSONObject("forme");
+        if (fo != null) {
+            col.addContent(PeaTile.gap(6)).addContent(PeaTile.txt("👟 " + String.format(java.util.Locale.FRANCE, "%,d", fo.optLong("pas", 0)).replace(',', ' ') + " pas · muscu " + fo.optInt("semaine") + "/" + fo.optInt("obj", 3), 11, Pea.MUTED, false));
+        }
         ModifiersBuilders.Clickable click = new ModifiersBuilders.Clickable.Builder().setId("open")
                 .setOnClick(new ActionBuilders.LaunchAction.Builder().setAndroidActivity(
                         new ActionBuilders.AndroidActivity.Builder().setPackageName(getPackageName()).setClassName(WearMain.class.getName()).build()).build())

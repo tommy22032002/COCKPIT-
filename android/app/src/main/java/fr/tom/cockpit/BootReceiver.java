@@ -13,6 +13,7 @@ public class BootReceiver extends BroadcastReceiver {
             MarketNotif.schedule(ctx);
             JarvisAlarm.scheduleAll(ctx);
             Widgets.updateAll(ctx);
+            try { Steps.readOnce(ctx, null); Steps.schedule(ctx); } catch (Exception ignored) { }
         }
     }
 }
