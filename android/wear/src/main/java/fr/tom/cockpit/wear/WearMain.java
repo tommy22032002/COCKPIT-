@@ -72,6 +72,7 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
 
     @Override protected void onCreate(Bundle b) {
         super.onCreate(b);
+        if (getIntent() != null && getIntent().getBooleanExtra("listen", false)) new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(this::listen, 400);
         scroll = new ScrollView(this);
         scroll.setBackgroundColor(0xFF000000);
         scroll.setFillViewport(true);
@@ -229,9 +230,16 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
         String a = new String(ev.getData(), StandardCharsets.UTF_8);
         runOnUiThread(() -> {
             if (jarvis != null) { jarvis.setTextColor(Pea.INK); jarvis.setText("Jarvis : " + a); }
+            Pea.sp(this).edit().putString("jarvisLast", a).apply();
             scroll.postDelayed(() -> scroll.fullScroll(View.FOCUS_DOWN), 200);
             if (ttsOk) tts.speak(a.replace("€", " euros"), TextToSpeech.QUEUE_FLUSH, null, "j");
         });
+    }
+
+    @Override protected void onNewIntent(Intent i) {
+        super.onNewIntent(i);
+        setIntent(i);
+        if (i != null && i.getBooleanExtra("listen", false)) listen();
     }
 
     @Override protected void onResume() {

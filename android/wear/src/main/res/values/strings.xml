@@ -4,4 +4,7 @@
     <string name="tile_budget">Budget du mois</string>
     <string name="tile_saison">Ma saison</string>
     <string name="comp_name">PEA</string>
+    <string name="tile_service">Service</string>
+    <string name="tile_jarvis">Jarvis</string>
+    <string name="tile_epargne">Arrondis et objectif</string>
 </resources>

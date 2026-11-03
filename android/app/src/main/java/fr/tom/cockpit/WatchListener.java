@@ -25,6 +25,16 @@ public class WatchListener extends WearableListenerService {
                 txt = "💪 Bravo ! " + Math.round(v) + " € pas dépensés. Ils sont notés dans ta liste d'attente comme argent sauvé : vire-les sur ton PEA quand tu veux.";
             } else txt = "Je n'ai pas compris le montant.";
             Wearable.getMessageClient(this).sendMessage(ev.getSourceNodeId(), "/jarvis/reply", txt.getBytes(StandardCharsets.UTF_8));
+        } else if ("/pea/svc".equals(path) || "/pea/tip".equals(path)) {
+            // Service pointé ou pourboire depuis la tuile de la montre : Capital l'enregistre à sa prochaine ouverture
+            String v = new String(ev.getData(), StandardCharsets.UTF_8).trim();
+            String now = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", java.util.Locale.US).format(new java.util.Date());
+            try {
+                org.json.JSONObject o = new org.json.JSONObject();
+                if ("/pea/svc".equals(path)) { String[] p2 = v.split("\\|"); o.put("t", "svc").put("op", p2[0]).put("at", p2.length > 1 ? p2[1] : now); }
+                else { double a2 = Double.parseDouble(v.replace(',', '.')); if (a2 <= 0) return; o.put("t", "tip").put("amt", a2).put("at", now); }
+                JN.queue(this, o);
+            } catch (Exception ignored) { }
         } else if ("/jarvis/ask".equals(path)) {
             String q = new String(ev.getData(), StandardCharsets.UTF_8).trim();
             String txt;
