@@ -99,7 +99,7 @@ public class WearMain extends Activity implements MessageClient.OnMessageReceive
             int c = day >= 0 ? Pea.GAIN : Pea.LOSS;
             tv(priv ? "•••• €" : Pea.eur(d.optDouble("value", 0)), 28, Pea.INK, true);
             tv(Pea.pct(d.optDouble("dayPct", 0)) + (priv ? "" : "  " + Pea.eur2(day)), 15, c, true);
-            tv("Gain total " + (priv ? "••" : Pea.eur2(d.optDouble("gain", 0))), 13, Pea.MUTED, false);
+            tv("Plus-value " + (priv ? "••" : Pea.eur2(d.optDouble("gain", 0))), 13, Pea.MUTED, false);
             JSONArray L = d.optJSONArray("lines");
             if (L != null && L.length() > 0) {
                 tv(" ", 6, Pea.MUTED, false);

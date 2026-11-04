@@ -53,7 +53,7 @@ public class PeaTile extends TileService {
                .addContent(txt(Pea.pct(dp), 18, c, true))
                .addContent(txt(priv ? "••" : Pea.eur2(day) + " aujourd'hui", 13, c, false))
                .addContent(gap(6))
-               .addContent(txt("Gain total " + (priv ? "••" : Pea.eur2(g)), 12, Pea.MUTED, false))
+               .addContent(txt("Plus-value " + (priv ? "••" : Pea.eur2(g)), 12, Pea.MUTED, false))
                .addContent(txt(Pea.saison(d), 11, Pea.ACCENT, false))
                .addContent(txt((Pea.marketOpen() ? "● Bourse ouverte · " : "Bourse fermée · ") + Pea.at(d), 11, Pea.MUTED, false));
         }

@@ -101,7 +101,7 @@ final class Widgets {
                 v.setTextViewText(R.id.w_value, priv ? "•••• €" : eur(value, false));
                 v.setTextViewText(R.id.w_day, (priv ? "••" : signedEur(dayAbs)) + "  " + pct(dayPct));
                 v.setTextColor(R.id.w_day, dayAbs >= 0 ? GAIN : LOSS);
-                v.setTextViewText(R.id.w_gain, "Gain total " + (priv ? "••" : signedEur(gain)));
+                v.setTextViewText(R.id.w_gain, "Plus-value " + (priv ? "••" : signedEur(gain)));
                 v.setTextViewText(R.id.w_at, ago(d.optString("at", "")));
                 if (!dash) {
                     int[] area = Pie.area(ctx, m, id);
@@ -221,7 +221,7 @@ final class Widgets {
             double value = posValue + d.optDouble("cash", 0);
             double dayPct = base > 0 ? dayAbs / base : 0;
             d.put("value", value);
-            d.put("gain", value - d.optDouble("verse", value));
+            d.put("gain", d.optDouble("cost", 0) > 0 ? value - d.optDouble("cash", 0) - d.optDouble("cost", 0) : value - d.optDouble("verse", value));
             d.put("dayAbs", dayAbs);
             d.put("dayPct", dayPct);
             JSONArray hist = d.optJSONArray("hist");

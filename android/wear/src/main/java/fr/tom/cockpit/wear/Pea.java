@@ -90,7 +90,7 @@ final class Pea {
                 if (!ok) return;
                 val += d.optDouble("cash", 0);
                 d.put("value", val);
-                d.put("gain", val - d.optDouble("verse", val));
+                d.put("gain", d.optDouble("cost", 0) > 0 ? val - d.optDouble("cash", 0) - d.optDouble("cost", 0) : val - d.optDouble("verse", val));
                 d.put("dayAbs", dayAbs);
                 d.put("dayPct", base > 0 ? dayAbs / base : 0);
                 SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);

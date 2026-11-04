@@ -18,7 +18,7 @@ final class Wear {
             String s = Prefs.widgetJson(ctx);
             if (s == null || s.length() < 3) return;
             JSONObject d = new JSONObject(s), o = new JSONObject();
-            for (String k : new String[]{"value", "gain", "dayAbs", "dayPct", "cash", "verse"}) o.put(k, d.optDouble(k, 0));
+            for (String k : new String[]{"value", "gain", "dayAbs", "dayPct", "cash", "verse", "cost"}) o.put(k, d.optDouble(k, 0));
             o.put("at", d.optString("at", ""));
             o.put("privacy", d.optBoolean("privacy", false));
             JSONArray L = d.optJSONArray("lines"), out = new JSONArray();
