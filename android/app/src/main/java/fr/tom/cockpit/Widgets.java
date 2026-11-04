@@ -99,9 +99,11 @@ final class Widgets {
                 double value = d.optDouble("value", 0), gain = d.optDouble("gain", 0);
                 double dayAbs = d.optDouble("dayAbs", 0), dayPct = d.optDouble("dayPct", 0);
                 v.setTextViewText(R.id.w_value, priv ? "•••• €" : eur(value, false));
-                v.setTextViewText(R.id.w_day, (priv ? "••" : signedEur(dayAbs)) + "  " + pct(dayPct));
-                v.setTextColor(R.id.w_day, dayAbs >= 0 ? GAIN : LOSS);
-                v.setTextViewText(R.id.w_gain, "Plus-value " + (priv ? "••" : signedEur(gain)));
+                // en gros : la plus-value des lignes (comme Fortuneo) ; en petit : la variation du jour
+                double cost = d.optDouble("cost", 0);
+                v.setTextViewText(R.id.w_day, "Plus-value " + (priv ? "••" : signedEur(gain)) + (cost > 0 ? "  " + pct(gain / cost) : ""));
+                v.setTextColor(R.id.w_day, gain >= 0 ? GAIN : LOSS);
+                v.setTextViewText(R.id.w_gain, "Aujourd'hui " + (priv ? "••" : signedEur(dayAbs)) + "  " + pct(dayPct));
                 v.setTextViewText(R.id.w_at, ago(d.optString("at", "")));
                 if (!dash) {
                     int[] area = Pie.area(ctx, m, id);
