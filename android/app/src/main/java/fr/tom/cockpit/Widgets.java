@@ -86,7 +86,9 @@ final class Widgets {
         } catch (Exception ignored) { }
 
         for (int id : ids) {
-            RemoteViews v = new RemoteViews(ctx.getPackageName(), dash ? R.layout.widget_dash : R.layout.widget_pea);
+            int[] whDp = dash ? null : More.size(ctx, m, id);
+            boolean tall = whDp != null && whDp[1] >= 230;
+            RemoteViews v = new RemoteViews(ctx.getPackageName(), dash ? R.layout.widget_dash : tall ? R.layout.widget_pea_tall : R.layout.widget_pea);
             v.setOnClickPendingIntent(R.id.w_root, open(ctx, dash ? "performance" : "portefeuille", dash ? 5 : 1));
             v.setOnClickPendingIntent(R.id.w_refresh, refresh(ctx));
             if (d == null) {
@@ -107,6 +109,11 @@ final class Widgets {
                 v.setTextViewText(R.id.w_at, ago(d.optString("at", "")));
                 if (!dash) {
                     int[] area = Pie.area(ctx, m, id);
+                    if (tall && area != null) area = new int[]{area[0], 104};
+                    if (tall) {
+                        android.graphics.Bitmap more = More.draw(ctx, whDp[0] - 28, whDp[1] - 28 - 118 - 8, d, priv);
+                        if (more != null) { v.setImageViewBitmap(R.id.w_more, more); v.setViewVisibility(R.id.w_more, View.VISIBLE); v.setOnClickPendingIntent(R.id.w_more, open(ctx, "portefeuille", 6)); }
+                    }
                     android.graphics.Bitmap pie = area == null ? null : Pie.draw(ctx, area, d, priv);
                     if (pie != null) {
                         v.setImageViewBitmap(R.id.w_pie, pie);
