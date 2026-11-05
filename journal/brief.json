@@ -1,128 +1,30 @@
 {
  "v": 1,
- "date": "2026-11-04",
- "at": "2026-11-04T07:44:22+01:00",
- "title": "Les démocrates gagnent le Congrès : la tech recule, le dollar faiblit",
- "mood": "nerveux mais sans panique",
+ "date": "2026-11-05",
+ "at": "2026-11-05T07:43:00+01:00",
+ "title": "Wall Street fête la victoire démocrate, les puces asiatiques trinquent",
+ "mood": "soulagé mais sélectif",
  "summary": [
-  "Hier, Wall Street a fini en ordre dispersé en attendant le vote : le Nasdaq a gagné 0,8 % et le S&P 500 0,4 % grâce au rebond des puces et de l'IA (Nvidia est repassée devant Apple en valeur), tandis que le Dow Jones perdait 0,4 %, freiné par les prévisions décevantes d'Apple. En Europe, la journée a été prudente : CAC 40 −0,3 % (toujours au-dessus des 8 000 points) et Stoxx 600 −0,6 %.",
-  "Cette nuit, les élections de mi-mandat ont tourné en faveur des démocrates : selon les projections des médias américains, ils prennent la Chambre des représentants et le Sénat. Les marchés y voient plus de règles et de contrôle pour les géants de la tech et de l'IA, et moins de baisses d'impôts. Résultat : les contrats à terme sur Wall Street reculaient jusqu'à −1,3 % pour le S&P 500 et −2,2 % pour le Nasdaq-100, le dollar s'affaiblit (l'euro monte vers 1,123 $) et le taux américain à 10 ans retombe vers 4,90 %. L'or grimpe d'environ 2 %.",
-  "En Asie, Tokyo, qui rouvrait après un jour férié, a plongé de plus de 3 % en séance avant de limiter la casse (environ −1,5 % à la clôture, plus bas depuis trois mois), plombé par les valeurs liées à l'IA. Séoul et Hong Kong reculent aussi. Ce soir, les résultats de Qualcomm et Arm, puis vendredi le rapport sur l'emploi américain, donneront le ton de la fin de semaine."
+  "Hier, les Bourses ont salué la victoire des démocrates aux élections de mi-mandat américaines. Un Congrès qui ne suit plus forcément le président, c'est moins de risques de grands chamboulements : le Dow Jones a bondi de 3 %, le S&P 500 de 1,6 % et le Nasdaq de 1,4 %. En Europe, le CAC 40 a pris 2,0 % à 8 177 points, un record, porté par les banques, et le Stoxx 600 a gagné 1,8 %. L'indice de la peur (VIX) a chuté de 20 %, signe que les investisseurs respirent.",
+  "Tout n'a pas monté pour autant. Le pétrole Brent a plongé de près de 9 % vers 94 dollars, car un Congrès démocrate pourrait pousser à la fin de la guerre avec l'Iran ; les pétrolières et les entreprises de défense ont reculé. Cette nuit, Qualcomm et Arm ont publié de bons résultats mais leurs actions ont baissé après la clôture, et le doute sur l'IA a frappé l'Asie : Tokyo a perdu 1,8 % et Séoul 3,5 %, plombés par les fabricants de puces, alors que Hong Kong a gagné 2,8 %.",
+  "En toile de fond, l'inflation reste le sujet n°1 : elle a atteint 4 % dans la zone euro, au plus haut depuis trois ans, à cause de l'énergie. La Banque d'Angleterre devrait remonter ses taux ce midi pour la première fois depuis trois ans, et demain le rapport sur l'emploi américain dira si la Fed devra faire de même en décembre."
  ],
- "forYou": "Ton ETF Nasdaq-100 risque d'être le plus secoué aujourd'hui, et la baisse du dollar réduit un peu la valeur en euros de tes ETF Monde et Nasdaq. C'est une réaction à chaud à un événement politique : historiquement, ce genre de secousse se tasse en quelques semaines, et ton versement mensuel achète simplement un peu moins cher quand les prix baissent. Rien à changer à ton plan.",
+ "forYou": "La journée d'hier a été bonne pour tes ETF Monde, Nasdaq-100 et Stoxx 600, un peu moins pour le Japon et la partie Asie des émergents, freinés par les puces. Ces écarts entre zones montrent l'intérêt d'être diversifié : quand une région souffre, une autre compense souvent. Pour un investissement mensuel régulier, rien ne change : tu continues ton plan, que la séance soit verte ou rouge.",
  "zones": {
-  "monde": "Les Bourses mondiales reculent ce matin après la victoire démocrate au Congrès américain ; la tech et l'IA sont les plus touchées, l'or profite de la prudence.",
-  "us": "Clôture hier en ordre dispersé (Nasdaq +0,8 %, S&P 500 +0,4 %, Dow Jones −0,4 %), mais les contrats à terme annoncent une ouverture nettement en baisse, surtout pour la tech.",
-  "europe": "CAC 40 −0,3 % et Stoxx 600 −0,6 % hier ; la BCE prépare les esprits à une hausse de taux en décembre et la succession de Christine Lagarde est lancée.",
-  "japon": "Le Nikkei a fini en baisse d'environ 1,5 % après avoir chuté de plus de 3 % : les valeurs de puces et d'IA ont décroché, au plus bas depuis trois mois.",
-  "emergents": "Repli des Bourses asiatiques (Séoul, Hong Kong) ; un dollar plus faible est en revanche plutôt une bonne nouvelle pour les pays émergents à moyen terme."
+  "monde": "Rebond général des actions après les élections américaines, sauf en Asie technologique ; le pétrole baisse fortement et l'or continue de grimper (+1,6 %, vers 4 137 dollars l'once).",
+  "us": "Forte hausse menée par le Dow Jones (+3 %) : les investisseurs aiment un pouvoir partagé à Washington. La tech suit plus timidement, et Qualcomm et Arm reculent après leurs résultats malgré des chiffres meilleurs que prévu.",
+  "europe": "Le CAC 40 signe un record à 8 177 points (+2,0 %) grâce aux banques. Mais l'inflation à 4 % dans la zone euro complique la tâche de la BCE, dont la présidente Christine Lagarde partira en février.",
+  "japon": "Le Nikkei recule de 1,8 % ce matin à 61 089 points, entraîné par les valeurs liées à l'IA (Tokyo Electron, Advantest, SoftBank). La Banque du Japon évoque de nouvelles hausses de taux.",
+  "emergents": "Contrastés : la Corée et Taïwan chutent à cause des semi-conducteurs, tandis que Hong Kong (+2,8 %) et l'Amérique latine profitent de la baisse du pétrole et d'un dollar plus faible."
  },
- "markets": [
-  {
-   "k": "^FCHI",
-   "n": "CAC 40",
-   "v": 8020.31,
-   "ch": -0.0034
-  },
-  {
-   "k": "^STOXX",
-   "n": "Stoxx 600",
-   "v": 645.66,
-   "ch": -0.00582
-  },
-  {
-   "k": "^GSPC",
-   "n": "S&P 500",
-   "v": 7568.92,
-   "ch": 0.00365
-  },
-  {
-   "k": "^IXIC",
-   "n": "Nasdaq",
-   "v": 25372.01,
-   "ch": 0.00825
-  },
-  {
-   "k": "^N225",
-   "n": "Nikkei 225",
-   "v": 62021.33,
-   "ch": -0.01681
-  },
-  {
-   "k": "EEM",
-   "n": "Émergents (EEM)",
-   "v": 61.1,
-   "ch": -0.00016
-  },
-  {
-   "k": "EURUSD=X",
-   "n": "Euro / dollar",
-   "v": 1.1233,
-   "ch": 0.00366
-  },
-  {
-   "k": "^TNX",
-   "n": "Taux US à 10 ans",
-   "v": 4.952,
-   "ch": 0.01185
-  },
-  {
-   "k": "^VIX",
-   "n": "Indice de la peur (VIX)",
-   "v": 20.83,
-   "ch": -0.01513
-  },
-  {
-   "k": "GC=F",
-   "n": "Or",
-   "v": 4028.1,
-   "ch": 0.02226
-  },
-  {
-   "k": "BZ=F",
-   "n": "Pétrole (Brent)",
-   "v": 104.17,
-   "ch": 0.0055
-  },
-  {
-   "k": "BTC-EUR",
-   "n": "Bitcoin",
-   "v": 69339.64,
-   "ch": 0.01221
-  }
- ],
  "agenda": [
-  {
-   "d": "2026-11-04",
-   "h": "16:00",
-   "t": "Indice ISM des services aux États-Unis (octobre)",
-   "z": "us",
-   "level": 2,
-   "impact": "Les services sont le moteur de l'économie américaine : un chiffre solide rassurerait sur la croissance après le choc électoral."
-  },
-  {
-   "d": "2026-11-04",
-   "h": "après la clôture US (nuit)",
-   "t": "Résultats de Qualcomm et Arm",
-   "z": "us",
-   "level": 2,
-   "impact": "Deux acteurs clés des puces : leurs chiffres peuvent calmer ou prolonger la baisse de la tech qui pèse sur le Nasdaq-100."
-  },
   {
    "d": "2026-11-05",
    "h": "13:00",
-   "t": "Décision de la Banque d'Angleterre",
+   "t": "Décision de taux de la Banque d'Angleterre",
    "z": "europe",
-   "level": 1,
-   "impact": "Le Royaume-Uni pèse dans le Stoxx 600 ; une surprise sur les taux ferait bouger les Bourses européennes."
-  },
-  {
-   "d": "2026-11-05",
-   "h": "journée",
-   "t": "Résultats de Toyota, Sony et Nintendo",
-   "z": "japon",
-   "level": 1,
-   "impact": "Grandes entreprises de ton ETF Japon ; dates de Toyota et Sony à confirmer, Nintendo annoncé ce jour-là."
+   "level": 2,
+   "impact": "Une hausse à 4 % est attendue pour freiner l'inflation. Le Royaume-Uni pèse lourd dans le Stoxx 600 : une surprise ferait bouger les Bourses européennes."
   },
   {
    "d": "2026-11-06",
@@ -130,7 +32,7 @@
    "t": "Rapport sur l'emploi américain (octobre)",
    "z": "us",
    "level": 3,
-   "impact": "Le chiffre le plus suivi du mois : il oriente les taux et Wall Street, donc ton ETF Monde et ton ETF Nasdaq."
+   "impact": "Le chiffre le plus suivi du mois. Un marché du travail solide renforcerait l'idée d'une hausse de taux de la Fed en décembre, ce qui pèse souvent sur la tech et donc sur ton ETF Nasdaq-100."
   },
   {
    "d": "2026-11-06",
@@ -138,7 +40,15 @@
    "t": "Confiance des consommateurs américains (Université du Michigan)",
    "z": "us",
    "level": 1,
-   "impact": "Indique si les ménages américains continuent de dépenser malgré l'inflation et l'essence chère."
+   "impact": "Montre si les ménages américains continuent de dépenser malgré l'inflation. Date à confirmer."
+  },
+  {
+   "d": "2026-11-09",
+   "h": "matin",
+   "t": "Inflation en Chine (octobre)",
+   "z": "emergents",
+   "level": 1,
+   "impact": "La Chine est le premier pays de ton ETF Émergents : ces chiffres renseignent sur la santé de sa consommation. Date à confirmer."
   },
   {
    "d": "2026-11-10",
@@ -146,110 +56,98 @@
    "t": "Inflation américaine (CPI d'octobre)",
    "z": "taux",
    "level": 3,
-   "impact": "Une inflation élevée éloignerait les baisses de taux de la Fed, ce qui pèse souvent sur les actions de croissance comme la tech."
+   "impact": "Avec le pétrole cher ces derniers mois, une inflation élevée rapprocherait une hausse de taux de la Fed, ce qui secoue souvent les actions de croissance."
   }
  ],
  "headlines": [
   {
-   "t": "RÉSUMÉ DE LA PRESSE-Wall Street Journal - 4 novembre",
+   "t": "Wall Street s’envole après la vague démocrate, l’IA vacille",
+   "s": "Le Singulier",
+   "u": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaWlENFZKWFZTcW44RERwa2tNeC1RMmN4clhkSWhHQlVVWHVmeWxlMU5Cdm5UVjlTbUxRQndCUlc3cTdFalFTeV9tOWFGS1d3Q1VCYkg3aFVjVm9ZNEJfOWhEQmRJMmNqcE5QSW50NmRWWTMtcGttaTFJTU1NTnNrRFc2NWZFS0x6RGRtbw?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Midterms 2026 : Wall Street salue la vague démocrate au Congrès et ses promesses de stabilité et de statu quo",
+   "s": "Le Monde.fr",
+   "u": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQemJmS3hzcDdiLUF1ZkYtc2I3YU9pdDFKWHpKVzR0TWJQeHp2MHp3VzZudEEtUGVxMTJ1VklCN0RhOHhwYlZiR1BST2FnT2ExRXhVV1V0X1pWdy1ieF9sRGkzSVJIZDU5RWpld0htS1VHXy02WXRiWXhUYWFXaHdjMk5MMEUyU0ZpNDdUejFuQ2xTMUk1X3pOVzNGUXNUWV9kanhiUFZobERHMC1KV0MwMGNSY1pSdHlUeTY5eXR5QkdpckhWZzEtWU15c0lGX2VYbTllUHg0TU5mRXI1R3cwMVM1VlZJWVdhd1haOF81R2FVNE02STd4OHFvTkdWUXF5a21sUkJmb3A?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Incertitudes sur la dette, doutes sur l'IA… Ce que change la victoire démocrate pour Wall Street",
+   "s": "Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNcFlkVW1ncWNrRlJkbzJQZl9raGRSZGJDbE9ldXM2eGVFUzl4enA0RFBlajhUbDd4SUZWWDM1TzdDbktyY2xMdGdQMGJvdmZpRDN4MVRaZ0ZZVjhjbFozcG1qVzl2UEJwcUpSXzZCLWttc3ZJUkFuOHhwR1htWHJBamkybXVteFBwM3pmdl9PSU1RMV9zb2tpTFdSRkFuODFEelRDWkdKZ2lpb1VXcmVsd0R1LXhaX0VRUm9UQzZuQU1XejNCOFZlcGU4RFNHcDYyWWR0TVVqOFl6VVh0SEQyRG12T2hlZjJqaEl3N2xvNUlxQQ?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Wall Street salue la vague démocrate, le pétrole et les semi-conducteurs décrochent",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOS1JOVFE0M0FXXzV0TnJaM2xNSUZNaThORWZ6T0JVOTNzeDVfVXV6TDZCVmcyX0xZYnhjWi1WUWxZUTRXckl1OHpQb0hGdlg4MGdBTWt3WkhBQ1lZSTVOSUYwb2tuN2hpcmNkQlpjbUVVcm5xOXg3b1h0OWN2dWJvR2R1aEhOYjd1dWE2X2hySFlxYnQtdHdRM3F5YnRTNEh1VzZ5UWNNQ1pQam5IOGV4TG9ySTd4MW9NUXB0eWZWX1dId2h6dkJv0gHMAUFVX3lxTE5qa1ViZFJZLXVkX3pnMUd0QXJmNG10T3Ywc09EQVhDRExMMXZtT2xmSGNZTG9ockZxMFhWZi1DT0taUEpVZ0h5bklyLWtBVnZOQW91RUFVdm9MNzVZa2ZqVVdZWGNYX2Q3SzREVjdxS1RSV1VQSXRsdC03UDUxS1h5ampWcmVveGpZOTcxZDMzNXJlUFZkOHd4TEl4ejVteDRWekM4X2s2bVJxTFVKQ2lSVkRXOVBGRGFNTmhQeGFkYzhzWEVrN2p2YkVlaA?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxQUFFidmdxUFMzVVFIZm1LbU9IclhMODYta0FsSGdwbnRkeTJRaWxFWU1QSk9CZzBsYzJybGdoRXRGU05USlJxX3ZxeEZJNTZIU3MxeFdSc01OZWNKX1QwSk9hNXNBNWlucU1uYmtNNU9ZN3VJX0xtUnBuZFhwV3ZDR3JlQ09SX201ckhPQWxRMXNGQjR3ZjRIM3RoUFFESW02U3dfdHVyN0tSak10ZXlsY2NDSklkVW1pSzlRZEQ0VEtjVm9hWmprNDlhT2hxLWllVWs0akV2VkxxUnMzSjdMYzREbkpNZmF1d2Z4MHEzZ1hfSzRQaF800gH3AUFVX3lxTFBQUWJ2Z3FQUzNVUUhmbUttT0hyWEw4Ni1rQWxIZ3BudGR5MlFpbEVZTVBKT0JnMGxjMnJsZ2hFdEZTTlRKUnFfdnF4Rkk1NkhTczF4V1JzTU5lY0pfVDBKT2E1c0E1aW5xTW5ia001T1k3dUlfTG1ScG5kWHBXdkNHcmVDT1JfbTVySE9BbFExc0ZCNHdmNEgzdGhQUURJbTZTd190dXI3S1JqTXRleWxjY0NKSWRVbWlLOVFkRDRUS2NWb2Faams0OWFPaHEtaWVVazRqRXZWTHFSczNKN0xjNERuSk1mYXV3ZngwcTNnWF9LNFBoXzQ?oc=5",
    "z": "us"
   },
   {
-   "t": "Les marchés mondiaux patientent avant les résultats des élections américaines de mi-mandat",
-   "s": "Le Devoir",
-   "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNS3hMa3hMQjlodFV4SDFfWUZEZG84aXVnWml0TFB1Ry15bzhET2sxUTdDWEhhN09JRjJHQTlaUUZHd2FQUENsVlZkMk5xNHN2Y05CM0dhTThDZTZEZUZyNkdtZ1VBdFM3bzNpcjhCTExrWGluNVMzc200TW02NjY2N0RxUUNXS3J2bjg5SkZuNU02WEZJWFhtdU85aVdKQXRsUU9MallBZFNSMkRYUkRfeHZzNmNGdTBZ?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "Futures Dow Jones, Nasdaq 100 et S&P 500 en forte baisse après le triomphe démocrate : et maintenant ?",
-   "s": "Invezz",
-   "u": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORnNOUG9fV2dfc05MTlNoZDZFRnpMNlJGN0F6dUNDNVpzZWExd0sxM1FkYzR6VmZ5VHc4eGNUa19zaTBjdGZtMnRab1hTTElrNjQwaFpFeFlYeEgzQ3prSWNuRkltenhjZmxXY3VCWmF5eE9DeWI1M19pVnRDc1d0N0llWEwyOXdPR3Y0MWVwQm5IRVhmRDB2bWMwZVFNVDVyMUV2aWdWeTRYV1dOamVoV0JYT2hOUUVCWlZKdmxkVWhUZmJtdzVGS0ExaEJoZXpJLW9vMEFNT3p1dVBr?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Wall Street clôture sans direction claire, entre rebond de la tech et \"midterms\"",
-   "s": "France 24",
-   "u": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPTGdpR1JaR0xaRFB0WHVlNS1tY2cxdmlXSjZJa1NaUmR1bWZlVDl1Sm5mM0NIcXR4U2h0aW5PTmdUUVROUDBXeWxWZnRjTTR4TUU0MWN4SHdJRk4tRzk3QjNJYkN1RVU3dFdIeHE2cUs0azZDc19yRmdsWm5UdndXQ2h0bTBFc3oyaFV6S01hdlhVT2pUS1VIbVlRV1NZaTU1NWs4aE8tYURBUWFUSGVDbGJxREhpS2oyQ0lLT2l6MGRGSGVZOVJHN2g4cmhhaEZx?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Le Nasdaq et le S&P 500 terminent en hausse grâce au rebond des valeurs des semi-conducteurs et de l'IA",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNTjc3VkJic3hrR283LU9CZE1aQ2ktbk5LTGJzYnZ6RXRyQkFPSEZ4VXVSQmx0YmVuaGhWM0ZjRTc4NDFPal9xOHdjN2ItVTFVTThXbXhDNU50MWxHN0NmRzZ1WWN4dHBfUy12ZDNGNzNFTDl5Wm4yeWpOMzZKN1M0U1dRNnR0Umc4RjRFWWhYV1RNenhwdHluQXV6OXYtbW05TkRBa3RsZklBazFtUlpnZDZMZ2FSamltbFNsTlBGZkRvU2c3SlRTOVV5WWRGTWNRWHo0MjAtWXVtZWtCU3pseTdraWxUSG4yNDJGd2JaUk9FQmVRZjc0Zm5TRldDQkZfU0pYbURoSDAzLUh2Zk5lZGI4Y9IBkwJBVV95cUxNTjc3VkJic3hrR283LU9CZE1aQ2ktbk5LTGJzYnZ6RXRyQkFPSEZ4VXVSQmx0YmVuaGhWM0ZjRTc4NDFPal9xOHdjN2ItVTFVTThXbXhDNU50MWxHN0NmRzZ1WWN4dHBfUy12ZDNGNzNFTDl5Wm4yeWpOMzZKN1M0U1dRNnR0Umc4RjRFWWhYV1RNenhwdHluQXV6OXYtbW05TkRBa3RsZklBazFtUlpnZDZMZ2FSamltbFNsTlBGZkRvU2c3SlRTOVV5WWRGTWNRWHo0MjAtWXVtZWtCU3pseTdraWxUSG4yNDJGd2JaUk9FQmVRZjc0Zm5TRldDQkZfU0pYbURoSDAzLUh2Zk5lZGI4Yw?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Wall Street profite du redressement des technologiques, Nvidia repasse devant Apple",
+   "t": "Wall Street termine en hausse après la victoire des démocrates au Congrès ; les valeurs des centres de données chutent",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxONmZlZUpVVXJtcWF3RHJFUFFTbXBJQ0JCa0Vnc0V6MTA4UDRQZUN4NDlmLWhQVVVoaXFiZVpqa1ZLUGtVZ0hEQkQ1ek53QnNGOWpvVzhZcE50cFZLYzZiV0FibmQ3VjZWdV9xcVB3dHBZZ3RBcU9fdGp5bGpoMF9keHJFTktxMDhwNnBEVlRQVnNrQmpmVFN1RnlKQ3dLSGFMTEFsQzNlTF9xV25ub3JZcDZ1azYwUlFpUHUtaU5sWTVrMHE1d0NBMXkzelFpSHp2YjVxU3pyQ0tVQQ?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNak9NelpLRmhpZmdPVlZXOWw1OGMzS25vdDl3clZzLVJCcVZIS1BLN3huUXhhRkt0Ym4xdUR2OWMtV2hiaTZKT3FEb0ZSNWxhbXlEck90ZnZBM3dta1lDdTJMRm52N3VIYmhMQWlETEVaeUJ6d3E1UktIRzg5VEVTempBcTctY3h2MUVramU5NWVEeGtPRWVyVHhXZHExTERwVUczNnhweG9zMExqUGdzcjJoRG9EeWw1VVlxQWRMVThIZnZXTDAwWW81ZXVpaDJpdTF1UEdPbEVGcjF1eWRnWThhRFFmd3ZGSDRQTUpn?oc=5",
    "z": "us"
   },
   {
-   "t": "Résumé quotidien : Les valeurs technologiques tirent Wall Street vers le haut le jour des élections, le pétrole recule alors que les négociations progressent (03.11.2026)",
-   "s": "XTB.com",
-   "u": "https://news.google.com/rss/articles/CBMirgJBVV95cUxNS2E0ZjRkSVQ4YnVvNjd5Y0MxMnBXWEswUFZ6UDJaVnkycmNZU0VaUjJxWlJxVGsxMk9FdTVZaXVYOXpWM3hVT3M4UEFzWDh5bXpsRVZ1SzdBRmNXbUxHYVJmYTYwVEtqcTNOWDMwWF83cHdRVllZdVBGZldvLTM1c1h6SUxXRzZrNjAtR09USU83UDloT2JuUlZPZGFHMnE2c3Vsc3lNeXZxTk9Pcl9aSVBZdlpmVWFnTFRRUF9lakhLSDYxWUdVXzRfSnRXNEpONG56bUVQQWxOYmd2cEZOOWFKZDlRQmxaUFJJRklUMXFBcUxtR2xsVjR0cmV2cEdIVnRGOFJGWHg4ZUNTd3VfT29xQ2ozbmROcVlaN2F3SkZPeDQxb0w2UGREU3pRdw?oc=5",
+   "t": "Arm a les faveurs des géants du cloud, pas celles de Wall Street",
+   "s": "Zonebourse",
+   "u": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQclVSWWdYQk1RT1l3bWxtWnVzRDAta0FKcFRFamJFR2xZa1hubnVxNk10Smw3MVU2UUhVS2trZllTYi0wUERvOFZCdUdpQy1fbmlYSjF3U2t4ZzhfcGVyNm01UUJGaEhITkpQaDdkQThfdE0yU1FVT2dOak93NWJIWjMyeGszNUZITW14WkllcDl5bHktTm5JRzdzVVBtcjZPWXF4cTJQWXRiUlZna2ZVeVRfZW5XeGJBZ1cxYjV4UEtxZw?oc=5",
    "z": "us"
   },
   {
-   "t": "Le Nikkei finit en baisse de 1,42%",
+   "t": "McDonald’s bondit de 6,23% à Wall Street après ses résultats",
+   "s": "Les Affaires",
+   "u": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQWDF4cEJyNmxlaDJ3VXNFb3NiMHc3UmN6ODhNVTM3T2FLUUx5cFNZY3lZSFNnLTByUUJGZ1V5Q3VfQUZTeklad2NCUGNLbDdWalM4VVpRZ0NMUW0zWGpkQ2xnWHVlZDdVZEotUVpDRDB2Qm43cURuNU0xX2VoY2hKYmNsdGVkU2EzV2NETzB1cF83UDl6Yk1Xd2g5b25uSmtoMVhNZTd3bGZTcVdqNzlhdm5ZcmtqaUdZbk5NU1h3ckJFRFo1N2FvMXZ3WDA2RWFZeF9pQTR3?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Clôture Paris : le CAC 40 grimpe de 2% après la \"vague bleue\" des midterms",
+   "s": "Boursier.com",
+   "u": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNX3RlZE5sYUpZeTlNQ0lBekNFbGx3aGZzUUdLR3R6WUExNzRrc042SUprNGdYZ1lyMXd1R0ItX3MxWXl0QnYzSjVUdk5wS1pabmJHU3Bra01oRTRHWGJpYWxvTlVNS3ZXYmIyX3lZZm1GVUh5Z21na1JraW8zZmJjMlpMa01vOUFxZ2ZqYXVPMmk1QkgzWWV5Rnc1cFpTVG5WNkh0MXZSTVZya3JaSlROalJCX3FQNndDaERRZzlPQ1hIam1pN09rWU93?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Les banques profitent du bond du CAC 40 : le journal de la bourse du mercredi 4 novembre 2026",
+   "s": "MoneyVox",
+   "u": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQRzFjQ3ljazBEZlkteDFtZ3NzcGxOSmZJekU2clIyMmJTcG15Qm9GcTFFNnVVbzN1ZUFzb1RkVmUxazZSQ0VtRFNQUUtTZDdQZkhEb1d3WkpHcjBqSmJlaTFodDdvRG9KLVc0RXZBdUU1SE9TTURsTWhucmNqS0tkb2pXejhLaWNLSGFCZjJQdUIzZGRNOTl0S2VGSmE1N0p1NVpzTEtDRFB1TGdFZnNPTGNOVU5MVTEwaE1MaXlyQlBwSm5majBHaEFGemtpdGRCVDlIODFacw?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Les dirigeants de l’UE veulent nommer le nouveau président de la BCE en décembre, selon un responsable",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNRUp3akM2NFpfUFBjbEZjcW1OUUZRY3N0OUhjWWFnWDRLbkxJYklkanQ5X05RNFhhNnFhU2ZWSDNTSEFXbTJJcWQ2bXlQNTFndVppZjNBVkktOWw2RlVqZUI3d25UejBmcnNOckNQSlVKUE1IMjNYVE9PUDJ5LTFValdvd1lfY2xJRnptV0RUaWdkOFlPYWJuUkVB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZlZOdVR5SkhGUGMxVEcxeE1UdmxNaGMwTGZlNjkwU2xueEZ0bEVEMmd6bC11alZILXFwQjVOR0VYTEhFeHNxWVBOcHliMzB2aHBTNDV3Yk02U3hScVByLUtiYkJIMkMxc0k2c0VhOGpyUDZ5cmtfMC02YjlCUWZ3SFpqYjc0ajdoTExMM1ZJWjZlcUhOXzJJd3NBNmlFRTNxX2FzeUI1elZMckdCQXJENlZ5Zk1jSm1GTkRLZXdoVjVDYUhNajRqN3Rsd1pqTGZNZ2t1WHZOeW9xTzdLMGtCTVgtYUd4MFVMZlRjblV6cw?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Zone euro : l’inflation complique la tâche de la BCE",
+   "s": "Le Revenu",
+   "u": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOERGRXRKdUJCTnk2SlRHRHQ5U0VoU2VXc1NXNEZ3bHhKYUJXNkZBc1B1T2cyY1ZXRElyLWNjd2EwSFVYMUk3VmpaZWRGRkRnbWRJcWc4ZjhXd3FhMEF4U0M4S0dGU2hBaF8zMkxrLVFtYUp4alFJb2d3WkcxTW9IS1pSQUZpZVlzTy1QV291TlhZblltZWtrZnRuTFg0VkdrWTdWWW1lLTZLaE5vMFhHUTREV2c?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "Le Nikkei finit en baisse de 1,79%",
+   "s": "Investir Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQSWRIaEY0Nm1KZURVOEN3MW9LcVlrRzZCcXl3VlYwSm9fbzYzaGVNZUlzQ2VDY1gzWUFDb3BYaVcxMjBHU2Z5emtoOXlULXBYQVBkTjFERFdRUUF2VGV3Zm5rY1o5ZHVuTm1oX1EtbzY3VUJ0Zk56ZzJKckFwN2FrNm9rTG41b3g3ZFRsZlVOZ1QwdlNYRnFacGdDdm1ya3JPeFJ1MV9n?oc=5",
    "z": "japon"
   },
   {
-   "t": "Le Nikkei tombe à son plus bas niveau depuis 3 mois, les valeurs liées à l’IA chutant sur fond d’inquiétudes électorales aux États-Unis",
+   "t": "La Banque du Japon (BOJ) envisage de nouvelles hausses de taux alors que l’inflation se rapproche de sa cible",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPbjJOTEhhZnhwMVZPR0NubFBXN0JUT2M1S1hvWlBSLVlCUGNmRGRhV3lVSEhKQmVRMnN2b2lSVHR0VVVQQWlteHNxY3EtX2tCV2xJRURua2NnaUlZd3NScEI4SjF6eFVrUnZjMUZUUEpMYk81aVB0aFFPaTlCa2NPaUlvY3paUHJzRkd1bjRneHZsdFFTdHlOUktZaHlSSVpoZHgzaTVxSWdBcGpERFZUcmVwaGZvdEFpb2ZVZWdaQmplU3pjZnd4aWRMeE1vbUNrXy1CbkV1blV6TW9tZ2RQcER0VF9xX2w5QXNBVktB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPVHhhdE9SLVAxTTZWc1VETko5SXN2NkpHUGxFdHVMVGhHbjlmcnJnT244OHBkU1l6WjM3UHA5RDVxVElVNkdvT05uZkRRc1BvcmpRSVItY2lvcGVONzVsdUJwSUJ1Vy1kMlhnUzVaSHBlV0s4cXdMYjFvQ3hXQm1Bb29heFkwZ3FCZWsxVEJvdWNWUWVyWjF5R1U4QWJ6RUxjX3FnSkVBbjZnaFhIbWNWZWJ1cnpJQ29ReS1qS3RkNzNoa0FQeUw0Tktfc2l4V1FEelJGZ19IbjkyZ3hvTFRPbXd3MDZqX21lMlBOOQ?oc=5",
    "z": "japon"
   },
   {
-   "t": "Gains démocrates aux États-Unis: le dollar trébuche, repli des Bourses en Asie",
-   "s": "TVA Nouvelles",
-   "u": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTngtVWhBcDAzaHNEOHd4TF90SHN3ekxYZVJjX2ZzTkZkSFJiOXdMOGFrTm9ZX3hRMGphT1B5Sm1STmx0bmpCclp2bWVmb3VfUXRhU3RxZUs4bkJ6cWN6NS15bTUwZDYyVWV0TzdhdjRjbXN2WTdTaXE4aVNUM2dwVC03T0FnNlI3bkl4anQ4LWFTaVI4cFFDZllmV201SXNTWUd1VFhNZXVISDRhSmpmZ0NZMnRZdw?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "Le Nikkei japonais chute de 3 % alors que les gains démocrates aux États-Unis pèsent sur les valeurs liées à l’IA",
+   "t": "Le Nikkei japonais chute de 3 % après les gains démocrates aux élections de mi-mandat américaines, qui pénalisent les valeurs de l’IA",
    "s": "Zonebourse Suisse",
    "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNRkRoVnQxMThPVG9MYjNCMnl0SjI2VmhvUk5LSVVGMUNUZW5sT3ZHeUdkR0xmdXotU1p0ak15SmJpRzRCSlJnNkgtTVEzQzlUcVRmWV85ZEFHa05aZmhDZXJtQzdqQ1RDcENNajB3UlZRSmxNN21qbk42RzdBWVkyd2l3dW56NlcwX2lkZEoyUWlXekxTMl9SMWxuTXRCYWFMejMyUkhGSXN6UkhJZkZZbk5oR0t1bDlmY2JKa0Y2TmpuN0JoQ0lSRWNLM0pDb01aZkV2dWdob1VUQWI5cThpX0MxcHRJNFN6NUJ1c0FlOA?oc=5",
    "z": "japon"
   },
   {
-   "t": "La Bourse de Paris termine en baisse, les mid-terms captent l'attention",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNT2JMQmdpcXh1eWQ0ZzQ4ZXZHbXBaWXhETTRyQTJFb2RwVFVXbHdMNzZTQ2ttZGN6cDN3M003X1dLRjVHUlVranRLb2pOcGMwei1VOWQwemYtZUwyczVUcHkxbnZsZWZqWGRTZElUM1U4Z0hJRi1Wc09ZWWlaOUtLREpiNEpHUjQ5Vnh4MUVpZzgtcWdxY3A4LXdlVmFqaVFsV2pGYldTOHFPWWdJN1lXSFJCaElMSExuY091dFotSkxDRzg3cERvOUdJNkRwY216cUlNc01ZTDhTUmgxSEdJZ1VMMFd3aFnSAecBQVVfeXFMTU9iTEJnaXF4dXlkNGc0OGV2R21wWll4RE00ckEyRW9kcFRVV2x3TDc2U0NrbWRjenAzdzNNN19XS0Y1R1JVa2p0S29qTnBjMHotVTlkMHpmLWVMMnM1VHB5MW52bGVmalhkU2RJVDNVOGdISUYtVnNPWVlpWjlLS0RKYjRKR1I0OVZ4eDFFaWc4LXFncWNwOC13ZVZhamlRbFdqRmJXUzhxT1lnSTdZV0hSQmhJTEhMbmNPdXRaLUpMQ0c4N3BEbzlHSTZEcGNtenFJTXNNWUw4U1JoMUhHSWdVTDBXd2hZ?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Cac 40 : Dans l'attente des élections de mi-mandat aux États-Unis, le CAC 40 reprend son souffle",
-   "s": "BFM Bourse",
-   "u": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNclR4Mm0tV2dpQVZJdWt2M0VBMG9VeWVtaElIM3JfR2V3RWFjVW55aDZVMXhaeHBXaXU3Nk9wQ1JBY3ZPUnBuUlJqRmk5VDEtMmwyOWE1LUI0TURsWTJRTGM4NURmNVZ2UXF2TFFpSGpMcmRsd2M3Vzc4ZzdUbW85MDZUTmIwN0hCRFRGWDVxMUFlanJjNTFSS0hyenZzSVE1bFp1UUppX2JuVFJYdlJQdUxIMmdNV2ZxUXItYkVwUXY5bVlYNUE1aVlRLXhQUkRCLUEwakhQQXIxOElQLWVXWmE2cnlkbFVVbFhUd1VWUDVGRDlXV1A0?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Départ de Lagarde : la succession à la BCE ajoute de l’incertitude",
-   "s": "Economie Matin",
-   "u": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOFI0RXdnRmw1QWo4bHBYbFFMOGFvcGthRlZLMWpWRXFiLTh4dnBucFVjZ25RbG9GSk9JekZmUE9JMFI2VTVyUXZnQW1jelFGeFJieTA4X1B0VEQtdHZRdHI4aFpjUG54bGFpZkVfN0tldTIxRGxqYklIaU5JeWZYU3BfblRGWGhqNUZrYTVHaXU?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "La BCE devrait relever ses taux en décembre, selon Nagel",
-   "s": "Investing.com France",
-   "u": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQc3p5VV80MzMwQkUwZDItY2d6VjF0RGxzTkhJeEdBQ01jX3FzZWptUUNzWTRiT0dtQlYxbUVvM0pJZHNOTy1vSkplNHFHUVlOWTRVZ1RRREJ2TzFjaTRHbXdGbXp0ZnJHYkZRcXBta1l6MVRya2NuOU5mREk4LWJMb0N4YldZaEZiZm9ic29mWExqUWQ5Um9ib1ZjVnRxVkNFUWUxay1fQVFtdw?oc=5",
-   "z": "taux"
-  },
-  {
-   "t": "L'action Dassault Systèmes, lanterne rouge du CAC 40, cède 3 % après son T3 relevé",
-   "s": "Idéal Investisseur",
-   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPT1RmZkJiRWdjTjltdDdicllSZERpTHA5QXo4RDZ2a1lTWHpjclJnd2h6c2tNOE9PQUhfblF6VWZjckRUQjJYZU0zZnptRjdZT2JYZmZWcGlhaHNfaWZvY0FOamhyTEQ2dkJjd3hLSHVQTDJFUWhMeUlPRkJLVWtNQVBaZ1FPcThMcUFoalA0TFpmYmQ1V2VZSUgxWEd4Qk9PZE9IUUdlcENsV0RrdEE0TXh3YUtCM3ZnWHEyd1QwT1A2TGJlNm1Gb1JJYTc?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Marchés en Asie : repli généralisé après la vague de ventes sur la tech à Wall Street",
-   "s": "TradingView",
-   "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9fY0NmRXBIbkRwN2xCXzRUQXhpcUVNeE9GNlBRanAyTzlwUFliNWs2dEN4dDZkNW5pQVZ1RG8yd1lzVDNxeWlpVVh0UG45OUNCOHRFTmtaMXVHWHBpWDVOcjF3?oc=5",
+   "t": "Les actions asiatiques montent après le rallye de Wall Street post-élections américaines",
+   "s": "Euronews.com",
+   "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOeW9RcWNkOW1HN3NVQWN3Nkp6UVI2b3dITWRORUs3Q1l1NTZjOTBoX21YZm5GX2E3clB3MVlQc2x1Tl9GeVRUMEZPd0tDQ0pOQW5hdF9VZlRIWWlVZWVsc3F4S1RQdUZYalNSSHlJczlKeDdmdFlFQ2N5TllISDMxMnUydzFBUThWMnU1eXAtcThIbVhFMXFBaHVTVUtOc05CVGdJX1NNOEpXdnJoc3hFeGtCTDZqcnVwUXU5Q050Z3I?oc=5",
    "z": "emergents"
   },
   {
@@ -259,23 +157,103 @@
    "z": "emergents"
   },
   {
-   "t": "\"Les marchés émergents offrent plus que la diversification : la technologie, la consommation et les ressources stratégiques\"",
-   "s": "Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQczBQRjM3d2l5U0xzRkx4NVdXZGUxSGU3ekl6Ukl4VlZ2bjBwQUF4X0x4dHlTZEh4STRrekY0dHN5ZmMtc081NjhhaW1fZGd6Vng5SUlTaHROc3NfSHRhdno1dTIxak1NcXdfcUdnR3ByWmtOZkM5akxuUFlvWEV3YjYzNFB6ZnVZRHpzSnZpbmJxN2tWMS1ranc5TTBRYWFDeUMzRWI3RDhrZWM3OTNCaTF1VUJjVVBsbWpMWlNRVndyR3Y5Uk8wSC1XdEE0cXRoRlVSRXRFcE81Zm9rMDQ5MFRLV19GWm9qZVRGcXYtNy00QU91NmhHdlVTallGU28?oc=5",
-   "z": "emergents"
-  },
-  {
    "t": "Le régulateur indien favorable à la suppression de l’impôt sur les plus-values à long terme pour les investisseurs étrangers, selon des sources",
    "s": "Zonebourse Suisse",
    "u": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQLXNZNWNxUk1leGZYeGtMYzhVTHpLbElDZGV0LVBqcnI0UHk2VThLb05MYVpmekVKY2JWRnIxU1Ayc29lREpfNE9NaUFhcDRvUlpUTWlpcDlqb25TLVdENWhHdEtjdHVKSmlLNk1aNk85OGc0OVkwcHRsaC03b3VTaDJ5S05POF9FaXcxOUpGZTJCRE9taFJVLUQzNHBUcU1Ua3NfaWc4U3M1eVg0bGNqX1BEQ1JiMmdoWVI4SGlpQ1ZuQkV1VVJXa21OUkhVX3ZPYW1ueUo0T2EtTW1tSWFrZ1dwUjlDaml3NDlWT2dBYUI?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Canada : Macklem brandit la menace de nouvelles hausses",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOMUIzalNXeWtjS0dhOEI5S1B4ZEVQUlM0QlFHVkZYZEFoYklIbU8xR0lCM0NaZDBrMDA2d1JBY01yVW9VVDVRMWlzMUkxWmc4cDk2TDZvZ1lvYnBrV192U3JVejFzZUtLS0J4Y1d3RGsyazNKUnhVZWhwdy1ZOXI1S3ZKLVN0by1FcW8yWmdVVlp2MEJJMXhyTF9nWk01bVhYNWdraUEtZmViNW5CZkRqSXBLQlRLTmZ3ZUpQOF9XVWZHSUg4WlNhNWwzaWNUcFVH0gHQAUFVX3lxTE4xQjNqU1d5a2NLR2E4QjlLUHhkRVBSUzRCUUdWRlhkQWhiSUhtTzFHSUIzQ1pkMGswMDZ3UkFjTXJVb1VUNVExaXMxSTFaZzhwOTZMNm9nWW9icGtXX3ZTclV6MXNlS0tLQnhjV3dEazJrM0pSeFVlaHB3LVk5cjVLdkotU3RvLUVxbzJaZ1VWWnYwQkkxeHJMX2daTTVtWFg1Z2tpQS1mZWI1bkJmRGpJcEtCVEtOZndlSlA4X1dVZkdJSDhaU2E1bDNpY1RwVUc?oc=5",
+   "t": "L’inflation britannique devrait culminer à 4,4% début 2027",
+   "s": "Investing.com France",
+   "u": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZXZQZDZRWVhKRzhsNEJCc09lZ0JQVjZYdUhRLWh6WWhMM0dtUURKaWhzRGQtN053ZXVNc3ZidkZ1d2c0OG93NnJSUmwyVWVoMGx5ZDctSW00QjREeUxSQWViY1l4aXEyODlEalQwRGRBaXZGYkNKT3ZXZXVyXzIwT2p3YW1DYUI2UmxMc29zUE84a2RxcmJ4YWpTRF9hcDRGc2pLa1NWNTlsZw?oc=5",
    "z": "taux"
+  },
+  {
+   "t": "ROI-La défaite cuisante de Trump aux élections de mi-mandat met en évidence le caractère politiquement toxique",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPQVFNa3N1QndWbFhIdTZCdFZ3Z0VLYW13UHdfUmVYTkpVV2ttQ2hvcXZkTk9rWmpla1lGbE9SRkUxRjd2MVdJLXBCbS1GNjBQZVJILV9pbXo1dWRWLW9udGp3Q004aUZsYXpUdUQ5WFdnbEhQQmJLWGN2Q2xaYVdRN0tyVGpVams1a3VWazVXUkJuOW54Vkw1YUdCa2tORDQzUm1iZG5nSXUxTk1ROVlta2YtV0JrOTk2U0laV1JPMDB2RWZpa0tTbmxhQ19PX1Zpc2ZXNXNCMjF5NWJkQzNqUjlncU5fWTJZUGpxUEFWVDNtZlBrWnhTOHB0MU4wVEt6aXpaa0FuYk1RdEZ4V0EzVG02eUMyYVJLZXlCeFhYb05vd0dMQVphLXg1bTczbWNmdHBKZkY2VdIBvAJBVV95cUxNYmdZendIMTB4N0RPQ3h6NzJ3X2gwNmplckNrN3VjcnRjMEpIb25WVW9JT2VhRUNFVUMwMHdRNnBLRU9veHlTaFJJeFV3bEMzQ2lYTFkxUGVleE9QNm5CUlVKTDJvM2tlckdObW1RdGlFd3NMRWFzYTdjTXFEV09PU3VKcDFxN21uVlZLc21IZDhfODZ3R2JYUEFXMFA1bFkxS2JFa2RrdTZsWVpVbVhDbDJpSnhCcl8xS1lFRzhwM1FobU1uM0ctdkY3QUJpb1VSdGlpSGxRTGxwRFBQYVNXSzFycVdoMk9FNHVfWWRKQVZyX01JZVVkamZZMG1RakRJNXd5NFJncjVZTGFPN0haa0tDYWVhMWp2OTZZT3FNRTVmc0pCQjlIal9KdTJrblNETkczSEY4VUNxY1JB?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "Wall Street, dollar, ETF Monde : comment les élections américaines touchent l’épargne française",
+   "s": "https://www.leconseilpatrimoine.fr/",
+   "u": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPY0l6Vjk1SmE1M0QwN281am9qcmpSZTRLdV9LRHZIN0IzS1NpeHRieWRvX1plekhGcENxV3FtejdjMEkxZl9wT0U4V0dvamZTd1hub3lfdjhEU3pGbDhlNktDdWJ6WEdhbnVzYXAzazczNXRSaXNOYVNoRlpjemE1Zm1sVVduQUJRcm5SNjk0bGJPd0VEQmh6dGs1b2tpT1VUX1o4?oc=5",
+   "z": "monde"
   }
  ],
- "lesson": "La « prime de risque politique ». Quand un événement politique change les règles du jeu (impôts, régulation), les investisseurs exigent d'être mieux payés pour le risque : ils vendent d'abord, et réfléchissent ensuite. C'est ce qui arrive ce matin à la tech américaine, qui pourrait faire face à plus de contrôle avec un Congrès démocrate. Ces mouvements sont souvent rapides et s'estompent quand on y voit plus clair ; sur 10 ou 20 ans, ce sont les bénéfices des entreprises qui font la performance de tes ETF, pas les élections."
+ "lesson": "« Le gouvernement divisé ». Aux États-Unis, quand le président et la majorité du Congrès ne sont pas du même camp, il devient plus difficile de faire passer de grandes réformes. Les marchés aiment souvent cette situation, car elle limite les surprises sur les impôts, les dépenses ou la régulation : moins d'incertitude, c'est un risque en moins à intégrer dans les prix. C'est en partie ce qui explique le bond d'hier. Mais sur le long terme, ce sont surtout les bénéfices des entreprises qui font avancer tes ETF, quel que soit le parti au pouvoir.",
+ "markets": [
+  {
+   "k": "^FCHI",
+   "n": "CAC 40",
+   "v": 8177.89,
+   "ch": 0.01965
+  },
+  {
+   "k": "^STOXX",
+   "n": "Stoxx 600",
+   "v": 657.4,
+   "ch": 0.01818
+  },
+  {
+   "k": "^GSPC",
+   "n": "S&P 500",
+   "v": 7688.62,
+   "ch": 0.01581
+  },
+  {
+   "k": "^IXIC",
+   "n": "Nasdaq",
+   "v": 25736.51,
+   "ch": 0.01437
+  },
+  {
+   "k": "^N225",
+   "n": "Nikkei 225",
+   "v": 61089.31,
+   "ch": -0.01768
+  },
+  {
+   "k": "EEM",
+   "n": "Émergents (EEM)",
+   "v": 61.62,
+   "ch": 0.00851
+  },
+  {
+   "k": "EURUSD=X",
+   "n": "Euro / dollar",
+   "v": 1.1263,
+   "ch": 0.00497
+  },
+  {
+   "k": "^TNX",
+   "n": "Taux US à 10 ans",
+   "v": 4.894,
+   "ch": -0.01171
+  },
+  {
+   "k": "^VIX",
+   "n": "Indice de la peur (VIX)",
+   "v": 16.61,
+   "ch": -0.20259
+  },
+  {
+   "k": "GC=F",
+   "n": "Or",
+   "v": 4136.8,
+   "ch": 0.01566
+  },
+  {
+   "k": "BZ=F",
+   "n": "Pétrole (Brent)",
+   "v": 94.02,
+   "ch": -0.00634
+  },
+  {
+   "k": "BTC-EUR",
+   "n": "Bitcoin",
+   "v": 71400.0,
+   "ch": 0.03455
+  }
+ ]
 }
