@@ -8,6 +8,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.AlarmClock;
 import android.provider.ContactsContract;
+import android.telephony.SmsManager;
+import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -59,6 +61,22 @@ final class Phone {
         c.startActivity(i);
     }
 
+    static boolean smsOk(Context c) { return c.checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED; }
+    static boolean callOk(Context c) { return c.checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED; }
+    /** Envoie vraiment le SMS (demandé explicitement à Jarvis, annulable 4 s dans l'appli). */
+    static String sendSms(Context c, String num, String body) {
+        if (!smsOk(c)) return "perm";
+        try {
+            SmsManager sm = android.os.Build.VERSION.SDK_INT >= 31 ? c.getSystemService(SmsManager.class) : SmsManager.getDefault();
+            ArrayList<String> parts = sm.divideMessage(body);
+            if (parts.size() > 1) sm.sendMultipartTextMessage(num, null, parts, null, null); else sm.sendTextMessage(num, null, body, null, null);
+            return "ok";
+        } catch (Exception e) { return "err"; }
+    }
+    static String call(Context c, String num) {
+        if (!callOk(c)) return "perm";
+        try { c.startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + Uri.encode(num))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); return "ok"; } catch (Exception e) { return "err"; }
+    }
     static void dial(Context c, String num) { c.startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + Uri.encode(num))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); }
     static void sms(Context c, String num, String body) { c.startActivity(new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + Uri.encode(num))).putExtra("sms_body", body == null ? "" : body).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); }
 }

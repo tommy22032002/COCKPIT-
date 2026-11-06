@@ -637,6 +637,8 @@ public class MainActivity extends Activity {
         @JavascriptInterface public boolean contactsOk() { return Phone.contactsOk(MainActivity.this); }
         @JavascriptInterface public void contactsAsk() { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, 24)); }
         @JavascriptInterface public String contactFind(String q) { return Phone.find(MainActivity.this, q); }
+        @JavascriptInterface public String smsSend(String num, String body) { String r = Phone.sendSms(MainActivity.this, num, body); if ("perm".equals(r)) runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.SEND_SMS}, 25)); return r; }
+        @JavascriptInterface public String callNow(final String num) { if (!Phone.callOk(MainActivity.this)) { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, 26)); return "perm"; } final String[] r = {"ok"}; runOnUiThread(() -> r[0] = Phone.call(MainActivity.this, num)); return "ok"; }
         @JavascriptInterface public void dial(final String num) { runOnUiThread(() -> { try { Phone.dial(MainActivity.this, num); } catch (Exception ignored) { } }); }
         @JavascriptInterface public void smsTo(final String num, final String body) { runOnUiThread(() -> { try { Phone.sms(MainActivity.this, num, body); } catch (Exception ignored) { } }); }
         @JavascriptInterface public boolean setTimer(final int sec, final String label) { try { Phone.timer(MainActivity.this, sec, label); return true; } catch (Exception e) { return false; } }
