@@ -629,6 +629,12 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String btDevices() { return CarBt.devices(MainActivity.this); }
         @JavascriptInterface public void setCarBt(String addr, String name) { CarBt.setCar(MainActivity.this, addr, name); }
         @JavascriptInterface public String takeTrips() { return CarBt.take(MainActivity.this); }
+        /* Notifications bancaires : lues seulement si activé dans Capital */
+        @JavascriptInterface public boolean notifOk() { return JarvisNotif.granted(MainActivity.this); }
+        @JavascriptInterface public boolean notifOn() { return JarvisNotif.on(MainActivity.this); }
+        @JavascriptInterface public void setNotifOn(boolean v) { JarvisNotif.setOn(MainActivity.this, v); }
+        @JavascriptInterface public String takeNotifs() { return JarvisNotif.take(MainActivity.this); }
+        @JavascriptInterface public void notifAsk() { runOnUiThread(() -> { try { startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)); } catch (Exception ignored) { } }); }
         @JavascriptInterface public void btAsk() {
             runOnUiThread(() -> {
                 java.util.List<String> p = new java.util.ArrayList<>();
