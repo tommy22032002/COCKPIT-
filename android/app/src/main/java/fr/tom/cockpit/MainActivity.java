@@ -681,7 +681,17 @@ public class MainActivity extends Activity {
 
         @JavascriptInterface public void openExternal(String url) {
             runOnUiThread(() -> {
-                try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url))); } catch (Exception ignored) { }
+                try {
+                    if (url.startsWith("app:")) { // ouvrir une appli installée (ex. app:com.google.android.gm|https://repli)
+                        String[] p = url.substring(4).split("\\|", 2);
+                        Intent li = getPackageManager().getLaunchIntentForPackage(p[0]);
+                        if (li != null) { startActivity(li.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); return; }
+                        if (p.length > 1) startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(p[1])));
+                        return;
+                    }
+                    if (url.startsWith("intent:")) { startActivity(Intent.parseUri(url, Intent.URI_INTENT_SCHEME)); return; }
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (Exception ignored) { }
             });
         }
     }
