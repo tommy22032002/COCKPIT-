@@ -630,6 +630,14 @@ public class MainActivity extends Activity {
         @JavascriptInterface public void setCarBt(String addr, String name) { CarBt.setCar(MainActivity.this, addr, name); }
         @JavascriptInterface public String takeTrips() { return CarBt.take(MainActivity.this); }
         /* Notifications bancaires : lues seulement si activé dans Capital */
+        /* Téléphone : contacts, appel, SMS, minuteur, réveil (rien n'est envoyé ni composé sans toi) */
+        @JavascriptInterface public boolean contactsOk() { return Phone.contactsOk(MainActivity.this); }
+        @JavascriptInterface public void contactsAsk() { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, 24)); }
+        @JavascriptInterface public String contactFind(String q) { return Phone.find(MainActivity.this, q); }
+        @JavascriptInterface public void dial(final String num) { runOnUiThread(() -> { try { Phone.dial(MainActivity.this, num); } catch (Exception ignored) { } }); }
+        @JavascriptInterface public void smsTo(final String num, final String body) { runOnUiThread(() -> { try { Phone.sms(MainActivity.this, num, body); } catch (Exception ignored) { } }); }
+        @JavascriptInterface public boolean setTimer(final int sec, final String label) { try { Phone.timer(MainActivity.this, sec, label); return true; } catch (Exception e) { return false; } }
+        @JavascriptInterface public boolean setAlarm(final int h, final int m, final String label) { try { Phone.alarm(MainActivity.this, h, m, label); return true; } catch (Exception e) { return false; } }
         @JavascriptInterface public boolean notifOk() { return JarvisNotif.granted(MainActivity.this); }
         @JavascriptInterface public boolean notifOn() { return JarvisNotif.on(MainActivity.this); }
         @JavascriptInterface public void setNotifOn(boolean v) { JarvisNotif.setOn(MainActivity.this, v); }
