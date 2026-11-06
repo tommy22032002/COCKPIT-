@@ -100,6 +100,14 @@ public class CarBt extends BroadcastReceiver {
         final Context app = c.getApplicationContext();
         if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(act)) {
             sp(app).edit().putLong("trStart", System.currentTimeMillis()).remove("trLat").remove("trLon").apply();
+            try {
+                String brief = sp(app).getString("carBrief", "");
+                long last = sp(app).getLong("carBriefAt", 0);
+                if (sp(app).getBoolean("carVoice", true) && !brief.isEmpty() && System.currentTimeMillis() - last > 30 * 60_000L) {
+                    sp(app).edit().putLong("carBriefAt", System.currentTimeMillis()).apply();
+                    if (!JarvisNotif.say(brief, 7000)) JN.post(app, 7701, null, "🚗 En route, monsieur", brief, "executif", null, false, brief, true);
+                }
+            } catch (Exception ignored) { }
             locate(app, loc -> {
                 if (loc != null) sp(app).edit().putString("trLat", String.valueOf(loc.getLatitude())).putString("trLon", String.valueOf(loc.getLongitude())).apply();
                 pr.finish();

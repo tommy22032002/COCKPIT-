@@ -43,6 +43,9 @@ final class Agenda {
                     if (all) fd.setTimeZone(TimeZone.getTimeZone("UTC")); else fd.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
                     JSONObject o = new JSONObject();
                     o.put("titre", cu.getString(0));
+                    SimpleDateFormat iso = new SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE), hm = new SimpleDateFormat("HH:mm", Locale.FRANCE);
+                    iso.setTimeZone(TimeZone.getTimeZone(all ? "UTC" : "Europe/Paris")); hm.setTimeZone(TimeZone.getTimeZone("Europe/Paris"));
+                    o.put("date", iso.format(new Date(cu.getLong(1)))); o.put("heure", all ? "" : hm.format(new Date(cu.getLong(1))));
                     o.put("quand", all ? fd.format(new Date(cu.getLong(1))) + " (journée)" : f.format(new Date(cu.getLong(1))));
                     String loc = cu.getString(4);
                     if (loc != null && !loc.isEmpty()) o.put("lieu", loc);

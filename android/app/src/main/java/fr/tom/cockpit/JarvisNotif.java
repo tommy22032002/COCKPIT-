@@ -7,6 +7,10 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
+import android.speech.tts.TextToSpeech;
+import android.os.Handler;
+import android.os.Looper;
+import java.util.Locale;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -23,6 +27,23 @@ public class JarvisNotif extends NotificationListenerService {
     static final Pattern MONEY = Pattern.compile("\\d[\\d  . ]*[.,]\\d{2}\\s?(€|EUR)|(€|EUR)\\s?\\d[\\d  . ]*[.,]\\d{2}|\\d+\\s?€", Pattern.CASE_INSENSITIVE);
     static final Pattern BANK = Pattern.compile("d[ée]bit|cr[ée]dit|paiement|pr[ée]l[èe]vement|virement|achat|carte|\\bCB\\b|retrait|rembours|op[ée]ration|solde|transaction|re[çc]u|envoy[ée]", Pattern.CASE_INSENSITIVE);
     static final String[] SKIP = {"com.whatsapp", "org.telegram", "com.instagram", "com.facebook", "com.snapchat", "com.discord", "com.google.android.gm", "com.microsoft.office.outlook", "com.twitter", "com.zhiliaoapp"};
+
+    static JarvisNotif inst;
+    TextToSpeech tts; boolean ttsOk;
+    @Override public void onListenerConnected() { inst = this; }
+    @Override public void onListenerDisconnected() { if (inst == this) inst = null; }
+    @Override public void onDestroy() { try { if (tts != null) tts.shutdown(); } catch (Exception ignored) { } if (inst == this) inst = null; super.onDestroy(); }
+    /** Fait parler Jarvis depuis l'arrière-plan (mode voiture). Renvoie false si le service n'est pas actif. */
+    static boolean say(final String text, long delayMs) {
+        final JarvisNotif s = inst; if (s == null || text == null || text.isEmpty()) return false;
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            try {
+                if (s.tts != null && s.ttsOk) { s.tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "car"); return; }
+                s.tts = new TextToSpeech(s, st -> { if (st == TextToSpeech.SUCCESS) { s.ttsOk = true; try { s.tts.setLanguage(Locale.FRANCE); s.tts.setPitch(0.9f); } catch (Exception ignored) { } s.tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "car"); } });
+            } catch (Exception ignored) { }
+        }, delayMs);
+        return true;
+    }
 
     static SharedPreferences sp(Context c) { return Prefs.sp(c); }
     static boolean on(Context c) { return sp(c).getBoolean("ntOn", false); }

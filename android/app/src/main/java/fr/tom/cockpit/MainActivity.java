@@ -631,6 +631,9 @@ public class MainActivity extends Activity {
         @JavascriptInterface public String takeTrips() { return CarBt.take(MainActivity.this); }
         /* Notifications bancaires : lues seulement si activé dans Capital */
         /* Téléphone : contacts, appel, SMS, minuteur, réveil (rien n'est envoyé ni composé sans toi) */
+        @JavascriptInterface public void setCarBrief(String t) { Prefs.sp(MainActivity.this).edit().putString("carBrief", t == null ? "" : t).apply(); }
+        @JavascriptInterface public void setCarVoice(boolean on) { Prefs.sp(MainActivity.this).edit().putBoolean("carVoice", on).apply(); }
+        @JavascriptInterface public boolean carVoice() { return Prefs.sp(MainActivity.this).getBoolean("carVoice", true); }
         @JavascriptInterface public boolean contactsOk() { return Phone.contactsOk(MainActivity.this); }
         @JavascriptInterface public void contactsAsk() { runOnUiThread(() -> requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, 24)); }
         @JavascriptInterface public String contactFind(String q) { return Phone.find(MainActivity.this, q); }
