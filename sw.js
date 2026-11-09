@@ -1,5 +1,5 @@
 // Capital : fonctionne hors connexion, se met à jour tout seul, et envoie tes rappels.
-const CACHE='cockpit-j1794252852';
+const CACHE='cockpit-j1794258975';
 const CORE=['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png','cockpit.enc'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
@@ -12,8 +12,16 @@ self.addEventListener('fetch',e=>{
   const url=new URL(req.url);
   const fonts=/fonts\.(googleapis|gstatic)\.com$/.test(url.hostname);
   if(url.origin===location.origin){
-    e.respondWith(fetch(req,{cache:'no-cache'}).then(r=>{if(r.ok){const cp=r.clone();caches.open(CACHE).then(c=>c.put(req,cp))}return r})
-      .catch(()=>caches.match(req,{ignoreSearch:true}).then(r=>r||caches.match('index.html'))));
+    const save=r=>{if(r&&r.ok){const cp=r.clone();caches.open(CACHE).then(c=>c.put(req,cp))}return r};
+    const net=()=>fetch(req,{cache:'no-cache'}).then(save);
+    const shell=req.mode==='navigate'||/\/(index\.html|manifest\.webmanifest|icon-[^/]*\.png)?$/.test(url.pathname);
+    if(shell){ // le lanceur s'ouvre tout de suite depuis le téléphone, et se met à jour en arrière-plan
+      e.respondWith(caches.match(req,{ignoreSearch:true}).then(hit=>{const n=net().catch(()=>null);if(hit){e.waitUntil(n);return hit}return n.then(r=>r||caches.match('index.html'))}));
+    }else{ // le reste : réseau d'abord, mais jamais plus de 6 s d'attente si une copie existe
+      e.respondWith(new Promise(res=>{let done=false;const fb=()=>caches.match(req,{ignoreSearch:true}).then(r=>r||(req.mode==='navigate'?caches.match('index.html'):null));
+        const t=setTimeout(()=>fb().then(r=>{if(r&&!done){done=true;res(r)}}),6000);
+        net().then(r=>{clearTimeout(t);if(!done){done=true;res(r)}}).catch(()=>{clearTimeout(t);fb().then(r=>{if(!done){done=true;res(r||Response.error())}})})}));
+    }
   }else if(fonts){
     e.respondWith(caches.match(req).then(hit=>hit||fetch(req).then(r=>{const cp=r.clone();caches.open(CACHE).then(c=>c.put(req,cp));return r})));
   }
