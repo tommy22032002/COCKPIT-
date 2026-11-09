@@ -59,6 +59,7 @@ async function unlock(pw){
   const hit=!!res;if(res){fetch('cockpit.enc',{cache:'no-cache'}).catch(()=>{})}
   else{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),60000);try{res=await fetch('cockpit.enc',{cache:'no-cache',signal:ctl.signal})}finally{clearTimeout(t)}}
   if(!res||!res.ok)throw new Error('net');
+  try{sessionStorage.setItem('cockpit.etag',res.headers.get('etag')||res.headers.get('last-modified')||'')}catch(e){}
   const buf=new Uint8Array(await res.arrayBuffer());BT.cache=!!hit;BT.enc=Date.now();
   if(String.fromCharCode(...buf.slice(0,4))!=='CPK1')throw new Error('format');
   const salt=buf.slice(4,20),iv=buf.slice(20,32),data=buf.slice(32);
