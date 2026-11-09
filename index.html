@@ -53,18 +53,19 @@ const KEY='cockpit.pw',BIO='cockpit.bio';
 const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}}};
 const b64=a=>btoa(String.fromCharCode(...new Uint8Array(a))),unb64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 async function unlock(pw){
+  const BT={t0:Date.now()};const bt=()=>{try{sessionStorage.setItem('cockpit.boot',JSON.stringify(BT))}catch(e){}};
   // ouverture immédiate avec la version déjà sur le téléphone ; la nouvelle se télécharge en arrière-plan pour la prochaine ouverture
   let res=null;try{if(window.caches)res=await caches.match('cockpit.enc',{ignoreSearch:true})}catch(e){}
-  if(res){fetch('cockpit.enc',{cache:'no-cache'}).catch(()=>{})}
+  const hit=!!res;if(res){fetch('cockpit.enc',{cache:'no-cache'}).catch(()=>{})}
   else{const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),60000);try{res=await fetch('cockpit.enc',{cache:'no-cache',signal:ctl.signal})}finally{clearTimeout(t)}}
   if(!res||!res.ok)throw new Error('net');
-  const buf=new Uint8Array(await res.arrayBuffer());
+  const buf=new Uint8Array(await res.arrayBuffer());BT.cache=!!hit;BT.enc=Date.now();
   if(String.fromCharCode(...buf.slice(0,4))!=='CPK1')throw new Error('format');
   const salt=buf.slice(4,20),iv=buf.slice(20,32),data=buf.slice(32);
   const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
-  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:310000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
+  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:310000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);BT.kdf=Date.now();
   let plain;try{plain=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,data)}catch(e){throw new Error('pw')}
-  return new TextDecoder().decode(plain);
+  const html=new TextDecoder().decode(plain);BT.dec=Date.now();BT.write=Date.now();bt();return html;
 }
 function show(html){document.open();document.write(html);document.close()}
 async function attempt(pw,remember){
