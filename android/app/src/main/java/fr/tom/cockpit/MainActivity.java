@@ -55,9 +55,19 @@ public class MainActivity extends Activity {
     private boolean wakeOn = false, speaking = false, resumed = false;
     private final android.os.Handler wh = new android.os.Handler(android.os.Looper.getMainLooper());
 
+    private boolean musicPause = false;
     private void wakeLoop() {
         if (!wakeOn || speaking || !resumed) return;
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) return;
+        // musique en cours (Spotify, YouTube…) : le micro se met en pause pour ne pas la couper, et reprend tout seul quand elle s'arrête
+        try {
+            android.media.AudioManager am = (android.media.AudioManager) getSystemService(AUDIO_SERVICE);
+            if (am != null && am.isMusicActive()) {
+                if (!musicPause) { musicPause = true; js("window.__wakeMusic&&window.__wakeMusic(1)"); }
+                wh.postDelayed(() -> wakeLoop(), 4000); return;
+            }
+            if (musicPause) { musicPause = false; js("window.__wakeMusic&&window.__wakeMusic(0)"); }
+        } catch (Exception ignored) { }
         try {
             if (sr == null) {
                 if (!android.speech.SpeechRecognizer.isRecognitionAvailable(this)) { js("window.__wakeErr&&window.__wakeErr('indisponible')"); wakeOn = false; return; }
