@@ -1,120 +1,112 @@
 {
  "v": 1,
- "date": "2026-11-10",
- "at": "2026-11-10T07:55:00+01:00",
- "title": "Le pétrole recule, les Bourses rebondissent avant l'inflation américaine",
- "mood": "soulagé mais prudent",
+ "date": "2026-11-11",
+ "at": "2026-11-11T07:55:00+01:00",
+ "title": "Inflation trop chaude aux États-Unis : les taux grimpent, la tech recule",
+ "mood": "tendu mais sans panique",
  "summary": [
-  "Gros rebond lundi à Wall Street : le S&P 500 a gagné +2,3 %, sa meilleure séance depuis avril, et le Nasdaq +2,7 %. Le déclencheur : le pétrole a chuté (Brent −5,9 % autour de 92 $) après que Donald Trump a jugé « très peu probables » de nouvelles frappes sur l'Iran si les négociations nucléaires avancent. Moins de pétrole cher, c'est moins de risque d'inflation, et donc moins de pression sur les taux.",
-  "Les valeurs des puces électroniques ont mené la danse (AMD +13 %, Broadcom +9 %), à une exception près : Nvidia a reculé d'environ 4 % après l'ouverture d'une enquête interne visant son patron. L'indice de la peur (VIX) a fondu de 22 % à moins de 20. En Europe, le CAC 40 (+1,2 %) et le Stoxx 600 (+1,3 %) avaient déjà profité du repli du brut.",
-  "Ce matin, l'Asie prolonge le mouvement : le Nikkei a terminé en hausse de +2,9 % à Tokyo et les marchés émergents asiatiques s'envolent. Tous les regards se tournent maintenant vers l'inflation américaine d'octobre, publiée à 14 h 30 : un chiffre trop élevé relancerait l'idée d'une nouvelle hausse des taux de la Fed en décembre."
+  "Wall Street a fini en baisse mardi soir : S&P 500 −0,4 %, Nasdaq −0,7 %. En cause, l'inflation américaine d'octobre, plus forte que prévu (+0,4 % sur un mois, +0,3 % hors énergie et alimentation). Dans la foulée, un responsable de la Fed, Christopher Waller, s'est dit favorable à une nouvelle hausse des taux en décembre, peut-être même d'un demi-point. Résultat : le taux américain à 10 ans a frôlé 5 % (4,98 %). Nvidia a en plus chuté de 5,5 % à cause d'une affaire personnelle visant son patron, ce qui a pesé sur tout le Nasdaq.",
+  "L'Europe s'en est mieux sortie : le CAC 40 a gagné +0,6 % (8 279 points, au plus haut depuis deux mois) et le Stoxx 600 +0,3 %, toujours aidés par le pétrole revenu autour de 92 $ le baril. L'indice de la peur (VIX) reste calme, sous 20.",
+  "Ce matin, Tokyo poursuit sa remontée : le Nikkei termine en hausse de +1,4 %, porté par un moral des industriels japonais au plus haut depuis plus de cinq ans et par les valeurs des puces. Séoul monte aussi, mais Hong Kong recule. Côté calendrier, c'est Veterans Day aux États-Unis : Wall Street est ouverte mais le marché obligataire américain est fermé, donc séance sans doute plus calme."
  ],
- "forYou": "Après une semaine dernière agitée, ces rebonds rappellent que les marchés peuvent se retourner très vite, dans un sens comme dans l'autre : personne ne sait prévoir ces journées à l'avance. Pour un investisseur qui achète chaque mois des ETF Monde, Nasdaq-100, Stoxx 600, TOPIX et Émergents, rien ne change : le DCA fonctionne justement parce qu'il ne dépend pas d'une séance ou d'un chiffre d'inflation. La volatilité des prochains jours (inflation, résultats de Nvidia) fait partie du parcours normal.",
+ "forYou": "Une inflation tenace et des taux qui montent, c'est surtout un vent contraire pour les valeurs tech américaines, donc pour un ETF Nasdaq-100 et, dans une moindre mesure, pour l'ETF Monde. Ces à-coups font partie du parcours : en investissant la même somme chaque mois, tu achètes simplement un peu plus de parts quand les prix baissent. Rien dans la séance d'hier ne remet en cause une stratégie de long terme.",
  "zones": {
-  "monde": "Le repli du pétrole et le retour de l'appétit pour l'IA ont fait monter quasiment toutes les grandes Bourses en 24 h. L'or reste solide au-dessus de 4 100 $ l'once.",
-  "us": "Séance la plus forte depuis avril pour le S&P 500 (+2,3 %), portée par les semi-conducteurs ; Nvidia fait exception (−4 %). L'inflation d'octobre à 14 h 30 est le grand test de la journée.",
-  "europe": "Le CAC 40 (+1,2 %) atteint un plus haut de deux mois, aidé par la baisse du pétrole ; Airbus et STMicroelectronics ont gagné environ 5 %. La succession de Christine Lagarde à la tête de la BCE doit être tranchée d'ici fin 2026.",
-  "japon": "Le Nikkei gagne +2,9 % ce mardi, après +2,3 % lundi, porté par la tech. Le compte rendu de la Banque du Japon montre que certains membres veulent accélérer les hausses de taux.",
-  "emergents": "Les actions émergentes d'Asie bondissent grâce au pétrole moins cher, qui soulage les pays importateurs ; l'ETF EEM a pris +2,9 % lundi à New York."
+  "monde": "Le thème du moment, c'est le retour de l'inflation et la perspective de nouvelles hausses de taux de la Fed, qui pèse sur les actions les plus chères.",
+  "us": "S&P 500 −0,4 % et Nasdaq −0,7 % après l'inflation d'octobre ; Nvidia −5,5 %. Les contrats à terme remontent légèrement ce matin.",
+  "europe": "CAC 40 +0,6 % et Stoxx 600 +0,3 %, soutenus par le repli du pétrole. La BCE répète que ses décisions dépendront des salaires et des prix.",
+  "japon": "Troisième séance de hausse pour le Nikkei (+1,4 %, au-dessus de 61 000 points), grâce à la confiance des industriels et aux valeurs des semi-conducteurs.",
+  "emergents": "Journée mitigée : l'ETF EEM a perdu −0,8 % à New York ; ce matin, la Corée progresse mais Hong Kong et la Chine reculent, freinés par la hausse des taux américains."
  },
  "markets": [
   {
    "k": "^FCHI",
    "n": "CAC 40",
-   "v": 8233.3,
-   "ch": 0.01159
+   "v": 8278.59,
+   "ch": 0.0055
   },
   {
    "k": "^STOXX",
    "n": "Stoxx 600",
-   "v": 656.52,
-   "ch": 0.01263
+   "v": 658.32,
+   "ch": 0.00274
   },
   {
    "k": "^GSPC",
    "n": "S&P 500",
-   "v": 7549.94,
-   "ch": 0.02346
+   "v": 7520.93,
+   "ch": -0.00384
   },
   {
    "k": "^IXIC",
    "n": "Nasdaq",
-   "v": 25253.14,
-   "ch": 0.02741
+   "v": 25065.88,
+   "ch": -0.00742
   },
   {
    "k": "^N225",
    "n": "Nikkei 225",
-   "v": 60424.22,
-   "ch": 0.02805
+   "v": 61285.47,
+   "ch": 0.01366
   },
   {
    "k": "EEM",
    "n": "Émergents (EEM)",
-   "v": 61.03,
-   "ch": 0.02865
+   "v": 60.57,
+   "ch": -0.00754
   },
   {
    "k": "EURUSD=X",
    "n": "Euro / dollar",
-   "v": 1.1232,
-   "ch": 0.0076
+   "v": 1.1156,
+   "ch": -0.00592
   },
   {
    "k": "^TNX",
    "n": "Taux US à 10 ans",
-   "v": 4.864,
-   "ch": 0.00103
+   "v": 4.983,
+   "ch": 0.02447
   },
   {
    "k": "^VIX",
    "n": "Indice de la peur (VIX)",
-   "v": 19.92,
-   "ch": -0.22309
+   "v": 19.46,
+   "ch": -0.02309
   },
   {
    "k": "GC=F",
    "n": "Or",
-   "v": 4130.6,
-   "ch": 0.00391
+   "v": 4063.4,
+   "ch": 0.00824
   },
   {
    "k": "BZ=F",
    "n": "Pétrole (Brent)",
-   "v": 91.03,
-   "ch": -0.01664
+   "v": 92.55,
+   "ch": 0.01159
   },
   {
    "k": "BTC-EUR",
    "n": "Bitcoin",
-   "v": 66434.23,
-   "ch": -0.00708
+   "v": 66078.56,
+   "ch": -0.0142
   }
  ],
  "agenda": [
   {
-   "d": "2026-11-10",
-   "h": "14:30",
-   "t": "Inflation américaine (CPI) d'octobre",
+   "d": "2026-11-11",
+   "h": "journée",
+   "t": "Veterans Day aux États-Unis : marché obligataire fermé, Wall Street ouverte",
    "z": "us",
-   "level": 3,
-   "impact": "Le chiffre clé de la semaine : une inflation plus forte que prévu ferait monter les taux et pourrait peser sur le Nasdaq-100 ; un chiffre sage prolongerait le rebond."
-  },
-  {
-   "d": "2026-11-10",
-   "h": "soir (après la clôture US)",
-   "t": "Résultats de CoreWeave",
-   "z": "us",
-   "level": 2,
-   "impact": "Spécialiste du cloud pour l'IA : un baromètre de la demande en puces, avant les comptes de Nvidia."
+   "level": 1,
+   "impact": "Séance souvent plus calme ; les taux américains ne bougeront qu'à partir de demain."
   },
   {
    "d": "2026-11-12",
    "h": "soir (après la clôture US)",
-   "t": "Résultats de Cisco et d'Applied Materials",
+   "t": "Résultats de Cisco",
    "z": "us",
    "level": 2,
-   "impact": "Deux poids lourds de la tech présents dans le Nasdaq-100 et l'ETF Monde ; ils renseignent sur les dépenses liées à l'IA."
+   "impact": "Poids lourd du Nasdaq-100 et de l'ETF Monde : un indicateur des dépenses des entreprises dans les réseaux et l'IA."
   },
   {
    "d": "2026-11-13",
@@ -122,7 +114,15 @@
    "t": "Prix à la production américains (PPI) d'octobre",
    "z": "us",
    "level": 2,
-   "impact": "Indique si la hausse des coûts des entreprises se transmet aux prix ; complète le chiffre d'inflation de mardi."
+   "impact": "Après l'inflation trop forte de mardi, un second chiffre élevé renforcerait l'idée d'une hausse des taux de la Fed en décembre."
+  },
+  {
+   "d": "2026-11-16",
+   "h": "00:50",
+   "t": "PIB du Japon au 3e trimestre (première estimation)",
+   "z": "japon",
+   "level": 2,
+   "impact": "Montre si l'économie japonaise tient le coup ; utile pour suivre ton ETF TOPIX et les décisions de la Banque du Japon."
   },
   {
    "d": "2026-11-17",
@@ -130,15 +130,15 @@
    "t": "Ventes au détail américaines d'octobre",
    "z": "us",
    "level": 2,
-   "impact": "Mesure la santé du consommateur américain, moteur de l'économie et des bénéfices des entreprises US."
+   "impact": "Mesure la santé du consommateur américain, moteur des bénéfices des entreprises US."
   },
   {
    "d": "2026-11-17",
-   "h": "23:00",
+   "h": "soir (conférence à 23:00)",
    "t": "Résultats trimestriels de Nvidia",
    "z": "us",
    "level": 3,
-   "impact": "Nvidia pèse lourd dans le Nasdaq-100 et l'ETF Monde : ses chiffres et ses prévisions peuvent faire bouger toute la tech mondiale."
+   "impact": "Nvidia pèse très lourd dans le Nasdaq-100 et l'ETF Monde : ses chiffres peuvent faire bouger toute la tech mondiale, surtout après sa chute de cette semaine."
   },
   {
    "d": "2026-11-18",
@@ -146,92 +146,98 @@
    "t": "Compte rendu de la dernière réunion de la Fed",
    "z": "taux",
    "level": 2,
-   "impact": "Permet de deviner si la Fed penche pour une nouvelle hausse de taux en décembre, ce qui influence toutes les Bourses."
+   "impact": "Donnera des indices sur l'ampleur de la hausse de taux envisagée en décembre."
   }
  ],
  "headlines": [
   {
-   "t": "Wall Street bondit alors que la chute des cours du pétrole apaise les craintes inflationnistes ; Nvidia s'effo",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPREVmelF5X3JGMzhoY0Z5MGNwTHVlWktZQkFPd19xNGZ5Y1dwdkJWenpKbXNiUzFRbS1vY2pWMnNFRmNTTlRBNVRYU191aGZKVmUwMXI3Y09ZcmcyLXZlNERVUmxDQWI4aEpXakRmZWZUMzh4Q3ZmQU5iZ0o1TG5hV3JvTllaNUQ2eWhBNkVicUZlRnZZREQ3VmFEdXc2eHZxWTVCQ0k3RndrQXI3b0tURko1YnpDVzVaNF81SVNBd3VIakFNNnc2TUlOTDJmUUJBanFydjNYZHo2Slp1cVdKRWs0RlMxdFBoc2JvQWpJenoxY1pSTzF0U3NZUkptdElBTW1SY1hXZXBzeng1Zk8xQ0lSYVYtenFxSDloNTA0RdIBnwJBVV95cUxPREVmelF5X3JGMzhoY0Z5MGNwTHVlWktZQkFPd19xNGZ5Y1dwdkJWenpKbXNiUzFRbS1vY2pWMnNFRmNTTlRBNVRYU191aGZKVmUwMXI3Y09ZcmcyLXZlNERVUmxDQWI4aEpXakRmZWZUMzh4Q3ZmQU5iZ0o1TG5hV3JvTllaNUQ2eWhBNkVicUZlRnZZREQ3VmFEdXc2eHZxWTVCQ0k3RndrQXI3b0tURko1YnpDVzVaNF81SVNBd3VIakFNNnc2TUlOTDJmUUJBanFydjNYZHo2Slp1cVdKRWs0RlMxdFBoc2JvQWpJenoxY1pSTzF0U3NZUkptdElBTW1SY1hXZXBzeng1Zk8xQ0lSYVYtenFxSDloNTA0RQ?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "AMD bondit de 13 %, les valeurs des puces d’intelligence artificielle relancées à Wall Street | Clôture",
+   "t": "Wall Street met fin à son rebond, l'inflation fait grimper les taux d'emprunt",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMTZXT2dLYTJOTC1vd3hjaFFCd0xHQlZKcFNOY0lhUE05aDJSZ1oyNGlvZ0hZVkM4N2ZnVV9pcmpaQzgwM0hxSmdPSEh4eUptXzEtdFp4ZkZ4WVNTU1liNk5MSzg1WkhBZjdmY2ZyUVVRNnFIVjcySDJfVjM0RWRWelkyYkstVm9WbmwzcklfallMblNneDJVOGhqQTAxVXEtQmEySDlaMlRMbFNoRnNBbFlJUFZRYnhIdVZzLWc4RFJNb2xCb0hqWTl6bEIweFRKWDlmeC0wa253bklHT0ZzaE1felhRZVNZWUE?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNREhxYzlPcWFYRFpqSkd1eXNCTThfSnhUNGswX2pocUNsSDVEMHlkOV81TVp0V1gwV0hXbEY2UFFkbklJaC0zd0hPWWViYWw1TmFkZ1dqb3BkZjU0RnVIYnlBTFQwUy0wSzU4UTJIdXFBVmJQWWQ5dWNrTWVCUnVYMTlJZnFuVHNsMExPbGtMaVdVYVpNTFFBdEdnTm14RmdjYTRLZ05lQnh3bk9UblotTjh0clJSZjU0bUlCUEhhakR0SWJ1LUJQY1hDXzVxeGRzc1E?oc=5",
    "z": "us"
   },
   {
-   "t": "Lectures rapides 10-11 : L’action Nvidia chute de 4,2 % malgré les gains de Wall Street ; ACV convoque une assemblée générale extraordinaire des actionnaires.",
-   "s": "Vietnam.vn",
-   "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVpqMm1PRzN0WjV4WmhSR0lvYnJxS3I2cGFNSVFDQ01iZmFCbGNSbjZhellHZ1Z6bDdJTDAzRnpfS3hyUG56VGlQOVQxNzVZVjFtcHlNc1FBY3VCakhlOFc3cVh5bElMaklRY1ZDYkFWWFVOT2JhWGFEajJRanFzMlJ0RXZTOWxCcUxoRGFsZ25WeTdEOFZxN1BBVzZqOUNuWkd5WEZQRjNJMUtCa1JCOENEa2JRR1NrMFFPVWM5TkhLeVBvQWJISg?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Futurs du S&P 500 aujourd’hui : stabilité avant l’IPC pendant que l’Asie s’enflamme et que le pétrole chute",
-   "s": "PortalCripto",
-   "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNX05nNHFFTjJuOGkzbV81dDFoR1NZd0oxZzA4dkc2elNrZVVyMWp1Qm5ncWxvT3ZlZjh0SnRDZE1GanJFcmRDVVgwNHNCVVBwUW9MZEx1Sm1BaGJsbC05NWpHU2tRdWZxcHFwZm1aRWJldGd2N0JqTUdacEh3SDY5YXMtcWlST3BEMXRqTEVSNUdlWWwwdi1ycnNxUjkwVDZtVmZhWlJKWTM2M2ZOU0R1MlhFelFFWGllWWcweXZHRjN6WW5aQ1JBTVl5RXk0V3NzSUNBQg?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "L'inflation américaine pourrait relancer le débat sur une hausse de taux en décembre",
+   "t": "Les bourses en direct | Wall Street termine dans le rouge après les chiffres élevés de l'inflation, Nvidia chute de 5,5%",
    "s": "L'Echo",
-   "u": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPZlFmc1JIYU40bGRKOEQ5WDRhTzBJelhkRXNCUnlRaEhxUlBBQklCUmw1dHk1c2twelZldmVKaTVVZ1dONzV2bEM0QS0xdlRwbUM3N2NGY2ZpVk91UHdjbTZpT0RGWmE4NGFYYVZZdUFiZUJIMGxVM3AyaUhxTmd5TVJnaEZjd09uUWxUYk1HaUF0OC1WRE0ybVRJdmktb1dJVDdJX25wZ3VTTVNOcGl4eWFJOGxwRUtOYmN6b0dUWVpKcjBLTGNQWjhJQUNnM1lIaDk3N2hnX3IzaXF2czdSSFFtVXdfVFFaVHZRbEtQeUd2bzZoX0E?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNRXVQdnU4STZFXzhza3dkblhWQ2EzTVlMYXZZZjlpWnViVDNrYy1ORmpKM1d0VlJNMkQyYmh2bFRjQVZJMWw2V0U5SWx4NDM3SEY0b3RDaVlud0Q0TnhSLVdCU0VqZ0lKMlJ1RE5UV2ppOEsyWTVNWmhGZExGLThsTEZBbXkzSFgtd252T1BVTG16WkNvcW90UzJQQVRkRTBicm1GNTQ4eGUtUk9FclI4MVBycjJkRGFTR254Q3JXc1d0RFdKZS14NXIyWWhwNzQzTkxwQ2RvS0tGeG16bllhOTdLVEdIMnpsR1YzUU05OWZNLTQwa2NVaUJGM1lUSkFQYTlz?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Une tromperie à 400 milliards de dollars : la liaison du patron de Nvidia fait chuter son action de 6 % à Wall Street",
+   "s": "Actu.fr",
+   "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNSGdaSUVoUndrbF9kMFdDSXgzeUhjaFd0Vk5TS3BKMjN1TWw3ekY4TllBNUFJQnlqY0FWem5xMHdJdW5GV0ppR1FTSnFScmRBNFlIblJjV3Z1MTVFcUhvQW5Ya2EyTWhOb1h3a0hfUDZDMzVVeGVFSXItdDJ0WGNRdG1CYUhMZE9MajNjZVhkUk1iUlR4LTZjZGFYSDVUVy1YZk9PRG41Y3Y2R24ydm5qV2tCYTZ3YkhDdUtVdnlyYjZJNFNoNXFqZFJ1SlNtU2lZSEVTLWlXcHZsTU1fVUlRQWVpd2s4Y1U?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Goldman anticipe une hausse supplémentaire des taux de la Réserve fédérale en mars 2027",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNcC16dDQ2V2VFWndjSXI5WHlyWThlOF9YOXFxNnk2TElOSlJEYThoRm1KSHI2b3FQQjM3Wk9acTZVNGplbjNCN3ROaEpUbmxsUElHcUE0eXFwV3BJdlA4R280N1h6Q25qTXZkTXJrTFNaLVRSTGVaVm1Hd2NpOEFMcmxUaDZrbUlyMVMtOEFiZ2lhU0E3ZVpMMktZUkRXOFFHWDEyUDhNVzQ4aGwtSXhJRm1IVE93Ymd5RFJRYzhTVFhERHRDa01Ec1pMTVRFWFNUUTlNbGU3aVd1b25CX2RhUA?oc=5",
    "z": "taux"
   },
   {
-   "t": "Les vendeurs de dollars marquent une pause avant les chiffres de l’inflation américaine",
+   "t": "Les responsables de la Fed laissent entrevoir une accélération du rythme des hausses de taux face à l'aggravat",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMirwJBVV95cUxPNm4wb3JpRGlOc2doaVI3bjBaQk5vWTVHWEI0X0FaWXdWWHYyamh4YURsRUxhYzBfcDAzN0VnSVR3T2FRTmRkZk1nTHYtNHlueHNwbGtXYTVSX0V4M3FEYmtMSVo5SXRtWndQcUlMYXcxRDlBN2pMazVWTF9tdEhuVlVZMjhkQ29NczdTOWVWN192a0NxTWFZVGR0N2R2YVEzeXYtdXg2NWtsV0xBYVBDd3Nod3pKVDl2eUdBRk50bkxzSjl3bTcxMGdibk9kaXM3NlBVS0pQZnU0SWlWbVc0UE1qVm1SV25jTWFLR1BQbmIySFpneWphdlJNeXZpalN4ZDBIbWRZdVlqYllITWY1Mm1vTDRyUUVPZGctLVM2ZVRpbXFVbldhVXRRZkdPUWvSAbQCQVVfeXFMUEVIbU9vRWdVbTR3STlxM09NdGx1VTE3UGVDV1pMei0zZk5wVHdWbkoxMExKMktzZWlFTXdRcFhDYi1yMENJd0ZkV252UXkwYWxqUkJWamVpcVZsTmllSjFXOUtyMWRVRjFHeDlzUnBSTTFUQzlxcjd3c3ZubEVQNGdQbWpXSHRkcmI2TVVoaGZpUHFxc1QyZXNnSTFzOHRnS09ZOTc1ajlLTzduWmZzcmJIWV9TYWlkc21LZkZueVFmMUNzalprU3BFR1dscU90Nk50N2xjbk1kRm1sME9naHZuQ0lrRVM5cFpwcWR0azF0RnNJV21YMkpmVk93cGFjbVFpSC0zdzFVUE9NYmJkT0FxeHQtZHV0SWlSVVJ1V1ZFSlA5aXB5Q1k2ajNpOFBTR2lVNTU?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "Les obligations dévissent, l’inflation élevée alimentant les craintes d’une forte hausse des taux de la Fed",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNdjVSYTBsRGhpNDZ6UTRSZkZlakNiNVk2WE5TU0lYUHhuV2liaHF5Y2pyR2k5bVpLcENTa0JOWHBZYzE3S3FoM2t2cmZlc3BhRjVwVDZzSk40SGVTMzFxcUtmVTV1UmNHaDNaNDF4bUxkMExMUS1iWlBQOHFKcUh2aTh6M1htbGdHUFM0RTRMR1RJZDh1ZGhaTDJ1T2dWUTZ1U2xwWnJadWNoRGF3b0NtSGVJeG9JLTFRS19DdlpNU2FteFJrbi0tcGFIcmJvcElpWDc2RWpVZmxvQmlZRlplalFjejd3QXBUMDZuak1B?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "L'inflation américaine pèse sur les obligations, le rendement du Trésor à 10 ans dépasse 5%",
+   "s": "IDNFinancials",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNLWw3dzNjZndqc2pmMGJHRUFPTlV0TjdtZzBUOTV1RGNZUWFlaTRwT0l3XzBkMjFfQUJzYlo2ZG1jRV96YmFHdDRKUkV5Q0tGdVZDWWZZX1B6YlROaF8tM2RkMUszZ1lSa00tWUFIVTNEbzdTOE5HWnR2SHRzZjlmLVR0Ymp5WlZSMEUzSmNXTWR2SnJJbVVtV1Z0TUwtdHo5dFlCeHY3YXcwRXVUdW43dTBkQWxpLTd6SGRMQk5hZWQ1Y0Z0cmpDR2w2TXBnaE9rZG1vdjVaaDh2YVJDZ2VWLVZQWGRNNU4zV25NLU13?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "Marchés: les USA souffrent de l'inflation, l'Europe profite du pétrole",
    "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNclNSbnFDYlkzblJBaFRoWFhac2JiOHRObE4ta2xZUE5YN2lfb0hsR2UtbFZDbzI5NnVaa0oxNmhSWXE5c1czeEtZSktLN1lhR0JvRkQ1TEF1Rm1FNUFBNDZHUDRVOU5IUEhSMnNkcVJGRnVXNGNES1RpdTN0SktjbmQza3lxaWw2LTgtTGoycDlRVFVJc1hMZ2w0NmtrZGN2R2ZRTUlhMzBXTXMxS082c2tvR1E0dDhCRU1pdjZVWUZkby1ucldZX25LVTNCVVBDZ3RWVFo4RU1iZENoaC00eXlxQQ?oc=5",
-   "z": "taux"
+   "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPdTB3SXQ5RHA4OTdGUEhid1RhSURLYVZ2T25aNkEyaThxUFhRS1hxSnhla2kwTURROWg2Ui04T0xpem5nUmVaUTBqYjhoMXB2TW5iZlpyUHJWRjZiM3pNeFBHVTBHRTU0bDJKMWNqNXBUQ1E3aUhSdlRWUFVOdDNPcHFVY005SWhDWlhtMkszX0hGOUlsZWM3NG1CYXRnTXBFcWFpc2NoeHBYTnhZTkg3OHhtUzZ2M2Q1Zl9JNVAxVEJfUTJhZXF5Mg?oc=5",
+   "z": "monde"
   },
   {
-   "t": "Goolsbee, de la Fed, prévient que l’inflation dans les services ne tient pas seulement aux pressions liées aux droits de douane",
-   "s": "www.tmgm.com",
-   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQNkdOMnpPV1BqeTAxQkZFaEh5UFJmMTk1T2VyYTdHZ01lbHpGaWxHV0tiSGtVWTdfYTFZSmVuVHlRRUVwaWpNS0Q2ZUxVemZuckxPXzRqMlJzaFdtZTBkak8tSVVpSXZ3WG9sX1cxS1BrenJta25iMmVnS2VSdGdVYXpnQjFxdTExYzRJZ2tzc3dTMmpXcG9XRGhDNjBfb3VCVXZDblA0LVR0RGpReWRHQ3RzNkVMb2twR0pCSVhyanRYRXVGdVJnWU9taks?oc=5",
-   "z": "taux"
+   "t": "EN EXCLUSIVITÉ-Anthropic vise une valorisation de 1.400 milliards de dollars lors de son introduction en bours",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPb0o4d3I1V1VTNWtlXzh5cWQzNnhlMkpJa1MzeTlzM3VHQmhlSXRqYnNQTmlrb0Y5OWNQUmY4WWF6V0JncE5WU3gtS1JCUEV4dHY0eUREXzNobTdHczUzckxRVEZXUlhvTmgwY1VLVkFBeTA3SXI0VTlQZ0NkNFhWYVA2cnNJVmdvbl9heF82X01IU2RQdDVUVHQyTkpVSnVXSzkzZndBQVdwNTF2TFhodzdJd1Rqc2ZFMjFYbkMwaEVuTkp6ak01eGVzLXhxUWctUlFab1p6ZjVxdDU4X0M0TUg0MXBneXF0T3VvQkRMd2FBczlWNmVuTWtZZ0VMZUV2ZktlTVU1Tm9DUWZtdHZoNWZmN1JJelA2Q1pQZlcwMmJVeWU1YUxsb0ZTRUh4ZmFFc2k2aXRScjROOTRmMGQzVGF3NmZZaTZfVGJEaXMwN3VOc3FOVVFyRmhn0gHfAkFVX3lxTE9xd1hXeDVxTnV4M1gxbkh4ZHNiZWFwWWFvYXo0WU5Ta05EMmcyVWRhZW5ETzlZRFVDUVpCUWRYNWhTTmRvNHlhRE5KY1lud2VKa2RadEkwVkR5UnJwTW9CaVVEYmRfbjhtVmNaazVpa1NXcnVBNWFzeGt4S1h5Ujk0RTBxaUtkVVROTVZuLVNRWTVacGlJZi1vaHU4Z1pnOFpRekFPNUJKTmZwWVd0TWpCOEVON1I4M1JGeEwwM3BYZ1RPdTZlejVkOEhxajhUQXlsTnBDOS0wd3lMUTJhRi1qR21IX2h5czU3bWYxZFoxRmg5Vjltd3ZBN3lVYzdZaHRUajBGRzNGdU1qOElUM2FaNWM0aDNOeTFUMmdDMXhwdVdMNGdCYjQ1NjBMZkhrTjF6MVNaV2k0SXpVbWkxazY1VkMwZlUwNmVOSDdYUFlNTXdIRUM5SDB1QU9RRVpEbw?oc=5",
+   "z": "us"
   },
   {
-   "t": "Les anticipations médianes d’inflation à cinq ans aux États-Unis augmentent de 3,0 % en octobre, contre une hausse de 3,0 % précédemment, selon la Fed de New York",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPRk9WdmxqQjlKTE9NNTlBNWpSVW5pR2hmWTQ3NEgyRzU5d2Z5QnhrRVk2TVVHa2lhZjN4SXlBczlJa0RuTW9hRFFhMnp6R0tDYlRyNnZTbEwwb0paZDBOV3FQZFJJd1RiUjBNOFB6REF4UTRHRXBXNEdNSTJ0N3JYbGIwNEVNVUdJSUg2ZXFnYnhEQmxpUFNBU3hjLWJBQXNhZDJlRkVEYXhFOFp0LVhwVG5oWGF5dVZvTnA3TldQcEVCWlA1ay1PVndhTm1xSll5NmtMRERsV1lBRXJxWWRiallabXg1VU5DSUFtWnlB?oc=5",
-   "z": "taux"
-  },
-  {
-   "t": "La Bourse de Paris termine en hausse avec la baisse des prix du brut",
-   "s": "France 24",
-   "u": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbWpfcVJRTW9GTEpJTVQyZkJQWWVGU3ZELVVWQzZhSHotRjROTkd1V3l4TWx4TFh2Y2lYT0dSLWxvclpaMUVvbm1lU0o3S0RlaWp6TXR5S3BkbzFxSU1yMzYxV19tSmVsSzh0aGpTVFZyUkhmZmw1RmtKMlczakFONHFLejhHbTd6VW8wcFlwcWpMbktMR0dnU3I1RHFFYi1kajRWaUVFYkk5QkJiVzE5dTBDMG5RNmhMejk2dTJR?oc=5",
+   "t": "Le Cac 40 au plus haut depuis deux mois, porté par la poursuite de la baisse des prix du pétrole",
+   "s": "Investir Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPT2lFT0NVNzFWTkRvbDFIWmZYbzlrbzdiSEFBU0xfNlRIUl9DYWpaNkt6XzI4YnI3VHI4dVItSW5SSWFkenVRTVljRFhYckJtTlc5ZERSaDdvSVFiTlJMdWNselpGWWhuRUNxM3dORm85VjNZNlFhTWdJS2IyallaUzZ0WnY4R1AzMFFEZndNa1BUeW11Q0c1aWNJaWtWLVF4QjQwUmpwUFc0ZEJTaDAwb0c2YnpKUWVsQ1hFczJBLTYwczNzNnFZNmE3MG5ZYnVVc2tYNXF5TExlbnkwS3hMUVlvWHN5WU1IRHBCU2l1QVZCOHcyNDR0Tjh3?oc=5",
    "z": "europe"
   },
   {
-   "t": "Cac 40 : Alors que Nvidia chute de 6% à Wall Street sur fond de liaison extraconjugale, le CAC 40 gagne 1,2%, porté par le repli du pétrole",
+   "t": "Cac 40 : Freiné par l'inflation américaine, le CAC 40 échoue aux portes des 8.300 points",
    "s": "BFM Bourse",
-   "u": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxPT3dRUGMzakJTd2NwaE5SLWRqekl2WTdaU2psMm84TFZpTTlNYzdYWDFHdl82aV9raXRzNGs2MHB1MndhcDJ1a2pfeGlha1dSVnAyejV3UkV5XzBvUWlwbmhPUlh6cDJtcHI5dHhITFRidFVsajJrMGZ4dmtKSmFjbHdxaFF2MlhZTmotOEdyeWlzMWNFcHF5LUlQVDNQOFVHRVNNZzYxeVpuTDVTTXVLcTlZZjBGS0s5T1FFM3Z2NlZ1VHRGTHBVVGlwamxnWGtzZVFMazdQN09JMEFxTVBoYXRsWVNkeVV3QlVTV1J0VF9QV0VzakZNb2ZPZlhxOXdQeFRJS1ItQmw0bUdYaUhmQTUtcTJFeEFOdlNZVTN1bkdNdjBGNHgyMHNsSQ?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxObTg5WXJOY05qYzdNZllObjBoRXJldDdJcDhTZnRoZG96ZTdQaDJOemN4VkpPRXA3dUg3dHBEX3JJeHhUYncwN3JCN0xCMWY2YTY3UlRqbm9fMlUySk4tRF9LYjZpakZSa3RNLTd4MnZ3VUJjSy1EUUhnWDZHcFJycGRVZjEyQV9qTDIxOS1GY0NMLUdpUUtfUjlBdUktbzdmbndvTnl6d0NzTG5ZLVVSSWNSQ2tNY1VISUNuQ1NSUFF1bWFqd083R2dYblZzSk9mZl9PckRsV25JS2VPVDhGTmRFbE8yS1hZRFpJ?oc=5",
    "z": "europe"
   },
   {
-   "t": "Le CAC 40 au plus haut depuis 2 mois : ces actions pourraient grimper jusqu’à +45%",
-   "s": "Investing.com France",
-   "u": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQWGhRZEhWejdjOUc4T1RGZVY4S09HbDZfYXpOMjE0ZGR3X3lKZlF6UjRIX09LcmxIVWQzS3lOT2QzelNTZ2FQalhJTl9Za3lDWkI4allLbUxKSUROejBielhNanQ2RXRSbDYxRVY1R0pqTTZBY2xHRTZ0ZFZ2b3ZfblhIQmdmOTdERGdNVkFaWWU1cVpNa3lOYW1DbENSSlBlNTBET1JNX1UyMHBYOU1uaDVWQ2dfQ0VWVFp1YXdzbG9ZVXlxbHN1QmxYREkzU2M?oc=5",
+   "t": "« Le problème doit être réglé à Paris » : l'économiste en chef de la BCE exclut toute intervention en faveur de la dette française",
+   "s": "Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNRmhUdU5nZDVrMXNJRDI3clEzenJDZlVTRVp1RlVPR1Zib2FGcHVoMF9MdGw3Y3RZa1o1eXFIZWloNHVucVB0S2RfcFpTUHdxaUVRaUdocllmSndKbnZpaXVzQ05MS185NHZvSk8zSlQyeTYtY212WGlFS1BFMVdOMWh0OEtGZ1hNTFpacDJRNDZJTmZDVzFfRnBTZkdOMGQteERGMWFma2s3Yy1TbWNibl9KeUwyLWhWV1BsLUV6YmRrYlFOYUZpeHFTdm9mU1ZOWGxqY0h2eFB5UVBKcmMwZmltQTlkUmw4aVoyc2ZTN0QxUDRKS3F2N3lDc1dnMGxTcE13S3FlZWxBVjYwY25XQlVORXdZYnBtRkE?oc=5",
    "z": "europe"
   },
   {
-   "t": "L'énergie, premier moteur des bénéfices du Stoxx 600 (Lazard Frères Gestion)",
+   "t": "La trajectoire des taux de la BCE dépendra de la diffusion de l’inflation, selon Lane",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPN2Z1UExRa0x4eEZZemxvTVROOEVaMXUwdjhPVExTb0ZBbXlUSnQybUdJQU5SVG1PZElycnhTbXpZRWNHSDE4LTFYd0k1YTdWeFhPLXBsdVQ5YWtnR0cxSDJJaDRnR0R0MXlEOGhrWC1TN1g0UVVxWUdPRkV5cmg0cUg3ank0bzZoOVZjT3E4eFRFU0dhamFTMWNTZHlYczZkX3JsRXJiRFRKLXkxTVRtUy1xN2pQc2ZlMjQ2a05YOWJiWXRaNE5HSUhmMktoZw?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOMXhmN25TVGFac2F4c29HOU53MFVGM25EZXJYeHZEUzA2OGh0Wk5vd0VDZzZXQ2IwNVlCclZWTkNMaTBwbG9LcjBPZTFoVzVXOHRCUGJoRHpZa2JGdDl0c19vdGFXV21yVnZQQmM0MVBVRjdGSFhKYlZaamFsdVhvQS1aTGdMcUpudGJxcmdkUUhfNEZVTjNiTEplX1FscXRXN0t4UWJkMndmNVdIRHFuT0xXbHdvUU9zN0VKellORWxod1pkNzRSTUFjRUg3NDUtYVcybFdsUjJFeE54MXc?oc=5",
    "z": "europe"
   },
   {
-   "t": "BCE : deux candidats pour succéder à Christine Lagarde, une décision espérée avant la fin de l’année",
-   "s": "Politique Matin",
-   "u": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTjF2dzc2bzgzNC1TSzRIM3o1bVRVanFycGNBWklEbWROQWdkZk9DMFlkOV9CSm0zdUF0cndzeTNYYlU4a1IzbXRLSzloTW5UNm5KcXlxcGRwYi1xeUN1R0NuM0RqcHFsUTFERnNRUlVyZHdxUHk3Y2hiT3JOekJ1cDZ0NEZ4V3llb044?oc=5",
+   "t": "La BCE pourrait encore augmenter ses taux en décembre 2026",
+   "s": "ABC Bourse",
+   "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNnNPTVF5X1lDM2tMS2RIWkticnRSMGd3TXJTRUg0LXlKak8wUndVaUlvVkEtRXhFNV9hUk1xUTh5UTNLOUNocVhDT28xTXhxTFBhWHpQVjJVQlhuMzBrUjB2eGdpNlBkMmdVQmxlbkdhTEk1Wk1hZ3RtTVpET1FKUk05d3pCbGQ5SWFLRU43YmVPY0VfdGY3TjdpZnJubGp6?oc=5",
    "z": "europe"
   },
   {
-   "t": "Le Nikkei finit en hausse de 2,87%",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORFR2RkNFbWZvSHJZZ0hFbWx2cWhKUXhxME5yUnVVbkRYSGwwRE5ta2tmNFlZTDJNbFc0S3hMRFJjdmVZV1RQUFMzbGRGV1RJLUVhUFA1S29DLUlwSnZjblpBa0JVbG4wQ0ZGRTJkSFRzYmJVRVZVZE5nVVpLQXd4N2RFMDlhWVVxRG1pZzNtRjNZV2R3MGx4Sw?oc=5",
+   "t": "Le Nikkei japonais progresse pour la troisième journée consécutive, les données économiques et les résultats d",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMi3gJBVV95cUxQbFNvNmlqd2Q4RWN6bDJ4S2tJbEJoamMxVlJMXzk3OU1rZEwwMzdiSEQ4RTNrcnp1RzIyMFc3TmRHYVliMXNVb1RqN3F6U2xMR0p5RUFPOUZEMFN4d3U3WWx2bEQxTmJ3bk9ZTzZaZjlNaXo4WndJVlpxNkp2RDRhSlNwZlR3Y2lQUjMxZ1d5NEdXR0hoZGhCa09iSXNzOVJKYVM3WEQ5WG1rZnlKb0VLaGYzbldSbmxhUUFTTGM3NFJRNG9iWUkxdHBhQkdVeWJzQmZFT3g5eWRUdnBhbndnQy1pYWo1V05HNnVxdGpySW5xamp2dTYyeFFkNm0tSHpScVV0ajV4R3hfQVRpTkNOR1YwX19DSklzV3VIaTdDTkpPcHRILVp1NzVQT2FySzdHT0oxbktKd3duNmliZXdMUk5NeDFBNFo3UXdiN2s4ajRoVjBXZ1dJNTJYVF96QdIB3gJBVV95cUxQbFNvNmlqd2Q4RWN6bDJ4S2tJbEJoamMxVlJMXzk3OU1rZEwwMzdiSEQ4RTNrcnp1RzIyMFc3TmRHYVliMXNVb1RqN3F6U2xMR0p5RUFPOUZEMFN4d3U3WWx2bEQxTmJ3bk9ZTzZaZjlNaXo4WndJVlpxNkp2RDRhSlNwZlR3Y2lQUjMxZ1d5NEdXR0hoZGhCa09iSXNzOVJKYVM3WEQ5WG1rZnlKb0VLaGYzbldSbmxhUUFTTGM3NFJRNG9iWUkxdHBhQkdVeWJzQmZFT3g5eWRUdnBhbndnQy1pYWo1V05HNnVxdGpySW5xamp2dTYyeFFkNm0tSHpScVV0ajV4R3hfQVRpTkNOR1YwX19DSklzV3VIaTdDTkpPcHRILVp1NzVQT2FySzdHT0oxbktKd3duNmliZXdMUk5NeDFBNFo3UXdiN2s4ajRoVjBXZ1dJNTJYVF96QQ?oc=5",
    "z": "japon"
   },
   {
@@ -247,29 +253,23 @@
    "z": "japon"
   },
   {
-   "t": "Les actions des marchés émergents asiatiques s'envolent après la chute des cours du pétrole, sur fond d'espoirs d'accord de paix",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNeGhXVjZVN0pTSnVWOU10a1pfWGZKaGhZUG9NNzN6eWJfY2JQS1JjRy10UFFROHFPdEY4bzY5NFVsclg5NXFubXQtbnNqOVdmZkJsQXBuVHdKWVhSZzR2ZkxsNjQ1NE56Q2lXVEZKbTdteGhCU2kxaHdYZ2FPMnEwNTdyN1hDRVhTcmtqWWxSV3JHQW5VcmFVWHkxTnpDX2NJaTQtemxWYTVzdUYtTDdVSFVwb0NvaHZJU1Rtb0ZJcUZ1bkg0dXB6aE1oa3VQWVBXVGlKZHoyaS1ueU80REdCV2hGalRyUXVrQ0pIX25taHdpQQ?oc=5",
-   "z": "emergents"
-  },
-  {
-   "t": "J.P.Morgan abaisse les devises des marchés émergents à « neutre »",
+   "t": "Les actions hongkongaises ouvrent en baisse, l’inflation élevée aux États-Unis alimentant les craintes sur les taux",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVVk1Mzh3NURhcXh2dVRqU1oyMFpBRDR5NWpXWUFlMXZEa0VBSGlrNkpvVVcydkdLZlZ6TVp1UU5HYXhhczhiM0JWbUI2VWZWZjJPV1lKYUw2enBoX2NzOHZicUJyWk95MlZRX2ZTbkotNHhYeVBqd2pxNldJVnlxc3pXazc4cmZLVjZMMXJwVmZwQTJhR2VXdFJSRDktaHdlNVh0X3lJX091R21aNU1FOUp0c2JFQjUtNDhoRU5lOA?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPbnJBUlVGRkNTQkUteVNCdHhqeFhTeGZjY21tX0lZVnNZQXNpUVFNMVIzMzNhdHY3UnV0cERqTjFZMWh2Y0hLTFNTXzRJcERLbHJ6TEdnc29xUkVQWnZ3WGFJNy0xM2ZlVVVEdmZJMmdWaDI3LTkxYTJBczd2U09uVHFEcVRVS29sU2JUM2hJeFZxQzE5MHA3dUZWRjN1bXBpaFQwN05qVVpwTjc0amNSc2JIWXZuQkFoM3JtempLU0pST2RFZlQ5ZjRWTDgyQlhJMnhlY0NwZTRnSTVPTWItRTY3aW1USUtXWXFzLWVvQQ?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Les marchés asiatiques suivent la hausse de Wall Street liée à l'IA",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPc1RUMmlDS3Y3d0lvUGxaVXBfdzQ3LUxOYUdNemNhTDZCU0RiM0ZqMlh2WTlZQUtVa0VOYTV5RU1aRjdJaElLbFJmTGs5VDB0dm16eU45ZmJ3Y3NnVkpia2lfbGJNT2tGUzRISXMxZjhUQVJsYmgwUDJDUHAtMUpLZWpEa1Z2X2JMZjN4QTBYdjk3ai10Y1FUQUhTZTZyaXFqak1lck9VQ20wZWxueTd3WU8wTWhKS0RZRVZqUGpKdUtvLXpCSWdn?oc=5",
-   "z": "monde"
+   "t": "Les actions sud-coréennes reculent, les données sur l’inflation américaine renforçant les paris sur une hausse des taux",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUkdWVWdiQUVRcXdVTlBoemxVVTY3dzdOVldPVDFWQ0M2RmFKT0pVZy1KY05QMnpWUExvTnhxRzMxWnB0a2p0aFRNR3FPMWZkU3hWaGFPZ1NRdFBBajF0ckRidmkzVk9Gd0c2SGltVG9BZUN2YWRRaDMzd0FoSzZoVmYtcFYzT1c1cVh3QmxPUTNPUnFHN0pfOXlYQjhRWkNMaWs2WVVsWnpfUXlYQWN3OVBqYWNBZERrcFpCbzM4X2lXbGJaMUNFajVrd1RDdFczS1I3VTM5OGlkRGptTk10V2dEOFFBNklWVEx2ZnBndw?oc=5",
+   "z": "emergents"
   },
   {
-   "t": "L’inflation aux Pays-Bas monte à 3,7% en octobre avec la hausse du gaz",
-   "s": "Investing.com France",
-   "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLVVuQlZlUjdVYTI5NHhOR0ZteFZzOWoxdzVma0pLVnpQWWFuNGdZNXFVM3ZJQjlXM2Ixem9wc0FZYlRrTUwwSHBiLTV6aWhIR2dpaTBENnRiN3l5eElfaUNjZUZCUnJyYUtlSXZnYlJsNi1PY1ZKZl9oQnpqSVlUeU4zVnNFcFd2TGRKSUVnVi1Nd3prT3lxZnlVQlk2UlhWd1AyLVlyUUFiYkN5R2RBTDJpM0FpbzlpSUk1bC0zWWtjbENLVnU5Uw?oc=5",
-   "z": "europe"
+   "t": "Marchés émergents: des bénéfices solides, des valorisations en retrait",
+   "s": "L'Echo",
+   "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOQzVtVDIzcDFOQW5QYXlZWmRTNGtHeVZDY3Jndk16d194ak9USzAtSXk1YXMxR2E5TFF1LUEzSFpZdkhtLUtzYmQ1Z3ZGaUxiNDR0WXdUaGpLVXYtWEZFMy1pNDJvYXhTMF9zcjRSaHM1X1FSNjJJUmZnemZ2UE5ISEFpYm5MSVRuSkRlU2ctQWxaUTkzWGp1NFoxMHkwQk1tZUJnYi04Sk10TUtiUDlQVUZfTmlwV2lRT3NsVHREWTg2bGRwckphRXBqSXdlQlZOaVF6d1FqT0otY1lWZUV6QmtpSVM?oc=5",
+   "z": "emergents"
   }
  ],
- "lesson": "Le mot du jour : l'indice de la peur (VIX). Le VIX mesure l'ampleur des variations que les investisseurs attendent sur le S&P 500 dans les 30 prochains jours, d'après le prix des options. Au-dessus de 25-30, les marchés sont nerveux ; sous 20, ils sont plutôt sereins. Lundi, il est passé d'environ 25,6 à 19,9 (−22 %) : la peur est retombée d'un coup, preuve que l'humeur des marchés change bien plus vite que la valeur réelle des entreprises."
+ "lesson": "« Le mot du jour » : l'inflation sous-jacente (ou « core »). C'est la hausse des prix sans l'énergie ni l'alimentation, deux postes qui varient beaucoup d'un mois à l'autre. Les banques centrales la surveillent de près, car elle montre la tendance de fond. Hier, elle est restée à +0,3 % sur un mois aux États-Unis pour le troisième mois de suite, ce qui laisse penser que l'inflation s'installe — d'où la crainte de nouvelles hausses de taux."
 }
