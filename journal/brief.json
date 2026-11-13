@@ -1,136 +1,112 @@
 {
  "v": 1,
- "date": "2026-11-12",
- "at": "2026-11-12T07:55:00+01:00",
- "title": "Wall Street rebondit grâce à CoreWeave, puis Nvidia vacille dans la nuit",
- "mood": "rebond fragile",
+ "date": "2026-11-13",
+ "at": "2026-11-13T07:55:00+01:00",
+ "title": "Nvidia perd son patron, Wall Street plie sans rompre et Tokyo rebondit",
+ "mood": "secoué mais résistant",
  "summary": [
-  "Belle séance hier : la tech a repris des couleurs après les bons résultats de CoreWeave, une société qui loue de la puissance de calcul pour l'IA (chiffre d'affaires presque triplé sur un an, prévisions relevées). Le S&P 500 a gagné +1,3 % et le Nasdaq +1,6 %. En Europe, le CAC 40 a pris +0,7 % à son plus haut depuis fin août, et le Stoxx 600 +0,7 % à un record.",
-  "Mais la soirée a refroidi l'ambiance : selon le Wall Street Journal, le conseil d'administration de Nvidia s'apprêterait à écarter son patron historique, Jensen Huang. L'action, qui avait fini en hausse de près de 3 %, a chuté d'environ 8 % après la clôture, et les contrats à terme sur Wall Street reculent ce matin. En Asie, Tokyo a ouvert en légère hausse avant de repasser dans le rouge (Nikkei −0,7 %), les fournisseurs de Nvidia étant pénalisés.",
-  "En toile de fond, l'inflation américaine reste trop élevée : la Fed est désormais attendue sur une hausse de ses taux en décembre (probabilité autour de 90 %). Le taux américain à 10 ans tourne autour de 5 % et le dollar est au plus haut depuis un an et demi face à l'euro (environ 1,11 $)."
+  "Le choc attendu a eu lieu : Jensen Huang, fondateur et patron de Nvidia, a démissionné avec effet immédiat ; la directrice financière Colette Kress assure l'intérim. L'action a perdu jusqu'à 11 % en séance avant de limiter la baisse à −4,3 %. Les concurrents en ont profité (AMD et Broadcom autour de +5,5 %), si bien que Wall Street a effacé l'essentiel de ses pertes : S&P 500 −0,4 %, Nasdaq −0,4 %. À Paris, le CAC 40 a même gagné +0,3 % (quatrième hausse d'affilée) et le Stoxx 600 a touché un record en séance.",
+  "Le vrai sujet de fond, ce sont les taux. Après une inflation américaine d'octobre plus forte que prévu, plusieurs responsables de la Fed (Williams, Goolsbee) jugent qu'il reste « du travail » : une hausse des taux en décembre est quasi certaine. Le taux américain à 10 ans a bondi à 5,10 % et le dollar reste fort (1 € ≈ 1,106 $). Côté matières premières, le Brent a pris +3,3 % (≈ 96 $) après des attaques houthies contre des installations saoudiennes, tandis que l'or a reculé de près de 3 %, à son plus bas depuis un an.",
+  "Ce matin en Asie, Tokyo rebondit (Nikkei +0,6 %, après plus de +1 % en début de séance), porté par les valeurs de puces comme Advantest et Tokyo Electron : la semaine s'annonce la meilleure depuis cinq mois. Le Bitcoin, lui, chute d'environ 6,5 % sur 24 h, vers 62 300 €. Au programme aujourd'hui : le PIB de la zone euro (11 h) et les prix à la production américains (14 h 30)."
  ],
- "forYou": "Ton ETF Nasdaq-100 et ton ETF Monde dépendent en partie de Nvidia, donc ils pourraient bouger nettement dans les prochains jours selon la décision de son conseil et ses résultats du 17 novembre. C'est le genre d'agitation que l'investissement mensuel (DCA) sert justement à lisser : tu achètes à des prix différents au fil des mois, sans avoir à deviner le bon moment. Le dollar fort a aussi un effet mécanique : il fait légèrement monter en euros la valeur de tes ETF investis en actions américaines.",
+ "forYou": "Nvidia pèse lourd dans les ETF Nasdaq-100 et Monde, mais la journée montre l'intérêt d'un indice : quand une star trébuche, d'autres entreprises prennent le relais, et ton ETF n'a quasiment pas bougé. La hausse des taux et du dollar peut rendre les prochaines semaines plus agitées ; pour un investissement mensuel régulier, ces creux font simplement acheter un peu moins cher, sans rien changer au plan.",
  "zones": {
-  "monde": "Les Bourses mondiales restent portées par l'IA, mais l'affaire Nvidia et la perspective de hausses de taux aux États-Unis rendent la reprise fragile.",
-  "us": "S&P 500 +1,3 % et Nasdaq +1,6 % hier grâce à CoreWeave ; Nvidia a ensuite perdu environ 8 % après la clôture, ce qui pèse sur les contrats à terme ce matin.",
-  "europe": "Le CAC 40 (+0,7 %) a fini à son plus haut depuis fin août, tiré par STMicroelectronics et Schneider Electric, et le Stoxx 600 a touché un record. La BCE se rapproche elle aussi d'une hausse de ses taux.",
-  "japon": "Le Nikkei recule d'environ 0,7 % ce matin après trois séances de hausse : les fournisseurs de Nvidia (Advantest, Ibiden) baissent, tandis que ses concurrents comme Tokyo Electron montent. Les prix à la production accélèrent, ce qui entretient l'idée d'une hausse des taux de la Banque du Japon.",
-  "emergents": "Les émergents ont bien rebondi hier (EEM +2,4 %), mais la force du dollar pèse sur certaines devises, comme la roupie indonésienne tombée à un plus bas historique. MSCI ajoute quatre valeurs indiennes à ses indices."
+  "monde": "Journée dominée par la démission du patron de Nvidia et la remontée des taux américains ; les marchés ont bien encaissé le choc grâce à la rotation vers d'autres valeurs.",
+  "us": "S&P 500 −0,4 % et Nasdaq −0,4 % après avoir perdu près de 1 % en séance ; Nvidia −4,3 %, AMD et Broadcom en forte hausse. Le taux à 10 ans repasse au-dessus de 5 % (5,10 %).",
+  "europe": "Le CAC 40 progresse encore (+0,3 %, 8 361 points), soutenu par le luxe, et le Stoxx 600 (+0,1 %) touche un record. La BCE est attendue sur une dernière hausse de taux en décembre.",
+  "japon": "Le Nikkei rebondit ce matin (+0,6 %, environ 61 160 points) grâce aux fabricants de puces et aux banques ; il se dirige vers une hausse d'environ 7 % sur la semaine.",
+  "emergents": "Les émergents reculent (EEM −1,5 %) sous l'effet d'un dollar fort, avec une roupie indonésienne au plus bas historique ; Taïwan reste l'exception avec sa meilleure semaine depuis vingt ans."
  },
  "markets": [
   {
    "k": "^FCHI",
    "n": "CAC 40",
-   "v": 8332.87,
-   "ch": 0.00656
+   "v": 8361.36,
+   "ch": 0.00342
   },
   {
    "k": "^STOXX",
    "n": "Stoxx 600",
-   "v": 663.05,
-   "ch": 0.00718
+   "v": 664.01,
+   "ch": 0.00145
   },
   {
    "k": "^GSPC",
    "n": "S&P 500",
-   "v": 7619.38,
-   "ch": 0.01309
+   "v": 7592.4,
+   "ch": -0.00354
   },
   {
    "k": "^IXIC",
    "n": "Nasdaq",
-   "v": 25466.19,
-   "ch": 0.01597
+   "v": 25366.09,
+   "ch": -0.00393
   },
   {
    "k": "^N225",
    "n": "Nikkei 225",
-   "v": 60798.84,
-   "ch": -0.00734
+   "v": 61156.09,
+   "ch": 0.00554
   },
   {
    "k": "EEM",
    "n": "Émergents (EEM)",
-   "v": 62.04,
-   "ch": 0.02427
+   "v": 61.14,
+   "ch": -0.01451
   },
   {
    "k": "EURUSD=X",
    "n": "Euro / dollar",
-   "v": 1.1082,
-   "ch": -0.00778
+   "v": 1.1063,
+   "ch": -0.0029
   },
   {
    "k": "^TNX",
    "n": "Taux US à 10 ans",
-   "v": 4.998,
-   "ch": 0.00301
+   "v": 5.103,
+   "ch": 0.02101
   },
   {
    "k": "^VIX",
    "n": "Indice de la peur (VIX)",
-   "v": 17.49,
-   "ch": -0.10123
+   "v": 18.7,
+   "ch": 0.06918
   },
   {
    "k": "GC=F",
    "n": "Or",
-   "v": 3983.3,
-   "ch": -0.0043
+   "v": 3899.9,
+   "ch": 0.00376
   },
   {
    "k": "BZ=F",
    "n": "Pétrole (Brent)",
-   "v": 92.47,
-   "ch": -0.00313
+   "v": 96.26,
+   "ch": 0.00459
   },
   {
    "k": "BTC-EUR",
    "n": "Bitcoin",
-   "v": 66386.82,
-   "ch": 0.00576
+   "v": 62322.02,
+   "ch": -0.0652
   }
  ],
  "agenda": [
   {
-   "d": "2026-11-12",
-   "h": "14:30",
-   "t": "Inscriptions hebdomadaires au chômage aux États-Unis",
-   "z": "us",
+   "d": "2026-11-13",
+   "h": "11:00",
+   "t": "PIB de la zone euro au 3e trimestre (2e estimation)",
+   "z": "europe",
    "level": 1,
-   "impact": "Un indicateur rapide du marché de l'emploi américain ; un chiffre solide conforterait la Fed dans sa volonté de remonter ses taux."
-  },
-  {
-   "d": "2026-11-12",
-   "h": "soir (après la clôture US)",
-   "t": "Résultats de Cisco",
-   "z": "us",
-   "level": 2,
-   "impact": "Poids lourd du Nasdaq-100 et de l'ETF Monde : un indicateur des dépenses des entreprises dans les réseaux et l'IA."
-  },
-  {
-   "d": "2026-11-12",
-   "h": "à confirmer",
-   "t": "Décision du conseil de Nvidia sur l'avenir de Jensen Huang",
-   "z": "us",
-   "level": 3,
-   "impact": "Date à confirmer. Nvidia est l'une des plus grosses entreprises du Nasdaq-100 et de l'ETF Monde : l'annonce peut faire bouger toute la tech."
+   "impact": "Confirme ou non la bonne croissance européenne annoncée en première estimation ; utile pour l'ETF Stoxx 600, sans surprise majeure attendue."
   },
   {
    "d": "2026-11-13",
    "h": "14:30",
-   "t": "Prix à la production américains (PPI) d'octobre",
+   "t": "Prix à la production aux États-Unis (PPI) d'octobre",
    "z": "us",
    "level": 2,
-   "impact": "Après l'inflation trop forte de cette semaine, un second chiffre élevé renforcerait l'idée d'une hausse des taux de la Fed en décembre."
-  },
-  {
-   "d": "2026-11-16",
-   "h": "00:50",
-   "t": "PIB du Japon au 3e trimestre (première estimation)",
-   "z": "japon",
-   "level": 2,
-   "impact": "Montre si l'économie japonaise tient le coup ; utile pour suivre ton ETF TOPIX et les décisions de la Banque du Japon."
+   "impact": "Un indicateur avancé de l'inflation : un chiffre élevé renforcerait les hausses de taux de la Fed et pourrait peser sur le Nasdaq."
   },
   {
    "d": "2026-11-17",
@@ -138,121 +114,133 @@
    "t": "Ventes au détail américaines d'octobre",
    "z": "us",
    "level": 2,
-   "impact": "Mesure la santé du consommateur américain, moteur des bénéfices des entreprises US."
+   "impact": "Montre si le consommateur américain tient malgré des taux élevés ; un pilier de la croissance et des bénéfices des entreprises de l'ETF Monde."
   },
   {
    "d": "2026-11-17",
-   "h": "vers 22:20 (conférence à 23:00)",
+   "h": "22:00",
    "t": "Résultats trimestriels de Nvidia",
    "z": "us",
    "level": 3,
-   "impact": "Nvidia pèse très lourd dans le Nasdaq-100 et l'ETF Monde : ses chiffres, en pleine crise de gouvernance, peuvent faire bouger toute la tech mondiale."
+   "impact": "Premier grand rendez-vous après le départ de Jensen Huang ; la date a été fixée avant sa démission, à confirmer. Fort impact possible sur les ETF Nasdaq-100 et Monde."
+  },
+  {
+   "d": "2026-11-18",
+   "h": "11:00",
+   "t": "Inflation de la zone euro d'octobre (2e estimation)",
+   "z": "europe",
+   "level": 2,
+   "impact": "Une inflation élevée conforte la hausse de taux de la BCE attendue en décembre ; à surveiller pour les actions européennes."
   },
   {
    "d": "2026-11-18",
    "h": "20:00",
-   "t": "Compte rendu de la dernière réunion de la Fed",
+   "t": "Compte rendu (minutes) de la dernière réunion de la Fed",
    "z": "taux",
+   "level": 3,
+   "impact": "Dira à quel point la Fed est prête à monter ses taux ; un ton dur ferait encore grimper les rendements et le dollar."
+  },
+  {
+   "d": "2026-11-20",
+   "h": "00:30",
+   "t": "Inflation au Japon (octobre)",
+   "z": "japon",
    "level": 2,
-   "impact": "Donnera des indices sur le rythme des hausses de taux envisagées à partir de décembre."
+   "impact": "Oriente la Banque du Japon sur une éventuelle hausse de taux, qui ferait monter le yen et bougerait l'ETF TOPIX."
+  },
+  {
+   "d": "2026-11-23",
+   "h": "11:00",
+   "t": "Indices PMI flash de la zone euro (novembre)",
+   "z": "europe",
+   "level": 2,
+   "impact": "Premier coup d'œil sur l'activité des entreprises européennes en novembre ; un bon thermomètre pour le Stoxx 600."
   }
  ],
  "headlines": [
   {
-   "t": "La tech dope les Bourses en Asie après Wall Street, confiantes malgré Nvidia",
-   "s": "Le Figaro",
-   "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVmRXVFk3dWhRQ1hUZkQtWUR5Z0d3VjZ1VnhTd2RuR0xaVmVIRDBUVXdqTko3bmIwdU5RRjVPLWtsU3ZoaDVJN2JmajlMYXFFNDRyOGpXWmtYeGF5bWRhaWUyci1pYXZzOUJtNE1ldXhab3Y0eVIxZ2tXUVdNd2gtcXVJa0lUV0RheU5MaUxJUlg5MHFKLUpIeEJtSEFyT09EckF5MlRLOXFaZG5aMzRoQnFhQ0VaWDFXbGc?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "Nvidia est sur le point de limoger son dirigeant Jensen Huang, selon le «Wall Street Journal»",
-   "s": "Le Temps",
-   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTndLdy1mb1lzUGhlUzhHQnQtSmd5cmNHVnpJM1k0RnUyX0JmZHRPTVVqOTlzdEYyVU5lRy1ETWxRbkFpbzRobmM0ZzBjQ1JEU1hpQjRIUzNPLS1CNzNQVkxhUHIxSlJpc2pXdmx3UHVjblVyOHZZSkJsNXA0ZWVBa24zNS1rRVNBZDdYR2dlYVlCQUZtQUdudktrUDRuS3ljRzlXLThnUEZ6S1JvLTN4Q0ZYcXhsSER3TXJv?oc=5",
+   "t": "Wall Street termine en baisse après la démission du directeur général de Nvidia ; les taux américains en hauss",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOVFZDdEVzWTNNUHVZZzFzeXRLTE5oSlM2ZV92eWZQNTY0Mm1NQ3B5dTBlckZYZmFxUXVpbjd2eVJJdGw4b3NybXhXTnp0MUhLU3pEa3pLZWhyZktKY2RGWlExeHhhT1k0VV9RckFYQjEtQWlmUXNhVnBURVJ1bHBzRlBhVmdyQUpfUElCdDBlZEhGenFMUkNYZHB2c3IweVJGMmQ0NHRLcHhsWnJWLVA3U2JlZXpRLWdCX1JFdThXNWk4TzNBSmZJRUVPOEVGZGg4YnA2QWRfX2ozakJZb3lkRTdBZ2ZPZHVtbXI3aXUzSWlGcmhoNlVVWkZJYWVQV3BoZHJ1VnptVzduMFUtSjNVdnFpQzVsd9IBmwJBVV95cUxON1paUlpVb0l3WXdCMk5QSkdmR0ppWE1qMzgyaHRRcmg4RzU0b1FwUmpBdUFSUTFYQ3poV3B0bTlWd0VXMVNfREhLOGJWamJ2bmVQckRoQ3RTa0dLSFBhREVTeUF1VzVPYmNmYVZkeFF2Z3NiMlNRM3pKNTd5YVRQbU1OejVzRFY4dUVpbjFTdmpQOXU5Q2RyYzFkQ25VWWFvVGRjLUcyNk5KUE5Dd0R1ODlKYWt0UGpmVHN5bGM1NXcyaXNnd282OWltRnUyMEt5VlZ6TnZSa1Fpc2M1bVZ3cmkyVklULXRfa2dUYjdGXzFpUzEyTmoxbndCXzJhZFd2Q0FPdkRoS3l4X2pYRkdMaDEwai1SN05LOWJR?oc=5",
    "z": "us"
   },
   {
-   "t": "Les contrats à terme de Wall St chutent alors que Nvidia glisse",
-   "s": "Investing.com France",
-   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOazUwUmxTNDdGTlNsR1lfUTA1VzJSOG5hd0x0WmtMOWg5N1B6TWFpXzZ0TkFlSlk1ZXVKVUJNMXNTR0VRajBEM0FnX1dIaGh2aWdDanB1c1dlVi1ZQUdrdjI5bVdlbkxKM3N0VFdSMGdwVWtmUGhMOVA3ZVMxUFIxMVRHSV9FYU9rQzE5SUVZWlZscHNhQW9sdGxoZmxsamNtSUppUjFDYVBPTmlEdk5FLUhydnVCckNuMHBn?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Point marchés-Wall Street clôture en hausse rassurée par CoreWeave",
+   "t": "Wall Street : Nvidia a cédé 4,3% après avoir perdu jusqu'à 11% en séance",
    "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNb0hHYXp0bTc2bE05ZUJEcHlKNENCRTZ5VnNFbElZUmFsdTRmalNLcEQzU3JuV2lSWk1aYng3bWkyTmpLMlVRT19VVG1YblVPcnFMQklHeTFZTVVFOU1JWVV3Tmx0YmVZQ1VZYlQ1Y0lMRE9xT2NUeGhvaUpYSmxUXzlGbTVjcVR0TVV6YkNTMEY2WkQ1WEZhUk5BckJ3YnZJYl8wMUxvT1hPYkEzdU1XU3BpVWxzTk0wZDlOd3MwZzQyUlJJbnc?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbF9ZYXNvMGw5S1lOTnpicWdQNmRDdEEtSGZocDhidEVKeWF5TmZ2SmtST0FXa19hcFNYQ3YzaGZJQV95ZE9ON1l3UjVOTmRJU0U4NkowamRCT2F4TFo1MjVZUE5DaGpiWDdDalcxYks1XzRZMVVqSDNveVJCRm40RTEtdTFLZmVTeWhUY1doMEdtZjAtVjE2LVhMQk9ldTk5MXdoVzlheXJtdWJmWW5odG9RMU85TWZNWF9CY3JZZUFBQ21SdlRraA?oc=5",
    "z": "us"
   },
   {
-   "t": "Wall Street : l'indice Nasdaq a avancé de 1,6% à 25.466,19 points",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSWZWOGMzUVBVanVJc1Q2dXluMW9jMWUwQS02b3MyWjE1a0E3UHlYbHdnQXA4OHdDQTR5OE9oYVEzT2dLWmtjQWNjZEl6bFNacFBZS1NsSzczUTRkYkItOEU2bnhqZ0lRM3RZaDRXOVpUdW9MMkphU2VuUU4tX1BRQjdIME1rU3VvX1RuX3kxOFhMM0FkWEE2cEZ0a1RMMTUwNUt0NFNHTHBRaVh6RlplcV80d3RYMFNaV3V4UnhDVQ?oc=5",
+   "t": "ROI-Wall Street résiste au marasme de l'IA. Qu'en est-il du choc Nvidia ? : McGeever",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPQkdxMk82amo5Wi1MT3Flc0NrNDRzWWY5c0RIdDR6cWlZZHEwNnU3Y0E4X3hFeDJQcmRXdER6bGhEZGstQWtaYW0zeFowRkl1cUU5ZUZZNUdaZ0d3MWhwaDRQWXluUFFJNDQtMjRGc1kyNFhVZWFnTm56ZXZFMUZtTWY3dzYwVzhqXzlSTjI3M1U3bnBid2o1cmNTdWxSaENkbEpCZnpQUUs1cWxielc5cVhYU3lTZnhRcUR6czkxYWZ3WGUtbW96QWJWR2hOS1ZyVnBVRHcyRFM4cVIyaDRXRzY2TlVaV1hZUkpwcml30gHzAUFVX3lxTE00UFR6bGdLQVdrLUNUUU5XQk45dkFYNnFCT2hQZ3RSUHZQYXRKS2VmeUZyR2steTlCOVlvbjRqTE5JUUhXVnNFRUNTQjlBTTI3VE1zZy1QQU1ENzBMVW9yMFk2UktMazNqUGJLTGtWa2lSc09DT2gycnMyQm05OHlWTEx6WGZBZ3Rqa2pwenN4MThNSFpjRDN2d0RSWGNmMmFRdHZ5bnBGMkFUN3NnM3VDend3czdhOGhHNVZibFctN3BKM3hNVzNXRFlseDRCSTBCeUh2dElEdzh5dk9TbnBIME03Sk5tOUZFaGNhaDJsSVZjWQ?oc=5",
    "z": "us"
   },
   {
-   "t": "Les responsables de la Fed signalent des hausses de taux plus rapides alors que l'inflation d'octobre est élevée.",
-   "s": "Quartz en Français",
-   "u": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZ00tb1JuSlJ4Und4RTNObUtEcTc1dGpVVzRWckNaUUhBQ09fWk1oWlo2bU5ER25Qa0tfVFV4RDFhUTNDS042alZGWTZyV2JaUWFHWDZBYlU4V2UzREFsYUxLVGt4YzhiLXFrb2c5QW9UbzRwSUxDdGNEckw4MUlvUUFicTBJekJlQkJMcnNNYWdocnEySW8zUGtwNVpqRFE?oc=5",
+   "t": "La Réserve fédérale de Kevin Warsh ne veut plus parler",
+   "s": "L'Agefi",
+   "u": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUWR4Vm04ZWduTVlGeHlXN0t2ZUtnd0k2VW1nNVVnbE9FRmNKNXM1MDY5UVZxTDZzT3NUMTI5cUNoX1VUdzBlZHpYc0d1M1psTXVNZnFGemdfaXZndU5hWGpHeElBTERqLWtlZDVLT0wxejRYazNJN3c0cEhCcXZCYm9aQkEwcEU5WkpITnB6cEphUFo5aUZObXVxY0JSQQ?oc=5",
    "z": "taux"
   },
   {
-   "t": "Goolsbee de la Fed qualifie l'inflation d'octobre de « presque inquiétante »",
-   "s": "Quartz en Français",
-   "u": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNW1Wc1IzQXh6VENVQmtTYW9UbDZ6UlIxU1NlZ2w5UjEwOHFnNHptSmVVTmhjczdNNWE4ZlJKd0xNeHJ0UHJtcE1faUhsdkZRa2UtcnZvRFpaZHBmZWwwelRPOXlBdE4zdUtFdGU2NGkxN2NjUGktUnRtamhLa0xzcjZTMUVUcGJlaWktZjNR?oc=5",
+   "t": "M. Williams, de la Fed, estime que la banque centrale a « du travail à faire » pour ramener l'inflation à son",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPRUktUU45TC1EWmVVaFJUTWpJbVROcklaTFh5UGZueGIydnZvUG9aYXRmazgtQ0RJaTk0OUNJdkRuWG1Qd2VVN25FdHRuaW14cEg3b3p4clBjRXFSTl9sVXNlaGlFeUczaHRndExpanp2MVVsSlkwaTRsQjFDWl9CT0ozaHpmelJLTjBuaXdhTmlOU0xORWtlQXpGVmNoNm96Vjk0SC1FZ0IyLUdmSVdhYm5ETkR0Ymx0UWFfZ0JSTVh6Q01aQmlyTkZpUWRiSWtHdXQ2Z01pbVJSTmxYTHdVX0VBRGkwcFZ4R290TFpMQTJPUjlvNEM1WWFkWW1Dc2tmUm9XUDJDNEczZ3BGR0R2V3V5X05ZZFdRTVdFeTMzNUJaQXRDajN1Qi1zcUNYc1k10gGwAkFVX3lxTE9FSS1RTjlMLURaZVVoUlRNakltVE5ySVpMWHlQZm54YjJ2dm9Qb1phdGZrOC1DRElpOTQ5Q0l2RG5YbVB3ZVU3bkV0dG5pbXhwSDdvenhyUGNFcVJOX2xVc2VoaUV5RzNodGd0TGlqenYxVWxKWTBpNGxCMUNaX0JPSjNoemZ6UktOMG5pd2FOaU5TTE5Fa2VBekZWY2g2b3pWOTRILUVnQjItR2ZJV2FibkRORHRibHRRYV9nQlJNWHpDTVpCaXJORmlRZGJJa0d1dDZnTWltUlJObFhMd1VfRUFEaTBwVnhHb3RMWkxBMk9SOW80QzVZYWRZbUNza2ZSb1dQMkM0RzNncEZHRHZXdXlfTllkV1FNV0V5MzM1QlpBdENqM3VCLXNxQ1hzWTU?oc=5",
    "z": "taux"
   },
   {
-   "t": "L’or recule, les solides données d’inflation américaines soutenant le dollar et les anticipations de hausse des taux de la Réserve fédérale",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNZlB6NGZPeXpFN0xIWlcxaWRxcTVsVVdOci15alQwcGlhbjBYaXlZVkdJYldEMlRaTVBmUmljT0NlNjJrQW40RTV6S3lFbW9SNEVvMEhMTTlHcGh4WHRBR3BkaGlJUWxSYUFkVGMtc0lWYUJrb3ljOXpGT3l1c2VnRGRFUDFVd1BhZF9sdGNLaDdvT2hoY3dkR0ZIbmtTOU5XZ1BtZU1rY29FRGRaY21mWmhfMnZQWEJSSS1UYU9OLUZhVWF6clFIY2o3cWFQMjNYdUxMeS1OMkJTZXRpQjhDLUJVWVUxM3ZEZjJROGJR?oc=5",
+   "t": "Goolsbee, de la Fed, s'inquiète de la persistance d'une inflation élevée dans une interview accordée à Yahoo F",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNYkxwWGlxWDlsU1RSNzFiNzZ3QTFMZ19qd25LZE1pTklHbmxucmVpcTRZaDkyVlpKS21VME1FODA5SEg0bTRSSnJuVllhXzc4SFBiZkkzUDZicmo3Z1JHMHFfQnFZTlduS0tUNlItcGpsaS1ObFktdnY4X2NxaHJrUjhfYWFpT2lrcXhZaURHVVRjbWtreHV4allLRkFHQUFhdDRlUWxrOC05MkNTem1lQ05XOWVKUlViN2E2VU1sT01TQklPc3RSMFgtU25hU3hKanBxbGdGUTJjVjBlYW5qR2l1UXJvdURMbDItVUROR1ZjLTRSa01JUnRZUkJvZFFWcG9UdjZOS3IzcHdrc29mTUtPeS0wU2lIS3dRVktRcV9FS0pFcktZb0J0Y2MtLWdLclBHZNIBtAJBVV95cUxNYkxwWGlxWDlsU1RSNzFiNzZ3QTFMZ19qd25LZE1pTklHbmxucmVpcTRZaDkyVlpKS21VME1FODA5SEg0bTRSSnJuVllhXzc4SFBiZkkzUDZicmo3Z1JHMHFfQnFZTlduS0tUNlItcGpsaS1ObFktdnY4X2NxaHJrUjhfYWFpT2lrcXhZaURHVVRjbWtreHV4allLRkFHQUFhdDRlUWxrOC05MkNTem1lQ05XOWVKUlViN2E2VU1sT01TQklPc3RSMFgtU25hU3hKanBxbGdGUTJjVjBlYW5qR2l1UXJvdURMbDItVUROR1ZjLTRSa01JUnRZUkJvZFFWcG9UdjZOS3IzcHdrc29mTUtPeS0wU2lIS3dRVktRcV9FS0pFcktZb0J0Y2MtLWdLclBHZA?oc=5",
    "z": "taux"
   },
   {
-   "t": "Porté par l’inflation américaine, le dollar au plus haut depuis mai 2025 face à l’euro",
-   "s": "Le Soir",
-   "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWW1LZ0dyYm02aTZNTTE5eHUzZVFtSFdoSllOY3lfSVN2anE0VmRWY05kNTJIM29NdzFMMjVPOHdVNFRzYU51VF9MWV9fMDZUbGtmTkwxdm14UW12UWQwbWZ6Z085WW5GenBONmkycDF4bFRrRUgxSkxzX25YNWVpdXVaa0djTUtYOHlYa0JwVmRMcWlnb0FTZzdtdURHN0Ytek51bkNLbDAzSUJGUUdoLUN0QUl0TUNycVFMZjA3WDg?oc=5",
+   "t": "Le dollar au plus haut depuis avril 2025, toujours poussé par l'inflation américaine...",
+   "s": "Fortuneo",
+   "u": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPZDlXYzNWQUxPdjh2OEFQOVl1UEEwdUdyUlE5WG9OOTQ5TUpBamc5RVdHdzh4QklqX0JJSEhYems1bXpxdU9YeDRKYWhKbm15TGJOYXFZR3hfSTI1c29KYjRnQ01LMzU2VlN5dzhabXp5S2ZMbnFIcnc4VW5sdlkwMExCMUNUMUJUYmFiTnM2Q1VXWkF5ZlhMcGtEMWJaSlV4RzJKNFlWWVZwRnpSM1BBYWJWUU9tNGVfRHpta3Mzb2ZXdlhYQnltZdIBzgFBVV95cUxNVkVPaWpPbm1zeTRiY003ZmtqUDRPV0h4MFR2Z0RscEVWcHVoSGdIb1Npd016ZWI4Uk1tVXlKbzRtOXpsd0dwemJoakVUSFV6aVo2dHZRaExOU3k5MWlYa2J0UjQweE1CY0FadmdBbk5pUi1jWkpzemRsYjBYUGRTU2J5Q19yRWxseHh5ZUwybjVvSlUtWUwxZGtlVUhKN25WY0ViNG96TnhNajVBWFh5aFM3QTZpcU81OVVzR25lc2l5cU5WX3RhOFdiV1VjZw?oc=5",
    "z": "taux"
   },
   {
-   "t": "STMicroelectronics et Schneider Electric signent les plus fortes progressions d'un Cac 40 au plus haut depuis la fin août",
+   "t": "Une inflation à 4%, des cours de l'énergie sous tension... Une nouvelle hausse des taux de la BCE en décembre semble inévitable et ça ne devrait pas être la dernière",
+   "s": "BFM",
+   "u": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOUm9LVjExcEFHTHFKeGNGQUttcDJOVnNfUXdKV1ZzSXlVM0pxZ2xiQWQ2dXBpYWdWN0NpZjNCbGNfY3dDYTBXalM3VmZ2TkRIaGNEUFVtcTVQQzNHTVFxRU9lVUQ1M1V2T21HcmQyU0RJTnJmT2hWQmQ0YnFKZkQzX2JNWHFaQ1VnVy1WZktNX3BrNERVUlNfQmY2QU5wZEZldjlpTm01MXktUXpYT0N3ZWZfNEtDaFNqYzF5WktHakwyNUlxOHNKcVVQM2FoYXloRXozZkpqLUVGMThSWnlMeUt3UUlQS3I2QVZzUDR6OTJuekdXZ1Z1VEt3bmxNRTZTLU05a0tpYnRiOVl0WlQwLXdBZlZRSWRnQXZRWTdZRTZqTUN4aG1yZ3dZeEJ3eEZxeklNZXRfdw?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "La Bourse de Paris résiste à la chute de Nvidia à Wall Street",
    "s": "Investir Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOMWtUQU93ZzliZ1BBOExGbWh6dU5zOS1tWEFJYnBhd1NZOFBNTVNhRkNVSV83cjExdXdVSkJnRm5USFkyWHBhTGNnLVBpNk5OTk96ZF8tUUkwb2UtLU95YWRzRk9jRW90QlZRQUU1b19GZkNrN1cwVHBZRkZvVlkxV0JDazZaT090LUdJXzhtNGVuVl96TmwzTV9mQkJIVHRtRDdFa1BQVWU3X0NzaElfS3loRmVnWHkzenpyMHJNSjdoT3BiLTlsUG9JeFMweWxTeDQ1b2F2T0tYeEdJRXJscHBESUJWNmFtRVppQWNYSGJKbDItR2l0WU9LNjJzYTgtN1FhTkJNbk41Z3o1cmdYZ1dyc0k?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMEQ4VXRmaDhiWEpkdWQ5OUhlTzBqeEN4aDlldk5fS05lN2FrcVB0QUZCWGlRQTJjWmxWT2wybjdXZDF4SFh3ODg3VW9pT0NmMnU3VWJ3SmJ0aWFCTWEtWVI0M1dfZFBJRlpwOW9aQnU3NVJCRGhaMjU2V3BtOHlwZ2VWaFRfT0F6QVBkbFN1RGtMX3JyaGZjTF9rZDZnUE9VZ1dTSDZXcXZjQk5TcVd6ams1bFYzTHZWZzF2S1dvTXcyZS1CZjhWVDVZQS0?oc=5",
    "z": "europe"
   },
   {
-   "t": "Zone euro : la BCE se rapproche d’un nouveau relèvement de ses taux directeurs",
-   "s": "Le Revenu",
-   "u": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOVlBZ1RHV0FBOTZBYWI4YXVIUVRfOUtrMlBMMG9sQ3BLaU9LSXM3c2ZBSFBjNTJQQ1VCYU9aeTFSeDhCc1lpSng0MHJscFJUbGNfLThFdEEwV1JEWVgwdlk2VmZvenRTeC0wWC16MXhRTnZZcFAwcllhT3ZtRFhsMjhWcTFvMHB3cExWVWl0d1UwT3RGbVh2TE13VXBobm1lY0thTkp3TGcwMTBCUWpjY1NKWGg?oc=5",
+   "t": "Succession de Christine Lagarde à la tête de la BCE : le grand marchandage franco-allemand",
+   "s": "Le Point",
+   "u": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQYldqb05TdUFpY2l2ZHlMUF9IM0VEc1lYOXhaak1haTNXMTUwUUtkbTA4M2pXMU5WSW5RZV9HZEpoTGtKeDdDMEdCYkJBUUhUWDRTbWNObHBJYWw2dlA1emZaT0FkQzhuVkVWMW5OWXBQXzMyeEpjTW9yYmYtWDVUU3NQQ1hfS2dhMzNsb0ZoSzVwX0IwVGlSX1R4QkNULTR3QzhqTlhUc2xmVkhTMHR2am5LdVlCNEY0TFc4TUhGaXc2SHJtbWpLa1ZiVHE5Szh6bzItdzJhV2YtNkNLY1E?oc=5",
    "z": "europe"
   },
   {
-   "t": "Marchés européens : le STOXX 600 atteint un nouveau record historique",
-   "s": "Boursenews.ma",
-   "u": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSFN1NVB4VUo1MUJoODlWU3NrSmJyS3hjaTl0V3NNXy1KcFhjOWtPX1p5b1JpWldtODdod213clJZeTdZRHpMNG1feFc2dDl2LUF5eXJlZmR0cEtvQTNoeWw1SHR2R2ljVzBXVXJ1aHJtdng3RDFEcTduNVVyN0NOOWx0SHRGMFNRXzZPMWgzNmNYelIxQ2RQSncwRmx6ZTVIQ3NTVy1vNUNLWkU?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "BCE : le départ anticipé de Lagarde n'entravera pas l'euro numérique",
-   "s": "Euronews.com",
-   "u": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOM1l4eEpENDZYYW1JeWxVSmhwSVAtY3dteURBY0tXWklvcVYwWnVFb1VNZklsZ05hM2pNN0l3Umxhbm8waHdrTENXSXlFQ0VLSkl1dmhiZG5YeXRrWHhKT1Y4TzR4Wl8yVkVQbkRJNFN3dmVKdEJGZ1JPeDNXLUFZWkpibEI5UW01dVlXYVA1NTdEdVNmVmdzZW9jM1labVhi?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Le Nikkei japonais progresse légèrement grâce aux valeurs technologiques, tandis que les fournisseurs liés à Nvidia reculent",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxObFN4OVVKdXNjN182N1I3cDhia2pYNkR3TlBYRE1Tbl83YmlDQ29vbXRobHUtcF9rejZEV0hXODU5aU5LOWstUXFWekRzZ3JwXzM5RHkxVWplTXJiVm51ZjZHMm5KajY3TGdnSDBWcC1XTWRxVkxxaENwNnBHZVJDQ2twWGVyNEpCMUJvU2hyRUxCWnNCWGNIUUc5SXFGT3FmVEJNY1BCU0M3Zi1fR3IxV0s1dFhkb19fVVJob3RtVkJZd0h1TDMyOG43cm5UejNpMlFJNGp4aV9oT1lRbDNLUWxnOEJLdGROWTMzLS1QWDA?oc=5",
+   "t": "Le Nikkei japonais en passe de connaître sa meilleure semaine depuis cinq mois malgré les turbulences chez Nvi",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPWUJsQXpXM1FpQ1NLaGMxejUtWElEeUNBVHoyNWZTcjRVWm5rcWQtUnJZdU1mVS05djdvdjBEaVJvMFpNeXZmQW9GX1hfejVRY2Z2VXJTZXBFbWxXWTdZUXZwbnhoNktKZkl3YWRNMEtMXzhMOHFVbzdRWXg1SGlHaDBwSnF5RDlWZWlpWllYdlVwYVMxLURNTWRwcUt1SmYzRTRWMjZDemtoUjRxNW5ELVBXVkJYcWZXNmZhakJVa1ZpMklDVFJBVWpacV9DTmxNR00za3cyR240VWNxRHNMZ3dhV2J0S1hIZzRkOVZPUzhvcUpBenZ2Ym5jWG5obWxCRHV5b3MwNUFCX2lfWm1UOVlJUnFnQlJFR2ptRmstcnDSAaACQVVfeXFMT1lCbEF6VzNRaUNTS2hjMXo1LVhJRHlDQVR6MjVmU3I0VVpua3FkLVJyWXVNZlUtOXY3b3YwRGlSbzBaTXl2ZkFvRl9YX3o1UWNmdlVyU2VwRW1sV1k3WVF2cG54aDZLSmZJd2FkTTBLTF84TDhxVW83UVl4NUhpR2gwcEpxeUQ5VmVpaVpZWHZVcGFTMS1ETU1kcHFLdUpmM0U0VjI2Q3praFI0cTVuRC1QV1ZCWHFmVzZmYWpCVWtWaTJJQ1RSQVVqWnFfQ05sTUdNM2t3MkduNFVjcURzTGd3YVdidEtYSGc0ZDlWT1M4b3FKQXp2dmJuY1huaG1sQkR1eW9zMDVBQl9pX1ptVDlZSVJxZ0JSRUdqbUZrLXJw?oc=5",
    "z": "japon"
   },
   {
-   "t": "Le membre accommodant de la Banque du Japon Toichiro Asada s’oppose à une hausse rapide des taux",
+   "t": "Le membre accommodant de la Banque du Japon (BDJ), Asada, s’oppose aux appels à une hausse rapide des taux",
    "s": "Zonebourse Suisse",
    "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQcnNvTjVlN0NJY1lHYlZva1lQV2tIZU9rcm5NMi0zMUduTGFuSjF2YkdrVEpqN1l1UTBpNFpSSnVmdV82VjEwQi1KY1k0QmxaY3hVNmdmYjFHVjYzMFRRbEpaWlUyY2dqcm5FVld5YUZUUG5wSl9JN3AwZmhNdlMzWTZpdHdfdW9fNV9pQWl2Y1l4eUx3OTBjM2lRUVN2d01Ba2JpYlVvZHl1QlIyTUNHVHZLNUExRXRmRVlITjVQZHVxZG9LaFJPTUtaNHF4MEZKd0Y3MXVtVHQzdXJha3ZHb0NSMkhxdzFfUUNTRUxn?oc=5",
    "z": "japon"
   },
   {
-   "t": "L’inflation de gros accélère au Japon, entretenant les anticipations d’une hausse des taux",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQNE4wWEtfV254cGtRNWZCcXNSSFgxSjRvRFpCN1BGdDkxMjYzSi1mT0NwNWhNU1RSQURSV01abktrZ19FYUg4NUl1VFVieDRRSXlObllrcXp2LVhOYk1kRDNZSVdCeW94YlJmRk1iRURhcW1RTHBzZTU2U3UyNUhrTl91cThnMzl5cDAxcTF1TlEwWmVuVmhUMnczbVlvOEdXcmdfcEVfU3A4RTdCYThHWUpESWRQTGJfV0lpNmRQU1FxU0Z2a3dnQ21fTFZtaks1VGY0dktSQUdHQm1UWU9xbndnRlRKNlpJXzBHcw?oc=5",
-   "z": "japon"
+   "t": "MARCHÉS ÉMERGENTS-La Bourse taïwanaise s'apprête à connaître sa meilleure semaine depuis deux décennies, faisa",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxQRm9xcmgtcGN4ajIzOWM4V2hnZTkyamFtRVNoVk5QLUp0bW84U0g0WVA2R3dTdlU2aUpmWDJqTUNfeG5KQXpfTGJNcmhPOHdvMDZ6MkVBNVQ3aDdWa1RFYmJQWVQxcDdQVTJjbm9PenNMS19pVTgySmZQSnhINzg4dnJQbW85R0NwTXpPM19jSFNfOTgzWk9wMWFSYm41LVpwSXJ1aUcweWNlYmdldkM2SXZTTUlOMmpQX0FfcmVuWTNzSDZVdWw1TTdfWEtZa3pwcDhVdDlORTdudFp5bzNPWlpzM0lKWHlrUzBTMHRGVUpkaTNfdXhwVWNmN2F4TVpENVhwekV5VV9pX19BQzVPb2hfV0V1Q2UxYTBVVDBuYjNjR2twVF91NVhsbDFRRDE4ZVgtMjRudU42REFyU2ktbW9LNVU4Yks3UUdSdzYzYmhyNGvSAdgCQVVfeXFMUENMeThjY3B4TFlyYkZ0dWVHTDlHMDN4R0had2dzTWJDeFB5R1FlaFZYWmRzRkZpYkoxN2hwNTVVVlUxdlN3TWhHTEo2eXhfbWhPWnhEX3VKTW5MV19HWVUxdzRHbm9vdER3VTN1ZUZZeDJjRjV1eURuTGtEb0l1d1FwT1U3NWtCeEhkbnAzV2gydG00aHAtZ3l1MVVrUDdVV0U4ZW5zWWJObWpKY2I2eEJ5elZUdkRIODJjOEtyZjhfZGw3TXlKUkV1elVjTlRGRzMzUGlvMk5Wa2VLdWFSNl9BcTBwdzNCeWM2OTgyYkdYTzFEdEpxZnF3VHRDbkNqMFZ6ZUFSenQyaWlfRUR5OXRqNDYzNjFyY0E5TklCQ25LZEZvTVpGOE95MXlTdGU2V3lxVExROXNYb0dkTmoxcDlPdlJsblVaRFNXMkkwOTItbHJPSkFETm0?oc=5",
+   "z": "emergents"
+  },
+  {
+   "t": "MARCHÉS ÉMERGENTS-La roupie indonésienne atteint un plus bas historique sous l'effet de la remontée du dollar",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMivwJBVV95cUxNaEJZUnp1bFQ0aWx4Q1JKa1Uyd0hYX3BIRGZoYUg1dDFmaDZ6T2lKVVR4UHo3OWtzT0JOeklGLVZONVBkc1R5aDZBV0xMenVfX2dmSk40cnJYb2ZPRGpUT2FCUmVBU0NQTHNZYlBIanJxTklfLUpBSWtURS1nQ3VzZkJ6bUNlYk1fd3RZOFJHTnQtVE90aWt5Z21Cd0ZmTThyX2tIQzdHbWtjSE9BZUhyaGFxX29jS3NZUkhvUmY4TS1pd3F3RUxoTFptZ3U4WnZOTmduMWhUa01KcDFxLXhVeHRaS2taeHdLSzJBSERMZGhaNXB6NTc4Q284OGFEV19qTGtNM2NoT2RpclNvWDd6ajBGUEx6OWJTZjdYSE5nYmJ3a0VMWTRycU1peVEyS2tvOVlZdElFd1JadWYxOTk40gG_AkFVX3lxTE1oQllSenVsVDRpbHhDUkprVTJ3SFhfcEhEZmhhSDV0MWZoNnpPaUpVVHhQejc5a3NPQk56SUYtVk41UGRzVHloNkFXTEx6dV9fZ2ZKTjRyclhvZk9EalRPYUJSZUFTQ1BMc1liUEhqcnFOSV8tSkFJa1RFLWdDdXNmQnptQ2ViTV93dFk4UkdOdC1UT3Rpa3lnbUJ3RmZNOHJfa0hDN0dta2NIT0FlSHJoYXFfb2NLc1lSSG9SZjhNLWl3cXdFTGhMWm1ndThadk5OZ24xaFRrTUpwMXEteFV4dFpLa1p4d0tLMkFIRExkaFo1cHo1NzhDbzg4YURXX2pMa00zY2hPZGlyU29YN3pqMEZQTHo5YlNmN1hITmdiYndrRUxZNHJxTWl5UTJLa285WVl0SUV3Ulp1ZjE5OTg?oc=5",
+   "z": "emergents"
   },
   {
    "t": "MSCI ajoute quatre titres indiens à son indice mondial phare lors de la révision de novembre",
@@ -261,23 +249,17 @@
    "z": "emergents"
   },
   {
-   "t": "MARCHÉS ÉMERGENTS-La roupie indonésienne atteint un plus bas historique sous l'effet de la remontée du dollar",
+   "t": "MARCHÉS ÉMERGENTS-Les actifs d'Amérique latine reculent sous l'effet de la volatilité des cours du pétrole et",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMiugJBVV95cUxPdktfRklCNHdPNXQ2NDMyQVYxRGswV21lQWxWRXE1Qjc3aEJZQlRNMVpBVXpwX21HVlpHQmViSkktZWxxRXR5YlRsV1BHMlU5emJZZ1I1S2F1Zi1rWUVJTzVkbXpJUHI0UUwxb0ZNTTZJemxDRGlhYUdzTzNHWW16T0tnblpIamw2R2tmdGpZRkx4QmNHbnJLel80ZkpfMTFiTUVFVnBIMnpRekU0WnVmSFVzYXZQYmJOSjZQSkhIUVFJb3hfcGswTml1QWNaVzNqRFBaLVN6SzJTZlBGRTMxRWE3aTBxWWpXdWlhN1ppaDNJU1hYajN4VXptbWhMR3JmRDZKWGhjOWJXYnFicEpwQ3NMbm5MSm9HQkk4TS14RWl5Q0xhREhzcE42U1NXc2ExQnIwWXRZNC1qd9IBvwJBVV95cUxPbDg3OXQ3UUhOZ2dpZ1gwMVFHanlrRTFUdHhwZ0VHRVpnbkhSX0tHTUQtNEtLOXdySlpER245NjFPaldpUFF6cUE1RnZwZzdiR3JyN2JsTERQVzZ4aHpLS1JWaXAyXzl6NVpMSjMwQ3BYLWUxVGVWN25wMExmZnNrUWZNQmFXaF9idDZBTUQ1NHB3RWp3a1FuZmtfNktDeUtmRXlvZjNDZVcxV0JlN09BNFBoejJWQW05dWY3M0p0dUw4NktSekNrdmIzX0VQNi00Y196QnlNT0pGYlZzUDIwYWlGSGNEb2tZYUN3YTNPQ2FGZldXeW1VV3JLc0x0dl9qdWNIQXo1dGZmZzJEbkRyRkFsVzJUWFdhZ09JaGdBSzZycmpMcGpZNTNNeV9JNlJqVGpwNS1QQWlmLXZjT2xB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPQ1FXR2dhSTVjSzdoUzR5Zm5JQ1BjbTQyeDdManZYYkJVenk3Ung4ZWd6VjBBMHlyVUs3YVBlR0NpNUpBeXk4ZlZnbEVPZlVrRUd2Qmc5YVpERGVadTY4LXlRU2p4S2pCYl92bjc1aVZMLTh0YXVBTWhUSHk5dXhKV2NOc1NnS3BYNjZIanhFdDF4RU9PLXBFQk5lc0J2VE5VcXhqdFBnaFdoUWtwTjBCU1E2UnV6ZHJuNFp0MjVrMmdfNHh3cmNvZjFySXk1SVZKcnN3WC1qTmM1TmN4dFFfNFlxUFV2TXVyVFRwaWg5U21kUlM5dUZtd2ZXQlVRTEh1WEY0T2tnbUxUTnFneVNLd3FMS0VBT3lrcUJ1Tk9oZ2lrWk9fblpCMzdYMjVBM2g3S2VMT0k5WVlZVUHSAbsCQVVfeXFMT0NRV0dnYUk1Y0s3aFM0eWZuSUNQY200Mng3TGp2WGJCVXp5N1J4OGVnelYwQTB5clVLN2FQZUdDaTVKQXl5OGZWZ2xFT2ZVa0VHdkJnOWFaRERlWnU2OC15UVNqeEtqQmJfdm43NWlWTC04dGF1QU1oVEh5OXV4SldjTnNTZ0twWDY2SGp4RXQxeEVPTy1wRUJOZXNCdlROVXF4anRQZ2hXaFFrcE4wQlNRNlJ1emRybjRadDI1azJnXzR4d3Jjb2Yxckl5NUlWSnJzd1gtak5jNU5jeHRRXzRZcVBVdk11clRUcGloOVNtZFJTOXVGbXdmV0JVUUxIdVhGNE9rZ21MVE5xZ3lTS3dxTEtFQU95a3FCdU5PaGdpa1pPX25aQjM3WDI1QTNoN0tlTE9JOVlZWVVB?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Marchés émergents: des bénéfices solides, des valorisations en retrait",
-   "s": "L'Echo",
-   "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOQzVtVDIzcDFOQW5QYXlZWmRTNGtHeVZDY3Jndk16d194ak9USzAtSXk1YXMxR2E5TFF1LUEzSFpZdkhtLUtzYmQ1Z3ZGaUxiNDR0WXdUaGpLVXYtWEZFMy1pNDJvYXhTMF9zcjRSaHM1X1FSNjJJUmZnemZ2UE5ISEFpYm5MSVRuSkRlU2ctQWxaUTkzWGp1NFoxMHkwQk1tZUJnYi04Sk10TUtiUDlQVUZfTmlwV2lRT3NsVHREWTg2bGRwckphRXBqSXdlQlZOaVF6d1FqT0otY1lWZUV6QmtpSVM?oc=5",
-   "z": "emergents"
-  },
-  {
-   "t": "Les actions sud-coréennes progressent légèrement, portées par les gains de Wall Street",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMnRPTkhTNmFFMkh3NE9iWi14X0hkOGhtNXd2emQ5Tk5oM0hjeVBmVUpQWVBjNms2bk55VmRTMmMyWm5MRXdRUDB3ejVmSHEyTHAxdEVPUDVNSFZ0Y1VhX3Vmd0pnTjB6aEowTko1NGhRU3AzbkdFNVRTWTZuQ1BWTXZGZHlReHNETzBiMVFxeF9Cc3RUcXA1Ull1ekJCMGtobWljd2Y0aEFxUGJCM3lkYThGMXFBZU9WaUZkQWF6SjQwTzZzYXZKR3l4MEVIREtna0c0ZGs3RERvbmJGUFhv?oc=5",
-   "z": "emergents"
+   "t": "Résumé quotidien : le pétrole rebondit, l'EUR/USD chute brutalement 🗽 Wall Street se stabilise après la chute de Nvidia",
+   "s": "XTB.com",
+   "u": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOd3d4RVRUUGQ0OXFoZ1B5eUlIa19jRjNxOGtyVEVLUGFWMGM3WWp1WFB3aEJ3Tmk1bk9iTWREckFOU1NYdVdEZ3R6Y3ktYVZZcGhYRDlsaDdtdENjcWlyS2xJTEMyRzBuaTNlenJlbV9QaHhQZ3pqZElLOW9SYWNNUVB5VXNRb21sRzNjeW9FSVRMSE9IZ1RqMk02Yk9iVFp3VElhTUlLbXdnZHdhbnYyUUJ3bWVRblBDYjFFUnJSNFg2dTJyZFVXTmVoMEZvdjMwUC1vcnZ1Q2lRWmQzYVI4YUxTMmg2NXpzUkE?oc=5",
+   "z": "monde"
   }
  ],
- "lesson": "« Le risque de concentration ». Quand quelques entreprises pèsent très lourd dans un indice, une mauvaise nouvelle sur l'une d'elles fait bouger tout l'indice : c'est le cas de Nvidia, qui représente une part importante du Nasdaq-100 et même de l'indice Monde. Un ETF reste diversifié (des centaines d'entreprises), mais pas uniformément : les géants y comptent davantage. C'est pour ça qu'associer plusieurs zones (Europe, Japon, émergents) à côté des États-Unis réduit la dépendance à une seule société ou un seul secteur."
+ "lesson": "Le mot du jour : le « risque de concentration ». C'est le danger de dépendre trop fortement d'une seule entreprise ou d'un seul secteur. Nvidia pèse plusieurs pourcents des grands indices : quand son patron part du jour au lendemain, l'action plonge, mais un ETF qui détient des centaines d'entreprises amortit le choc, car d'autres (ici AMD ou Broadcom) montent au même moment. C'est tout l'intérêt de diversifier : un accident isolé ne fait pas dérailler l'ensemble."
 }
