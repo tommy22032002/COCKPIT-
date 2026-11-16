@@ -3,7 +3,7 @@ import json, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET, em
 
 UA = {"User-Agent": "Mozilla/5.0 (CockpitJournal)"}
 MKT = ["^FCHI", "^STOXX", "^GSPC", "^IXIC", "^N225", "EEM", "EURUSD=X", "^TNX", "^VIX", "GC=F", "BZ=F", "BTC-EUR",
-       "DCAM.PA", "PUST.PA", "ETZD.PA", "PTPXE.PA", "PAEEM.PA"]
+       "DCAM.PA", "PUST.PA", "ETSA.PA", "ETZD.PA", "PTPXE.PA", "PAEEM.PA"]
 NEWSQ = {
     "tout": 'bourse OR "marchés financiers" OR Wall Street when:1d',
     "us": '"Wall Street" OR Nasdaq OR "Réserve fédérale" when:1d',
