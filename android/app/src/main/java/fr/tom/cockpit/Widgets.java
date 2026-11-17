@@ -222,6 +222,15 @@ final class Widgets {
                                 "Ton DCA l'achète en ce moment bien moins cher. Ne change rien à ton plan et ne vends pas : c'est là que le DCA fait la différence.", "achat");
                     }
                 }
+                // baisse d'un ETF : -3 % ou plus dans la journée, une fois par jour et par ETF
+                if (prev > 0 && px > 0 && px / prev - 1 <= -0.03 && JN.on(ctx, "etf") && !JN.quiet(ctx)) {
+                    String ek = "etf-" + l.optString("k", sym) + "-" + day;
+                    if (!Prefs.sp(ctx).getBoolean(ek, false)) {
+                        Prefs.sp(ctx).edit().putBoolean(ek, true).apply();
+                        JN.post(ctx, ek.hashCode(), null, "Baisse : " + l.optString("n", sym) + " " + pct(px / prev - 1) + " aujourd'hui",
+                                "Ton ETF " + l.optString("n", sym) + " perd " + pct(px / prev - 1) + " sur la journée (≈ " + signedEur(q * (px - prev)) + " sur ta ligne). Ton DCA continue : il achètera moins cher.", "portefeuille", null, true, null, true);
+                    }
+                }
                 posValue += q * px;
                 if (prev > 0) { dayAbs += q * (px - prev); base += q * prev; }
             }

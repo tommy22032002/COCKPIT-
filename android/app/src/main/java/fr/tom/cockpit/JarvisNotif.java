@@ -74,6 +74,7 @@ public class JarvisNotif extends NotificationListenerService {
             JSONObject o = new JSONObject();
             o.put("pkg", pkg); o.put("app", label); o.put("title", title.length() > 160 ? title.substring(0, 160) : title);
             o.put("text", text.length() > 400 ? text.substring(0, 400) : text); o.put("at", sbn.getPostTime()); o.put("key", sbn.getKey());
+            bigCheck(c, label, title, text);
             synchronized (JarvisNotif.class) {
                 JSONArray q; try { q = new JSONArray(sp(c).getString("ntQ", "[]")); } catch (Exception x) { q = new JSONArray(); }
                 for (int i = 0; i < q.length(); i++) { JSONObject p = q.optJSONObject(i); if (p != null && p.optString("text").equals(o.optString("text")) && Math.abs(p.optLong("at") - o.optLong("at")) < 120000) return; }
@@ -81,6 +82,30 @@ public class JarvisNotif extends NotificationListenerService {
                 while (q.length() > 200) q.remove(0);
                 sp(c).edit().putString("ntQ", q.toString()).apply();
             }
+        } catch (Exception ignored) { }
+    }
+
+    static final Pattern AMT = Pattern.compile("(\\d{1,3}(?:[  .]\\d{3})*|\\d+)(?:[.,](\\d{2}))?\\s?(?:€|EUR)", Pattern.CASE_INSENSITIVE);
+    static final Pattern DEBIT = Pattern.compile("d[ée]bit|paiement|pr[ée]l[èe]vement|achat|carte|\\bCB\\b|retrait|envoy[ée]|transaction", Pattern.CASE_INSENSITIVE);
+    static final Pattern CREDIT = Pattern.compile("cr[ée]dit|re[çc]u|rembours|virement re[çc]u|salaire", Pattern.CASE_INSENSITIVE);
+
+    /** Dépense inhabituelle en direct : notification de ta banque au-dessus du seuil calculé par Capital (bigTx). */
+    static void bigCheck(Context c, String app, String title, String text) {
+        try {
+            if (!JN.on(c, "tx")) return;
+            double big = JN.data(c).optDouble("bigTx", 0);
+            if (big <= 0) return;
+            String all = title + " " + text;
+            if (CREDIT.matcher(all).find()) return;
+            if (!DEBIT.matcher(all).find()) return; // « ton solde est de … » n'est pas une dépense
+            java.util.regex.Matcher m = AMT.matcher(all);
+            if (!m.find()) return;
+            double v = Double.parseDouble(m.group(1).replaceAll("[  .]", "") + "." + (m.group(2) == null ? "00" : m.group(2)));
+            if (v < big) return;
+            String k = "big-" + Math.round(v * 100) + "-" + (System.currentTimeMillis() / 3600_000L);
+            if (Prefs.sp(c).getBoolean(k, false)) return;
+            Prefs.sp(c).edit().putBoolean(k, true).apply();
+            JN.post(c, k.hashCode(), null, "Dépense inhabituelle : " + Widgets.eur(v, false), app + " : " + (text.isEmpty() ? title : text) + "\n\nC'est plus que 95 % de tes dépenses habituelles. Si ce n'est pas toi, contacte ta banque.", "comptes", null, true, null, true);
         } catch (Exception ignored) { }
     }
 
