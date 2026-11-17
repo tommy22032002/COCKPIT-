@@ -43,6 +43,7 @@ final class Widgets {
         if (dash != null && dash.length > 0) render(ctx, m, dash, true);
         Wear.push(ctx);
         LockNotif.update(ctx);
+        try { NetWidget.updateAll(ctx); } catch (Exception ignored) { }
     }
 
     static String eur(double v, boolean cents) {

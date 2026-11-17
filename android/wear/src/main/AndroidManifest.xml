@@ -101,6 +101,16 @@
             <meta-data android:name="androidx.wear.tiles.PREVIEW" android:resource="@mipmap/ic_launcher" />
         </service>
         <service
+            android:name="fr.tom.cockpit.wear.NetTile"
+            android:exported="true"
+            android:label="@string/tile_net"
+            android:permission="com.google.android.wearable.permission.BIND_TILE_PROVIDER">
+            <intent-filter>
+                <action android:name="androidx.wear.tiles.action.BIND_TILE_PROVIDER" />
+            </intent-filter>
+            <meta-data android:name="androidx.wear.tiles.PREVIEW" android:resource="@mipmap/ic_launcher" />
+        </service>
+        <service
             android:name="fr.tom.cockpit.wear.EpargneTile"
             android:exported="true"
             android:label="@string/tile_epargne"

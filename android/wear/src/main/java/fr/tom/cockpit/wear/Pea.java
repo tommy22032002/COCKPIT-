@@ -51,6 +51,7 @@ final class Pea {
     static void changed(Context c) {
         Context a = c.getApplicationContext();
         try { TileService.getUpdater(a).requestUpdate(PeaTile.class); } catch (Throwable ignored) { }
+        try { TileService.getUpdater(a).requestUpdate(NetTile.class); } catch (Throwable ignored) { }
         try { TileService.getUpdater(a).requestUpdate(BudgetTile.class); } catch (Throwable ignored) { }
         try { TileService.getUpdater(a).requestUpdate(SaisonTile.class); } catch (Throwable ignored) { }
         try { ComplicationDataSourceUpdateRequester.create(a, new ComponentName(a, PeaComplication.class)).requestUpdateAll(); } catch (Throwable ignored) { }

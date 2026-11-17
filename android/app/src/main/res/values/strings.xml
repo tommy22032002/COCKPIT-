@@ -3,6 +3,8 @@
     <string name="app_name">Capital</string>
     <string name="share_label">Envoyer à Capital</string>
     <string name="w_pea_name">Capital · PEA</string>
+    <string name="w_net_name">Capital · Patrimoine</string>
+    <string name="w_net_desc">Ton patrimoine net, sa variation sur 1 mois et sa courbe, comme l’accueil de Capital.</string>
     <string name="w_dash_name">Capital · Tableau de bord</string>
     <string name="w_pea_desc">Valeur du PEA et variation du jour. Élargis-le pour voir ta répartition.</string>
     <string name="w_dash_desc">Courbe du PEA, apport, objectif et prochain achat. Agrandis-le jusqu’à tout l’écran.</string>

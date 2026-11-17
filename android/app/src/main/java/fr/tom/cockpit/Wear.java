@@ -20,6 +20,14 @@ final class Wear {
             JSONObject d = new JSONObject(s), o = new JSONObject();
             for (String k : new String[]{"value", "gain", "dayAbs", "dayPct", "cash", "verse", "cost"}) o.put(k, d.optDouble(k, 0));
             o.put("at", d.optString("at", ""));
+            // patrimoine net (même calcul que l'appli) et sa courbe sur 1 mois
+            double net = d.has("netExPea") ? d.optDouble("netExPea", 0) + d.optDouble("value", 0) : d.optDouble("net", 0);
+            o.put("net", net);
+            JSONArray nh = d.optJSONArray("netHist"), nh2 = new JSONArray();
+            if (nh != null) for (int i = Math.max(0, nh.length() - 31); i < nh.length(); i++) nh2.put(nh.optJSONArray(i).optDouble(1, 0));
+            if (nh2.length() > 0) nh2.put(nh2.length() - 1, net);
+            o.put("netHist", nh2);
+            if (d.has("netParts")) o.put("netParts", d.optJSONObject("netParts"));
             o.put("privacy", d.optBoolean("privacy", false));
             JSONArray L = d.optJSONArray("lines"), out = new JSONArray();
             if (L != null) for (int i = 0; i < L.length(); i++) {

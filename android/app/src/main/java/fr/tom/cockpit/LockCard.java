@@ -31,7 +31,15 @@ public class LockCard {
     static Bitmap draw(Context c, JSONObject d, String show, boolean big) {
         float dn = c.getResources().getDisplayMetrics().density;
         int wDp = Math.max(260, Math.min(420, (int) (c.getResources().getDisplayMetrics().widthPixels / dn) - 56));
-        int W = (int) (wDp * dn), H = (int) ((big ? 176 : 48) * dn);
+        return draw(c, d, show, wDp, big ? 176 : 48);
+    }
+
+    /** Taille libre (widget d'écran d'accueil) : grande carte dès 100 dp de haut. */
+    static Bitmap draw(Context c, JSONObject d, String show, int wDp, int hDp) {
+        float dn = c.getResources().getDisplayMetrics().density;
+        boolean big = hDp >= 100;
+        wDp = Math.max(120, Math.min(600, wDp)); hDp = Math.max(40, Math.min(500, hDp));
+        int W = (int) (wDp * dn), H = (int) (hDp * dn);
         Bitmap b = Bitmap.createBitmap(W, H, Bitmap.Config.ARGB_8888);
         Canvas cv = new Canvas(b);
         Paint bg = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -45,8 +53,10 @@ public class LockCard {
         int dayCol = dayAbs >= 0 ? Widgets.GAIN : Widgets.LOSS;
         float cx = W / 2f, pad = 14 * dn;
         String netS = Widgets.eur(net, false), peaS = Widgets.eur(pea, false), pctS = Widgets.pct(dayPct);
+        if (d.optBoolean("privacy", false)) { netS = "•••• €"; peaS = "•••• €"; }
 
         if (!big) {
+            cv.translate(0, Math.max(0, (H - 48 * dn) / 2f));
             if (onlyNet || onlyPea) {
                 // une seule valeur, centrée et en grand
                 Paint cap = txt(9.5f * dn, Widgets.MUTED, true);
@@ -84,6 +94,8 @@ public class LockCard {
         RectF area = new RectF(pad, pad + (onlyNet ? 64 : 84) * dn, W - pad, H - pad - 12 * dn);
         JSONArray hist = onlyPea ? d.optJSONArray("hist") : d.optJSONArray("netHist");
         int n = hist == null ? 0 : hist.length(), from = Math.max(0, n - 90);
+        // un mois de courbe pour le patrimoine, comme l'accueil de l'appli
+        if (!onlyPea && n > 1) { String lim = new java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(new java.util.Date(System.currentTimeMillis() - 31L * 86400000L)); from = n - 1; while (from > 0 && hist.optJSONArray(from - 1).optString(0, "").compareTo(lim) >= 0) from--; if (n - from < 2) from = Math.max(0, n - 2); }
         if (n - from >= 2) {
             double lo = Double.MAX_VALUE, hi = -Double.MAX_VALUE;
             for (int i = from; i < n; i++) { double y = hist.optJSONArray(i).optDouble(1, 0); lo = Math.min(lo, y); hi = Math.max(hi, y); }
@@ -103,7 +115,7 @@ public class LockCard {
             Paint st = new Paint(Paint.ANTI_ALIAS_FLAG); st.setStyle(Paint.Style.STROKE); st.setStrokeWidth(2.2f * dn); st.setColor(col); st.setStrokeJoin(Paint.Join.ROUND);
             cv.drawPath(ln, st);
             String d0 = hist.optJSONArray(from).optString(0, "");
-            String evo = Widgets.signedEur(last - first) + (d0.length() >= 10 ? " depuis le " + d0.substring(8, 10) + "/" + d0.substring(5, 7) : "");
+            String evo = (last >= first ? "▲ " : "▼ ") + Widgets.signedEur(last - first) + (onlyPea ? (d0.length() >= 10 ? " depuis le " + d0.substring(8, 10) + "/" + d0.substring(5, 7) : "") : " sur 1 mois");
             Paint ep = txt(10 * dn, col, true);
             cv.drawText(evo, W - pad - ep.measureText(evo), H - pad + 2 * dn, ep);
         }

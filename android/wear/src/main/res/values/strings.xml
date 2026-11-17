@@ -6,5 +6,6 @@
     <string name="comp_name">PEA</string>
     <string name="tile_service">Service</string>
     <string name="tile_jarvis">Jarvis</string>
+    <string name="tile_net">Patrimoine net</string>
     <string name="tile_epargne">Arrondis et objectif</string>
 </resources>
