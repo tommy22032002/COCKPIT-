@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Logo Capital : un C avec une courbe qui monte (zone sûre de l'icône adaptative) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="680" android:viewportHeight="680">
+    <group android:translateX="84" android:translateY="84">
+        <path android:pathData="M340,180 A112,112 0 1,0 340,332" android:strokeColor="#FFFFFFFF" android:strokeWidth="50" android:strokeLineCap="round"/>
+        <path android:pathData="M212,298 L250,260 L276,282 L338,222" android:strokeColor="#FF8CF5C8" android:strokeWidth="24" android:strokeLineCap="round" android:strokeLineJoin="round"/>
+    </group>
+</vector>
