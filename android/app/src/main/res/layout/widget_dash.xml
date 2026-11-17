@@ -18,6 +18,8 @@
         <TextView android:id="@+id/w_at" android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:textColor="@color/muted" android:textSize="10sp" android:maxLines="1"/>
     </LinearLayout>
+    <TextView android:id="@+id/w_rv" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp"
+        android:textColor="@color/ink" android:textSize="13sp" android:maxLines="1" android:ellipsize="end" android:visibility="gone"/>
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp">
         <TextView android:id="@+id/w_p0" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:paddingBottom="4dp" android:text="1 mois" android:textColor="@color/ink" android:textSize="12sp" android:background="@drawable/chip_off"/>
         <TextView android:id="@+id/w_p1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:paddingBottom="4dp" android:text="3 mois" android:textColor="@color/ink" android:textSize="12sp" android:background="@drawable/chip_off"/>

@@ -140,6 +140,16 @@ final class Widgets {
                     v.setOnClickPendingIntent(R.id.w_ap_row, open(ctx, "plan", 7));
                     v.setOnClickPendingIntent(R.id.w_ms_row, open(ctx, "plan", 8));
                     v.setOnClickPendingIntent(R.id.w_chart, open(ctx, "performance", 4));
+                    // reste à vivre jusqu'à la fin du mois (comptes courants − prélèvements à venir), calculé par Capital
+                    if (d.has("rvFin")) {
+                        double rf = d.optDouble("rvFin", 0), rd = d.optDouble("rvDay", 0);
+                        String to = d.optString("rvTo", "");
+                        v.setTextViewText(R.id.w_rv, "Reste à vivre" + (to.isEmpty() ? "" : " jusqu'au " + to) + " : " + (priv ? "•••• €" : eur(rf, false) + (rd > 0 ? " · " + eur(rd, false) + "/jour" : "")));
+                        v.setViewVisibility(R.id.w_rv, View.VISIBLE);
+                        v.setOnClickPendingIntent(R.id.w_rv, open(ctx, "comptes", 11));
+                    } else {
+                        v.setViewVisibility(R.id.w_rv, View.GONE);
+                    }
 
                     int per = Prefs.period(ctx, id);
                     int[] chips = {R.id.w_p0, R.id.w_p1, R.id.w_p2, R.id.w_p3};

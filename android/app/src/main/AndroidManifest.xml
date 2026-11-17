@@ -91,18 +91,13 @@
             android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode" />
 
-        <!-- icône « Jarvis » : « Ok Google, ouvre Jarvis » ouvre directement la bulle -->
+        <!-- plus d'icône « Jarvis » séparée (une seule icône Capital) : Jarvis s'ouvre par l'appui long sur l'icône (raccourci « jarvis ») -->
         <activity-alias
             android:name=".JarvisLauncher"
             android:targetActivity=".JarvisActivity"
             android:label="@string/jarvis_name"
             android:icon="@mipmap/ic_launcher"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity-alias>
+            android:exported="true" />
 
         <service
             android:name=".JarvisNotif"
