@@ -1,112 +1,104 @@
 {
  "v": 1,
- "date": "2026-11-16",
- "at": "2026-11-16T07:55:00+01:00",
- "title": "Semaine Nvidia : l'Asie recule, l'Europe tient avant les résultats",
- "mood": "nerveux, en attente",
+ "date": "2026-11-17",
+ "at": "2026-11-17T07:44:00+01:00",
+ "title": "Lundi noir pour la tech américaine, tout le monde attend Nvidia ce soir",
+ "mood": "tendu, en attente",
  "summary": [
-  "Vendredi, Wall Street a fini en baisse sans paniquer : S&P 500 −0,4 %, Nasdaq −0,9 %, plombés par les fabricants de puces (indice des semi-conducteurs −3,4 %, AMD −8,8 %). Nvidia a perdu 12,8 % sur la semaine, sa sixième semaine de baisse d'affilée, après le départ de son patron Jensen Huang. Malgré cela, la semaine reste la meilleure depuis août pour Wall Street (environ +2,5 % pour le S&P 500). En Europe, le CAC 40 a signé une cinquième hausse de suite (+0,1 %) et +2,8 % sur la semaine.",
-  "Ce matin, l'Asie recule nettement : le Nikkei perd environ 2,4 %, tiré vers le bas par les valeurs de puces avant les résultats de Nvidia mardi soir. Le Japon a aussi annoncé une contraction surprise de son économie au troisième trimestre, et la Chine des ventes et une production industrielle d'octobre moins bonnes que prévu. Taïwan et la Corée du Sud, très liées aux semi-conducteurs, souffrent aussi.",
-  "Toile de fond : l'inflation américaine reste trop élevée (prix à la production +6,5 % sur un an) et un responsable de la Fed juge qu'il reste « du travail ». Une hausse des taux en décembre est de plus en plus attendue : le taux américain à 10 ans grimpe à 5,15 %, le dollar reste fort (1 € ≈ 1,10 $) et le pétrole Brent tient vers 96 $ sur fond de tensions au Moyen-Orient. Cette semaine : Nvidia mardi, les minutes de la Fed mercredi et l'entrée en Bourse géante d'Anthropic jeudi."
+  "Hier, Wall Street a nettement reculé : S&P 500 −1,9 %, Nasdaq −2,5 % et Dow Jones −1,4 %, troisième baisse d'affilée. Nvidia a encore perdu 4,1 % : depuis le départ de son patron Jensen Huang, l'entreprise a perdu environ 735 milliards de dollars de valeur en Bourse. S'y ajoutent de nouvelles règles américaines qui limitent l'accès à distance aux puces les plus avancées, et la crainte que des freins soient mis à la construction de centres de données pour l'IA. L'« indice de la peur » VIX bondit de 19 à près de 23.",
+  "L'Europe a beaucoup mieux résisté : le CAC 40 n'a cédé que 0,2 % (8 352 points), mettant fin à cinq hausses d'affilée, et le Stoxx 600 −0,3 %. Ce matin, l'Asie suit Wall Street mais sans panique : le Nikkei termine en baisse de 1,3 %, la Corée du Sud 1 %, Taïwan et Hong Kong environ 1 %. Les contrats à terme américains sont stables.",
+  "Côté taux et matières premières : le taux américain à 10 ans se détend légèrement à 5,12 % (5,15 % vendredi), le pétrole Brent recule vers 92 $ (−3,5 % hier) et l'or se maintient près de 3 880 $. Le grand rendez-vous, ce sont les résultats de Nvidia ce soir après la clôture de Wall Street, suivis mercredi des minutes de la Fed et jeudi de l'entrée en Bourse d'Anthropic."
  ],
- "forYou": "La baisse touche surtout la tech américaine et les marchés asiatiques liés aux puces, donc vos ETF Nasdaq-100, Japon et Émergents peuvent être plus secoués cette semaine que le Stoxx 600. Les résultats de Nvidia peuvent provoquer un gros mouvement dans un sens ou dans l'autre, mais pour un investissement mensuel régulier, ces à-coups font partie du chemin : un mois plus agité permet simplement d'acheter un peu moins cher. Rien ne change dans le plan de fond.",
+ "forYou": "La baisse est concentrée sur la tech américaine et les marchés asiatiques liés aux puces : votre ETF Nasdaq-100 et, dans une moindre mesure, vos ETF Monde, Japon et Émergents en ressentent l'effet, alors que le Stoxx 600 tient bien. Les résultats de Nvidia peuvent provoquer un fort mouvement demain, dans un sens comme dans l'autre. Pour un investissement mensuel régulier, ces semaines agitées font partie du parcours : quand les prix baissent, le même versement achète simplement un peu plus de parts.",
  "zones": {
-  "monde": "Semaine suspendue aux résultats de Nvidia et à l'entrée en Bourse d'Anthropic, avec en fond la crainte d'une hausse des taux de la Fed en décembre.",
-  "us": "Vendredi en baisse (S&P 500 −0,4 %, Nasdaq −0,9 %) à cause des puces, mais meilleure semaine depuis août ; les contrats à terme hésitent avant Nvidia mardi.",
-  "europe": "Le CAC 40 aligne cinq séances de hausse (+2,8 % sur la semaine) et le Stoxx 600 reste près de ses records, moins exposé à la tech.",
-  "japon": "Le Nikkei chute d'environ 2,4 % ce matin, pénalisé par les valeurs de semi-conducteurs et une contraction inattendue du PIB au troisième trimestre ; le yen reste faible (≈ 160 par dollar).",
-  "emergents": "Taïwan et la Corée du Sud reculent avec les puces, et les chiffres chinois d'octobre déçoivent ; l'ETF EEM a perdu 0,4 % vendredi."
+  "monde": "Les marchés mondiaux reculent, entraînés par la tech américaine, dans l'attente de Nvidia ce soir et de l'introduction en Bourse d'Anthropic jeudi.",
+  "us": "Lundi difficile : S&P 500 −1,9 %, Nasdaq −2,5 %, Nvidia −4,1 % ; le VIX remonte vers 23. Les contrats à terme sont stables avant les ventes au détail (14 h 30) et Nvidia ce soir.",
+  "europe": "Le CAC 40 (−0,2 %) et le Stoxx 600 (−0,3 %) résistent bien, même si les valeurs liées aux puces comme STMicroelectronics restent sous pression.",
+  "japon": "Le Nikkei a fini en baisse de 1,3 % ce matin, sous les 59 000 points, plombé par SoftBank et Advantest ; le yen reste faible (≈ 159 par dollar).",
+  "emergents": "L'ETF EEM a chuté de 3,3 % hier, et ce matin la Corée du Sud, Taïwan et Hong Kong cèdent environ 1 %, très exposés aux semi-conducteurs."
  },
  "markets": [
   {
    "k": "^FCHI",
    "n": "CAC 40",
-   "v": 8368.91,
-   "ch": 0.0009
+   "v": 8352.0,
+   "ch": -0.00202
   },
   {
    "k": "^STOXX",
    "n": "Stoxx 600",
-   "v": 664.14,
-   "ch": 0.0002
+   "v": 662.31,
+   "ch": -0.00276
   },
   {
    "k": "^GSPC",
    "n": "S&P 500",
-   "v": 7561.67,
-   "ch": -0.00405
+   "v": 7416.59,
+   "ch": -0.01919
   },
   {
    "k": "^IXIC",
    "n": "Nasdaq",
-   "v": 25136.27,
-   "ch": -0.00906
+   "v": 24509.76,
+   "ch": -0.02492
   },
   {
    "k": "^N225",
    "n": "Nikkei 225",
-   "v": 59700.77,
-   "ch": -0.02358
+   "v": 58965.48,
+   "ch": -0.01167
   },
   {
    "k": "EEM",
    "n": "Émergents (EEM)",
-   "v": 60.92,
-   "ch": -0.0036
+   "v": 58.89,
+   "ch": -0.03332
   },
   {
    "k": "EURUSD=X",
    "n": "Euro / dollar",
-   "v": 1.1014,
-   "ch": -0.00328
+   "v": 1.1011,
+   "ch": -0.00126
   },
   {
    "k": "^TNX",
    "n": "Taux US à 10 ans",
-   "v": 5.154,
-   "ch": 0.00999
+   "v": 5.121,
+   "ch": -0.0064
   },
   {
    "k": "^VIX",
    "n": "Indice de la peur (VIX)",
-   "v": 19.3,
-   "ch": 0.03209
+   "v": 22.91,
+   "ch": 0.18705
   },
   {
    "k": "GC=F",
    "n": "Or",
-   "v": 3850.5,
-   "ch": -0.00921
+   "v": 3877.6,
+   "ch": 0.00638
   },
   {
    "k": "BZ=F",
    "n": "Pétrole (Brent)",
-   "v": 96.52,
-   "ch": 0.0071
+   "v": 92.01,
+   "ch": -0.00465
   },
   {
    "k": "BTC-EUR",
    "n": "Bitcoin",
-   "v": 58650.96,
-   "ch": 0.0082
+   "v": 58470.53,
+   "ch": -0.01292
   }
  ],
  "agenda": [
-  {
-   "d": "2026-11-16",
-   "h": "heure à confirmer",
-   "t": "Discours du président de la Fed, Kevin Warsh",
-   "z": "us",
-   "level": 2,
-   "impact": "Le ton sur l'inflation peut faire bouger les taux américains et donc les actions US de vos ETF Monde et Nasdaq-100 (heure à confirmer)."
-  },
   {
    "d": "2026-11-17",
    "h": "14:30",
    "t": "États-Unis : ventes au détail d'octobre",
    "z": "us",
    "level": 2,
-   "impact": "La consommation tire l'économie américaine : des chiffres trop forts renforceraient l'idée d'une hausse des taux de la Fed en décembre."
+   "impact": "Des achats des ménages trop dynamiques renforceraient l'idée d'une hausse des taux de la Fed en décembre, ce qui pèse sur les actions."
   },
   {
    "d": "2026-11-17",
@@ -114,15 +106,15 @@
    "t": "Résultats trimestriels de Nvidia",
    "z": "us",
    "level": 3,
-   "impact": "Nvidia pèse lourd dans le Nasdaq-100 et l'ETF Monde ; après le départ de son patron, la publication peut faire bouger toute la tech mondiale mercredi."
+   "impact": "Nvidia pèse lourd dans le Nasdaq-100 et l'ETF Monde : sa publication peut faire bouger toute la tech mondiale mercredi."
   },
   {
    "d": "2026-11-18",
-   "h": "11:00",
+   "h": "matin",
    "t": "Zone euro : inflation d'octobre (chiffre final)",
    "z": "europe",
    "level": 1,
-   "impact": "Confirmation d'un chiffre déjà estimé : surprise peu probable, mais utile pour deviner la suite de la BCE."
+   "impact": "Simple confirmation d'un chiffre déjà estimé, utile pour deviner la suite de la BCE (heure à confirmer)."
   },
   {
    "d": "2026-11-18",
@@ -135,10 +127,10 @@
   {
    "d": "2026-11-19",
    "h": "journée",
-   "t": "Premier jour de cotation d'Anthropic au Nasdaq",
+   "t": "Premier jour de cotation d'Anthropic",
    "z": "us",
    "level": 2,
-   "impact": "L'une des plus grosses entrées en Bourse de l'histoire : un bon test de l'appétit des investisseurs pour l'IA. Elle n'entrera pas tout de suite dans vos ETF indiciels."
+   "impact": "Grand test de l'appétit des investisseurs pour l'IA ; l'action n'entrera pas tout de suite dans vos ETF indiciels."
   },
   {
    "d": "2026-11-19",
@@ -154,108 +146,104 @@
    "t": "Japon : inflation d'octobre",
    "z": "japon",
    "level": 2,
-   "impact": "Une inflation élevée pousserait la Banque du Japon à monter ses taux en décembre, ce qui renforcerait le yen et pèserait sur le Nikkei/TOPIX."
+   "impact": "Une inflation élevée pousserait la Banque du Japon à monter ses taux en décembre, ce qui pèserait sur le Nikkei/TOPIX (date et heure à confirmer)."
+  },
+  {
+   "d": "2026-11-25",
+   "h": "14:30",
+   "t": "États-Unis : PIB du 3e trimestre (2e estimation) et inflation PCE d'octobre",
+   "z": "us",
+   "level": 3,
+   "impact": "L'indicateur d'inflation préféré de la Fed : un chiffre élevé rendrait une hausse des taux en décembre plus probable."
   }
  ],
  "headlines": [
   {
-   "t": "Chronique | De la \"vague bleue\" à la correction boursière: pourquoi la promesse de l’IA convainc moins Wall Street",
-   "s": "L'Echo",
-   "u": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPM0p3cldqa096UVVUelRocWIwQnhSM2ZRbWtQYmFNT1czMHhFeXlubTZyLU5pZmp3OThaUjBweTc4SmRvVXQ2ZEN1bXh6NEoyYTJ2NV9IcDBnX0FwUzg4dWx2V3JvZnpiWVk2ek0zMXZfVW52Z1JkUXlVQzFuX1MtWC16WUtaQUNITkVWTUQ5Y1NNMEg5VmZiN21YeFA4OFFtbF9ZWDhMRnlSLU1jaW9KQ1VYeHJMc1QxUzN0OXIwS0M4WnlKWDhOQWF4X1Z4QUhIZ3ZtU2h5cWkxMDR6UzZKcEFCR1VzaFBpbFo5VjlOZWtWM0k?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "Trois menaces qui pèsent sur l'entrée en Bourse d'Anthropic",
-   "s": "Zonebourse",
-   "u": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTzNCSFVIZzZzOUZyX3JmY195bGx4cWtsb193dkNTYkROYlQ1MncwRHpPX2R3MTcwVWlPYkVkNXJkS1lmemtQbmxMVVhrRHQ5cDRRVUZjQk9KMGtuVG5JTTVPTGw0Nnh2VjFOZGxweVBFS3dpX08xeGd1ZmlyR05PVDYxZWd3ZUlsSnFjSlRUdF9GQzB2akVVOVZxMUJFMzItNmt1ZkNqVU5rT0NFV1dIVDFkcjIxdU1lT3hOcA?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "L'administration Trump s'apprête à désigner Nvidia et d'autres entreprises spécialisées dans l'IA comme “champ",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi0wJBVV95cUxORUFIeXJZT3FrMjZVa01TX1BrVGJFZVFvMVhXRzVyMHIydDNtbmUzNEktaFNHblVJNjV5QnNfN1JmZXFEMUxCZHU5cXgxdXBhTk9Qek5kZVBydzc2X1JyWVVFZHVwZzNBNFZKZVhMQ2hhb0lfNkVfS0laNmUtTlJYbjZCN296VE9KWkVwQmtNNmplTlNJTGtsN3l6UjhEZEwyMWk5TXpCa2dPYnJoczdMUS1VQkNPQUcwWW5GbFp2ZFVZTElSa2NTTUk5Y0Nwc0FRY1NRS1FVczhsVzdDczZVYUR1R2xza20wZVlpOGJaNjRxT21jZldhaDlkcW9uVFl1SkFLMGI3dGlDWmY3NXUxUy1UT2RkdUlOSWZXMkJUOHo3RGFLVFQtRGpVREMxNUN6dTdORUtJZXc3Z2lUUkxXSV9jXzRYNjRFVGxGU0FlMDh3N1XSAdMCQVVfeXFMTkVBSHlyWU9xazI2VWtNU19Qa1RiRWVRbzFYV0c1cjByMnQzbW5lMzRJLWhTR25VSTY1eUJzXzdSZmVxRDFMQmR1OXF4MXVwYU5PUHpOZGVQcnc3Nl9ScllVRWR1cGczQTRWSmVYTENoYW9JXzZFX0tJWjZlLU5SWG42QjdvelRPSlpFcEJrTTZqZU5TSUxrbDd5elI4RGRMMjFpOU16QmtnT2JyaHM3TFEtVUJDT0FHMFluRmxadmRVWUxJUmtjU01JOWNDcHNBUWNTUUtRVXM4bFc3Q3M2VWFEdUdsc2ttMGVZaThiWjY0cU9tY2ZXYWg5ZHFvblRZdUpBSzBiN3RpQ1pmNzV1MVMtVE9kZHVJTklmVzJCVDh6N0RhS1RULURqVURDMTVDenU3TkVLSWV3N2dpVFJMV0lfY180WDY0RVRsRlNBZTA4dzdV?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "La tech fait chuter les Bourses en Asie, la panique sur les puces persiste",
-   "s": "TradingView",
-   "u": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1JeFZJTHFUNmJxYWZmRks1Mm1aTXQ2eDhiYVlUbENvUE05TWhkQ0RZTXRpZWxJNzFZanVYMno5RFpWb3VBaDdVTl9ZZVVTNDlJM1RlRG41ZHhoQWhIcllyR2N3?oc=5",
-   "z": "monde"
-  },
-  {
-   "t": "Les futures sur le S&P 500 perdent de l’élan aujourd’hui avant les résultats de Nvidia",
-   "s": "PortalCripto",
-   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQzhUVmlqUllGTVFXdUt2ZUxUbmpKa2dDMTVtNUtiVVJZcmktZnpwb1pncklXV25pbGd3aVBPTW0yXzVZVW80UllCY2lzem1Kak14YmZ1UlQ2THlWOURxbnpTYkdveFJ2SDVqdE5OOGJNOU1aYTVHVmRRbzBnNV9HNkNxdkZZdnc4Zm40UUo2Mm5zamxkZF9pbHNfU1hvb2FqQk1PMTZUS3ZYbE1lNk5yVHBGUEREQjZfcWZv?oc=5",
+   "t": "Dow Jones : Wall Street suspendue aux résultats de Nvidia après un lundi noir",
+   "s": "Investing.com France",
+   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTGpNVTRuRm82SHJwakxFQnpSNzlOV2l3VVg4RENLeEk0dkJPeTIyQ3lpWlB5Y3VFUTN6SnZUb29XNFNpRE5iT1pPeEItMzZ0ZGZDYVZrTGl1S0JvMzBpUjE0c2lEajFYS0xCWTlMbXE2aXJPYWVqaEFZYS1HVDJ4TXVBekZkcjFBRENMNEhwcHVfeVJHRDdleHNIMUZRWmdQYzBRcU5FTktWZC1uc19DODYyU1czSlloMWZacWFIMnJqNGhMakJHUWVXVVE?oc=5",
    "z": "us"
   },
   {
-   "t": "La Réserve fédérale américaine (Fed) « a encore du travail à accomplir sur l’inflation », selon le président de la Fed de Kansas City",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOaURCei03MlZBOU83QUszdTJwSWgtSEpTcGhWWjhINlZrc2tZU1g5cExoaTdCTVJlWW9RelpfcDlBS2hNWjdTdnlPaElKSDg2dEFDYVQ0V3FqUXAzbThiMGF2SDZjRzlrLXpnRlc0OFFrd3RMU1FnMDZJc0lqQlY0R2ltaHUwQ0hRQk5RenUzbVJkMEF5SlBheloyZXJTeTVUMVhDZ1I4QTBKeEphTVVOdUFCbzc3c0tfMHlaSk9RbGhabmoxaVN1YTQtZVJiSHhkNTQtTWNKd0tFNEVmSmpaaVp6WUhhN2c?oc=5",
+   "t": "Clôture Wall Street : le Nasdaq décroche, en attendant Nvidia et l'IPO d'Anthropic",
+   "s": "Boursier.com",
+   "u": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPdmlVblVybGxYQ2REVE80aFBRZ2RxNU5uWEZVZ041Q2lqS1Q5amhGS1k3NXY1RTFqdzIyMVFOcEJXbXVPWWtzT2xtNDN0aHhKVEJ1RTZqenhOSXpYVXUwdkhPdE1KX3BZTk1wMTk4akZJdmt3TERBTnRidThiR3BHUWJNN1U4R0prcnFWbVVkTTBNQXd6TEp1cHo2TTRUWFlMZ0FaaEpyMnMtdGZFeVhONENicEFBWWhVeHhCUjJMNXl5RndGeVczd2QwLXhBcmtLdnFHRklGbw?oc=5",
    "z": "us"
   },
   {
-   "t": "La semaine à venir à Wall Street-Les résultats de Nvidia et l'introduction en bourse d'Anthropic constituent d",
-   "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQd0ZfWTZfLWItTm5JQk5INnFDWTNzQzBXVk1taEtWcEhRRDE4Rnpua3ppc2RVYUQxYWlta205RTNWVUg1QkhBUjlzSTZDS19jOVJMbkx1NVliUTVoSHQ3ODgwdzFuckdGNVAwY01CS0ExWWV6WjA1ejJrVEI2ZXVibzZZdmFzb3hhWUNmaF91UEtPenVSQWRVcmp0NUJEd1VRZlFqVzJMOGZNYXYtZnBjNEExQnZpTm1lMm55Nm1qaGtMQjRyM2Q2a0Vfc1Y2X2RzUk1XbVBMaVE5UjdLYzIxd0JlMk5FUTFxWms3WGc0RkZCWllMS2dITXg3ZDJhemt1TW1DaFhBbGVSTnZ2U0FET2xiNHJSaEZBOGFuU0ZtV3g1Mm52QW5tQ2c3Szh2NFpmSlFrRTRaYTBCbUpUQjQ0NGhXdkp1RC03U0hnSnd0a0tTTVUwYllfUVRPY2JTTWZEaFBZV2NR0gHmAkFVX3lxTFB3Rl9ZNl8tYi1ObklCTkg2cUNZM3NDMFdWTW1oS1ZwSFFEMThGem5remlzZFVhRDFhaW1rbTlFM1ZVSDVCSEFSOXNJNkNLX2M5UkxuTHU1WWJRNWhIdDc4ODB3MW5yR0Y1UDBjTUJLQTFZZXpaMDV6MmtUQjZldWJvNll2YXNveGFZQ2ZoX3VQS096dVJBZFVyanQ1QkR3VVFmUWpXMkw4Zk1hdi1mcGM0QTFCdmlObWUybnk2bWpoa0xCNHIzZDZrRV9zVjZfZHNSTVdtUExpUTlSN0tjMjF3QmUyTkVRMXFaazdYZzRGRkJaWUxLZ0hNeDdkMmF6a3VNbUNoWEFsZVJOdnZTQURPbGI0clJoRkE4YW5TRm1XeDUybnZBbm1DZzdLOHY0WmZKUWtFNFphMEJtSlRCNDQ0aFd2SnVELTdTSGdKd3RrS1NNVTBiWV9RVE9jYlNNZkRoUFlXY1E?oc=5",
+   "t": "Les futures de Wall Street stables avant les résultats de Nvidia",
+   "s": "Investing.com France",
+   "u": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOR0RodEhnTUlQeGVKaHJCYnJnczU1Nm1HeGdFbU8tcUdBTmxzSEl2cWd5LWNFZ1pZaXJNQ3RhT2ZvTnNUSTM0TDRnOTdWRGUtS1Y0c2hOd1B0dWhTUE5aaVZ1N2N0c3FSb2o1Y0FEY2tnRGxwV1BmRnZlV210SWxpc1NmS0xHWWJHTDQ0Tmx2YVFNMThXNHg2VXhwcjByR3NSOGpkSGtLeGd2QWJqVk1RVUNvTWRabGhGYWxHbw?oc=5",
    "z": "us"
   },
   {
-   "t": "IPO d'Anthropic : 900 Md$ d'engagements, géants exposés",
-   "s": "Brief IA",
-   "u": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMDdLLUFIaU1PMkJWWmZ4cnNXUG9EN3ZPd3lITXZDWHNBb0JQblFkY00wSmtjdzEtcFZYWE15c0FSWENSLWpyN2Z4blRhSnF5b3BFOXZ4QXRmWDd5OGpSZ3laWnVtXzRrLXl5NzZ0TFoyVmg1c3JZaHBsZGpiYWlBR0RNdXk4TXNxVnc?oc=5",
+   "t": "S&P 500 : Wall Street joue gros cette semaine avec les résultats de Nvidia",
+   "s": "IG",
+   "u": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNTU5pZjMwWlFaX0x0Sk5WSU5sekNuVnJ5Y2FURWhVSU5WYlVZbnF0RjU2anZaWk8tbG1oZ082NWVwUjNGZy1vUTN2WjUyQjByejJpMXh2QjNkeHplM0V0MUVFb0NMcUNfaER0cDgtUlZxQnl4aU8xSmdCZ00xbklNMG5tTkdFY1ZHTjhXaVI3UjdYeDFqZmR4OURMbWpmczJxSWFOZDMycXBDZ0h5OW5iTEZsNVprVldqVm5TTXRmMi0yTDVRVVZGcHYwMA?oc=5",
    "z": "us"
   },
   {
-   "t": "Nvidia : quels risques pour les ETF World et Nasdaq ?",
-   "s": "https://www.leconseilpatrimoine.fr/",
-   "u": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQkhWZkVOdGU3V0tXTVRGQnMtS2xlb3MtYUd6TUpJT2hnamJhQWRuc2x1cGxzRWNKWk1FSXR0aV9OeVZDN0FTbk5mNVY3cEljQWdmdnRiYzNXa1k0SExNbEwzRHhIVDZPOUJlMVkwTlhjY1o0TGQ3cnMtNTdKcDdpaENBVlpGN1BlUVh1MmxPRng0Y1MtejhLZk1STVAyTWNabVJ3M203T2x6QTNkR2R1Sjg0RXduMmY0YTdR?oc=5",
+   "t": "Tom Lee ne voit aucune faiblesse dans la tendance IA malgré la chute de 12 % du Nasdaq",
+   "s": "BeInCrypto",
+   "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYMWFFRHJRWFhXaEhYNzVLZ2ZoRzN5Y3RNMnNfaVl1NFB3M280akdXUFdyX1F0ZVpEeWJVS2ZHV09WTUZndlVNOHl2NnpQWFN2emlIVHloUktxTjBiQjMwNEdST0U3NmVI?oc=5",
    "z": "us"
   },
   {
-   "t": "Le CAC 40 a enchaîné une cinquième séance de hausse",
-   "s": "Radio Monaco",
-   "u": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNM0dqYnhBWklLS0NnRVZ4X2dfQkZRTGljTlZ6Z3pxZEtvTUpkVFQ5VmJjRmpNazE1X3ptVlhEOExtM1RfZE5zelRpTk1JYjRibUNQdUU3X0x2OExubE9nSG5TdEswUkN4U0ZTaUh6VmQ3cWU2aHVubjF5UHFhYm1NRVgyYmxMa0NreDNlemVR?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Le CAC 40 a résisté au décrochage de la tech américaine",
-   "s": "Radio Monaco",
-   "u": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOUUE2S2R6bXRBdHhtbWxHTklDemlNcFdmWko4NkRxLXNFS2ZGSGVCQVJqNGNJaU9JU2N1MnE3Z3hDa1RZWk9OOVZJU2NYTzMtV3lRclo2M2F6aVktTU1FeVZZZXA3cmpKcl9lQkNSR0YwdW5tcTlDSm5yYktoR040SHRHOWU3ZklYWTlrR2VyaEhWTEU?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "ING : les taux longs devraient monter jusqu'au début 2027 avant de refluer - Actualités et statistiques",
-   "s": "IndexBox",
-   "u": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOb3c2c2JIX3V2MDN1anN6MXhGcENmdVJyakJCTExHUzR6cWdZbDNONGRvTGhpUW52aHBsZ1hGVG9URFUtZnotRjVYZkc0bnJUUktKSXJKOEdFSjQtMHRITGVzVFpId1JzbFNSSzNlTmZJYl9kWmdpOXgyS0o4RV8tZzJtXzFCdkhRM3pqWEdocDM3TnFDSzZuSW1kcUZYY2ZzUndwQzc4ekJLdw?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Anthropic, Nvidia, « GTA VI »… Les rendez-vous à ne pas manquer la semaine du 16 novembre",
+   "t": "La tech décroche à Wall Street avant l'introduction en Bourse d'Anthropic",
    "s": "Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNazNuRmR6dlk4QnhzSk5rdjM0SHBPcE9zbjRPZExyNDBuWU55SXFwa09ITzJMMWxKZktmd0U2VElhU2NrOGxtM1REd29vVmU4MVRxdG51ckhnR2twTGhZZXZtQS1zbmFzNldfc2pPSFk0ZkR5alN4dDBaeHB5VnhocFl3bk5NSWxoMm1xQWs2ZEgtSTU2Q0YyRS1ydkl0UFo3bG5nUXUwTEEtb213a09TNDUzQUpLWUJXenkyV1F4UTlSb0NHbFhvbUxiRkxyVmd3YUpFMXlrTl9JaWJTLUNB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMU9oYThHRlU2TG93elNURWdsUFpfUGF3bWdIV2d1OHBmTVYwbVJ2eGlXLUZRX3RNRG9lT2NNb28zaTAxb2doeV85bUhwSjE1QWt0WFByZVpqWWRFcVlqbk9vT3h2TDVVcnVTNDBKSHREeGhqaWpKQXg4enFOTmxISEpFUWNjbno2OWhONXpNZzYwNndrNWxabEVfMFRzTnZTUHV4akVCYkltZzB1OExsVFU2TEJTdWNuWkw5dnhWWURiN3BxT2NObm8yVmVhNDlMMDYyZw?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "CAC 40 en baisse, Nvidia... Le Journal de la bourse du lundi 16 novembre 2026",
+   "s": "MoneyVox",
+   "u": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNY0ptMEpBeVB4LURqOE0zMHNCeEdCS2YxVnVuMmdNZ0ZybkU5T3NkMDVWZjNYM296ajVzcVZQUzdUdDdmRjZwbHRGQ254V0d1akNuc2ZHYm1uR1VnVVhmeDdtd29tRjRraU9vZXRvWHpHODZWb0VmUGw4R2JMdDhiLUM3U2xhYkRGNC00TjkwTktEQU1ySVhaLWZlN1A2Zk1jM0tpQ2JJdTVUY3BqVkcwRTJIZWNDSkNSdF9mXzdRQQ?oc=5",
    "z": "europe"
   },
   {
-   "t": "Les actions asiatiques des fabricants de puces chutent avant les résultats du troisième trimestre de Nvidia",
-   "s": "TradingView",
-   "u": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBiU1dScS1sc2xKbENOamxhM2x2TWVpRHNjMnYySDJUa09KZXZvQkF6TWFzTXhSN0ZrUVhqdjJ0bU5nbnQ2anBoUUNDbm5DWm42WF82bGwtbWJOcW4xMHlRZTNrdlEyWGVOUlduWTRLMA?oc=5",
-   "z": "japon"
+   "t": "Le Cac 40 finit en légère baisse, STMicroelectronics, Schneider Electric et Legrand sous pression",
+   "s": "Investir Les Echos",
+   "u": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOdHJtNGRiYWpEY2NXeDQxM3BEOUFNNlJKT1Bwb3RJWDFwcDNXN0dpYlZnYXEyc1JfdEk0Y2pJamRhdzlmeGZFLVBfMFR5aE9IUmI3Z0dfLTh6YjFGVXBHMDJDM1BlWVNsVENaSDZUV3ZIRjduWXZEME5GakhkNWNRd3dZcm90WmhoRW1CSGVxWTF1LWdpclQ0My1wYXFiU2JzY0hndXREeVg0WlFVbFJsT3BDWFRLbG0wT3pRRktfV0l0T1pWMGFRVjN5RFQ4NFlnSmZWVjhNOC1WbUhBbVVPQktFOWRZU2xqSHRrWWZQNWVfcUxTMlFYWlBn?oc=5",
+   "z": "europe"
   },
   {
-   "t": "Le Nikkei japonais plonge, pénalisé par les valeurs technologiques, à l’aube d’une semaine cruciale pour l’IA",
+   "t": "BCE : la flambée des actions liées à l'IA menace d'une brutale correction",
+   "s": "Euronews.com",
+   "u": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdXAxT3hSS2RYSTJJVkR0ZWdxc2hXMjhmRVlpTUZVTVh3NGlVaGdLenQ3UjRFX1dhZ2kxcWd1QU1hZVRfbS0xX1p1d216d2szZDNTVktXZVduQV85X2NQWnhqU3I2c0R0cGFtcFBZMV81TU9sWXBVNzdYQXZEbTdjNHlENktmT2dVekdWbGdhdkh0WUlYeWprc1h5Ry1kY2JZZG1jNjQ2QQ?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "L'action Stellantis signe un plus bas de cinq ans et ferme la marche du CAC 40",
+   "s": "Idéal Investisseur",
+   "u": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQR3RTdlYtN0pJTW1GQ0lrakttZUhIMGFRcmpudWRaMWpfV19KQW43aUtPVjRibElJaG5FMmM0dEVaNHlPNTM5TmhSVmJwb0RSMGs1X2lRcWJRSE5jZzhfVzN0cl9vQlpMVVJIZW9kTTBlODMzcWxCaV9sTFdYY3RrRGRuaHdRa1BRTXVGY29FU3pNLV9HeFczRXJJUUNOWFdtRFd1OHduZWQyTUd5NWJ6aTNIX3NsLThoWFU3ZnF0THdhSDZuQ1h2NkhwVFY?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "L'action STMicroelectronics perd 11,5 % sur trois mois et pèse sur le CAC 40",
+   "s": "Idéal Investisseur",
+   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUzN0em5XTFNIU3pndjgyTkJaZElnYjFfR0RiMEVjOTBsNVdsRGdvUFc1RFlVaFdoNVVIaHY2R2VxUkRMbDFZX1VUY2E5MVc5OG9PX0hVak1NaUdha3BhVFg1Mk01TlhsNmlId095S3c1R3ZXM1lGRVdQcXNBbldhLXg2R181d0NZUlRHN1pVNFg5YXNwZDRNcEszXzl0SnU0b3gyMmh5QjRFX0JuQWhGRGxMVmowRmo1NUdZNDZMT3NJdk1aWXc?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "Le Nikkei finit en baisse de 1,34%",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPNTBUcXN1b0NWME9ySlU4d09yLWIzY1lORF8tM0pmNUtkUWd6S2dFRUZ6Z0RqWmE0VVJ6ZExfRVdYNTdza0ItODNEdGdjc0JpMUs5UENhYkJOaXEwX3h4VnExbU9HMThkWDRyYzV0UWpnZzlIREFzdVZZeC1JaGlobWZhM01tWDB3WWxmRTNxdFdJRkZZSHhfYm1LU3lrcXVSb0xjZDFsQjd3ejFZd2tKZ3lzMGFRdDJTTDUwQkI1NmhUV3lnV1ZIb2ZaOG1wX0JuVmdBYWVGMkxuZ2pFTFVWR1lKZ1JUVVBLVkh4Ng?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONktVdlIyZ2ZvTk1Kb0pIdVBmZVJMNkZMUUliWTl6WlYza21STGNHWHg4dUJBb25HNDNhQU9CaWJEQlY2ZzEtcXg0RkpROVltUXBtN0tBSmN5dEVEbkJRa2JIZUhsSDEzallBTjJqN2ZGQ0M0WG1SZi1rQXNjdVRjNjBJWmg0QWtBaVp5MktwLXRzWGVuRGlnU0l3?oc=5",
    "z": "japon"
   },
   {
-   "t": "Le Japon enregistre une contraction inattendue de l’économie au troisième trimestre",
-   "s": "PortalCripto",
-   "u": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSXp4RUJaZzBCN3JOeGgyRnh2eU81THBsSVBWNWJwSXhFcjRmeVlVZGFnU3FCeFZDZTMxbUtqc1dTeWhGNnE3bzk5RHBvNlRBNGtoRTN4MWlpMnVJWmNQV2MyRU5nUmoySmFRdFBkcFVkVUJ4dktWV0IzWjJIWmpoVTVSR3BYaXd4elZteGc2QXBLNUdzNmhySllxR2dTSWJsSUE3MU10TEJpeU1vYzVCUHB6cHU?oc=5",
+   "t": "Le Nikkei japonais recule, les investisseurs évitant le risque avant les résultats de Nvidia",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQVFpzVi13SGZsakx5bDU0Y2hDeDhLeEJLMWVVbE50QVJUeUkyWWIxQ1F0cnNnWF80eDN3MUEtd28zNTMxV2RFRExDRDQyTjdiWHF1N1ZUSXNVeEpCZlM5dVBOMnZmT3hiU2REMUlIRGkyMGJNSkc5Y1dlOEFMYnZtWDdnYVk2dVhvcHA0ODJyd3NuNzMyMFNZYkdmMk1NM1JCT3B3OW1oTkhXT3AzRExpbko2SURkVDBYNmpkODBWdWZPaU5Ndk9iOTE3LVVUbWF0eXc0Y3hZOVJvWTdWVWVJdXJOWHNnUQ?oc=5",
    "z": "japon"
   },
   {
-   "t": "Takata, de la Banque du Japon, appelle à relever rapidement les taux vers un niveau « approprié",
+   "t": "La Banque du Japon devrait relever ses taux en décembre : pourquoi le yen continue malgré tout de s’affaiblir",
+   "s": "www.tmgm.com",
+   "u": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOTkxVZnVIVll1ZTVFNnVpUUNxa01MZHRuSDZvTWZ6bnAyZmFWYXVYV0dYMjdTcUxKdnZjRUxDVHczQzZhV2hudUpWUWY3RUYxN3BwdHZqVm5mbm1GV3hXTmhvOW4xdW0tUl9TNUNDQ294WFBCSHBTX1V5bXhCZUxXZzdwbWpMMV9iR3hUYVVsRmZ0RzhpODF2VS1rakVfa0JUd19FNFNuQjdORjVkYmRGUEx1SDZMbld1ek05TXVfQ1hGLVVrQVpFZERCaTNMREFEOTB4Q0Y3M0F4RWFRVUo2QTBuWjY?oc=5",
+   "z": "japon"
+  },
+  {
+   "t": "Le membre « faucon » de la Banque du Japon, Takata, appelle à relever rapidement les taux vers un niveau « adéquat »",
    "s": "Zonebourse Suisse",
    "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQQUtqeERtU2VLeVluUzlMUnBaY3EySDI4THhCd3A3a19LMWNLZlc2RDFqZTNnTVBRd3RDZXFqRm5yQ3FueTgxd0FpcG5RVy1KbTZqS2l3ZHFYYzBJTC1zRnNXdVZyaXY4YkFBZlZNcnp3bnZfYUttLXNDekxIM1kwMHR5bzNnM3doUjRId0Q0WEluVjN0blpkQUdzVzh3TW5mSzdfc05DckJQRV9FQ3NrdUNfeE1mY1UwUlJZYzBhOGg4ZHVRMkMzbk5pOF9SdlVyVjRQMW1kUE1fRUR6a2N2dzdZbkdmbUE?oc=5",
    "z": "japon"
@@ -263,15 +251,33 @@
   {
    "t": "MARCHÉS ÉMERGENTS-Les valeurs technologiques taïwanaises et sud-coréennes s'effondrent alors que les investiss",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMixwJBVV95cUxPQ014VVk1bk5wMUtabmxjaWJzTGlfblNjT0E0S043YmF5SFpNeXlJRWZTU2RtMGU5c050TDIzaUdVQkVqanBMYXBzYUREeHdDYWtCckdYcEVneEdDLTd5MnBmM0lxN0lQaDN4UWdhOFo4d3lzMFRlWkRNcHU4QUNRYzNmV0R1dk5KSDRlLTUxNEoyYzNZTzBHVV8zYnVUNzZLTERXS05kcENfYmx2Zm5LSGVvWFBZOUdXT0tDSkRJNlRrRWFTWTFNTWxTa0NNSmJyQW5BM0RHcmVtUlhLMWg0YV9oWmhTRHZRcGNPbzhwY3IxZFpFdnk1WmxUaVFuQTg4UDhpMHExaEk0R0hYRW8xOHhNbWJhX2h1SVN3TjdmY3BFbGZtQmRzODZUSU4yQUx2cm1kQzZ5T2Z1Y3ItUTFFUUEtOWw5QTDSAcwCQVVfeXFMT082YUhkblB1UUs1SlZjWmlEblQzMG16Q0ZoWERaVDRlTXc0UHpiQ1NwZk81STNCSVUzaWtMSUlCN2I1R01aeWZEVWU4RUZzZXd1dHRRMHFNM1RoN1dOTTVIR05mbGl1TE52Nzl4OXBxM2xsT2NQNE9FWm1jZ1c0bi1iSy1NNGJqSC1aekVJc2JQa3BVTTZ5bEJFVWZyVnFlRWozUnFYSFhSS2ZQODg2MUktRXB6MnlodlppWC03MGh5azh0dllldlNuRUd2Z240dVFZamhOMUNBckZCeDdGLWQwcThhaTVBZjhWNDE5aGR3dEVocG5tV3JnaWN4bVpSMkpUUmRWNEdJbE1kUV9DamVkWUZFZ2ZOWlRoZURZSzlKaE4wQzVSX1Rwam16MmtUUDBfSHlnekN4anhneFA1RXZnd09rQmRZSFFZd2E?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPTzZhSGRuUHVRSzVKVmNaaURuVDMwbXpDRmhYRFpUNGVNdzRQemJDU3BmTzVJM0JJVTNpa0xJSUI3YjVHTVp5ZkRVZThFRnNld3V0dFEwcU0zVGg3V05NNUhHTmZsaXVMTnY3OXg5cHEzbGxPY1A0T0VabWNnVzRuLWJLLU00YmpILVp6RUlzYlBrcFVNNnlsQkVVZnJWcWVFajNScVhIWFJLZlA4ODYxSS1FcHoyeWh2WmlYLTcwaHlrOHR2WWV2U25FR3ZnbjR1UVlqaE4xQ0FyRkJ4N0YtZDBxOGFpNUFmOFY0MTloZHd0RWhwbm1XcmdpY3htWlIySlRSZFY0R0lsTWRRX0NqZWRZRkVnZk5aVGhlRFlLOUpoTjBDNVJfVHBqbXoya1RQMF9IeWd6Q3hqeGd4UDVFdmd3T2tCZFlIUVl3YdIBzAJBVV95cUxPTzZhSGRuUHVRSzVKVmNaaURuVDMwbXpDRmhYRFpUNGVNdzRQemJDU3BmTzVJM0JJVTNpa0xJSUI3YjVHTVp5ZkRVZThFRnNld3V0dFEwcU0zVGg3V05NNUhHTmZsaXVMTnY3OXg5cHEzbGxPY1A0T0VabWNnVzRuLWJLLU00YmpILVp6RUlzYlBrcFVNNnlsQkVVZnJWcWVFajNScVhIWFJLZlA4ODYxSS1FcHoyeWh2WmlYLTcwaHlrOHR2WWV2U25FR3ZnbjR1UVlqaE4xQ0FyRkJ4N0YtZDBxOGFpNUFmOFY0MTloZHd0RWhwbm1XcmdpY3htWlIySlRSZFY0R0lsTWRRX0NqZWRZRkVnZk5aVGhlRFlLOUpoTjBDNVJfVHBqbXoya1RQMF9IeWd6Q3hqeGd4UDVFdmd3T2tCZFlIUVl3YQ?oc=5",
    "z": "emergents"
   },
   {
-   "t": "L'IA, ce moteur inattendu de l'inflation",
-   "s": "Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPLWxIVDUycEY4VXJoQ3psQ0k2Qmd2TXRabUVqMUVjMDJYLXlqZ3pyTEpETmR6dHlxckYzNk15c2trcF9ZRlB1U3Vtd3VkNTZ3SHJheVY0bWZpTFJBNHJmVnItM25XbXV1dWdURjM2SWxJTGhXVTE3aThGelJlM05CQWNMcHBtQWRWdk10aEg1cUY2dUp1?oc=5",
+   "t": "Selon UBS, les marchés émergents offrent des perspectives intéressantes pour les investisseurs en 2027",
+   "s": "Business AM",
+   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZGdkZlJ2WFdRMV9KOHp6clo1dy0tNnpjaDJ4bUJlU2tvNkhhTGpkUnR6X2hQM1VUa1pBSklXSDU0U0xFbEFXbTNYODNRV1JLVmJrYTc5Z0pwdzJoQ2lYTlJ0NlU2c0ZXRkp0elhsNFpxcVdQYnhDRE1abEFYYTk4cVduSHc1ZWhEdHA1MDZ2UXpqOFJkdnE5TEtnYTEzRXFkbVhqOUVOUmsyV3premxqUkZZcnRkd0N3M2VNU0hyN0pvWl9wNlE?oc=5",
+   "z": "emergents"
+  },
+  {
+   "t": "Goldman Sachs prévoit que l'impact économique des investissements dans l'IA atteindra son apogée en 2027",
+   "s": "Business AM",
+   "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWDVhaHBXbnlLRV95QUhpRG51VjE2M2g3WF84MTItN0k5OV9LdGtQMzZlNlZwdEExN2lSOFhUZlBXMHlPU015aE0wUWdlMTJaekItYmJSSjAteFM4bUZIUVhaZURFMVY2NWF4UEVhSVZpcURqRDhzYnY2WTl0enJLX0ROUmNNSnBaUEZhcWREX01acWU0ZmdNQWVzVzVjTVpoRzIwY0NnTUVUMzlUd1llMVZtT2VpTkVPUEpXbnBIVTk?oc=5",
+   "z": "monde"
+  },
+  {
+   "t": "La Deutsche Bank prévoit trois hausses consécutives des taux d'intérêt par la Réserve fédérale en raison d'une inflation tenace",
+   "s": "Business AM",
+   "u": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWDFPYW9iSjhzWThUeUNQcGpuXzh2MXhWUXl0Nmd3bUhWZUJYSTZYUHBsWThaRzExV01LSnFYeVg5ZjlCd2RjTkhsRTJJaXU0bkV1YWRrM0xaVHN0bjl3X0xvWE9LMlJhODVnR3c5eGUwYU04dGE1SkJQVU1SckhvUWYyblM1bXpGNmR3M1hCWTJvRDhOMzRjSWpnX1h3Q01HNTJKYjRfUFFsNWx4d01sQ19sM0g2b1lk?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "La BCE met en garde contre les risques de volatilité des marchés si la vague de l'IA ralentit.",
+   "s": "Vietnam.vn",
+   "u": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZHFCVTQ4SjZycXo0aDdSYmdkbmlwN2NEZDFmeHFfVTVVNlR1NV94UWxMa2pFX2xkU2VPdGE2N2w3SUhCdzdSUV9IRV9rbFYxZWhnbjR3OW0wU0w4aldzNjYxcjM3bklKQlhlM0RwbGV1MFc0a25HbGZhR3pnZ1VWMXZhRUZlY2NnUnVtbWNWODRsUmo1dUM4?oc=5",
    "z": "taux"
   }
  ],
- "lesson": "Le mot du jour : la « concentration ». Un indice comme le Nasdaq-100 ou même le MSCI World donne plus de poids aux plus grosses entreprises : quelques géants comme Nvidia, Apple ou Microsoft y représentent une part importante. Résultat, la publication d'une seule société peut faire bouger tout votre ETF, comme on le voit cette semaine. C'est pour cela qu'il est utile de combiner plusieurs zones (Europe, Japon, émergents) : elles ne réagissent pas toutes de la même façon au même moment."
+ "lesson": "Le mot du jour : le « VIX », surnommé l'indice de la peur. Il mesure l'ampleur des variations que les investisseurs anticipent sur le S&P 500 dans les 30 prochains jours. Autour de 12-15, le marché est calme ; au-dessus de 20, comme aujourd'hui (près de 23), il devient nerveux, souvent avant un événement important comme les résultats de Nvidia. Un VIX élevé ne prédit pas la direction de la Bourse, seulement que les mouvements risquent d'être plus forts."
 }
