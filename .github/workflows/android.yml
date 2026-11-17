@@ -25,6 +25,24 @@ jobs:
           gradle-version: '8.9'
       - name: Compilation de l'APK
         run: gradle -p android assembleRelease --no-daemon
+      - name: Rotation de clé du téléphone (nouvelle clé secrète, certifiée par l'ancienne)
+        # Seule l'appli du téléphone change de clé ; l'appli de la montre reste signée comme avant.
+        env:
+          PHONE_KS_B64: ${{ secrets.PHONE_KS_B64 }}
+          PHONE_KS_PASS: ${{ secrets.PHONE_KS_PASS }}
+        run: |
+          set -euo pipefail
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          AS="$(ls -d "$SDK"/build-tools/*/ | sort -V | tail -1)apksigner"
+          printf '%s' "$PHONE_KS_B64" | base64 -d > "$RUNNER_TEMP/new.keystore"
+          OLDPASS="$(grep -oP "storePassword '\K[^']+" android/app/build.gradle)"
+          OLD=(--ks android/app/cockpit.keystore --ks-key-alias cockpit --ks-pass "pass:$OLDPASS" --key-pass "pass:$OLDPASS")
+          NEW=(--ks "$RUNNER_TEMP/new.keystore" --ks-key-alias capital2026 --ks-pass env:PHONE_KS_PASS --key-pass env:PHONE_KS_PASS)
+          "$AS" rotate --out "$RUNNER_TEMP/lineage" --old-signer "${OLD[@]}" --new-signer "${NEW[@]}"
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          "$AS" sign "${OLD[@]}" --next-signer "${NEW[@]}" --lineage "$RUNNER_TEMP/lineage" "$APK"
+          "$AS" verify --verbose --print-certs "$APK" | grep -E "Verified using|Signer .*certificate SHA-256" || true
+          rm -f "$RUNNER_TEMP/new.keystore"
       - name: Publication sur GitHub Pages
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk cockpit.apk
