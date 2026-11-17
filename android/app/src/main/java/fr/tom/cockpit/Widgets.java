@@ -42,6 +42,7 @@ final class Widgets {
         if (pea != null && pea.length > 0) render(ctx, m, pea, false);
         if (dash != null && dash.length > 0) render(ctx, m, dash, true);
         Wear.push(ctx);
+        LockNotif.update(ctx);
     }
 
     static String eur(double v, boolean cents) {

@@ -180,6 +180,7 @@
         <receiver android:name=".JNReply" android:exported="false" />
         <receiver android:name=".JNAction" android:exported="false" />
         <receiver android:name=".JarvisAlarm" android:exported="false" />
+        <receiver android:name=".LockNotif" android:exported="false" />
 
         <receiver
             android:name=".ReminderReceiver"
