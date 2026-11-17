@@ -41,7 +41,7 @@ public class LockNotif extends BroadcastReceiver {
             String netTxt = "Patrimoine net " + Widgets.eur(net, false);
             String title, text;
             if ("pea".equals(show)) { title = peaTxt; text = "Aujourd'hui"; }
-            else if ("net".equals(show)) { title = netTxt; text = "PEA " + Widgets.eur(pea, false) + " · " + Widgets.pct(dayPct); }
+            else if ("net".equals(show)) { title = netTxt; text = "Capital"; }
             else { title = netTxt; text = peaTxt; }
             String at = d.optString("at", "");
             if (!at.isEmpty()) text += " · " + Widgets.ago(at);
@@ -72,7 +72,7 @@ public class LockNotif extends BroadcastReceiver {
             if (l.optBoolean("hide", false)) {
                 b.setVisibility(Notification.VISIBILITY_PRIVATE);
                 b.setPublicVersion(new Notification.Builder(c, CHANNEL).setSmallIcon(R.drawable.ic_stat)
-                        .setContentTitle("Capital").setContentText("PEA " + Widgets.pct(dayPct) + " aujourd'hui").build());
+                        .setContentTitle("Capital").setContentText("net".equals(show) ? "Déverrouille pour voir ton patrimoine." : "PEA " + Widgets.pct(dayPct) + " aujourd'hui").build());
             } else b.setVisibility(Notification.VISIBILITY_PUBLIC);
             nm.notify(NID, b.build());
         } catch (Exception ignored) { }
