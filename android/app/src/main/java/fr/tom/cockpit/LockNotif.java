@@ -53,6 +53,7 @@ public class LockNotif extends BroadcastReceiver {
             nm.createNotificationChannel(ch);
             Notification.Builder b = new Notification.Builder(c, CHANNEL)
                     .setSmallIcon(R.drawable.ic_stat)
+                    .setStyle(new Notification.DecoratedCustomViewStyle())
                     .setContentTitle(title)
                     .setContentText(text)
                     .setOngoing(true)
@@ -60,6 +61,14 @@ public class LockNotif extends BroadcastReceiver {
                     .setShowWhen(false)
                     .setCategory(Notification.CATEGORY_STATUS)
                     .setContentIntent(Widgets.open(c, "net".equals(show) ? "patrimoine" : "portefeuille", 4546));
+            // carte dessinée comme le widget : compacte repliée, grande dépliée
+            try {
+                android.widget.RemoteViews small = new android.widget.RemoteViews(c.getPackageName(), R.layout.notif_lock);
+                small.setImageViewBitmap(R.id.n_img, LockCard.draw(c, d, show, false));
+                android.widget.RemoteViews large = new android.widget.RemoteViews(c.getPackageName(), R.layout.notif_lock);
+                large.setImageViewBitmap(R.id.n_img, LockCard.draw(c, d, show, true));
+                b.setCustomContentView(small).setCustomBigContentView(large).setCustomHeadsUpContentView(small);
+            } catch (Exception ignored) { }
             if (l.optBoolean("hide", false)) {
                 b.setVisibility(Notification.VISIBILITY_PRIVATE);
                 b.setPublicVersion(new Notification.Builder(c, CHANNEL).setSmallIcon(R.drawable.ic_stat)
