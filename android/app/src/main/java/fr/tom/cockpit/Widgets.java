@@ -44,6 +44,7 @@ final class Widgets {
         Wear.push(ctx);
         LockNotif.update(ctx);
         try { NetWidget.updateAll(ctx); } catch (Exception ignored) { }
+        try { FullWidget.updateAll(ctx); } catch (Exception ignored) { }
     }
 
     static String eur(double v, boolean cents) {

@@ -21,4 +21,6 @@
     <string name="sc_forme_long">Ma séance de muscu</string>
     <string name="w_jarvis_name">Jarvis</string>
     <string name="w_jarvis_desc">Un bouton pour parler à Jarvis sans ouvrir Capital.</string>
+    <string name="w_full_name">Capital · Complet</string>
+    <string name="w_full_desc">Patrimoine, courbe, répartition, comptes, PEA, alertes et prochains mouvements. Fais défiler, touche une ligne pour l’ouvrir dans Capital.</string>
 </resources>

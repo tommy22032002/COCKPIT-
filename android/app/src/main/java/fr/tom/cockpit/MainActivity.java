@@ -305,7 +305,7 @@ public class MainActivity extends Activity {
     private void handleIntent(Intent intent) {
         if (intent == null) return;
         String hash = intent.getStringExtra("hash");
-        if (hash != null && hash.matches("[a-z]+")) {
+        if (hash != null && hash.matches("[a-z0-9:]+")) {
             if (pageReady) web.evaluateJavascript("(function(h){if(window.__nav)__nav(h);else location.hash=h})('" + hash + "')", null);
             else pendingHash = hash;
         }
