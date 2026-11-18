@@ -26,7 +26,10 @@ import java.util.regex.Pattern;
 public class JarvisNotif extends NotificationListenerService {
     static final Pattern MONEY = Pattern.compile("\\d[\\d  . ]*[.,]\\d{2}\\s?(€|EUR)|(€|EUR)\\s?\\d[\\d  . ]*[.,]\\d{2}|\\d+\\s?€", Pattern.CASE_INSENSITIVE);
     static final Pattern BANK = Pattern.compile("d[ée]bit|cr[ée]dit|paiement|pr[ée]l[èe]vement|virement|achat|carte|\\bCB\\b|retrait|rembours|op[ée]ration|solde|transaction|re[çc]u|envoy[ée]", Pattern.CASE_INSENSITIVE);
-    static final String[] SKIP = {"com.whatsapp", "org.telegram", "com.instagram", "com.facebook", "com.snapchat", "com.discord", "com.google.android.gm", "com.microsoft.office.outlook", "com.twitter", "com.zhiliaoapp"};
+    static final String[] SKIP = {"com.whatsapp", "org.telegram", "com.instagram", "com.facebook", "com.snapchat", "com.discord", "com.google.android.gm", "com.microsoft.office.outlook", "com.twitter", "com.zhiliaoapp",
+            // assistants IA, SMS, navigateurs, vidéo : ils citent des montants sans être des paiements
+            "com.anthropic", "com.openai", "com.google.android.apps.bard", "com.microsoft.copilot", "ai.perplexity", "ai.mistral", "com.deepseek",
+            "com.google.android.apps.messaging", "com.samsung.android.messaging", "com.oneplus.mms", "com.android.mms", "com.android.chrome", "org.mozilla", "com.google.android.youtube", "com.amazon"};
 
     static JarvisNotif inst;
     TextToSpeech tts; boolean ttsOk;
