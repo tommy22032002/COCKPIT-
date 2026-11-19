@@ -1,269 +1,269 @@
 {
  "v": 1,
- "date": "2026-11-18",
- "at": "2026-11-18T07:55:00+01:00",
- "title": "Nvidia rassure après la clôture, après une 4e séance de baisse à Wall Street",
- "mood": "nerveux, léger soulagement",
+ "date": "2026-11-19",
+ "at": "2026-11-19T07:43:40+01:00",
+ "title": "Jour J pour l'entrée en Bourse d'Anthropic, la Fed prépare des hausses de taux",
+ "mood": "prudent, dans l'attente",
  "summary": [
-  "Mardi, la Bourse a encore reculé partout : à Wall Street, le S&P 500 a perdu 1,0 % et le Nasdaq 0,7 %, leur quatrième séance de baisse d'affilée. Paris a fait pire (CAC 40 −1,6 %, plombé par le luxe, Hermès −5 %) et le Stoxx 600 européen a cédé 1,7 %. Les investisseurs se méfient des valeurs de l'intelligence artificielle, et l'indice de la peur (VIX) est monté à 25,5, un niveau de nervosité nette.",
-  "Après la clôture, Nvidia a publié de très bons chiffres : 115,8 milliards de dollars de chiffre d'affaires en trois mois (+103 % sur un an, au-dessus des ~109 milliards attendus) et des prévisions relevées pour l'an prochain. L'action a pris 4 à 5 % hors séance, même si le départ récent de son patron Jensen Huang continue d'inquiéter. Ce matin en Asie, l'effet est resté timide : Tokyo a fini en petite hausse (Nikkei +0,3 %) après avoir effacé une partie de ses gains, tandis que Taïwan reculait.",
-  "En toile de fond, les taux restent hauts : deux responsables de la Fed (Williams, Musalem) jugent de nouvelles hausses de taux probables, le taux américain à 10 ans tient vers 5,1 % et le dollar est proche de son plus haut depuis 19 mois (1 € ≈ 1,098 $). L'or recule de 2,2 % et le pétrole Brent de 1 %. Prochains rendez-vous : le compte rendu de la Fed ce soir et l'arrivée en Bourse d'Anthropic jeudi."
+  "Mercredi, Wall Street a fini sans direction claire après les résultats de Nvidia, pourtant au-dessus des attentes : le S&P 500 a cédé 0,2 % tandis que le Nasdaq a gagné 0,4 %. L'Europe a été plus nerveuse : le CAC 40 a perdu 0,9 % et repasse sous les 8 200 points, le Stoxx 600 recule de 1,0 %. Les investisseurs continuent de trier les gagnants et les perdants de l'intelligence artificielle plutôt que d'acheter tout ce qui touche à l'IA.",
+  "Côté taux, le compte rendu de la dernière réunion de la Fed montre que presque tous ses membres jugent une nouvelle hausse des taux inévitable pour freiner l'inflation. Le taux américain à 10 ans reste très élevé, autour de 5,07 %. Bonne nouvelle pour l'inflation : le pétrole Brent recule de 2,8 %, vers 89 $ le baril. L'indice de la peur (VIX) se détend un peu, à 24,6, mais reste au-dessus de son niveau de calme habituel (autour de 15-20).",
+  "Ce jeudi, tous les regards sont tournés vers l'entrée en Bourse d'Anthropic sur le Nasdaq, présentée comme la plus grosse de l'histoire (prix annoncé à 83 $ par action, au-dessus de la fourchette prévue). Les contrats à terme américains montent avant l'ouverture. En Asie, Tokyo termine en hausse de 0,7 % alors que Taïwan chute nettement."
  ],
- "forYou": "Les ETF Monde et Nasdaq-100 ont baissé ces derniers jours, car la tech américaine y pèse lourd ; les bons résultats de Nvidia limitent l'inquiétude sans la faire disparaître. Pour un investissement mensuel régulier, ces phases de repli ont un avantage concret : le même montant achète plus de parts. Rien dans l'actualité du jour ne change une stratégie de long terme.",
+ "forYou": "Ces journées en dents de scie sont normales quand les banques centrales remontent leurs taux : elles ne changent rien à une stratégie d'investissement mensuel sur le long terme, au contraire, chaque versement achète un peu moins cher quand les cours baissent. L'entrée en Bourse d'Anthropic ne touche pas directement tes ETF : une nouvelle action n'entre dans les indices comme le Nasdaq-100 ou le MSCI World qu'après un délai et selon des règles précises. Garde ton rythme habituel.",
  "zones": {
-  "monde": "Quatrième jour de repli mondial sur fond de doutes autour de l'IA et de taux élevés ; les résultats solides de Nvidia apportent un premier soulagement.",
-  "us": "S&P 500 −1,0 %, Nasdaq −0,7 %, Dow Jones −1,6 % mardi ; Nvidia gagne 4 à 5 % après la clôture grâce à des ventes et des prévisions au-dessus des attentes.",
-  "europe": "CAC 40 −1,6 % et Stoxx 600 −1,7 % mardi, entraînés par le luxe et les valeurs liées à l'IA ; côté BCE, un compromis franco-allemand ouvre la voie à l'Espagnol Pablo Hernández de Cos pour succéder à Christine Lagarde, selon Les Echos.",
-  "japon": "Le Nikkei termine en légère hausse (+0,3 %) après une séance agitée ; le gouverneur Ueda répète que la Banque du Japon surveille l'ancrage de l'inflation, une hausse de taux en décembre restant évoquée.",
-  "emergents": "Les Bourses émergentes d'Asie reculent, Taïwan en tête, entre doutes sur l'IA et restrictions américaines sur les puces ; le dollar fort pèse aussi sur ces marchés."
+  "monde": "Les marchés hésitent entre l'enthousiasme pour l'IA (résultats de Nvidia, entrée en Bourse d'Anthropic) et la crainte de nouvelles hausses de taux face à une inflation tenace.",
+  "us": "Séance mitigée : S&P 500 −0,2 %, Nasdaq +0,4 %. La Fed laisse entendre de nouvelles hausses de taux ; l'entrée en Bourse d'Anthropic est l'événement du jour.",
+  "europe": "Nette baisse : CAC 40 −0,9 %, Stoxx 600 −1,0 %. La BCE alerte de nouveau sur les risques d'une bulle autour de l'IA.",
+  "japon": "Le Nikkei termine en hausse (+0,7 % à la clôture). Le gouverneur de la Banque du Japon laisse entrevoir une hausse de taux prochaine, les économistes la voient en décembre.",
+  "emergents": "Journée difficile : la Bourse de Taïwan, très liée aux puces électroniques, chute ce matin, et l'Amérique latine a reculé face à un dollar plus fort (EEM −0,7 %)."
  },
  "markets": [
   {
    "k": "^FCHI",
    "n": "CAC 40",
-   "v": 8216.78,
-   "ch": -0.01619
+   "v": 8146.83,
+   "ch": -0.00851
   },
   {
    "k": "^STOXX",
    "n": "Stoxx 600",
-   "v": 650.72,
-   "ch": -0.0175
+   "v": 644.05,
+   "ch": -0.01025
   },
   {
    "k": "^GSPC",
    "n": "S&P 500",
-   "v": 7340.53,
-   "ch": -0.01026
+   "v": 7323.63,
+   "ch": -0.0023
   },
   {
    "k": "^IXIC",
    "n": "Nasdaq",
-   "v": 24328.38,
-   "ch": -0.0074
+   "v": 24429.88,
+   "ch": 0.00417
   },
   {
    "k": "^N225",
    "n": "Nikkei 225",
-   "v": 59165.13,
-   "ch": 0.00518
+   "v": 59542.41,
+   "ch": 0.00878
   },
   {
    "k": "EEM",
    "n": "Émergents (EEM)",
-   "v": 58.27,
-   "ch": -0.01053
+   "v": 57.88,
+   "ch": -0.00669
   },
   {
    "k": "EURUSD=X",
    "n": "Euro / dollar",
-   "v": 1.0982,
-   "ch": -0.00147
+   "v": 1.0971,
+   "ch": -0.00199
   },
   {
    "k": "^TNX",
    "n": "Taux US à 10 ans",
-   "v": 5.103,
-   "ch": -0.00351
+   "v": 5.066,
+   "ch": -0.00725
   },
   {
    "k": "^VIX",
    "n": "Indice de la peur (VIX)",
-   "v": 25.46,
-   "ch": 0.11131
+   "v": 24.56,
+   "ch": -0.03535
   },
   {
    "k": "GC=F",
    "n": "Or",
-   "v": 3779.8,
-   "ch": -0.02184
+   "v": 3738.1,
+   "ch": -0.00102
   },
   {
    "k": "BZ=F",
    "n": "Pétrole (Brent)",
-   "v": 92.19,
-   "ch": -0.0102
+   "v": 89.41,
+   "ch": -0.02762
   },
   {
    "k": "BTC-EUR",
    "n": "Bitcoin",
-   "v": 58832.91,
-   "ch": -0.00228
+   "v": 57904.3,
+   "ch": -0.01914
   }
  ],
  "agenda": [
   {
-   "d": "2026-11-18",
-   "h": "20:00",
-   "t": "Compte rendu (minutes) de la réunion d'octobre de la Fed",
-   "z": "taux",
-   "level": 2,
-   "impact": "Indique à quel point les membres de la Fed penchent pour une nouvelle hausse des taux en décembre, ce qui influence les actions et le dollar."
-  },
-  {
-   "d": "2026-11-18",
-   "h": "soir",
-   "t": "Fixation du prix d'introduction en Bourse d'Anthropic",
+   "d": "2026-11-19",
+   "h": "14:30",
+   "t": "Inscriptions hebdomadaires au chômage aux États-Unis",
    "z": "us",
-   "level": 2,
-   "impact": "Le prix retenu montrera l'appétit des investisseurs pour l'IA, thème central du Nasdaq-100 en ce moment."
+   "level": 1,
+   "impact": "Un marché de l'emploi solide conforte la Fed dans l'idée de monter ses taux ; un affaiblissement l'inciterait à la prudence."
   },
   {
    "d": "2026-11-19",
-   "h": "après-midi (ouverture de Wall Street)",
-   "t": "Premiers échanges d'Anthropic au Nasdaq (symbole ANT)",
+   "h": "après-midi (après 15:30)",
+   "t": "Première cotation d'Anthropic sur le Nasdaq",
    "z": "us",
    "level": 2,
-   "impact": "Un test de confiance pour toute la tech ; la nouvelle action n'entrera pas tout de suite dans vos ETF indiciels."
+   "impact": "Thermomètre de l'appétit des investisseurs pour l'IA, qui pèse lourd dans le Nasdaq et le MSCI World. L'heure exacte de la première cotation est à confirmer."
   },
   {
    "d": "2026-11-20",
    "h": "00:30",
-   "t": "Japon : inflation d'octobre",
+   "t": "Inflation au Japon (octobre)",
    "z": "japon",
    "level": 2,
-   "impact": "Une inflation soutenue conforterait une hausse des taux de la Banque du Japon en décembre, ce qui peut peser sur le TOPIX (date et heure à confirmer)."
+   "impact": "Un chiffre élevé renforcerait les chances d'une hausse de taux de la Banque du Japon en décembre, ce qui fait bouger le yen et les actions japonaises."
   },
   {
    "d": "2026-11-20",
    "h": "matin",
-   "t": "Zone euro : indices PMI d'activité (estimation flash de novembre)",
-   "z": "europe",
+   "t": "Taux de référence des prêts en Chine (LPR)",
+   "z": "emergents",
    "level": 1,
-   "impact": "Thermomètre rapide de la santé des entreprises européennes du Stoxx 600 (à confirmer)."
+   "impact": "Indique si Pékin soutient son économie, un poids lourd des ETF Émergents."
   },
   {
    "d": "2026-11-25",
    "h": "14:30",
-   "t": "États-Unis : PIB du 3e trimestre (2e estimation) et inflation PCE d'octobre",
+   "t": "Inflation PCE (octobre) et PIB du 3e trimestre (2e estimation) aux États-Unis",
    "z": "us",
    "level": 3,
-   "impact": "L'indicateur d'inflation préféré de la Fed : un chiffre élevé rendrait une hausse des taux en décembre plus probable."
+   "impact": "L'indicateur d'inflation préféré de la Fed : un chiffre élevé rendrait une hausse de taux en décembre encore plus probable et pourrait secouer les actions."
+  },
+  {
+   "d": "2026-11-25",
+   "h": "20:00",
+   "t": "Livre beige de la Fed",
+   "z": "us",
+   "level": 1,
+   "impact": "Photographie de l'économie américaine région par région, lue comme un indice avant la réunion de la Fed du 9 décembre."
   },
   {
    "d": "2026-11-26",
    "h": "journée",
-   "t": "Thanksgiving : Wall Street fermée",
+   "t": "Thanksgiving : Wall Street fermée (séance écourtée le 27, clôture à 19:00)",
    "z": "us",
    "level": 1,
-   "impact": "Pas de cotation aux États-Unis ce jour-là, et séance écourtée le lendemain : volumes faibles, mouvements parfois exagérés."
+   "impact": "Peu d'échanges en fin de semaine : les mouvements de marché peuvent être plus brusques que d'habitude."
   }
  ],
  "headlines": [
   {
-   "t": "Bourse : Anthropic fixé mercredi sur le montant levé pour son introduction",
-   "s": "Le Figaro",
-   "u": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMkNwdW42QjI3LXkzWlEydXN0RGhmMndaY3o0cVpRWWJTNkVQeGNHWklJQS1Fc3g1MnRjd1Z4T2dLZXM4MUcxdDN4ei1Iby1fOEthYjRvUE9BcElKRkJ3Z1FQOHJfenRvSmZtMW9lcld1Zld0NG92MnRPWUtuVzQ2OTk4a25RZ19Dd2syOEdyR2xqaG1JcUMydTJsX2RiYlZLSk5VWmRvMGxGQkdlNDlDd0k4MWtqcy02cnlRMEpqRGE?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Nvidia : 65 milliards de dollars de bénéfices en trois mois, l'IA rapporte gros mais Wall Street doute encore",
-   "s": "FranceTransactions.com",
-   "u": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUUNYektPYUQ2MjFUdGtLUzVCMU9LSV94TndYemRiclNneF9vUm9BMFZtc3lRRlFlbFh3cksyYkVET01YaEdkZ1RCYk5OMkhNTEpIckhqQzhPOUMwMkNfa0xhSzI3MlIwekpFUkhjSEw1MmREbFJ0VExaeGczbDdTOGRhZzVMR1M5OXMtRUdJLUpMZFNzem5CbkxfNWtQX3NfOW5nLU1Wb29EQ2RmSlVNNGtDWHNEcDFDR25yWVY5dk93ajl4SGVBelgzTkRWOU1meE4tZldfSjlhUQ?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Les actions asiatiques mitigées alors que l’optimisme autour de Nvidia compense la chute de Wall Street",
-   "s": "Investing.com France",
-   "u": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQUmF2ZTVEZ1BBTVlSaHZad2l3WXp4WXdhNkQ3S1dCMTZRTE4wam1iTmhGcVNvZ1JJU2tGY05HVW43R0lDM0tucFRxYXVDRzlfeWdSVmNTc09CNy1OdkhjeFNpODFhaWJVY2h4MUl3TjNFel9KOVVtTzVCRzdTc0x6M0ZrT2VZWXpuMTgxdjF3N1NXRXRfUGpYdjdSUHVIT1pRd2Y0QVlPTGx6UDdCSXpJSjZrZ0tOT3BiUzV5Y1dnb0xZSGxBX3VuZVI5X3NKa0ZsWjRvUjVnSUpOVHVHb19LOUVudjdQa09XdUxRQUtsaGZiUQ?oc=5",
+   "t": "Anthropic signe la plus grosse introduction en Bourse de l’histoire",
+   "s": "Alliancy",
+   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVEw5djB1czVQZHAyY0MtNmpZb2RaZVVGMDhVT2RoV292Q0Vab0pYSTBJRnlzc252cER5R2FiZldfZlBoS09sS1JUZ1luS25abkFkUkloTDl2b3VfVF8yVGtwWWR3aGFseS1JcHZiYl81eXIwWFVzb1hIOGNYemc5RWxZZ252UVJpRFNUbzZRTDdFODZfUl82Mm9Rd2cwOEdyRVhUa0w1VTFPeVRqR2g2bE9USFdId01Ka2FCNWhmNm5UQmo1c0E?oc=5",
    "z": "monde"
   },
   {
-   "t": "CORRIGÉ - MARCHÉS BOURSIERS AMÉRICAINS-Wall Street termine en baisse dans l'attente des résultats de Nvidia ;",
+   "t": "Aux Etats-Unis, Wall Street met fin à l’euphorie généralisée sur l’IA et cherche à trier les gagnants et les perdants de cette révolution",
+   "s": "Le Monde.fr",
+   "u": "https://news.google.com/rss/articles/CBMirgJBVV95cUxPR0FfSXhyNUVMSDZKMTBHbFdnX2tCY0t3dGFCNVg0YWF6QlJKcjZOQzJMQW43X19hNFNaY3RlMUlYSGpVZ1RFUmh1eTNzZGg2dzJuTUpRcFl4dlpIeGdWR2JCLTQ5LXZuTFJmMVFma3dkSF9MUVpad0cwRXdfMmRvMGFOMU1lS0JrWndSaFU5SjF0V0pSWGhrS3U2cmE5N05hT0VmT29NT3AwYjRxU20xdHdJNjFoRDUzY0JFZUtfN3N3ME1IcDN3ZW11RHcwRjUzcW5MZFZmWW4wRnJITm9tbWtfUkRFV2d6OUpnZzhFM3J3ZExqampZRW5Vcm1lcjVmcURRaEhaVEMyUUlDQUFRRVNxb2pULXBCVkxXUWFQY3pwd0FJa05hQmpvT2xkQQ?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Les futures de Wall Street progressent avant la méga-IPO d’Anthropic à 1.500 milliards $",
+   "s": "Investing.com France",
+   "u": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNMEtVZGs0ZjJLTkdGZVctRUxvNDBzRUs5bW5aSEdITUxrVjUwZWM5dlAtY3FjYkp3dWtQRU5qaXljcHIyUHZBbFVaZDkzODBScWhHZ3dmbVdLLW5XRUpBQlpxQ3dfWGpRVzR2RHYwODF6T0NKZmRJZlhxaUR2aWNZZ1JjOEp5RERoNFJXV0VoTnlWQzdRenZ3T0VKTjNlN3Q3RVFHNmd3RnFha2dJU2NYLVMwczFoU1Y3NzBOcTVQMjZXZ3FZbFpPaDZfM0NnUDNjSTJOcWlZaw?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Wall Street termine sans direction claire avant le test Anthropic",
+   "s": "France 24",
+   "u": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNmpDM3BtNDRMV0JBRk9wZ3NrbjhtWUpQb04yZGl0RzBkaEx0TWk4WWpHZTZOSmo5WFFsR3lfRGg5c1BTN1lGZ01uQWFqekFQWDc1anFidjA0MlRTVTl2elc1bHdtcUdmLW1GcTd5T0dYeC1hb2Q4dXNfYmVVbWVTYkx0cXJtaUEyQUNKU3hfampTR1NVRU5zdXpmVkh5QUp1amNwQjMzUW5FYVd1cEpPQzlaaE5JUE5ZVHA1QQ?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "La promesse de 500 milliards $ de Wall St à Nvidia pas encore mobilisée",
+   "s": "Investing.com France",
+   "u": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPOEMzNWJLLUQxOWxsTE9NQ2lhOVZtYVV4VTd5bGxkZ0IwLThmQkQzcnBvd0VDeldoTm8zV2dTaURLSWxYTWZpcW5wNVR5WEJXdzQweTNwRFNuZEY3a2ZCREhGUlR6dC1ZRmMySExVUmNGSm43aG1udWVpQzlFaXktWjkwQTZGNV9OY2RjTkdZa0xnTTJpNzRTay1tdHVPN2I4TUdPR0FQSzNMT1FVMHEtaTJrbkt1VkRrdGpMSGJ2c05UNFF2?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Bourse: Toronto s’incline de plus de 2%, Wall Street délaisse Nvidia pour Anthropic",
+   "s": "Les Affaires",
+   "u": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQM0pYRnVEWGhGVktVX3VHeDhJVi04SGlERjZCcHRaX2NlVUxuNHhNOTdlNTZqSlphNXhIaXZhenFvSHBpWkVLMVluUXlIMHlIdDVqVFZhMmZtWGl1di0wUXBjMUQxaEhqUlg4TmdMbFcyQ3cxd2haajRCOXM2dmxZNXpLRmJXcWE4MWt0aVd5LTVrZ3ptTFAzM3NjWFV1bm8?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Prix de l’IPO d’Anthropic : 83 dollars par action",
+   "s": "NeoTeo",
+   "u": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQWENvM3JPdW1WVHJBRFl1N3g3RFhlekoyMVFmajA1bmo0d2kyQWZPN2UwTThuMFFIYUdoT3hxWlB2VFNLTVpKRnI5bWhacVE3anczeUJ1T0E4aDc4YUlydkxCWVhnbTV2ZlhjN1VQaGhsQjl6OVAyQlFFTWhEcmNsTA?oc=5",
+   "z": "us"
+  },
+  {
+   "t": "Bulle de l'IA : la BCE tire une nouvelle fois la sonnette d'alarme, 4 000 milliards de dollars d'engagements hors bilan, c'est trop",
+   "s": "FranceTransactions.com",
+   "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQVzh1U2JKbjJDQ0tsZ2c0S3dRVGc1a0hqUjBiS3UyWVlMSGEwLUJWZHlrZ3hmOHBobUZaWXBnbEFMT2FoWno3WUw0M2RRc1lrRXgzZ2tNc2V0Uy1PYTMtTVZJR3ZQNEZINm9aUDA2SDBTV01qYWxvYjVJdFM0NnZYZnpfWXB1dw?oc=5",
+   "z": "europe"
+  },
+  {
+   "t": "La Bourse de Paris termine dans le rouge",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxPVldCZVVBWURzakVwNVJva2ZhbjNQcWdjbjVPTG5ITEc3OENfRmZSN004ZXBvdFZsOW1nQkhmdTl0cDAtTy1YNUtObkFlRXRZdVhfNHItdWZ4VUozT1BaQzRCRXE0RkQ5THczMEx5ZXQwdTZ3MUlUN1lFMlhkaVF2dGJ5RG5UTVl4c1gzMEhwaDlKeUk0b19XdC0yYUxOLURqVWdXY1V3c3FIT0FFbFlTZUZfR01uSW1ncUdkOW9KRmdFX0pXZHFhZlVoX3VwQTh3UUZhUGpSRzlkdEdOVHRqNlZLZ2VraUtKSFpTSnVIa05TeVRrTktodmlkVFU0c0pCaW8wSTlHSFF5OHY2eGs4VnhfaEd2TGJLZzF5MHFpX1NRcHFELU9aZUlSalFvSFNVUTAyZ25FdG1fUXJxa25GdGtuSG5iaUpZR1lqWVhxdTVaSDEzY25NWDEwN3VnQncxUi1tZ2pqQU56MjDSAfACQVVfeXFMTThPU0pxYUZNeEc4MW1mUHRxaml1emlLdEVqZkxndUxvMFZfN2pBTVMxbFVwMTFRTUExTnVpdGhKb1o3XzZmcURFSmJTZlQzM1NESDF2U3EzQXRocHl2dXY5RVlUb0p5Tld3QXRMQjAwVDQ3Ri13MjhuZXd3Q1lObGgxYjhYQVphdkUtQ3ZkOGhqQlNfeWphOGhSVjMzQ2ZTRi14M1c2TlY0aThjTHl6R2taRXdLNFNOcy1sUDVSSV96ZDBaZUlFanZQbkRfemduWkRNOGdER3c2ZjBpSXltS0xWUG9DZmdXUTJNMHpncFlxLXFiNnJJYzBHLVg3TVJYZFl3YkZNSHF1UHgtTHRUY0FzRlo1TXNOZ2pNWDlFbFE4VUhBeEtmMEZ2UktQN251ZjF2SlFJWmQ2Q0ZxVGhfYWMwbHNSWV9DRmdGZ0h1QzFxcmJoaU1LTi1SbW5KX1M3emRYWGprWlFuSGZKVW53Rm4?oc=5",
-   "z": "us"
+   "u": "https://news.google.com/rss/articles/CBMiugFBVV95cUxON2RtRG5LeXBzZ3d1RTg4SWJjbkJXcTB3YWZyV2NhTFU5U25RaDRkSlRTcnh0azVIYVlDd09WeXZYb2VMQUp0X3Q0Zkl6NmNjYUNUMFZheFVueUFreUJlbGFhRHZfT1Y1bGpWeDZHNF9pMDFVYm9aWG9YSnFOcHhjUHpBZ1VUVzY1OGtZcTIySmV1T3o3UE1EenBzOXcwRTFGLVRHMXJZTnp5akl2eE0yZFkxaVRzSVc5aVHSAb8BQVVfeXFMTk5rTFN3RDgwS21OV293eDZHX0dxSXVILWR5OV9NeHBtZzg3RllxZ3dCcFN0TmZFemR4M1E3TV8xS0Y3cXc0YXVGLUs0TzcwZnNYZjNUUTQ3T2kxOWxtTDZwZzc2VUtjVlZBYmNCbEZCUS01T0wxZ0xaajMxSF9wVWJFWHVZN1NCTENVOVJlTmlDLVNDeEEwUzJiSHpaS0lTQUxPUVFteXJZZ1NnQ19TQmtRVnJ3c1FSVUZhdHdLc1U?oc=5",
+   "z": "europe"
   },
   {
-   "t": "Nvidia rebondit de 4 % après la publication de ses résultats 🔼 Le géant de l'IA pourra-t-il redonner de l'élan à Wall Street",
-   "s": "XTB.com",
-   "u": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSFdBUXBiNmpGT2EzVXhaSG1CMVItZTV6bUNhS0hiclZqdHlVeTI3NUwwVkJfUDhTVWZoMGJ4a2FsU184S1kyMm1JV1dFVzZhX3N6M1otWEVoc2JJb1RkRFpRaGpNa0ltdXFPYzU2ZlRIMDlvT1dzQVp1VDQ2YUtOTU1hQ3llY2dzdVgzSllrYlRJLVpvbHJJN3JtbHpDakMzbUJBQWItN24wRkdhUjZuUFNCcFh6RVE2Q1FDdk9IUHVPY25nRGtKcFh3NGkzWlktc041UzRuR0xYLW9weFdRRDRKVnNydmZWaFZDOFE4MnkxZw?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Clôture Wall Street : la correction se poursuit dans la 'tech', en attendant Nvidia et Anthropic",
-   "s": "Boursier.com",
-   "u": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQX0V6aDZuWGR1Mng5cEVqaU1BcVNDTVA4d2NpNFJETU1Za0ZDWi1WSTN5ZTVhQmtZeE9teC1qYTAtX2c2eVQwSTg1X2FCMmJyMDM0ZktEblNReGlrNmtTMWw3akJNRmVVZEtpdk5pVjhIcm94bHkyQnBiS1ZfQ3NLbnFCNmJiQ3hkUVQweUE5ckhiekVZQzVGX1FQMzB4SHZQSnAyS0NxU0F6Wkh5Z3RPakVfRFhPcHdUa205UndGZkcyQ3dkMU1sVnNRU25kYktjMUNrMFZYZW9fYkRRNXZCQVdYRGR0Zkk?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Wall Street : l'indice S&P 500 a perdu 1% à 7.340,53 points",
-   "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMG9hblIxb0hkX0xSMFdHWmREM09jZWRUY3FrY0Z0U3UzWW0xWHVZX25jRlBVSUdNeG9SLWFRMlB1ekFhTXpmVDdnbE9JcFNQdGZuLTQ1QmV1Tlh0cm9WaFhYMEUyLUtYbFM1S3hyU2JuUGNPaEN2bUowOFB1Uml1S0pOaTk5VU9JcVhPVkZBOGFJNnpqUjNXRFNwdHVlME55b0FYenI0dzlBWk9QSmhoTG1zY1BxY2c?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Anthropic : débuts au Nasdaq le 19 sous le symbole \"ANT\"… le prix d'introduction dépassera-t-il 78 dollars ?",
-   "s": "재경일보",
-   "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBtVU11TTUyTjZqUzZDZkdBS2pscGpsY01rQTVGYTNKT1l2NXNudVlPV2hlb2pZQldYZ2hKQlVXUEdGMDBzR2xFQUZBbzBnZTlLbDFtSFB6ZWs1TXJQX2VPNA?oc=5",
-   "z": "us"
-  },
-  {
-   "t": "Cac 40 : Plombé par les inquiétudes autour de Nvidia et le recul du luxe, le CAC 40 clôture en forte baisse",
+   "t": "Cac 40 : Les résultats tonitruants de Nvidia ne suffisent pas à apaiser Wall Street, le CAC 40 termine en nette baisse",
    "s": "BFM Bourse",
-   "u": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNdk1NX29uSFdGWkdRdDhfNlpaanhzTF96NldtMVlJYzdoOWJ3VDFJMXNCU3FmYmRtQWdkekEwOTRuR2hBYWtnbEJ0Zmk0dFRSTFNpcEp5czR5NTNzanBPNGRGQ2tjdVZSTktOd2ZfVjBhajA5SnBORU9EdW94R3BYcnFhNHMyRkhPWExpd0VPTG50TURuTFNlYVlWQ05SVVZ2bGxLaTV1Tk93T0I5U2lNaTR1Q1dwdF9WQVh1OGMzMkxMWm13MmtkbjY5WkRCVzd5RzBjcEI0RUVoWS15RzdlQjJ1UEtnYjZGbUJWeG9IYW1VNkd5NGxqcmJpVEJyS2ZtV3YxelZB?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMilAJBVV95cUxOZG50Nlo4MEVfMHVfb0JJcVhkcU1pZzg3aS1DdzhGY3o1a25uYV9OOGxEMlRwVW1ZcjdiMTl2MVRMMWNjc2p4aHFfWDJpbWFmLU9yazdlQlpObE9ZeHoyS2JFSW5YNnQ4Vk4zT1kwZ05lRXVmV0RDYnQ1Rng1dWNZNG81UUptdUxkQnlicVNKQlBXeWpSSVlyc0FidHE2aTlTSmdNRlF1S3Z1R2hZUUZPRWxoRll3NzRDSzJmQW9LTExSQ1h2a0lxalNWS1ZTNkY1Z0RFQ2pHWlZIbDR0dDN5cXR6QUpsc0lhRTdIUndGa1g5VmR5OXBqR0R4aWFFalZSOTY0SkNnbkE1VDlWeENJR1dmdmY?oc=5",
    "z": "europe"
   },
   {
-   "t": "Le Cac 40 finit en baisse de 1,6%, Hermès a perdu plus de 5%",
-   "s": "Investir Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1lEWGFWUFdaZWJmbWNhZFFiLXVucktUUXFuS3liQlZjTThUWEYwNGRFdUE3dVdIcEdGUzIyZG5pSTZrblFUMHVSOUNwaVNHQVczMjlrZFdqTW9VV29XbVlRdWJRd2gyUzBoY1puNjNoaDhZMEZkMjhpU3NodDR6cjVZZmRkbTFIbUltZFpNSUxmOV9OazZFc3dod2hkRDFoWVZvOGxhcWxnV2NtVVVDbnR4S2VwN1FrNmljdHRfdlJmWVVVQVE?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Le CAC 40 décroche en clôture : la correction mondiale sur l'IA rattrape Paris",
-   "s": "Idéal Investisseur",
-   "u": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOOVJ6Ti1GQ2tJd2p1c0ZwU1lEdGZXb1JZM0htWldJTlJhY3RZVE8xbUFCRHg1RlVTZDUwRWlMSGJUYVYtQzVjUjRiRVh5R204X2pYZFp4SHZuU2ZvSnVZX0JjVXhnNTFoSFh6alNkU2NLUGpNNzNSTW54RTBJVmJwVHQ5QzltbUNuZW4tdVR0TFlnOE1LZXo0aWVHdkFfT2t0WDhqT2trbnpBSExTSGdlSlQ4ekp1U2djcG9PN3BieVBjUG85SllnaEplZzFuRGlt?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "BCE : un compromis franco-allemand ouvre la voie à l'Espagnol de Cos pour succéder à Christine Lagarde",
-   "s": "Les Echos",
-   "u": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPVE8zalZDN0ZyYW1kMWR5MDd1Wk1vS0ZWb0pOR3dTa3Y1MFN0bWdsV3JUR2dlLVkzZjd1bEVUSERfMGVBSjRsSmVEUERvaVVKcXk4Yk9SMHU5VExlZWdDWnZJbWxmXzVIQ2tZSURMR1BWYkZaV0FKdGplcDByMkJiTDJRcXVPUkpxOUhPcWJid0N0bjBPMk5kN05pek92NnNsczZFX1ItLS1WYnJnWkZ1NXU4RVVKbnJpQ0RIQUVEdGoyNFpVTktReTByejZMZ0NUa2JETHM5T1dBUWs2dHItNjdDaWJua1RnR1ZPZVE2ZGNuaTdlb2hPbW5B?oc=5",
-   "z": "europe"
-  },
-  {
-   "t": "Le Nikkei finit en hausse de 0,28%",
+   "t": "Le Nikkei finit en hausse de 0,71%",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdDJjeVFNZkNjR251cDl0aDBBakZESzJBNGJwWE41T01fMEZoTmRoc2l4VXU3Z1dCRzR4U0Rudk8xaWN5VGNMbWpTcE82Y1JVV2lFZzI1RUtZdU5RWmw0anJaTEVQZDRYZXpTR0RoMURmMDMta3VpMGpoZGRETzdXS3ZvamNfX1pINUNCNzBkQnFTZ0c4NFA5Tg?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSktaeXRsT3B4SFc3Wjg1Si0tMVZrdmtnYzNjX094RVc3Rm0wTTdLODF1NE1jX3BGcVVFNmlDY3loZ25GUFhkY3hITGFWc1VsM2tzMFlEcG5OSFdULTgyX2lOd1hRWlJlWUd3UmhPaXRDbDMwbm1PUUtmeld5Q0c5NEJDbC1sNTRyTzVwM0JSay1FdF9zUG1NTw?oc=5",
    "z": "japon"
   },
   {
-   "t": "Le Nikkei japonais efface ses gains, les perspectives du développement de l’IA et la direction de Nvidia pèsent",
+   "t": "Le gouverneur de la Banque du Japon (BoJ) relativise la faiblesse de la consommation et laisse entrevoir une hausse prochaine des taux",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNWXFkbXYwMTU0NFhrd25nR1lEMWg5TE12eUpickYxR0praWJ3XzRVOGxwQ1BTdTRJbFdIZzkzN29oR24xTVM0cUF0X1RHWlNRZkhUUjIwcDZFNy0wRzYwUDZMRFNUT3VtSHhmNDRrN0VNNGduT3V0OVlpRHpTS2doWW5jZ0luTUVacFN4NkcyWjY5QURCVkZ0MkNGd05KT3JqWlRkbk5hbW1aUVRPOERZNmpFMzRRdW5fRG9vaTdIbDFpVDdHcHUyb205c2lWczNOTVV4eVMzcTRZVE1pTURRX0RyYlVsV3g5X0FJWWV3?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQY21kUDVqeHZvOHJQRUFHN3JuU09jUDJnQkpwM2VLTjA5WWp6R0lBZVNic0N1Y1J3VC1VZndfV05vSWtCVnF1dlZLbG5RQldxdFF4dWNtY041T2lIVmQxb2NWMGVaTGdfbEtuUGdUN09DdTJaSEpOT0xURm5KOThaWkxoUzBpWmRZQmFidjA0MS1ubEhQWlI3V2l2Y0dicE5YQkRwQVlPM3JmMTZMTUo4c1hSWWwyLXNFZkhqYXNjbnJmd29YdmlHWmdBU0twNVRoU1l1b1NxOE5NTnJjQUk2blZXdHR5Y0h2ZmpiNUVQZw?oc=5",
    "z": "japon"
   },
   {
-   "t": "Ueda affirme que la Banque du Japon évaluera si l’inflation sous-jacente s’ancre",
+   "t": "La Banque du Japon relèvera ses taux en décembre, puis de nouveau d’ici fin mars, selon les économistes",
    "s": "Zonebourse Suisse",
-   "u": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQNGZhejQwbmN1VFlTcWx2LUNOc2FneWJpWWZTOXlhbDI2RGtBU0N1NU5HaFpmT0VaS1d2c1NXU3lQS1VHbTRRemJUcWJwVHA0VkZQcDdmbXN6WFotVWkyTXhSN3BfR3Y5MkpacFF1TUh5T3NjaDFpYWYteUhmdnNBeHVaZ0NNUTRVUWZkRmFJVnJqcGE4QTZwdzhqU3NkT2dmYU9TR0Q5TEg4RlZBN1cwUEZTb21tYjYxQ0FTcENZMXZkYzhYdDVQUVRWY09SWjFjUy1IUzR2ZW5YZw?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQY0pTYVJGSU1UZW1KemVMd3Bic2VfMkFYSnExTXFZU2c4REtkZnpqYzBYWC0yV0pVZTJDbmpMUnhTak1TbEg0d052WF8tVzh5dlgzUWZQVVlJSlZPWmdKcEV4OXY0cGNhMDJjLXlDdlBuY2RiLVRQcmh1VXlnRHFmM2I1WkQzTUFCMEN4Z0VjSWxMc2xESU9fMGJ4MEVRT1gtRzZTOUJVR3ptMjlwMUt4ekZqSzhuMFExSHNjV2pQcDJSMGlFMnpWQlBnbmphYjFUWUdVQi1ZV2cwRzJxM1RoYi05Ym12MGtqSHptUDdn?oc=5",
    "z": "japon"
   },
   {
-   "t": "MARCHÉS ÉMERGENTS-Les actions taïwanaises entraînent les marchés asiatiques à la baisse alors que l'optimisme",
+   "t": "MARCHÉS ÉMERGENTS-Les marchés boursiers taïwanais s'effondrent, les devises asiatiques restent prudentes alors",
    "s": "Boursorama",
-   "u": "https://news.google.com/rss/articles/CBMivAJBVV95cUxNZk5fbmcxWkswbHlpb2VKY2dMYTlpdmZ0cld4T1FqU1VCTTZra2tpbzNnNnNCRzZ4bzNyVmdTNlF6V0VCbndCT3lYUDNvek9TVmJ2MWtCODBoY0c3R1FadnJTejFSSEVFcjExbFBKTXZsdHNQekxhV1dFQVJnWHVqTktFaTRwY2REd3hMZWUxSkVqcHgyelBDeF9VeUJwS2JCUFhOQ1ZROWtiSUtkSFIzbXBMOG1NQ3ZaTUVyTjBmU1p1U0JobS1uNnRKcmdqZGlhcFMwSVRTbEtTMGJHcXFPeFJzclBnbWVzc1ppbHRkaTdKenlaV3VoMkJzZ2haNFBvN2FsQU5mZHA1cUtMdnFMUUFkZnRjbW11cHFsTG90ZG5YUDF0NzdMZDBXVWJZYmxBVmp2TmxJNFhKU0Jq0gHCAkFVX3lxTE95RjR2Q2lnWjNmbVJhRzZFQ2hpdjV2ZnIwREhXWS01dmhwUWRxdERDTm1NcUNSb0hmeENjZXQ3aDRIM0FVeS1zNkFKQVZlZEg1dXFiaDlSVHNlRlJySEpwRHp4N2VQeXlrRzVpMnlDeWZITjRlSUtpX1lzeXBRb0NDS1V5QVdOU2RmMlVEdldldE8ycmUteDdFUWR4VE1aRmJoQk0xNFM4azYyS3g4NDQ2RzNnZ2pDUUNBMHk1dVBlVW9FRUVqTnZudVh1X2JWNUN0cnFzTFNlSnl2bTZ3ZFY3Tm9DckFKRW81TDJ4MnFkVEFaZ0lOWnp1NGJPNDJ2TnhYVXlsX2sxVTNIRVYzaERZR2RVMEtSWUY5QXFjT1laZEY4UmdTbGhucDM0T214S0ZrekVDUDR1a1F4ZmJWV194NHc?oc=5",
+   "u": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxQSnU0TDZyOGg0NFc4UlMxbFpJUUZaRlA1R0FvODBZdV9XZGx0c1dYUXVsU1dxQmZXUXVYT1hxRDMyNmNRT0hmb3lYSThVVkh1SXB3Mmw3d1hfd19SZXNVd1JpTVhONFJjaWFrUGM4dWxlUFBrMTNzRk5oZUdPMDJNa3FIelF6UVRMd0hONE9GTXVjb3NvSlc2b25rb3Y5dFhyT1gycVZOcTN0ZVAybVNuaGRZYlhIakstSXJDTTJHWThNbk13UU9oc2VvcElWR3ZDWUxvSjI2b19mczhhR2tiX3hQbm5HY1FjaEU5RlRjdzRhcVdCc3BDRlp2cjY4TWRUT0VkT3p3endweGVtbmJDYm1KNnJlc2JtTjNNd1VmekV1X2hQTXdZSUxUV1AxaHk3VkUwY0hkQkZObnMwUXUxSFE4MkxrQmJlM1BzZVNWbWc4aDdtMFVjQWs0Mm5nR0g2R0Uw0gHoAkFVX3lxTE1Ca3pVRVhQTXZCZnhkaWRRR2JNS0taZU03aFJVaVdSQVdhQVlHWExxelNna0JTWk9kRXIxSFItU21NcHRNTXRvdlJMQ2JoUnRzUUxITXIwSHZoZzk5d1REa3pySjdlanZKdWJuZFdtblVWdkl1aVd4LVdldXNJak9Bd1pkYkVpc2pMelduRnZ3dmJBQ1gwZ1JWOGlCMnptYnF0Nng0VHVNRjFZTUhrZ292U3RXLUkwOWV6ckRYNm9CU1JBZ0g0dDJ3UjJWWXVselcwNGFNd3BxaFB5bzlpMUotaFpPUk14UkF3WEY0TWxiU3lvdlhsMmphRXhTUzJxVkd3ak5temI3ZmtPSVpEX1l6UjhxRjdpeFZFM1FOSHVVTlFnNERYc3lRUDlOVkN5eWlxbG4yQXRQcy0yQ3E4dWJmcUJsYm5DWDNFa1JmWjdLS2U5YXhhY0U3WW04UFVoOEZ6TEpVTHpLSQ?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Repli des valeurs liées à l’IA: excessif ou justifié?",
-   "s": "allnews.ch",
-   "u": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOOUhUa3Z0SlA4S1JCc1lLMngzRFVLaEwxN09ON3loVlhhTlpCOTFDRTUwRXpBTTRhYXZiaUZvQ3V3Z25aa19nRVRvdExNbjB1SU1wRFVhOU1RQVBOV2tLb0JtazJWTmVWUG1EWnQ4UWlxcWFfQ3Q3Y3JCaVFoSmtOMkFzd3lRRGxKQlA3RGJYeXQ3OXdUY0pTbGMzMC0?oc=5",
+   "t": "MARCHÉS ÉMERGENTS-Les devises et les actions latino-américaines chutent face à la vigueur du dollar et à la fa",
+   "s": "Boursorama",
+   "u": "https://news.google.com/rss/articles/CBMixAJBVV95cUxNSmkzeWluaWp0WHY1TDkxWHgtSlRFRHJnaUQxU0g0aFNpQVUwT1hib1poSjhsYUlKdV9hWkRpOFA4akdsVXJyOEI5TElkRGlDZjJyRHNGTmM0cDVYTXJORXFlaXRCTGo5N0NqeU82RVdzVkZDY2ZOYWFOX05JM1BwVlBvc05kY09abUxKV0RKb2Q5eHFoVEN1OF96VTN2TXQ3NEZUVEE5ak4zeDliUVh4YUZYMDdyU1hkV19VZzRKUnhPdnVPY2J4Z19EVU5tVmlaQVpISDh6Q0tubzA1anRqVVlaSFg3NnZMRE5aVUFNOV9fZV9ObEpPLVh0V2pVaWRXeTJ5S2tzN0Y0a0FaVW54VDlDUWJHNzJCWDRNNlkyV0xWaEZvRlhIZ2hmTDdscHBKMERzSHdwRzJrbUVEdG5idVZoUkzSAcQCQVVfeXFMTUppM3lpbmlqdFh2NUw5MVh4LUpURURyZ2lEMVNINGhTaUFVME9YYm9aaEo4bGFJSnVfYVpEaThQOGpHbFVycjhCOUxJZERpQ2YyckRzRk5jNHA1WE1yTkVxZWl0QkxqOTdDanlPNkVXc1ZGQ2NmTmFhTl9OSTNQcFZQb3NOZGNPWm1MSldESm9kOXhxaFRDdThfelUzdk10NzRGVFRBOWpOM3g5YlFYeGFGWDA3clNYZFdfVWc0SlJ4T3Z1T2NieGdfRFVObVZpWkFaSEg4ekNLbm8wNWp0alVZWkhYNzZ2TEROWlVBTTlfX2VfTmxKTy1YdFdqVWlkV3kyeUtrczdGNGtBWlVueFQ5Q1FiRzcyQlg0TTZZMldMVmhGb0ZYSGdoZkw3bHBwSjBEc0h3cEcya21FRHRuYnVWaFJM?oc=5",
    "z": "emergents"
   },
   {
-   "t": "Fed de New York : pour Williams, de nouvelles hausses de taux sont probables, sans virage agressif - Actualités et statistiques",
-   "s": "IndexBox",
-   "u": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNT192MW9BSVZqRzFITEViSERiVzRJU2g2TkVwMWhKR2F2Uk5rM2pYMktMZEFnTXBhbXNEVXJoWERPaVR4TG1kazlVTHlrYVRiYS16YV9lS1FLQ2ZnVUdwRHh0MURRWmZkVTVNR0tlcE45UkxSdW53MWU3MGZkbjdPai1yWVdPQ2hoU2d6WExDbFNBMzdya1Z4WGZ3WWEtX3FabGZKVUY2TDFOeGRZVTNWTWgzQ0g3Wm8?oc=5",
+   "t": "Les actions des marchés émergents progressent après les résultats de Nvidia ; les actifs sud-africains reculent après l’inflation",
+   "s": "Zonebourse Suisse",
+   "u": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNR09LZ1U1WHRrZXJoYXR5QmxQVHVlR3ZsemphOWR0eWk5UnpvcHQwMU5FelBuRTB6b1pkZnJUM3NPX01uZXNFNWxZTXdkdVdEWWdZcUZWc1ZheExrcG5IM0t4R0R3VWNzcEZrVE4tNWhpQjJDbE1sRU81LTJXMnZVdExHNXp3S3NiQW9nelhjYWVrZXUwbnM2ejl2aE1QRXpyU05BSGVGY2lmMVZjMWQ0bjRwTHFhUnd5aS1kYmRDSjZ0bWdUMHFFUldDQmJqZXJiMTNyS2tKLXlMWTlWZVc3OFozMDNxQktEZ0pHUVZFMA?oc=5",
+   "z": "emergents"
+  },
+  {
+   "t": "La Fed se prépare à de nouvelles hausses de taux face à l’inflation",
+   "s": "agefi.com",
+   "u": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMnZXNHRSQnVFanRmX200QS1aZ084ZXN2SUw0dWxwNVBRVkpvcU8tTEN0bENiS1JQOHVVOTlBVXkwSGZxVnZkZXBILVI4cmM1STJtOUpRdjZfYnlrazNDbHZqd1lUMDdZRFkzNEVlbFhuSnFwLUhSMW1ZdnRzY2M4V21TVldFRTRXRnVVRV9ueEhxYmw0Mmk2Y3JneC1NTUQzeGdwOThn?oc=5",
    "z": "taux"
   },
   {
-   "t": "Les actions rebondissent, mais la persistance de l'inflation fait grimper les taux et le dollar",
-   "s": "allnews.ch",
-   "u": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNS3NmMHFNQXdMUmYyOHk0R2R6SG5XZVpaeWVpUHFIdTdsNzNYV0lZbFU1LWZ6MlJWVVNyT3dyaGx4TzZ2SVdvQW14bnpVbTJMSDRfLUNuU2JGR2xGbjRJUThLVkZyWV9yRDFxQzRESVZiR2U5Y2pBeVllZHVPdzRwLUlsMU5LeElFWTFwZDJqZHNydnBYMUw5Z18zV0s0Ymcwd0tkUERLTDd1cU9pNG9zdDdJV2hYbGs2SlJMX0dzSUEzYWU5dk9pM3l3?oc=5",
+   "t": "Pour lutter contre l'inflation, \"presque tous\" les banquiers centraux américains estiment qu'un relèvement des taux directeurs est inéluctable",
+   "s": "BFM",
+   "u": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNcUFsTkVHb1o3ckt0TVFwNmpzNHc0aHlid0lPT3k5X0lQbVJFNl9vNWNjRFJDT1RxV05vYWkzS1FVY2lUYVVBYnVKWmtsdWdiZU5tZkNOWnJCdUZxaVJRSlVFQzYwblJMNUROQm1sTTZlWnJFeEU5ZnFEUjY1Vi1FWC1QOG1maUxVNENmYzE2YmVSY0FWdW4zT0RteUlZMWt1bVlQZThETGFTUkdwbVBkNDFtaTlHTkIxc2l1aTVYVnd5RUhwS0RRRlp5UmhyWlBnTXhueFRBWkpEcGNQY2hKcDZETXRBcGFXT2RsWjdiNll0NFNiSFRYcHhnQ0twQ0VpZk0wZVZXQ1pNUG1QM19qSVdhZFlPcVVTNnlUclhSNzVnV2xfNDlHNkdYMUVCeVZfdlgtdnpPZTY?oc=5",
+   "z": "taux"
+  },
+  {
+   "t": "L'inflation au Royaume-Uni atteint son plus haut niveau depuis un an, à 3,6 %",
+   "s": "وكالة سبأ",
+   "u": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9XVGtqRHFNa093dmdCbmU2MmcydWxuLVJITkozWUcwcG5zVTI0eUJsenVMUmd0ZHVndm05RlVrZWJjRnJOUUN4RjZRZE1KMnVTWWZZNlRpOTU?oc=5",
    "z": "taux"
   }
  ],
- "lesson": "Le mot du jour : l'« introduction en Bourse » (ou IPO). C'est le moment où une entreprise jusque-là privée, comme Anthropic cette semaine, vend pour la première fois ses actions au public sur un marché. La banque qui organise l'opération fixe un prix d'introduction la veille, puis le cours évolue librement dès le premier jour, parfois très fortement. Un ETF indiciel n'achète pas l'action dès son arrivée : elle n'y entre qu'une fois intégrée à l'indice, souvent plusieurs semaines ou mois plus tard."
+ "lesson": "Le mot du jour : l'introduction en Bourse (IPO). C'est le moment où une entreprise jusque-là privée met ses actions en vente au public pour la première fois, comme Anthropic ce jeudi sur le Nasdaq. Le prix d'introduction est fixé avec les banques à partir de la demande des grands investisseurs, puis le cours évolue librement dès la première cotation, parfois de façon très agitée. Pour un investisseur en ETF, pas besoin de se précipiter : si l'entreprise grossit, elle finira par entrer dans les indices suivis par tes ETF, selon leurs règles."
 }
